@@ -1,0 +1,44 @@
+#!/bin/bash
+set -e
+
+ALLOWED_NAME="caiman"
+ALLOWED_EMAIL="dorohecaimandoro@gmail.com"
+
+extract_name() {
+  printf '%s' "${1%% <*}"
+}
+
+extract_email() {
+  printf '%s' "$1" | sed -E 's/^[^<]*<([^>]*)>.*/\1/'
+}
+
+AUTHOR_IDENT="$(git var GIT_AUTHOR_IDENT)"
+COMMITTER_IDENT="$(git var GIT_COMMITTER_IDENT)"
+
+AUTHOR_NAME="$(extract_name "$AUTHOR_IDENT")"
+AUTHOR_EMAIL="$(extract_email "$AUTHOR_IDENT")"
+COMMITTER_NAME="$(extract_name "$COMMITTER_IDENT")"
+COMMITTER_EMAIL="$(extract_email "$COMMITTER_IDENT")"
+
+if [ "$AUTHOR_NAME" != "$ALLOWED_NAME" ]; then
+  echo "commit rejected: author name must be '$ALLOWED_NAME' but is '$AUTHOR_NAME'"
+  exit 1
+fi
+
+if [ "$AUTHOR_EMAIL" != "$ALLOWED_EMAIL" ]; then
+  echo "commit rejected: author email must be '$ALLOWED_EMAIL' but is '$AUTHOR_EMAIL'"
+  exit 1
+fi
+
+if [ "$COMMITTER_NAME" != "$ALLOWED_NAME" ]; then
+  echo "commit rejected: committer name must be '$ALLOWED_NAME' but is '$COMMITTER_NAME'"
+  exit 1
+fi
+
+if [ "$COMMITTER_EMAIL" != "$ALLOWED_EMAIL" ]; then
+  echo "commit rejected: committer email must be '$ALLOWED_EMAIL' but is '$COMMITTER_EMAIL'"
+  exit 1
+fi
+
+echo "author/committer check passed"
+exit 0

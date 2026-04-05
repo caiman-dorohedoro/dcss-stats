@@ -13,6 +13,8 @@
     "format": "prettier --write .",
     "lint": "eslint .",
     "test": "yarn vitest run",
+    "wintrace:build": "tsx ./src/wintrace/build.ts",
+    "wintrace:recommend": "tsx ./src/wintrace/recommendCli.ts",
     "test-all": "yarn lint && yarn type-check",
     "typegen": "yarn prisma dev generate",
     "prisma": "node ./scripts/prisma.js"

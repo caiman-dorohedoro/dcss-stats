@@ -19,6 +19,8 @@ dist/
 /build
 /coverage
 /docs
+/apps/api/wintrace-cache
+/apps/api/wintrace-dist
 
 # misc
 .vercel
