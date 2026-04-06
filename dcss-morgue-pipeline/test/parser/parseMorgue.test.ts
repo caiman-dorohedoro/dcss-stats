@@ -101,4 +101,21 @@ describe('parseMorgue', () => {
       expect(result.failure.reason).toBe('wizardry_parse_failed')
     }
   })
+
+  it('parses colored draconians as canonical Draconian', () => {
+    const result = parseMorgue(loadFixture('success', 'colored-draconian.txt'), {
+      ...fixtureMeta(),
+      sourceVersionLabel: '0.35-a0',
+    })
+
+    expect(result.ok).toBe(true)
+    if (result.ok) {
+      expect(result.record.version).toBe('trunk')
+      expect(result.record.species).toBe('Draconian')
+      expect(result.record.ac).toBe(11)
+      expect(result.record.ev).toBe(11)
+      expect(result.record.sh).toBe(0)
+      expect(result.record.spells).toEqual([])
+    }
+  })
 })

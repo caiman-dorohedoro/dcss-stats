@@ -31,7 +31,13 @@ function parseVersion(text: string): BaseStatsSnapshot['version'] {
 }
 
 function matchSpecies(descriptor: string): string {
-  const species = SPECIES_NAMES.find((name) => descriptor === name || descriptor.startsWith(`${name} `))
+  const normalizedDescriptor = descriptor.trim().replace(
+    /^[A-Za-z]+ Draconian(?:\b.*)?$/,
+    'Draconian',
+  )
+  const species = SPECIES_NAMES.find(
+    (name) => normalizedDescriptor === name || normalizedDescriptor.startsWith(`${name} `),
+  )
 
   if (!species) {
     throw new Error(`Could not match species from line: ${descriptor}`)

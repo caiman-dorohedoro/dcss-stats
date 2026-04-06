@@ -70,4 +70,19 @@ describe('extractBaseStats', () => {
       dexterity: 13,
     })
   })
+
+  it('normalizes colored draconian descriptors to canonical Draconian', () => {
+    const parsed = extractBaseStats(loadFixture('colored-draconian.txt'))
+
+    expect(parsed).toEqual({
+      version: 'trunk',
+      species: 'Draconian',
+      ac: 11,
+      ev: 11,
+      sh: 0,
+      strength: 16,
+      intelligence: 25,
+      dexterity: 19,
+    })
+  })
 })

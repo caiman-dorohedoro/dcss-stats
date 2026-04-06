@@ -1,0 +1,62 @@
+Dungeon Crawl Stone Soup version 0.35-a0-257-gf9e06672e4 (webtiles) character file.
+
+Game seed: 4635481648971255567
+
+17385 WSnake the Summoner (level 12, 0/85 HPs)
+             Began as a White Draconian Summoner on Apr 5, 2026.
+             Shot with an arrow by a centaur warrior.
+             The game lasted 00:46:01 (5363 turns).
+
+WSnake the Summoner (White Draconian Summoner)      Turns: 5363, Time: 00:46:02
+
+Health: 0/85       AC: 11    Str: 16    XL:     12   Next: 18%
+Magic:  12/27      EV: 11    Int: 25    God:    Ru [**....]
+Gold:   678        SH:  0    Dex: 19    Spells: 9/34 levels left
+
+rFire   + + +  (20%)    m - +4 quarterstaff (chaos)
+rCold   + + .  (33%)      [offhand occupied]
+rNeg    . . .  (100%)   (no helmet)
+rPois   +      (33%)    l - +0 cloak {rPois}
+rElec   .      (100%)   p - +0 pair of gloves {Dex+3}
+rCorr   .      (100%)   e - +0 pair of boots
+SInv    .               d - amulet of regeneration
+Will    .....           j - +6 ring of intelligence
+Stlth   ++              b - ring of Sogam {^Drain rF+++ rC+ Str+6 Dex+2}
+HPRegen 1.14/turn
+MPRegen 0.20/turn
+
+%: no passive effects
+@: studying Long Blades, inugami summoned
+A: glacial breath, AC +8, unfitting armour, cold resistance 1, cold-blooded,
+inability to use devices, armoured tail 1
+a: Glacial Breath (2%), Renounce Religion (0%)
+
+Inventory:
+
+Hand Weapons
+ m - a +4 quarterstaff of chaos (weapon)
+Armour
+ e - a +0 pair of boots (worn)
+ l - a +0 cloak of poison resistance (worn)
+ p - a +0 pair of gloves of dexterity (worn)
+Jewellery
+ a - a ring of wizardry
+ b - the ring of Sogam (worn) {^Drain rF+++ rC+ Str+6 Dex+2}
+ d - an amulet of regeneration (worn)
+ j - a +6 ring of intelligence (worn)
+
+Skills:
+ - Level 2.5 Fighting
+ - Level 3.1 Dodging
+ - Level 0.0 Shields
+ - Level 10.4 Spellcasting
+ - Level 12.0 Summonings
+
+Magic Modifiers:
+Wizardry: 1
+Channel: 0
+Wild Magic: 0
+
+You had 9 spell levels left.
+You didn't know any spells.
+Your spell library was empty.
