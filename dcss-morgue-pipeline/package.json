@@ -1,0 +1,24 @@
+{
+  "name": "dcss-morgue-pipeline",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "bootstrap": "tsx src/cli.ts bootstrap",
+    "incremental": "tsx src/cli.ts incremental",
+    "audit": "tsx src/cli.ts audit"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.4.1",
+    "p-queue": "^8.1.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.19.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.10"
+  }
+}

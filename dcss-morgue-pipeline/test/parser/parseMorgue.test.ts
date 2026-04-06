@@ -1,0 +1,95 @@
+import { readFileSync } from 'node:fs'
+import path from 'node:path'
+import { describe, expect, it } from 'vitest'
+import { parseMorgue, type ParseMorgueMeta } from '../../src/parser/parseMorgue'
+
+function loadFixture(directory: 'success' | 'fail', name: string) {
+  return readFileSync(
+    path.resolve(process.cwd(), `test/fixtures/morgue/${directory}/${name}`),
+    'utf8',
+  )
+}
+
+function fixtureMeta(): ParseMorgueMeta {
+  return {
+    candidateId: 'candidate-1',
+    serverId: 'CAO',
+    playerName: 'alice',
+    sourceVersionLabel: '0.34',
+    endedAt: '2026-04-05T01:02:03.000Z',
+    morgueUrl: 'http://crawl.akrasiac.org/rawdata/alice/morgue-alice-20260405-010203.txt',
+  }
+}
+
+describe('parseMorgue', () => {
+  it('parses a 0.34 webtiles quit morgue', () => {
+    const result = parseMorgue(loadFixture('success', 'cao-0.34-webtiles-quit.txt'), fixtureMeta())
+
+    expect(result.ok).toBe(true)
+    if (result.ok) {
+      expect(result.record.version).toBe('0.34')
+      expect(result.record.species).toBe('Barachi')
+      expect(result.record.bodyArmour).toBe('leather armour')
+      expect(result.record.dodgingSkill).toBe(2.1)
+      expect(result.record.spells).toEqual([])
+    }
+  })
+
+  it('parses a trunk webtiles death morgue', () => {
+    const result = parseMorgue(loadFixture('success', 'cao-trunk-webtiles-death.txt'), {
+      ...fixtureMeta(),
+      sourceVersionLabel: '0.35-a0',
+    })
+
+    expect(result.ok).toBe(true)
+    if (result.ok) {
+      expect(result.record.version).toBe('trunk')
+      expect(result.record.species).toBe('Minotaur')
+      expect(result.record.bodyArmour).toBe('plate armour')
+      expect(result.record.bootsOrBarding).toBe(true)
+      expect(result.record.cloak).toBe(true)
+      expect(result.record.armourSkill).toBe(2.4)
+      expect(result.record.spells).toEqual([])
+    }
+  })
+
+  it('parses the modern spell library table and keeps school skills', () => {
+    const result = parseMorgue(loadFixture('success', 'spell-library-table-full.txt'), fixtureMeta())
+
+    expect(result.ok).toBe(true)
+    if (result.ok) {
+      expect(result.record.schoolSkills).toEqual({
+        conjurations: 11.2,
+        fireMagic: 9.7,
+      })
+      expect(result.record.spells).toContainEqual({
+        name: 'Flame Wave',
+        failurePercent: 3,
+        memorized: true,
+      })
+      expect(result.record.spells).toContainEqual({
+        name: 'Fireball',
+        failurePercent: 12,
+        memorized: false,
+      })
+    }
+  })
+
+  it('normalizes a missing spell section to an empty list', () => {
+    const result = parseMorgue(loadFixture('success', 'no-spell-section.txt'), fixtureMeta())
+
+    expect(result.ok).toBe(true)
+    if (result.ok) {
+      expect(result.record.spells).toEqual([])
+    }
+  })
+
+  it('fails the whole parse when wizardry is ambiguous', () => {
+    const result = parseMorgue(loadFixture('fail', 'ambiguous-wizardry.txt'), fixtureMeta())
+
+    expect(result.ok).toBe(false)
+    if (!result.ok) {
+      expect(result.failure.reason).toBe('wizardry_parse_failed')
+    }
+  })
+})

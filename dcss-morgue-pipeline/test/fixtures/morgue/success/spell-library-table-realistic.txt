@@ -1,0 +1,36 @@
+Your spell library contained the following spells:
+
+ Spells                   Type           Power      Damage    Failure   Level
+ Sandblast                Erth           100%       2d20      0%          1
+ Kinetic Grapnel          Frge           100%       1d8       1%          1
+ Magic Dart               Conj           100%       1d8       1%          1
+ Poisonous Vapours        Alch/Air       100%       1d4       1%          1
+ Shock                    Conj/Air       100%       1d9       1%          1
+ Mercury Arrow            Conj/Alch      100%       2d11      1%          2
+ Momentum Strike          Conj/Tloc      100%       3d10      1%          2
+ Static Discharge         Conj/Air       100%       3-8/arc   1%          2
+ Hailstorm                Conj/Ice       92%        3d15      1%          3
+ Inner Flame              Hex/Fire       92%        N/A       1%          3
+ Stone Arrow              Conj/Erth      100%       3d13      1%          3
+ Brom's Barrelling Bould  Conj/Erth      100%       2d14      1%          4
+ Fulminant Prism          Conj/Alch      51%        3d22      1%          4
+ Olgreb's Toxic Radiance  Alch           100%       N/A       1%          4
+ Volatile Blastmotes      Fire/Tloc      100%       2d18      4%          3
+ Iskenderun's Mystic Bla  Conj/Tloc      92%        2d18      17%         4
+ Passwall                 Erth           49%        N/A       9%          3
+ Fireball                 Conj/Fire      47%        3d19      13%         5
+ Arcjolt                  Conj/Air       46%        1d56      22%         5
+ Nazja's Percussive Temp  Frge           46%        4d11      22%         5
+ Freezing Cloud           Conj/Ice/Air   45%        6-21      32%         5
+ Leda's Liquefaction      Alch/Erth      22%        N/A       41%         4
+ Soul Splinter            Necr           84%        N/A       56%         1
+ Jinxbite                 Hex            42%        2d2       71%         2
+ Alistair's Intoxication  Alch           27%        N/A       89%         5
+ Confusing Touch          Hex            21%        N/A       90%         3
+ Gloom                    Hex/Necr       42%        N/A       90%         3
+ Sigil of Binding         Hex            21%        N/A       90%         3
+ Tukima's Dance           Hex            21%        N/A       90%         3
+ Ensorcelled Hibernation  Hex/Ice        26%        N/A       94%         2
+ Apportation              Tloc           10%        N/A       99%         1
+ Summon Small Mammal      Summ           20%        N/A       99%         1
+ Blink                    Tloc           10%        N/A       99%         2

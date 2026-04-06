@@ -1,0 +1,37 @@
+Dungeon Crawl Stone Soup version 0.34.0 (webtiles) character file.
+
+Game seed: 12345
+
+Sorcerer the Caller (Djinni Fire Elementalist)      Turns: 1234, Time: 00:12:34
+
+Health: 34/34      AC:  4    Str:  8    XL:     7   Next: 12%
+Magic:  17/17      EV: 11    Int: 19    God:
+Gold: 123          SH:  0    Dex: 14    Spells: 2/17 levels left
+
+Inventory:
+
+Armour
+ a - a +2 robe of Willpower (worn)
+ b - a +0 buckler (worn)
+
+
+   Skills:
+ + Level 2.3 Armour
+ + Level 8.1 Dodging
+ + Level 0.0 Shields
+ + Level 12.4 Spellcasting
+ + Level 11.2 Conjurations
+ + Level 9.7 Fire Magic
+
+
+You had 2 spell levels left.
+You knew the following spells:
+
+Your Spells         Type       Power   Damage   Failure   Level
+a - Flame Wave      Conj/Fire  100%    3d16     3%        4
+
+Your spell library contained the following spells:
+
+Spells              Type       Power   Damage   Failure   Level
+Fireball            Conj/Fire  100%    3d20     12%       5
+Blink               Tloc       100%    N/A      22%       2

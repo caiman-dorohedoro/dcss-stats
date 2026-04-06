@@ -1,0 +1,75 @@
+ Dungeon Crawl Stone Soup version 0.35-a0-181-g84ebf06 (webtiles) character file.
+
+Game seed: 10492857596665655916
+
+3046 dolemite99 the Cleaver (level 9, -4/91 (105) HPs)
+             Began as a Minotaur Berserker on Apr 3, 2026.
+             Was an Elder of Trog.
+             Slain by a wight
+             ... wielding a +0 halberd
+              (7 damage)
+             ... on level 8 of the Dungeon.
+             The game lasted 00:06:16 (7158 turns).
+
+dolemite99 the Cleaver (Minotaur Berserker)         Turns: 7158, Time: 00:06:17
+
+HP:   -4/91 (105)   AC: 14    Str: 25    XL:     9   Next: 56%
+MP:   8/8           EV:  6    Int:  4    God:    Trog [****..]
+Gold: 366           SH:  0    Dex: 11    Spells: 8/8 levels left
+
+rFire   . . .  (100%)   e - +2 war axe (drain)
+rCold   . . .  (100%)   (no offhand)
+rNeg    . . .  (100%)   b - +0 plate armour
+rPois   .      (100%)   (no helmet)
+rElec   .      (100%)   g - +1 cloak
+rCorr   .      (100%)   (no gloves)
+SInv    .               a - +0 pair of boots
+Will    .....           (no amulet)
+Stlth                   i - ring of flight
+HPRegen 0.35/turn       f - +4 ring of slaying
+MPRegen 0.11/turn
+
+%: no passive effects
+@: berserking, flying, drained, very quick
+A: horns 2, retaliatory headbutt
+a: Renounce Religion (0%), Berserk (0%), Trog's Hand (0%), Brothers in Arms
+(69%)
+
+
+You were on level 8 of the Dungeon.
+You worshipped Trog.
+Trog was greatly pleased with you.
+You visited 1 branch of the dungeon, and saw 8 of its levels.
+
+You collected 366 gold pieces.
+
+Inventory:
+
+Hand Weapons
+ e - a +2 war axe of draining (weapon)
+Missiles
+ j - a poisoned dart
+ k - 2 javelins (quivered)
+Armour
+ a - a +0 pair of boots (worn)
+ b - a +0 plate armour (worn)
+ g - a +1 cloak (worn)
+ h - a +0 chain mail
+Jewellery
+ f - a +4 ring of slaying (worn)
+ i - a ring of flight (worn)
+Scrolls
+ t - 3 scrolls of teleportation
+
+
+   Skills:
+ - Level 3.6 Fighting
+ + Level 13.1 Axes
+ * Level 8.0 Throwing
+ - Level 2.4 Armour
+ - Level 2.1 Dodging
+
+
+You had 8 spell levels left.
+You didn't know any spells.
+Your spell library was empty.

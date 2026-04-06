@@ -1,0 +1,2 @@
+name=alice:start=20260405000102:v=0.34:end=20260405010203:tmsg=slain by an orc:: warrior
+name=bob:start=20260405030405:v=0.34:end=20260405040506:tmsg=escaped wi

@@ -1,0 +1,24 @@
+Dungeon Crawl Stone Soup version 0.34.1
+You are a Djinni Fire Elementalist.
+You have 8 Strength, 19 Intelligence and 14 Dexterity.
+
+Magic Modifiers:
+Wizardry: 1
+Channel: 0
+Wild Magic: 0
+
+Skills:
++ Level 2.3 Armour
++ Level 8.1 Dodging
++ Level 0.0 Shields
++ Level 12.4 Spellcasting
++ Level 11.2 Conjurations
++ Level 9.7 Fire Magic
+
+Equipment:
+a - +2 robe of Willpower (worn)
+b - +0 buckler (worn)
+
+Spells:
+* Flame Wave 3%
+Fireball 12%

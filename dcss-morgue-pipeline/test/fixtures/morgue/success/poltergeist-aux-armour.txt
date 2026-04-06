@@ -1,0 +1,22 @@
+Dungeon Crawl Stone Soup version 0.35-a0-181-g84ebf06 (webtiles) character file.
+
+jkt the Sneak (Poltergeist Enchanter)               Turns: 4652, Time: 00:12:34
+
+Health: -5/46      AC:  8    Str:  4    XL:     8   Next: 52%
+Magic:  11/14      EV: 14    Int: 20    God:    Dithmenos [......]
+Gold:   124        SH:  5    Dex: 20    Spells: 6/15 levels left
+
+Inventory:
+
+Hand Weapons
+ a - a +2 dagger (weapon)
+Armour
+ f - a +0 helmet (haunted)
+ i - a +2 cloak (haunted)
+Jewellery
+ g - a +6 ring of dexterity (worn)
+ j - an amulet of reflection (worn)
+
+
+   Skills:
+ + Level 4.7 Dodging

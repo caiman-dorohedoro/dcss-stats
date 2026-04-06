@@ -1,0 +1,5 @@
+.npm-cache/
+coverage/
+data/
+dist/
+node_modules/

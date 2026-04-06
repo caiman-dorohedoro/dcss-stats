@@ -1,0 +1,6 @@
+Dungeon Crawl Stone Soup version 0.34.1
+You are a Djinni Fire Elementalist.
+You have 8 Strength, 19 Intelligence and 14 Dexterity.
+
+Equipment:
+a - +0 shimmering barrier (worn)

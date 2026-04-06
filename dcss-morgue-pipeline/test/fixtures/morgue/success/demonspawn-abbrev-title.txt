@@ -1,0 +1,35 @@
+ Dungeon Crawl Stone Soup version 0.34.0 (webtiles) character file.
+
+46 pichaelthompson the Grave Robber (level 3, -1/26 HPs)
+             Began as a Demonspawn Necromancer on Apr 3, 2026.
+             Succumbed to an adder's poison
+             ... on level 2 of the Dungeon.
+             The game lasted 00:01:43 (1590 turns).
+
+pichaelthompson the Grave Robber (DsNe)             Turns: 1590, Time: 00:01:44
+
+Health: -1/26      AC:  4    Str:  8    XL:     3   Next: 44%
+Magic:  5/6        EV: 11    Int: 17    God:
+Gold:   87         SH:  0    Dex: 13    Spells: 3/6 levels left
+
+Inventory:
+
+Armour
+ b - a +0 robe (worn)
+ c - a +1 pair of gloves (worn)
+
+
+   Skills:
+ + Level 1.0 Fighting
+ + Level 2.1 Dodging
+ + Level 2.2 Stealth
+ + Level 2.3 Spellcasting
+ * Level 4.9 Necromancy
+
+
+You had 3 spell levels left.
+You knew the following spells:
+
+ Your Spells              Type           Power      Damage    Failure   Level
+a - Soul Splinter         Necr           100%       N/A       2%          1
+b - Grave Claw            Necr           56%        2d11      3%          2
