@@ -41,16 +41,16 @@ function matchSpecies(descriptor: string): string {
 }
 
 function parseSpecies(text: string): string {
-  const directDescriptor = text.match(/You are an? (.+?)\./)?.[1]
-
-  if (directDescriptor) {
-    return matchSpecies(directDescriptor)
-  }
-
   const beganAsDescriptor = text.match(/^\s*Began as an? (.+?) on [A-Z][a-z]{2} \d{1,2}, \d{4}\.$/m)?.[1]
 
   if (beganAsDescriptor) {
     return matchSpecies(beganAsDescriptor)
+  }
+
+  const directDescriptor = text.match(/You are an? (.+?)\./)?.[1]
+
+  if (directDescriptor) {
+    return matchSpecies(directDescriptor)
   }
 
   const titleDescriptor = text.match(/^[^\n]*\(([^)]+)\)\s+Turns:/m)?.[1]

@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from 'node:fs/promises'
+import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import type { PoliteFetch } from '../net/politeFetch'
 import type { ReadLogfileSlice } from './syncLogfile'
@@ -38,6 +38,31 @@ async function cacheLogfileSlice(
 
   await mkdir(dirPath, { recursive: true })
   await writeFile(filePath, input.text, 'utf8')
+}
+
+async function readLatestCachedSlice(rootDir: string, input: { serverId: string; version: string }) {
+  const dirPath = path.resolve(rootDir, input.serverId, input.version)
+  const entries = await readdir(dirPath).catch(() => [])
+  const logfileEntries = entries.filter((entry) => /^\d+\.log$/.test(entry)).sort()
+  const latestEntry = logfileEntries.at(-1)
+
+  if (!latestEntry) {
+    return null
+  }
+
+  const offset = Number.parseInt(latestEntry.replace(/\.log$/, ''), 10)
+
+  if (!Number.isFinite(offset)) {
+    return null
+  }
+
+  const text = await readFile(path.resolve(dirPath, latestEntry), 'utf8')
+
+  return {
+    text,
+    byteOffset: offset,
+    cachePath: path.resolve(dirPath, latestEntry),
+  }
 }
 
 function createIdentityHeaders(): Headers {
@@ -183,10 +208,35 @@ export function createHttpLogfileReader(options: {
   logfilesDir: string
   fetchImpl: PoliteFetch
   initialTailBytes?: number
+  log?: (message: string) => void
 }): ReadLogfileSlice {
   const initialTailBytes = options.initialTailBytes ?? 1_048_576
 
   return async (input) => {
+    if (input.byteOffset === 0) {
+      const cached = await readLatestCachedSlice(options.logfilesDir, {
+        serverId: input.serverId,
+        version: input.version,
+      })
+
+      if (cached) {
+        options.log?.(
+          `[logfile] reusing cached slice ${input.serverId}/${input.version} @${cached.byteOffset} from ${cached.cachePath}`,
+        )
+
+        return {
+          text: cached.text,
+          byteOffset: cached.byteOffset,
+        }
+      }
+    }
+
+    options.log?.(
+      input.byteOffset === 0
+        ? `[logfile] fetching tail slice for ${input.serverId}/${input.version} from ${input.logfileUrl}`
+        : `[logfile] fetching range for ${input.serverId}/${input.version} from ${input.logfileUrl} starting at byte ${input.byteOffset}`,
+    )
+
     const slice =
       input.byteOffset === 0
         ? await fetchInitialTail(options.fetchImpl, input.logfileUrl, initialTailBytes)

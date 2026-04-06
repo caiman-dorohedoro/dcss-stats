@@ -14,6 +14,8 @@ export type RuntimeCommandOptions = {
   minDelayMs?: number
   timeoutMs?: number
   fresh?: boolean
+  freshLogfiles?: boolean
+  verbose?: boolean
 }
 
 export type BootstrapCommandOptions = RuntimeCommandOptions &
@@ -40,12 +42,21 @@ async function withRuntime<T>(
     paths: ReturnType<typeof resolveRuntimePaths>
     politeFetch: ReturnType<typeof createPoliteFetch>
     db: ReturnType<typeof openDb>
+    log?: (message: string) => void
   }) => Promise<T>,
 ): Promise<T> {
   const paths = resolveRuntimePaths(options.dataDir)
+  const log = options.verbose ? (message: string) => console.error(message) : undefined
 
   if (options.fresh) {
-    await resetRuntimeDataDir(paths)
+    await resetRuntimeDataDir(paths, {
+      clearLogfiles: options.freshLogfiles,
+    })
+    log?.(
+      options.freshLogfiles
+        ? `[runtime] fresh run: cleared database, morgues, audit, and logfile cache in ${paths.dataDir}`
+        : `[runtime] fresh run: cleared database, morgues, and audit in ${paths.dataDir}; preserving logfile cache`,
+    )
   }
 
   await ensureRuntimePaths(paths)
@@ -58,7 +69,7 @@ async function withRuntime<T>(
 
   try {
     migrate(db)
-    return await run({ paths, politeFetch, db })
+    return await run({ paths, politeFetch, db, log })
   } finally {
     db.close()
   }
@@ -67,7 +78,7 @@ async function withRuntime<T>(
 export async function runBootstrapCommand(
   options: BootstrapCommandOptions,
 ): Promise<PipelineSummary> {
-  return withRuntime(options, async ({ db, paths, politeFetch }) =>
+  return withRuntime(options, async ({ db, paths, politeFetch, log }) =>
     runBootstrap({
       db,
       options: {
@@ -76,9 +87,11 @@ export async function runBootstrapCommand(
         serverIds: options.serverIds,
       },
       paths,
+      log,
       readLogfileSlice: createHttpLogfileReader({
         logfilesDir: paths.logfilesDir,
         fetchImpl: politeFetch,
+        log,
       }),
       fetchMorgue: (targetDb, input) =>
         defaultFetchMorgue(targetDb, {
@@ -92,7 +105,7 @@ export async function runBootstrapCommand(
 export async function runIncrementalCommand(
   options: IncrementalCommandOptions,
 ): Promise<PipelineSummary> {
-  return withRuntime(options, async ({ db, paths, politeFetch }) =>
+  return withRuntime(options, async ({ db, paths, politeFetch, log }) =>
     runIncremental({
       db,
       options: {
@@ -102,9 +115,11 @@ export async function runIncrementalCommand(
         serverIds: options.serverIds,
       },
       paths,
+      log,
       readLogfileSlice: createHttpLogfileReader({
         logfilesDir: paths.logfilesDir,
         fetchImpl: politeFetch,
+        log,
       }),
       fetchMorgue: (targetDb, input) =>
         defaultFetchMorgue(targetDb, {

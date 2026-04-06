@@ -60,7 +60,12 @@ async function looksLikeRuntimeDataDir(paths: RuntimePaths): Promise<boolean> {
   ).catch(() => false)
 }
 
-export async function resetRuntimeDataDir(paths: RuntimePaths): Promise<void> {
+export async function resetRuntimeDataDir(
+  paths: RuntimePaths,
+  options?: {
+    clearLogfiles?: boolean
+  },
+): Promise<void> {
   if (!(await pathExists(paths.dataDir))) {
     return
   }
@@ -77,7 +82,15 @@ export async function resetRuntimeDataDir(paths: RuntimePaths): Promise<void> {
     )
   }
 
-  await rm(paths.dataDir, { recursive: true, force: true })
+  await rm(paths.dbPath, { force: true })
+  await rm(`${paths.dbPath}-shm`, { force: true })
+  await rm(`${paths.dbPath}-wal`, { force: true })
+  await rm(paths.morguesDir, { recursive: true, force: true })
+  await rm(paths.auditDir, { recursive: true, force: true })
+
+  if (options?.clearLogfiles) {
+    await rm(paths.logfilesDir, { recursive: true, force: true })
+  }
 }
 
 export async function ensureRuntimePaths(paths: RuntimePaths): Promise<void> {

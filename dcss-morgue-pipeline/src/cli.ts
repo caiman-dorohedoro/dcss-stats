@@ -39,8 +39,10 @@ Options:
   --per-bucket <n>     Candidates per (server, version) bucket. Default: 10
   --server <ids>       Comma-separated server ids. Default: all active servers
   --data-dir <path>    Override runtime data directory
-  --fresh              Delete existing runtime data in --data-dir before running
+  --fresh              Clear DB, morgues, and audit before running, but keep logfile cache
+  --fresh-logfiles     Also clear cached logfile slices. Implies --fresh
   --dry-run            Discover and sample, but skip morgue fetch/parse
+  --verbose            Print discovery, fetch, and parse progress logs
   --min-delay-ms <n>   Minimum delay per host. Default: 2000
   --timeout-ms <n>     HTTP timeout in milliseconds. Default: 10000`
 
@@ -50,8 +52,10 @@ Options:
   --since <iso8601>    Lower bound for discovered_at. Default: now minus 6 hours
   --server <ids>       Comma-separated server ids. Default: all active servers
   --data-dir <path>    Override runtime data directory
-  --fresh              Delete existing runtime data in --data-dir before running
+  --fresh              Clear DB, morgues, and audit before running, but keep logfile cache
+  --fresh-logfiles     Also clear cached logfile slices. Implies --fresh
   --dry-run            Discover and sample, but skip morgue fetch/parse
+  --verbose            Print discovery, fetch, and parse progress logs
   --min-delay-ms <n>   Minimum delay per host. Default: 2000
   --timeout-ms <n>     HTTP timeout in milliseconds. Default: 10000`
 
@@ -154,9 +158,11 @@ function parseCommonOptionBag(args: string[]): {
     dataDir?: string
     dryRun: boolean
     fresh: boolean
+    freshLogfiles: boolean
     minDelayMs?: number
     timeoutMs?: number
     serverIds?: ServerId[]
+    verbose: boolean
   }
   rest: string[]
 } {
@@ -164,12 +170,16 @@ function parseCommonOptionBag(args: string[]): {
     dataDir?: string
     dryRun: boolean
     fresh: boolean
+    freshLogfiles: boolean
     minDelayMs?: number
     timeoutMs?: number
     serverIds?: ServerId[]
+    verbose: boolean
   } = {
     dryRun: false,
     fresh: false,
+    freshLogfiles: false,
+    verbose: false,
   }
   const rest: string[] = []
 
@@ -198,6 +208,12 @@ function parseCommonOptionBag(args: string[]): {
       continue
     }
 
+    if (current === '--fresh-logfiles') {
+      parsed.fresh = true
+      parsed.freshLogfiles = true
+      continue
+    }
+
     if (current === '--min-delay-ms') {
       parsed.minDelayMs = parseIntegerOption(current, args[index + 1])
       index += 1
@@ -207,6 +223,11 @@ function parseCommonOptionBag(args: string[]): {
     if (current === '--timeout-ms') {
       parsed.timeoutMs = parseIntegerOption(current, args[index + 1])
       index += 1
+      continue
+    }
+
+    if (current === '--verbose') {
+      parsed.verbose = true
       continue
     }
 
@@ -237,9 +258,11 @@ function parseBootstrapOptions(args: string[]): BootstrapCommandOptions {
     dataDir: common.parsed.dataDir,
     dryRun: common.parsed.dryRun,
     fresh: common.parsed.fresh,
+    freshLogfiles: common.parsed.freshLogfiles,
     minDelayMs: common.parsed.minDelayMs,
     timeoutMs: common.parsed.timeoutMs,
     serverIds: common.parsed.serverIds,
+    verbose: common.parsed.verbose,
   }
 }
 
@@ -272,9 +295,11 @@ function parseIncrementalOptions(args: string[]): IncrementalCommandOptions {
     dataDir: common.parsed.dataDir,
     dryRun: common.parsed.dryRun,
     fresh: common.parsed.fresh,
+    freshLogfiles: common.parsed.freshLogfiles,
     minDelayMs: common.parsed.minDelayMs,
     timeoutMs: common.parsed.timeoutMs,
     serverIds: common.parsed.serverIds,
+    verbose: common.parsed.verbose,
   }
 }
 

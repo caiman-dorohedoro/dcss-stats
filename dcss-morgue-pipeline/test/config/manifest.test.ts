@@ -14,6 +14,7 @@ describe('manifest', () => {
   it('includes CAO and CBRG for normalized 0.34/trunk buckets', () => {
     expect(ACTIVE_SERVER_IDS).toContain('CAO')
     expect(ACTIVE_SERVER_IDS).toContain('CBRG')
+    expect(ACTIVE_SERVER_IDS).not.toContain('CUE')
     expect(getServerManifest('CAO').buckets).toEqual(['0.34', 'trunk'])
   })
 

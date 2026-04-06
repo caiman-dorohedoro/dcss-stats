@@ -30,6 +30,8 @@ Commands:
         '--data-dir',
         '/tmp/dcss-data',
         '--fresh',
+        '--fresh-logfiles',
+        '--verbose',
         '--min-delay-ms',
         '50',
         '--timeout-ms',
@@ -44,8 +46,10 @@ Commands:
       dataDir: '/tmp/dcss-data',
       dryRun: false,
       fresh: true,
+      freshLogfiles: true,
       minDelayMs: 50,
       timeoutMs: 2000,
+      verbose: true,
     })
     expect(result).toEqual({
       exitCode: 0,
@@ -73,10 +77,12 @@ Parsed failures: 1`,
       since: '2026-04-05T00:00:00.000Z',
       dryRun: true,
       fresh: false,
+      freshLogfiles: false,
       dataDir: undefined,
       minDelayMs: undefined,
       timeoutMs: undefined,
       serverIds: undefined,
+      verbose: false,
     })
     expect(result).toEqual({
       exitCode: 0,
@@ -108,6 +114,13 @@ Dry run enabled: skipped morgue fetch and parse.`,
     await expect(runCli(['bootstrap', '--server', 'NOPE'])).resolves.toEqual({
       exitCode: 1,
       stdout: 'Unknown server id(s): NOPE',
+    })
+  })
+
+  it('rejects CUE because it is no longer an active public server target', async () => {
+    await expect(runCli(['bootstrap', '--server', 'CUE'])).resolves.toEqual({
+      exitCode: 1,
+      stdout: 'Unknown server id(s): CUE',
     })
   })
 })

@@ -35,6 +35,7 @@ export type PipelineContext = {
   fetchMorgue?: typeof defaultFetchMorgue
   parseMorgue?: typeof defaultParseMorgue
   readMorgueText?: (localPath: string) => Promise<string>
+  log?: (message: string) => void
 }
 
 function getNow(ctx: PipelineContext): string {
@@ -68,6 +69,7 @@ export async function runDiscoveryPhase(ctx: PipelineContext) {
     readLogfileSlice: ctx.readLogfileSlice,
     now: ctx.now,
     serverIds: ctx.options.serverIds,
+    log: ctx.log,
   })
 }
 
@@ -86,7 +88,10 @@ export async function executeSelectedCandidates(
   let parsedSuccesses = 0
   let parsedFailures = 0
 
-  for (const candidate of candidates) {
+  for (const [index, candidate] of candidates.entries()) {
+    ctx.log?.(
+      `[candidate ${index + 1}/${candidates.length}] ${candidate.serverId}/${candidate.version} ${candidate.playerName} ended ${candidate.endedAt}`,
+    )
     const fetchRow = await fetchMorgue(ctx.db, {
       candidate,
       rootDir: ctx.paths?.morguesDir ?? path.resolve(process.cwd(), 'data/morgues'),
@@ -94,6 +99,9 @@ export async function executeSelectedCandidates(
     })
 
     if (fetchRow.fetchStatus !== 'success' || !fetchRow.localPath) {
+      ctx.log?.(
+        `[fetch] failed ${candidate.playerName}: ${fetchRow.lastError ?? fetchRow.fetchStatus} (${fetchRow.morgueUrl})`,
+      )
       parseResultRepo.upsertFailure(ctx.db, {
         candidateId: candidate.candidateId,
         failureCode: 'morgue_fetch_failed',
@@ -103,6 +111,8 @@ export async function executeSelectedCandidates(
       parsedFailures += 1
       continue
     }
+
+    ctx.log?.(`[fetch] success ${candidate.playerName}: ${fetchRow.morgueUrl}`)
 
     const text = await readMorgueText(fetchRow.localPath)
     const result = parseMorgue(text, {
@@ -115,6 +125,9 @@ export async function executeSelectedCandidates(
     })
 
     if (result.ok) {
+      ctx.log?.(
+        `[parse] success ${candidate.playerName}: species=${result.record.species}, spells=${result.record.spells.length}`,
+      )
       parseResultRepo.upsertSuccess(ctx.db, {
         candidateId: candidate.candidateId,
         parsedJson: result.record,
@@ -122,6 +135,9 @@ export async function executeSelectedCandidates(
       })
       parsedSuccesses += 1
     } else {
+      ctx.log?.(
+        `[parse] failure ${candidate.playerName}: ${result.failure.reason}${result.failure.detail ? ` (${result.failure.detail})` : ''}`,
+      )
       parseResultRepo.upsertFailure(ctx.db, {
         candidateId: candidate.candidateId,
         failureCode: result.failure.reason,
@@ -163,6 +179,7 @@ export async function runBootstrap(ctx: PipelineContext): Promise<PipelineSummar
       perBucket: ctx.options.perBucket,
     },
   )
+  ctx.log?.(`[bootstrap] selected ${selected.length} candidates`)
   if (ctx.options.dryRun) {
     return {
       selectedCandidates: selected.length,

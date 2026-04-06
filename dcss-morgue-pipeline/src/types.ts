@@ -143,7 +143,6 @@ export const ACTIVE_SERVER_IDS = [
   'CNC',
   'CDI',
   'CXC',
-  'CUE',
   'CBR2',
   'CAO',
   'LLD',

@@ -1,4 +1,4 @@
-import { mkdtemp, readFile } from 'node:fs/promises'
+import { mkdtemp, mkdir, readFile, writeFile } from 'node:fs/promises'
 import os from 'node:os'
 import path from 'node:path'
 import { describe, expect, it, vi } from 'vitest'
@@ -69,5 +69,32 @@ describe('createHttpLogfileReader', () => {
     await expect(
       readFile(path.resolve(rootDir, 'CAO', '0.34', '000000000007.log'), 'utf8'),
     ).resolves.toBe('line-2\nline-3\n')
+  })
+
+  it('reuses a cached initial slice instead of refetching when byteOffset is zero', async () => {
+    const rootDir = await mkdtemp(path.join(os.tmpdir(), 'dcss-log-slice-'))
+    const cacheDir = path.resolve(rootDir, 'CAO', '0.34')
+
+    await mkdir(cacheDir, { recursive: true })
+    await writeFile(path.resolve(cacheDir, '000000000020.log'), 'cached-a\ncached-b\n', 'utf8')
+
+    const fetchImpl = vi.fn()
+    const reader = createHttpLogfileReader({
+      logfilesDir: rootDir,
+      fetchImpl,
+    })
+
+    const result = await reader({
+      serverId: 'CAO',
+      version: '0.34',
+      logfileUrl: 'https://crawl.akrasiac.org/logfile',
+      byteOffset: 0,
+    })
+
+    expect(fetchImpl).not.toHaveBeenCalled()
+    expect(result).toEqual({
+      text: 'cached-a\ncached-b\n',
+      byteOffset: 20,
+    })
   })
 })

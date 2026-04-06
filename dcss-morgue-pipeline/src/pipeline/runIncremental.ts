@@ -23,6 +23,7 @@ export async function runIncremental(ctx: PipelineContext): Promise<PipelineSumm
       perBucket: ctx.options.perBucket,
     },
   )
+  ctx.log?.(`[incremental] selected ${selected.length} candidates since ${since}`)
   if (ctx.options.dryRun) {
     return {
       selectedCandidates: selected.length,

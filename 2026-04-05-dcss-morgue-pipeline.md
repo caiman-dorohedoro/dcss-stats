@@ -212,7 +212,7 @@ export type TargetVersion = '0.34' | 'trunk'
 export const CANONICAL_BODY_ARMOUR = ['none', 'robe', 'leather armour', 'ring mail', 'scale mail', 'chain mail', 'plate armour'] as const
 export const CANONICAL_SHIELDS = ['none', 'buckler', 'kite shield', 'tower shield'] as const
 
-export const ACTIVE_SERVER_IDS = ['CBRG', 'CNC', 'CDI', 'CXC', 'CUE', 'CBR2', 'CAO', 'LLD', 'CPO'] as const
+export const ACTIVE_SERVER_IDS = ['CBRG', 'CNC', 'CDI', 'CXC', 'CBR2', 'CAO', 'LLD', 'CPO'] as const
 
 export const SERVER_MANIFEST = {
   CAO: {
@@ -734,6 +734,12 @@ export async function runIncremental(ctx: PipelineContext) {
 - `npm run bootstrap`
 - `npm run incremental`
 - `npm run audit`
+
+## CLI Notes
+- `--fresh` resets the SQLite DB, fetched morgues, and audit output, but preserves cached logfile slices.
+- `--fresh-logfiles` also clears cached logfile slices.
+- `--verbose` prints logfile reuse/fetch decisions, candidate selection, fetch URLs, and parse outcomes.
+- `--min-delay-ms` applies to the shared host queue used by both logfile discovery and morgue fetching.
 ```
 
 - [ ] **Step 4: Run full project verification**
@@ -754,7 +760,7 @@ git commit -m "feat: wire pipeline workflows and audit output"
 - [ ] Run: `cd dcss-morgue-pipeline && npm run typecheck`
 - [ ] Run: `cd dcss-morgue-pipeline && npm run bootstrap -- --help`
 - [ ] Run: `cd dcss-morgue-pipeline && npm run incremental -- --help`
-- [ ] Confirm `README.md` documents storage layout, shared host politeness limits, bootstrap workflow, and audit bundle generation.
+- [ ] Confirm `README.md` documents storage layout, shared host politeness limits, bootstrap workflow, audit bundle generation, and CLI options such as `--fresh`, `--fresh-logfiles`, and `--verbose`.
 
 ## Notes for the Implementer
 

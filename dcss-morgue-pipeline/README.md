@@ -16,30 +16,98 @@ Help is available with:
 - `npm run incremental -- --help`
 - `npm run audit -- --help`
 
-Recommended first run:
+## Quick Start
 
-- `npm run bootstrap -- --server CAO --per-bucket 1`
-- `npm run incremental -- --server CAO --per-bucket 1`
-- `npm run audit -- --sample-size 10`
+- Small first bootstrap:
+  `npm run bootstrap -- --server CAO --per-bucket 1 --data-dir /tmp/dcss-bootstrap-test --fresh --verbose`
+- Rerun from a clean DB while reusing cached logfile slices:
+  `npm run bootstrap -- --server CAO,CBR2,CBRG,CNC --per-bucket 10 --data-dir /tmp/dcss-bootstrap-test --fresh --verbose`
+- Fully cold rerun, including logfile cache:
+  `npm run bootstrap -- --server CAO,CBR2,CBRG,CNC --per-bucket 10 --data-dir /tmp/dcss-bootstrap-test --fresh-logfiles --verbose`
+- Incremental sample over the default 6-hour window:
+  `npm run incremental -- --server CAO,CBR2 --per-bucket 5 --data-dir /tmp/dcss-bootstrap-test --verbose`
+- Audit bundle:
+  `npm run audit -- --data-dir /tmp/dcss-bootstrap-test --sample-size 10`
 
-Useful CLI options:
+`--verbose` prints runtime resets, logfile reuse/fetch decisions, per-bucket discovery progress, candidate selection, morgue fetch URLs, and parse outcomes.
 
-- `--server CAO,CBRG` to limit work to specific servers
-- `--data-dir /path/to/data` to move the SQLite file and cached artifacts
-- `--dry-run` on `bootstrap` or `incremental` to stop after discovery and selection
-- `--since 2026-04-05T00:00:00Z` on `incremental` to override the default 6-hour window
+## CLI Reference
+
+### `bootstrap`
+
+Discovers candidates from each selected `(server, version)` bucket, samples up to `--per-bucket` rows per bucket, fetches morgues, and parses them.
+
+Useful options:
+
+- `--per-bucket 10` sets the sample size for each `(server, version)` bucket
+- `--server CAO,CBR2,CBRG` limits work to specific active servers
+- `--data-dir /path/to/data` relocates SQLite state and cached artifacts
+- `--fresh` clears `pipeline.sqlite`, `morgues/`, and `audit/`, but preserves cached logfile slices
+- `--fresh-logfiles` does the same reset and also clears `logfiles/`
+- `--dry-run` stops after discovery and selection
+- `--verbose` prints discovery, fetch, and parse progress logs
+- `--min-delay-ms 3000` increases the minimum delay between requests to the same host
+- `--timeout-ms 20000` increases the HTTP timeout for logfile or morgue fetches
+
+### `incremental`
+
+Runs the same fetch/parse path, but only samples candidates discovered inside the incremental window.
+
+Useful options:
+
+- all shared options from `bootstrap`
+- `--since 2026-04-05T00:00:00Z` overrides the default `now - 6 hours` window
+
+### `audit`
+
+Writes a JSON audit bundle containing sampled successes and failures from the current SQLite state.
+
+Useful options:
+
+- `--sample-size 20` controls the number of audit rows emitted
+- `--data-dir /path/to/data` selects which runtime state to audit
+
+## Server Set
+
+Active server IDs are derived from this repo's checked-in server definitions:
+
+- `CAO`
+- `CBR2`
+- `CBRG`
+- `CDI`
+- `CNC`
+- `CPO`
+- `CXC`
+- `LLD`
+
+`CUE` is intentionally excluded from the active set because `underhound.eu` morgue URLs currently require HTTP basic auth and return `401 Unauthorized` to anonymous fetches.
 
 ## Storage Layout
 
-- `data/logfiles/` — cached logfile content or slices
+- `data/logfiles/` — cached logfile content or slices, reused across `--fresh` runs unless `--fresh-logfiles` is set
 - `data/morgues/` — fetched raw morgue files
 - `data/audit/` — sampled audit bundles
 - `data/pipeline.sqlite` — pipeline offsets, candidates, fetch statuses, and parse results
 
+To inspect parsed rows directly:
+
+```bash
+sqlite3 /tmp/dcss-bootstrap-test/pipeline.sqlite \
+  ".headers on" ".mode line" \
+  "select
+     json_extract(parsed_json,'$.playerName') as player,
+     json_extract(parsed_json,'$.species') as species,
+     json_array_length(json_extract(parsed_json,'$.spells')) as spell_count
+   from parse_results
+   where parse_status = 'success'
+   order by player;"
+```
+
 ## Politeness Limits
 
-- per-host concurrency = 1
-- minimum delay between requests to the same host = 2 seconds
+- host-based concurrency = 1
+- minimum delay between requests to the same host = 2 seconds by default
+- logfile discovery and morgue fetching share the same host queue
 - different hosts may run in parallel
 
 The same host-queue policy is intended for both logfile discovery and morgue fetching.
@@ -50,6 +118,7 @@ The same host-queue policy is intended for both logfile discovery and morgue fet
 
 1. Discover candidate games from configured logfile sources.
    Unseen oversized logfiles are read from a recent tail window instead of from byte `0`.
+   If a cached logfile slice already exists for the bucket, `--fresh` runs reuse that cached slice.
 2. Stratify by `(server, version)` bucket.
 3. Select a bounded bootstrap sample per bucket.
 4. Fetch sampled morgues.
