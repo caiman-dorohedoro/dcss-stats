@@ -21,6 +21,9 @@ e - +0 pair of boots (worn)
 
 Dungeon Crawl Stone Soup version 0.34.1
 You are a Djinni Fire Elementalist.
+Health: 34/34      AC:  4    Str:  8    XL:     7   Next: 12%
+Magic:  17/17      EV: 11    Int: 19    God:
+Gold: 123          SH:  0    Dex: 14    Spells: 2/17 levels left
 You have 8 Strength, 19 Intelligence and 14 Dexterity.
 
 Spells:

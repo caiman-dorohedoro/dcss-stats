@@ -97,6 +97,9 @@ sqlite3 /tmp/dcss-bootstrap-test/pipeline.sqlite \
   "select
      json_extract(parsed_json,'$.playerName') as player,
      json_extract(parsed_json,'$.species') as species,
+     json_extract(parsed_json,'$.ac') as ac,
+     json_extract(parsed_json,'$.ev') as ev,
+     json_extract(parsed_json,'$.sh') as sh,
      json_array_length(json_extract(parsed_json,'$.spells')) as spell_count
    from parse_results
    where parse_status = 'success'

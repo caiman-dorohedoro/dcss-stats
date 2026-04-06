@@ -17,6 +17,9 @@ describe('extractBaseStats', () => {
     expect(parsed).toEqual({
       version: '0.34',
       species: 'Djinni',
+      ac: 4,
+      ev: 11,
+      sh: 0,
       strength: 8,
       intelligence: 19,
       dexterity: 14,
@@ -29,6 +32,9 @@ describe('extractBaseStats', () => {
     expect(parsed).toEqual({
       version: '0.34',
       species: 'Barachi',
+      ac: 3,
+      ev: 11,
+      sh: 0,
       strength: 12,
       intelligence: 9,
       dexterity: 15,
@@ -41,6 +47,9 @@ describe('extractBaseStats', () => {
     expect(parsed).toEqual({
       version: 'trunk',
       species: 'Minotaur',
+      ac: 14,
+      ev: 6,
+      sh: 0,
       strength: 25,
       intelligence: 4,
       dexterity: 11,
@@ -53,6 +62,9 @@ describe('extractBaseStats', () => {
     expect(parsed).toEqual({
       version: '0.34',
       species: 'Demonspawn',
+      ac: 4,
+      ev: 11,
+      sh: 0,
       strength: 8,
       intelligence: 17,
       dexterity: 13,

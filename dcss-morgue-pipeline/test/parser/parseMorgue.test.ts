@@ -29,6 +29,9 @@ describe('parseMorgue', () => {
     if (result.ok) {
       expect(result.record.version).toBe('0.34')
       expect(result.record.species).toBe('Barachi')
+      expect(result.record.ac).toBe(3)
+      expect(result.record.ev).toBe(11)
+      expect(result.record.sh).toBe(0)
       expect(result.record.bodyArmour).toBe('leather armour')
       expect(result.record.dodgingSkill).toBe(2.1)
       expect(result.record.spells).toEqual([])
@@ -45,6 +48,9 @@ describe('parseMorgue', () => {
     if (result.ok) {
       expect(result.record.version).toBe('trunk')
       expect(result.record.species).toBe('Minotaur')
+      expect(result.record.ac).toBe(14)
+      expect(result.record.ev).toBe(6)
+      expect(result.record.sh).toBe(0)
       expect(result.record.bodyArmour).toBe('plate armour')
       expect(result.record.bootsOrBarding).toBe(true)
       expect(result.record.cloak).toBe(true)
@@ -62,6 +68,9 @@ describe('parseMorgue', () => {
         conjurations: 11.2,
         fireMagic: 9.7,
       })
+      expect(result.record.ac).toBe(4)
+      expect(result.record.ev).toBe(11)
+      expect(result.record.sh).toBe(0)
       expect(result.record.spells).toContainEqual({
         name: 'Flame Wave',
         failurePercent: 3,

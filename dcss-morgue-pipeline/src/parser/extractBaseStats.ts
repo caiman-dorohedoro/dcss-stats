@@ -88,10 +88,27 @@ function parsePrimaryStats(text: string) {
   }
 }
 
+function parseDefensiveStats(text: string) {
+  const ac = text.match(/\bAC:\s+(-?\d+)/)?.[1]
+  const ev = text.match(/\bEV:\s+(-?\d+)/)?.[1]
+  const sh = text.match(/\bSH:\s+(-?\d+)/)?.[1]
+
+  if (!ac || !ev || !sh) {
+    throw new Error('Could not parse AC/EV/SH')
+  }
+
+  return {
+    ac: Number(ac),
+    ev: Number(ev),
+    sh: Number(sh),
+  }
+}
+
 export function extractBaseStats(text: string): BaseStatsSnapshot {
   return {
     version: parseVersion(text),
     species: parseSpecies(text),
+    ...parseDefensiveStats(text),
     ...parsePrimaryStats(text),
   }
 }

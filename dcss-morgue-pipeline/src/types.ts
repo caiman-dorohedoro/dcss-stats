@@ -52,6 +52,9 @@ export type CandidateGame = {
 export type BaseStatsSnapshot = {
   version: TargetVersion
   species: string
+  ac: number
+  ev: number
+  sh: number
   strength: number
   intelligence: number
   dexterity: number
