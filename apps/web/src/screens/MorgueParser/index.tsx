@@ -7,6 +7,24 @@ export function MorgueParserScreen() {
   const [input, setInput] = useState('')
   const [result, setResult] = useState<ParseMorgueTextResult | null>(null)
 
+  const sortedSpells = useMemo(() => {
+    if (!result?.ok) {
+      return []
+    }
+
+    return [...result.record.spells].sort((left, right) => {
+      if (left.failurePercent !== right.failurePercent) {
+        return left.failurePercent - right.failurePercent
+      }
+
+      if (left.memorized !== right.memorized) {
+        return left.memorized ? -1 : 1
+      }
+
+      return left.name.localeCompare(right.name)
+    })
+  }, [result])
+
   const prettyJson = useMemo(() => {
     if (!result) {
       return ''
@@ -111,6 +129,62 @@ export function MorgueParserScreen() {
               <div className="mt-4 rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-900 dark:border-rose-900/60 dark:bg-rose-950/30 dark:text-rose-100">
                 <div className="font-semibold">{result.failure.reason}</div>
                 {result.failure.detail && <div className="mt-1 text-xs opacity-80">{result.failure.detail}</div>}
+              </div>
+            )}
+
+            {result?.ok && (
+              <div className="mt-4 rounded-2xl border border-gray-200 bg-gray-50 p-3 dark:border-zinc-800 dark:bg-zinc-900">
+                <div className="mb-3 flex items-center justify-between gap-3">
+                  <div>
+                    <h3 className="text-sm font-semibold text-gray-950 dark:text-white">Spell List</h3>
+                    <p className="text-xs text-gray-500 dark:text-zinc-400">
+                      Sorted by lowest failure rate first.
+                    </p>
+                  </div>
+                  <span className="rounded-full bg-amber-100 px-2.5 py-1 text-[11px] font-semibold tracking-wide text-amber-800 uppercase dark:bg-amber-500/15 dark:text-amber-300">
+                    {sortedSpells.length} spells
+                  </span>
+                </div>
+
+                {sortedSpells.length > 0 ? (
+                  <div className="overflow-hidden rounded-2xl border border-gray-200 dark:border-zinc-800">
+                    <div className="grid grid-cols-[minmax(0,1fr)_6rem_7rem] bg-gray-100 px-3 py-2 text-[11px] font-semibold tracking-wide text-gray-500 uppercase dark:bg-zinc-800 dark:text-zinc-400">
+                      <div>Spell</div>
+                      <div className="text-right">Failure</div>
+                      <div className="text-right">Memorized</div>
+                    </div>
+                    <div className="max-h-80 overflow-auto">
+                      {sortedSpells.map((spell) => (
+                        <div
+                          key={`${spell.name}-${spell.failurePercent}-${spell.memorized ? 'y' : 'n'}`}
+                          className="grid grid-cols-[minmax(0,1fr)_6rem_7rem] items-center gap-3 border-t border-gray-200 bg-white px-3 py-2 text-sm dark:border-zinc-800 dark:bg-zinc-950"
+                        >
+                          <div className="min-w-0 truncate font-medium text-gray-900 dark:text-zinc-100">
+                            {spell.name}
+                          </div>
+                          <div className="text-right font-mono text-gray-700 dark:text-zinc-300">
+                            {spell.failurePercent}%
+                          </div>
+                          <div className="flex justify-end">
+                            <span
+                              className={
+                                spell.memorized
+                                  ? 'rounded-full bg-emerald-100 px-2 py-1 text-[11px] font-semibold tracking-wide text-emerald-800 uppercase dark:bg-emerald-500/15 dark:text-emerald-300'
+                                  : 'rounded-full bg-gray-100 px-2 py-1 text-[11px] font-semibold tracking-wide text-gray-600 uppercase dark:bg-zinc-800 dark:text-zinc-300'
+                              }
+                            >
+                              {spell.memorized ? 'Yes' : 'No'}
+                            </span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <div className="rounded-2xl border border-dashed border-gray-300 bg-white px-4 py-6 text-sm text-gray-500 dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-400">
+                    This morgue does not list memorized spells or a spell library.
+                  </div>
+                )}
               </div>
             )}
 
