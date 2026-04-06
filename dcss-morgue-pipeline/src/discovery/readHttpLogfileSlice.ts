@@ -1,7 +1,7 @@
 import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import type { PoliteFetch } from '../net/politeFetch'
-import type { ReadLogfileSlice } from './syncLogfile'
+import type { ReadBackfillSlice, ReadLogfileSlice } from './syncLogfile'
 
 type HttpSlice = {
   text: string
@@ -40,29 +40,70 @@ async function cacheLogfileSlice(
   await writeFile(filePath, input.text, 'utf8')
 }
 
-async function readLatestCachedSlice(rootDir: string, input: { serverId: string; version: string }) {
+type CachedSliceEntry = {
+  byteOffset: number
+  cachePath: string
+}
+
+async function listCachedSliceEntries(
+  rootDir: string,
+  input: { serverId: string; version: string },
+): Promise<CachedSliceEntry[]> {
   const dirPath = path.resolve(rootDir, input.serverId, input.version)
   const entries = await readdir(dirPath).catch(() => [])
-  const logfileEntries = entries.filter((entry) => /^\d+\.log$/.test(entry)).sort()
-  const latestEntry = logfileEntries.at(-1)
+  return entries
+    .filter((entry) => /^\d+\.log$/.test(entry))
+    .sort()
+    .map((entry) => ({
+      byteOffset: Number.parseInt(entry.replace(/\.log$/, ''), 10),
+      cachePath: path.resolve(dirPath, entry),
+    }))
+    .filter((entry) => Number.isFinite(entry.byteOffset))
+}
+
+async function readCachedSlice(entry: CachedSliceEntry) {
+  const text = await readFile(entry.cachePath, 'utf8')
+
+  return {
+    text,
+    byteOffset: entry.byteOffset,
+    cachePath: entry.cachePath,
+  }
+}
+
+async function readLatestCachedSlice(rootDir: string, input: { serverId: string; version: string }) {
+  const entries = await listCachedSliceEntries(rootDir, input)
+  const latestEntry = entries.at(-1)
 
   if (!latestEntry) {
     return null
   }
 
-  const offset = Number.parseInt(latestEntry.replace(/\.log$/, ''), 10)
+  return readCachedSlice(latestEntry)
+}
 
-  if (!Number.isFinite(offset)) {
+async function readPriorCachedSlice(
+  rootDir: string,
+  input: { serverId: string; version: string; beforeByteExclusive: number },
+) {
+  const entries = await listCachedSliceEntries(rootDir, input)
+  const priorEntry = [...entries]
+    .reverse()
+    .find((entry) => entry.byteOffset < input.beforeByteExclusive)
+
+  if (!priorEntry) {
     return null
   }
 
-  const text = await readFile(path.resolve(dirPath, latestEntry), 'utf8')
+  return readCachedSlice(priorEntry)
+}
 
-  return {
-    text,
-    byteOffset: offset,
-    cachePath: path.resolve(dirPath, latestEntry),
-  }
+export async function getLatestCachedSliceOffset(
+  rootDir: string,
+  input: { serverId: string; version: string },
+): Promise<number | null> {
+  const entries = await listCachedSliceEntries(rootDir, input)
+  return entries.at(-1)?.byteOffset ?? null
 }
 
 function createIdentityHeaders(): Headers {
@@ -204,6 +245,46 @@ async function fetchInitialTail(
   })
 }
 
+async function fetchBackfillChunk(
+  fetchImpl: PoliteFetch,
+  logfileUrl: string,
+  beforeByteExclusive: number,
+  chunkBytes: number,
+): Promise<HttpSlice | null> {
+  if (beforeByteExclusive <= 0) {
+    return null
+  }
+
+  const targetStart = Math.max(0, beforeByteExclusive - chunkBytes)
+  const requestedStart = Math.max(0, targetStart - 1)
+  const headers = createIdentityHeaders()
+  headers.set('range', `bytes=${requestedStart}-${beforeByteExclusive - 1}`)
+
+  const response = await fetchImpl(logfileUrl, { headers })
+
+  if (response.status === 416) {
+    return null
+  }
+
+  if (!response.ok) {
+    throw new Error(`Failed to backfill logfile ${logfileUrl}: HTTP ${response.status}`)
+  }
+
+  const bodyText = await response.text()
+  const text =
+    response.status === 206
+      ? bodyText
+      : Buffer.from(bodyText, 'utf8')
+          .subarray(requestedStart, beforeByteExclusive)
+          .toString('utf8')
+
+  return trimInitialTailText({
+    requestedStart,
+    targetStart,
+    text,
+  })
+}
+
 export function createHttpLogfileReader(options: {
   logfilesDir: string
   fetchImpl: PoliteFetch
@@ -241,6 +322,56 @@ export function createHttpLogfileReader(options: {
       input.byteOffset === 0
         ? await fetchInitialTail(options.fetchImpl, input.logfileUrl, initialTailBytes)
         : await fetchFromKnownOffset(options.fetchImpl, input.logfileUrl, input.byteOffset)
+
+    await cacheLogfileSlice(options.logfilesDir, {
+      serverId: input.serverId,
+      version: input.version,
+      byteOffset: slice.byteOffset,
+      text: slice.text,
+    })
+
+    return slice
+  }
+}
+
+export function createHttpLogfileBackfillReader(options: {
+  logfilesDir: string
+  fetchImpl: PoliteFetch
+  backfillChunkBytes: number
+  log?: (message: string) => void
+}): ReadBackfillSlice {
+  return async (input) => {
+    const cached = await readPriorCachedSlice(options.logfilesDir, {
+      serverId: input.serverId,
+      version: input.version,
+      beforeByteExclusive: input.beforeByteExclusive,
+    })
+
+    if (cached) {
+      options.log?.(
+        `[logfile] reusing cached backfill slice ${input.serverId}/${input.version} @${cached.byteOffset} from ${cached.cachePath}`,
+      )
+
+      return {
+        text: cached.text,
+        byteOffset: cached.byteOffset,
+      }
+    }
+
+    options.log?.(
+      `[logfile] fetching backfill chunk for ${input.serverId}/${input.version} from ${input.logfileUrl} before byte ${input.beforeByteExclusive}`,
+    )
+
+    const slice = await fetchBackfillChunk(
+      options.fetchImpl,
+      input.logfileUrl,
+      input.beforeByteExclusive,
+      options.backfillChunkBytes,
+    )
+
+    if (!slice) {
+      return null
+    }
 
     await cacheLogfileSlice(options.logfilesDir, {
       serverId: input.serverId,

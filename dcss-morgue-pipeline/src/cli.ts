@@ -41,6 +41,8 @@ Options:
   --data-dir <path>    Override runtime data directory
   --fresh              Clear DB, morgues, and audit before running, but keep logfile cache
   --fresh-logfiles     Also clear cached logfile slices. Implies --fresh
+  --initial-tail-bytes <n>  Tail bytes to read when a logfile bucket is first seen. Default: 1048576
+  --backfill-chunk-bytes <n>  Older logfile bytes to fetch per backfill step. Default: initial-tail-bytes
   --dry-run            Discover and sample, but skip morgue fetch/parse
   --verbose            Print discovery, fetch, and parse progress logs
   --min-delay-ms <n>   Minimum delay per host. Default: 2000
@@ -54,6 +56,7 @@ Options:
   --data-dir <path>    Override runtime data directory
   --fresh              Clear DB, morgues, and audit before running, but keep logfile cache
   --fresh-logfiles     Also clear cached logfile slices. Implies --fresh
+  --initial-tail-bytes <n>  Tail bytes to read when a logfile bucket is first seen. Default: 1048576
   --dry-run            Discover and sample, but skip morgue fetch/parse
   --verbose            Print discovery, fetch, and parse progress logs
   --min-delay-ms <n>   Minimum delay per host. Default: 2000
@@ -161,6 +164,7 @@ function parseCommonOptionBag(args: string[]): {
     freshLogfiles: boolean
     minDelayMs?: number
     timeoutMs?: number
+    initialTailBytes?: number
     serverIds?: ServerId[]
     verbose: boolean
   }
@@ -173,6 +177,7 @@ function parseCommonOptionBag(args: string[]): {
     freshLogfiles: boolean
     minDelayMs?: number
     timeoutMs?: number
+    initialTailBytes?: number
     serverIds?: ServerId[]
     verbose: boolean
   } = {
@@ -226,6 +231,12 @@ function parseCommonOptionBag(args: string[]): {
       continue
     }
 
+    if (current === '--initial-tail-bytes') {
+      parsed.initialTailBytes = parseIntegerOption(current, args[index + 1])
+      index += 1
+      continue
+    }
+
     if (current === '--verbose') {
       parsed.verbose = true
       continue
@@ -240,12 +251,19 @@ function parseCommonOptionBag(args: string[]): {
 function parseBootstrapOptions(args: string[]): BootstrapCommandOptions {
   const common = parseCommonOptionBag(args)
   let perBucket = 10
+  let backfillChunkBytes: number | undefined
 
   for (let index = 0; index < common.rest.length; index += 1) {
     const current = common.rest[index]
 
     if (current === '--per-bucket') {
       perBucket = parseIntegerOption(current, common.rest[index + 1])
+      index += 1
+      continue
+    }
+
+    if (current === '--backfill-chunk-bytes') {
+      backfillChunkBytes = parseIntegerOption(current, common.rest[index + 1])
       index += 1
       continue
     }
@@ -261,6 +279,8 @@ function parseBootstrapOptions(args: string[]): BootstrapCommandOptions {
     freshLogfiles: common.parsed.freshLogfiles,
     minDelayMs: common.parsed.minDelayMs,
     timeoutMs: common.parsed.timeoutMs,
+    initialTailBytes: common.parsed.initialTailBytes,
+    backfillChunkBytes,
     serverIds: common.parsed.serverIds,
     verbose: common.parsed.verbose,
   }
@@ -298,6 +318,7 @@ function parseIncrementalOptions(args: string[]): IncrementalCommandOptions {
     freshLogfiles: common.parsed.freshLogfiles,
     minDelayMs: common.parsed.minDelayMs,
     timeoutMs: common.parsed.timeoutMs,
+    initialTailBytes: common.parsed.initialTailBytes,
     serverIds: common.parsed.serverIds,
     verbose: common.parsed.verbose,
   }

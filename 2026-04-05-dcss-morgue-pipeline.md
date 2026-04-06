@@ -738,6 +738,8 @@ export async function runIncremental(ctx: PipelineContext) {
 ## CLI Notes
 - `--fresh` resets the SQLite DB, fetched morgues, and audit output, but preserves cached logfile slices.
 - `--fresh-logfiles` also clears cached logfile slices.
+- `--initial-tail-bytes` controls the first tail window used for unseen logfile buckets.
+- `--backfill-chunk-bytes` allows bootstrap to fetch older logfile chunks when the current discovered window is too small for the requested `--per-bucket`.
 - `--verbose` prints logfile reuse/fetch decisions, candidate selection, fetch URLs, and parse outcomes.
 - `--min-delay-ms` applies to the shared host queue used by both logfile discovery and morgue fetching.
 - Candidate fetch/parse execution may run across hosts in parallel while preserving host-local pacing.
@@ -761,7 +763,7 @@ git commit -m "feat: wire pipeline workflows and audit output"
 - [ ] Run: `cd dcss-morgue-pipeline && npm run typecheck`
 - [ ] Run: `cd dcss-morgue-pipeline && npm run bootstrap -- --help`
 - [ ] Run: `cd dcss-morgue-pipeline && npm run incremental -- --help`
-- [ ] Confirm `README.md` documents storage layout, shared host politeness limits, bootstrap workflow, audit bundle generation, and CLI options such as `--fresh`, `--fresh-logfiles`, and `--verbose`.
+- [ ] Confirm `README.md` documents storage layout, shared host politeness limits, bootstrap workflow, audit bundle generation, and CLI options such as `--fresh`, `--fresh-logfiles`, `--initial-tail-bytes`, `--backfill-chunk-bytes`, and `--verbose`.
 
 ## Notes for the Implementer
 

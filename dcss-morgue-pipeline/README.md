@@ -24,6 +24,8 @@ Help is available with:
   `npm run bootstrap -- --server CAO,CBR2,CBRG,CNC --per-bucket 10 --data-dir /tmp/dcss-bootstrap-test --fresh --verbose`
 - Fully cold rerun, including logfile cache:
   `npm run bootstrap -- --server CAO,CBR2,CBRG,CNC --per-bucket 10 --data-dir /tmp/dcss-bootstrap-test --fresh-logfiles --verbose`
+- Backfill deeper into older logfile history when a bucket needs more candidates:
+  `npm run bootstrap -- --server CAO,CBR2,CBRG,CNC --per-bucket 1000 --data-dir /tmp/dcss-bootstrap-test --initial-tail-bytes 1048576 --backfill-chunk-bytes 10485760 --verbose`
 - Incremental sample over the default 6-hour window:
   `npm run incremental -- --server CAO,CBR2 --per-bucket 5 --data-dir /tmp/dcss-bootstrap-test --verbose`
 - Audit bundle:
@@ -44,6 +46,8 @@ Useful options:
 - `--data-dir /path/to/data` relocates SQLite state and cached artifacts
 - `--fresh` clears `pipeline.sqlite`, `morgues/`, and `audit/`, but preserves cached logfile slices
 - `--fresh-logfiles` does the same reset and also clears `logfiles/`
+- `--initial-tail-bytes 10485760` increases the first tail window used for unseen logfile buckets
+- `--backfill-chunk-bytes 10485760` fetches older logfile chunks when the initial tail does not provide enough candidates for the requested bucket size
 - `--dry-run` stops after discovery and selection
 - `--verbose` prints discovery, fetch, and parse progress logs
 - `--min-delay-ms 3000` increases the minimum delay between requests to the same host
@@ -122,6 +126,7 @@ The same host-queue policy is intended for both logfile discovery and morgue fet
 1. Discover candidate games from configured logfile sources.
    Unseen oversized logfiles are read from a recent tail window instead of from byte `0`.
    If a cached logfile slice already exists for the bucket, `--fresh` runs reuse that cached slice.
+   If a bucket still has fewer than `--per-bucket` eligible candidates, bootstrap reuses older cached slices first and then fetches older logfile chunks to backfill further into history.
 2. Stratify by `(server, version)` bucket.
 3. Select a bounded bootstrap sample per bucket.
 4. Fetch sampled morgues.

@@ -17,6 +17,20 @@ export type ReadLogfileSlice = (
   byteOffset?: number
 }>
 
+export type ReadBackfillSliceInput = {
+  serverId: ServerId
+  version: TargetVersion
+  logfileUrl: string
+  beforeByteExclusive: number
+}
+
+export type ReadBackfillSlice = (
+  input: ReadBackfillSliceInput,
+) => Promise<{
+  text: string
+  byteOffset: number
+} | null>
+
 export type SyncInput = {
   serverId: ServerId
   version: TargetVersion
@@ -28,6 +42,15 @@ export type SyncInput = {
 export type SyncResult = {
   previousOffset: number
   nextOffset: number
+  processedLines: number
+  insertedCandidates: number
+  rejectedLines: number
+  skippedTrailingPartialLine: boolean
+}
+
+export type BackfillResult = {
+  previousBeforeByteExclusive: number
+  nextBeforeByteExclusive: number
   processedLines: number
   insertedCandidates: number
   rejectedLines: number
@@ -59,6 +82,47 @@ function getCommittedSlice(text: string) {
   }
 }
 
+function ingestCommittedLines(
+  db: Database,
+  input: {
+    serverId: ServerId
+    logfileUrl: string
+    now: string
+    text: string
+  },
+) {
+  const { lines, completeByteLength, skippedTrailingPartialLine } = getCommittedSlice(input.text)
+  const countBeforeInsert = candidateRepo.count(db)
+  const parsedCandidates = []
+  let rejectedLines = 0
+
+  for (const line of lines) {
+    try {
+      parsedCandidates.push(
+        parseXlogLine(line, {
+          serverId: input.serverId,
+          logfileUrl: input.logfileUrl,
+          discoveredAt: input.now,
+        }),
+      )
+    } catch {
+      rejectedLines += 1
+    }
+  }
+
+  if (parsedCandidates.length > 0) {
+    candidateRepo.insertMany(db, parsedCandidates)
+  }
+
+  return {
+    completeByteLength,
+    processedLines: lines.length,
+    insertedCandidates: candidateRepo.count(db) - countBeforeInsert,
+    rejectedLines,
+    skippedTrailingPartialLine,
+  }
+}
+
 export async function syncLogfile(db: Database, input: SyncInput): Promise<SyncResult> {
   const previousOffset =
     offsetRepo.get(db, input.serverId, input.version, input.logfileUrl)?.byteOffset ?? 0
@@ -70,28 +134,18 @@ export async function syncLogfile(db: Database, input: SyncInput): Promise<SyncR
   })
   const effectiveOffset = slice.byteOffset ?? previousOffset
   const now = input.now?.() ?? new Date().toISOString()
-  const { lines, completeByteLength, skippedTrailingPartialLine } = getCommittedSlice(slice.text)
-  const countBeforeInsert = candidateRepo.count(db)
-  const parsedCandidates = []
-  let rejectedLines = 0
-
-  for (const line of lines) {
-    try {
-      parsedCandidates.push(
-        parseXlogLine(line, {
-          serverId: input.serverId,
-          logfileUrl: input.logfileUrl,
-          discoveredAt: now,
-        }),
-      )
-    } catch {
-      rejectedLines += 1
-    }
-  }
-
-  if (parsedCandidates.length > 0) {
-    candidateRepo.insertMany(db, parsedCandidates)
-  }
+  const {
+    completeByteLength,
+    processedLines,
+    insertedCandidates,
+    rejectedLines,
+    skippedTrailingPartialLine,
+  } = ingestCommittedLines(db, {
+    serverId: input.serverId,
+    logfileUrl: input.logfileUrl,
+    now,
+    text: slice.text,
+  })
 
   const nextOffset = effectiveOffset + completeByteLength
 
@@ -108,8 +162,50 @@ export async function syncLogfile(db: Database, input: SyncInput): Promise<SyncR
   return {
     previousOffset,
     nextOffset,
-    processedLines: lines.length,
-    insertedCandidates: candidateRepo.count(db) - countBeforeInsert,
+    processedLines,
+    insertedCandidates,
+    rejectedLines,
+    skippedTrailingPartialLine,
+  }
+}
+
+export async function backfillLogfile(db: Database, input: {
+  serverId: ServerId
+  version: TargetVersion
+  logfileUrl: string
+  beforeByteExclusive: number
+  readBackfillSlice: ReadBackfillSlice
+  now?: () => string
+}): Promise<BackfillResult | null> {
+  const slice = await input.readBackfillSlice({
+    serverId: input.serverId,
+    version: input.version,
+    logfileUrl: input.logfileUrl,
+    beforeByteExclusive: input.beforeByteExclusive,
+  })
+
+  if (!slice) {
+    return null
+  }
+
+  const now = input.now?.() ?? new Date().toISOString()
+  const {
+    processedLines,
+    insertedCandidates,
+    rejectedLines,
+    skippedTrailingPartialLine,
+  } = ingestCommittedLines(db, {
+    serverId: input.serverId,
+    logfileUrl: input.logfileUrl,
+    now,
+    text: slice.text,
+  })
+
+  return {
+    previousBeforeByteExclusive: input.beforeByteExclusive,
+    nextBeforeByteExclusive: slice.byteOffset,
+    processedLines,
+    insertedCandidates,
     rejectedLines,
     skippedTrailingPartialLine,
   }

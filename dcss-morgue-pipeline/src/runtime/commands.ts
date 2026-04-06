@@ -1,6 +1,9 @@
 import { writeAuditBundle } from '../audit/writeAuditBundle'
 import { migrate, openDb } from '../db/repos'
-import { createHttpLogfileReader } from '../discovery/readHttpLogfileSlice'
+import {
+  createHttpLogfileBackfillReader,
+  createHttpLogfileReader,
+} from '../discovery/readHttpLogfileSlice'
 import { fetchMorgue as defaultFetchMorgue } from '../fetch/fetchMorgue'
 import { createPoliteFetch } from '../net/politeFetch'
 import { runBootstrap, type PipelineOptions, type PipelineSummary } from '../pipeline/runBootstrap'
@@ -13,6 +16,7 @@ export type RuntimeCommandOptions = {
   serverIds?: readonly ServerId[]
   minDelayMs?: number
   timeoutMs?: number
+  initialTailBytes?: number
   fresh?: boolean
   freshLogfiles?: boolean
   verbose?: boolean
@@ -20,6 +24,7 @@ export type RuntimeCommandOptions = {
 
 export type BootstrapCommandOptions = RuntimeCommandOptions &
   Pick<PipelineOptions, 'perBucket'> & {
+    backfillChunkBytes?: number
     dryRun: boolean
   }
 
@@ -35,6 +40,7 @@ export type AuditCommandOptions = RuntimeCommandOptions & {
 
 const DEFAULT_MIN_DELAY_MS = 2000
 const DEFAULT_TIMEOUT_MS = 10000
+const DEFAULT_INITIAL_TAIL_BYTES = 1_048_576
 
 async function withRuntime<T>(
   options: RuntimeCommandOptions,
@@ -91,6 +97,16 @@ export async function runBootstrapCommand(
       readLogfileSlice: createHttpLogfileReader({
         logfilesDir: paths.logfilesDir,
         fetchImpl: politeFetch,
+        initialTailBytes: options.initialTailBytes ?? DEFAULT_INITIAL_TAIL_BYTES,
+        log,
+      }),
+      readBackfillSlice: createHttpLogfileBackfillReader({
+        logfilesDir: paths.logfilesDir,
+        fetchImpl: politeFetch,
+        backfillChunkBytes:
+          options.backfillChunkBytes ??
+          options.initialTailBytes ??
+          DEFAULT_INITIAL_TAIL_BYTES,
         log,
       }),
       fetchMorgue: (targetDb, input) =>
@@ -119,6 +135,7 @@ export async function runIncrementalCommand(
       readLogfileSlice: createHttpLogfileReader({
         logfilesDir: paths.logfilesDir,
         fetchImpl: politeFetch,
+        initialTailBytes: options.initialTailBytes ?? DEFAULT_INITIAL_TAIL_BYTES,
         log,
       }),
       fetchMorgue: (targetDb, input) =>

@@ -1,14 +1,15 @@
 import { readFile } from 'node:fs/promises'
 import path from 'node:path'
-import { getServerManifest } from '../config/manifest'
-import { candidateRepo, migrate, parseResultRepo } from '../db/repos'
+import { ACTIVE_SERVER_IDS, getServerManifest } from '../config/manifest'
+import { candidateRepo, migrate, offsetRepo, parseResultRepo } from '../db/repos'
 import type { Database } from '../db/openDb'
 import { discoverCandidates as defaultDiscoverCandidates } from '../discovery/discoverCandidates'
-import type { ReadLogfileSlice } from '../discovery/syncLogfile'
+import { backfillLogfile, type ReadBackfillSlice, type ReadLogfileSlice } from '../discovery/syncLogfile'
 import { fetchMorgue as defaultFetchMorgue } from '../fetch/fetchMorgue'
 import { parseMorgue as defaultParseMorgue } from '../parser/parseMorgue'
 import { selectBootstrapCandidates } from '../sampling/selectBootstrapCandidates'
-import type { CandidateGame, ParseFailureRecord, ParseResultRow, ServerId } from '../types'
+import { isExcludedModeCandidate } from '../discovery/parseXlogLine'
+import type { CandidateGame, ParseFailureRecord, ParseResultRow, ServerId, TargetVersion } from '../types'
 
 export type PipelineSummary = {
   selectedCandidates: number
@@ -32,6 +33,7 @@ export type PipelineContext = {
   }
   now?: () => string
   readLogfileSlice?: ReadLogfileSlice
+  readBackfillSlice?: ReadBackfillSlice
   discoverCandidates?: () => Promise<unknown>
   fetchMorgue?: typeof defaultFetchMorgue
   parseMorgue?: typeof defaultParseMorgue
@@ -53,6 +55,112 @@ function filterCandidatesByServerIds(
 
   const allowed = new Set(serverIds)
   return candidates.filter((candidate) => allowed.has(candidate.serverId))
+}
+
+function getBucketKey(candidate: Pick<CandidateGame, 'serverId' | 'version'>): string {
+  return `${candidate.serverId}:${candidate.version}`
+}
+
+function getBootstrapEligibleCounts(
+  db: Database,
+  serverIds: readonly ServerId[] | undefined,
+): Map<string, number> {
+  const counts = new Map<string, number>()
+
+  for (const candidate of filterCandidatesByServerIds(candidateRepo.listBootstrapEligible(db), serverIds)) {
+    if (isExcludedModeCandidate(candidate)) {
+      continue
+    }
+
+    const bucketKey = getBucketKey(candidate)
+    counts.set(bucketKey, (counts.get(bucketKey) ?? 0) + 1)
+  }
+
+  return counts
+}
+
+async function runBootstrapBackfillPhase(ctx: PipelineContext) {
+  if (!ctx.readBackfillSlice) {
+    return
+  }
+
+  const targetServerIds = ctx.options.serverIds ?? ACTIVE_SERVER_IDS
+  const bucketStates = new Map<
+    string,
+    {
+      serverId: ServerId
+      version: TargetVersion
+      logfileUrl: string
+      cursorBeforeByteExclusive: number
+    }
+  >()
+
+  for (const serverId of targetServerIds) {
+    const manifest = getServerManifest(serverId)
+
+    for (const version of manifest.buckets) {
+      const offset = offsetRepo.get(ctx.db, serverId, version, manifest.logfiles[version].url)?.byteOffset ?? 0
+      bucketStates.set(`${serverId}:${version}`, {
+        serverId,
+        version,
+        logfileUrl: manifest.logfiles[version].url,
+        cursorBeforeByteExclusive: offset,
+      })
+    }
+  }
+
+  while (true) {
+    const eligibleCounts = getBootstrapEligibleCounts(ctx.db, ctx.options.serverIds)
+    const underfilled = [...bucketStates.values()].filter(
+      (bucket) =>
+        (eligibleCounts.get(`${bucket.serverId}:${bucket.version}`) ?? 0) < ctx.options.perBucket &&
+        bucket.cursorBeforeByteExclusive > 0,
+    )
+
+    if (underfilled.length === 0) {
+      return
+    }
+
+    let madeProgress = false
+
+    for (const bucket of underfilled) {
+      const bucketKey = `${bucket.serverId}:${bucket.version}`
+      const before = bucket.cursorBeforeByteExclusive
+      ctx.log?.(
+        `[backfill] ${bucket.serverId}/${bucket.version} eligible=${eligibleCounts.get(bucketKey) ?? 0} target=${ctx.options.perBucket}; reading older logfile chunk before byte ${before}`,
+      )
+
+      const result = await backfillLogfile(ctx.db, {
+        serverId: bucket.serverId,
+        version: bucket.version,
+        logfileUrl: bucket.logfileUrl,
+        beforeByteExclusive: before,
+        readBackfillSlice: ctx.readBackfillSlice,
+        now: ctx.now,
+      })
+
+      if (!result) {
+        bucket.cursorBeforeByteExclusive = 0
+        continue
+      }
+
+      bucket.cursorBeforeByteExclusive = result.nextBeforeByteExclusive
+      ctx.log?.(
+        `[backfill] ${bucket.serverId}/${bucket.version} cursor ${result.previousBeforeByteExclusive} -> ${result.nextBeforeByteExclusive}; lines=${result.processedLines}, inserted=${result.insertedCandidates}, rejected=${result.rejectedLines}`,
+      )
+
+      if (
+        result.nextBeforeByteExclusive < result.previousBeforeByteExclusive ||
+        result.insertedCandidates > 0
+      ) {
+        madeProgress = true
+      }
+    }
+
+    if (!madeProgress) {
+      return
+    }
+  }
 }
 
 export async function runDiscoveryPhase(ctx: PipelineContext) {
@@ -212,6 +320,7 @@ export function toFailureRecord(failure: ParseFailureRecord): ParseFailureRecord
 export async function runBootstrap(ctx: PipelineContext): Promise<PipelineSummary> {
   migrate(ctx.db)
   await runDiscoveryPhase(ctx)
+  await runBootstrapBackfillPhase(ctx)
 
   const selected = selectBootstrapCandidates(
     filterCandidatesByServerIds(candidateRepo.listBootstrapEligible(ctx.db), ctx.options.serverIds),
