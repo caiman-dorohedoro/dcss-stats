@@ -2,7 +2,8 @@
   "name": "@dcss-stats/root",
   "private": true,
   "workspaces": [
-    "apps/*"
+    "apps/*",
+    "packages/*"
   ],
   "scripts": {
     "prepare": "husky",

@@ -20,7 +20,8 @@
     "baseUrl": "./src",
     "paths": {
       // "~*": ["*"]
-      "~/*": ["./*"]
+      "~/*": ["./*"],
+      "@dcss-stats/morgue-parser": ["../../../packages/morgue-parser/src/index.ts"]
     },
     "plugins": [
       {

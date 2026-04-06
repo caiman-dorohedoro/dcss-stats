@@ -2,7 +2,7 @@ const rootUrl = process.env.NEXT_PUBLIC_ROOT_URL
 
 /** @type {import('next').NextConfig} */
 const config = {
-  transpilePackages: ['lodash-es'],
+  transpilePackages: ['lodash-es', '@dcss-stats/morgue-parser'],
   cacheComponents: true,
   images: {
     qualities: [75, 100],

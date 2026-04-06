@@ -2,6 +2,8 @@
 
 Strict DCSS 0.34/trunk morgue dataset pipeline scaffold.
 
+The strict parser core now also lives in [packages/morgue-parser](/Users/hyeon/playground/dcss-stats/packages/morgue-parser/README.md), so the same morgue-to-JSON logic can be reused from browser code or other tools without pulling in SQLite, fetch, or logfile state.
+
 ## Commands
 
 - `npm test`
@@ -32,6 +34,15 @@ Help is available with:
   `npm run audit -- --data-dir /tmp/dcss-bootstrap-test --sample-size 10`
 
 `--verbose` prints runtime resets, logfile reuse/fetch decisions, per-bucket discovery progress, candidate selection, morgue fetch URLs, and parse outcomes including `species`, `ac`, `ev`, `sh`, and spell count.
+
+## Browser Reuse
+
+- shared browser-safe parser core:
+  [packages/morgue-parser](/Users/hyeon/playground/dcss-stats/packages/morgue-parser/README.md)
+- demo paste UI in the web app:
+  [apps/web/src/app/morgue-parser/page.tsx](/Users/hyeon/playground/dcss-stats/apps/web/src/app/morgue-parser/page.tsx)
+
+The browser route parses pasted morgue text entirely client-side and returns the same normalized combat, equipment, skill, and spell fields as the pipeline parser, minus pipeline-only metadata like `serverId` and `morgueUrl`.
 
 ## CLI Reference
 
