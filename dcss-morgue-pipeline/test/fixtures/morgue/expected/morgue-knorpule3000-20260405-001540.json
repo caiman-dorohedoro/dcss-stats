@@ -115,11 +115,11 @@
     "electricity resistance",
     "torment resistance 1",
     "stone body",
-    "devolution 1 0: Orb of Zot"
+    "devolution 1"
   ],
   "spells": [
     {
-      "name": "Lehudib's Crystal Sp",
+      "name": "Lehudib's Crystal Spear",
       "failurePercent": 7,
       "memorized": true
     },
@@ -154,12 +154,12 @@
       "memorized": true
     },
     {
-      "name": "Nazja's Percussive T",
+      "name": "Nazja's Percussive Tempering",
       "failurePercent": 1,
       "memorized": true
     },
     {
-      "name": "Lee's Rapid Deconstr",
+      "name": "Lee's Rapid Deconstruction",
       "failurePercent": 1,
       "memorized": true
     },
@@ -199,7 +199,7 @@
       "memorized": false
     },
     {
-      "name": "Brom's Barrelling Bould",
+      "name": "Brom's Barrelling Boulder",
       "failurePercent": 0,
       "memorized": false
     },
@@ -319,12 +319,12 @@
       "memorized": false
     },
     {
-      "name": "Iskenderun's Battlesphe",
+      "name": "Iskenderun's Battlesphere",
       "failurePercent": 1,
       "memorized": false
     },
     {
-      "name": "Iskenderun's Mystic Bla",
+      "name": "Iskenderun's Mystic Blast",
       "failurePercent": 1,
       "memorized": false
     },
@@ -439,7 +439,7 @@
       "memorized": false
     },
     {
-      "name": "Yara's Violent Unravell",
+      "name": "Yara's Violent Unravelling",
       "failurePercent": 16,
       "memorized": false
     },

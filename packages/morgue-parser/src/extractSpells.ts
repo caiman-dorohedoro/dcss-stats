@@ -1,3 +1,4 @@
+import { DEFAULT_CANONICAL_SPELL_NAMES } from './canonicalSpellNames'
 import type { SpellSnapshot } from './types'
 import { ParseFailure } from './validateStrict'
 import { splitSections } from './splitSections'
@@ -238,8 +239,12 @@ export function extractSpells(
     canonicalSpellNames?: readonly string[]
   },
 ): SpellSnapshot[] {
+  const canonicalSpellNames = [
+    ...new Set([...DEFAULT_CANONICAL_SPELL_NAMES, ...(options?.canonicalSpellNames ?? [])]),
+  ]
+
   return canonicalizeSpellNames(
     dedupeSpells([...parseLegacySpellSection(text), ...parseModernSpellSections(text)]),
-    options?.canonicalSpellNames ?? [],
+    canonicalSpellNames,
   )
 }

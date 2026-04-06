@@ -10,6 +10,13 @@ function loadFixture(name: string) {
   )
 }
 
+function loadFullFixture(name: string) {
+  return readFileSync(
+    path.resolve(process.cwd(), `test/fixtures/morgue/full/${name}`),
+    'utf8',
+  )
+}
+
 describe('extractMutations', () => {
   it('extracts terse innate traits from the wrapped A: line', () => {
     expect(extractMutations(loadFixture('mutations-wrapped-a-line.txt'))).toEqual({
@@ -26,6 +33,20 @@ describe('extractMutations', () => {
         'efficient magic 1',
         'slime shroud',
         'feed off suffering 1',
+      ],
+    })
+  })
+
+  it('stops mutation parsing before orb and rune summary lines', () => {
+    expect(extractMutations(loadFullFixture('morgue-knorpule3000-20260405-001540.txt'))).toEqual({
+      mutations: [
+        'sickness immunity',
+        'big wings',
+        'negative energy resistance 1',
+        'electricity resistance',
+        'torment resistance 1',
+        'stone body',
+        'devolution 1',
       ],
     })
   })

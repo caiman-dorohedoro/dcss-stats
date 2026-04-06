@@ -10,6 +10,13 @@ function loadFixture(name: string) {
   )
 }
 
+function loadFullFixture(name: string) {
+  return readFileSync(
+    path.resolve(process.cwd(), `test/fixtures/morgue/full/${name}`),
+    'utf8',
+  )
+}
+
 describe('parseMorgueText shared parser', () => {
   it('parses browser-safe structured data directly from morgue text', () => {
     const result = parseMorgueText(loadFixture('cao-0.34-webtiles-quit.txt'))
@@ -41,5 +48,43 @@ describe('parseMorgueText shared parser', () => {
       failurePercent: 17,
       memorized: false,
     })
+  })
+
+  it('restores truncated spell names through parseMorgueText defaults', () => {
+    const result = parseMorgueText(loadFullFixture('morgue-knorpule3000-20260405-001540.txt'))
+
+    expect(result.ok).toBe(true)
+    if (result.ok) {
+      expect(result.record.spells).toContainEqual({
+        name: "Lehudib's Crystal Spear",
+        failurePercent: 7,
+        memorized: true,
+      })
+      expect(result.record.spells).toContainEqual({
+        name: "Nazja's Percussive Tempering",
+        failurePercent: 1,
+        memorized: true,
+      })
+      expect(result.record.spells).toContainEqual({
+        name: "Lee's Rapid Deconstruction",
+        failurePercent: 1,
+        memorized: true,
+      })
+      expect(result.record.spells).toContainEqual({
+        name: "Brom's Barrelling Boulder",
+        failurePercent: 0,
+        memorized: false,
+      })
+      expect(result.record.spells).toContainEqual({
+        name: "Iskenderun's Battlesphere",
+        failurePercent: 1,
+        memorized: false,
+      })
+      expect(result.record.spells).toContainEqual({
+        name: "Iskenderun's Mystic Blast",
+        failurePercent: 1,
+        memorized: false,
+      })
+    }
   })
 })

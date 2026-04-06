@@ -5,7 +5,8 @@ Browser-safe DCSS morgue parser core.
 It parses pasted morgue text into structured JSON without any filesystem or
 network access.
 
-The parser accepts optional canonical vocabularies for:
+The parser ships with built-in canonical spell names and also accepts optional
+canonical vocabularies for:
 
 - species names
 - spell names
@@ -27,8 +28,9 @@ if (result.ok) {
 }
 ```
 
-If the caller has access to a canonical spell list, it can restore truncated
-spell-table names:
+The built-in spell list already restores most truncated spell-table names. If a
+caller wants to supplement or override that vocabulary, it can pass extra
+spell names:
 
 ```ts
 parseMorgueText(morgueText, {

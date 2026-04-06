@@ -176,11 +176,11 @@
     "(nimble swimmer 1)",
     "tentacles",
     "clever 2",
-    "strong 1 0: Orb of Zot"
+    "strong 1"
   ],
   "spells": [
     {
-      "name": "Vhi's Electric Charg",
+      "name": "Vhi's Electric Charge",
       "failurePercent": 1,
       "memorized": true
     },
@@ -195,7 +195,7 @@
       "memorized": true
     },
     {
-      "name": "Ozocubu's Refrigerat",
+      "name": "Ozocubu's Refrigeration",
       "failurePercent": 0,
       "memorized": true
     },
@@ -215,7 +215,7 @@
       "memorized": true
     },
     {
-      "name": "Borgnjor's Revivific",
+      "name": "Borgnjor's Revivification",
       "failurePercent": 1,
       "memorized": true
     },
@@ -225,7 +225,7 @@
       "memorized": true
     },
     {
-      "name": "Lee's Rapid Deconstr",
+      "name": "Lee's Rapid Deconstruction",
       "failurePercent": 1,
       "memorized": true
     },
@@ -270,7 +270,7 @@
       "memorized": false
     },
     {
-      "name": "Maxwell's Portable Pile",
+      "name": "Maxwell's Portable Piledriver",
       "failurePercent": 0,
       "memorized": false
     },
@@ -335,7 +335,7 @@
       "memorized": false
     },
     {
-      "name": "Construct Spike Launche",
+      "name": "Construct Spike Launcher",
       "failurePercent": 1,
       "memorized": false
     },
@@ -395,7 +395,7 @@
       "memorized": false
     },
     {
-      "name": "Eringya's Surprising Cr",
+      "name": "Eringya's Surprising Crocodile",
       "failurePercent": 1,
       "memorized": false
     },
@@ -425,12 +425,12 @@
       "memorized": false
     },
     {
-      "name": "Iskenderun's Battlesphe",
+      "name": "Iskenderun's Battlesphere",
       "failurePercent": 1,
       "memorized": false
     },
     {
-      "name": "Iskenderun's Mystic Bla",
+      "name": "Iskenderun's Mystic Blast",
       "failurePercent": 1,
       "memorized": false
     },
@@ -470,7 +470,7 @@
       "memorized": false
     },
     {
-      "name": "Alistair's Walking Alem",
+      "name": "Alistair's Walking Alembic",
       "failurePercent": 1,
       "memorized": false
     },
@@ -525,7 +525,7 @@
       "memorized": false
     },
     {
-      "name": "Yara's Violent Unravell",
+      "name": "Yara's Violent Unravelling",
       "failurePercent": 1,
       "memorized": false
     },

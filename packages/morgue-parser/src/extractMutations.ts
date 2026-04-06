@@ -1,7 +1,7 @@
 import type { MutationSnapshot } from './types'
 import { splitSections } from './splitSections'
 
-const STOP_LINE_PATTERNS = [/^}:/, /^[a-z]:/i, /^You /, /^[A-Z][^,]*:$/]
+const STOP_LINE_PATTERNS = [/^}:/, /^[a-z]:/i, /^\d+:/, /^You /, /^[A-Z][^,]*:$/]
 
 function collectAbilityLine(header: string): string {
   const lines = header.split('\n')
