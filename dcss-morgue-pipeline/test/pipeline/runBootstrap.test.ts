@@ -98,9 +98,7 @@ describe('runBootstrap', () => {
               dodgingSkill: 8.1,
               shieldSkill: 0,
               spellcasting: 12.4,
-              schoolSkills: {},
               spells: [],
-              wizardry: 1,
               mutations: [],
             },
           }
@@ -109,7 +107,7 @@ describe('runBootstrap', () => {
         return {
           ok: false as const,
           failure: {
-            reason: 'wizardry_parse_failed',
+            reason: 'synthetic_parse_failed',
             detail: 'synthetic failure',
           },
         }
@@ -199,9 +197,7 @@ describe('runBootstrap', () => {
             dodgingSkill: 8.1,
             shieldSkill: 0,
             spellcasting: 12.4,
-            schoolSkills: {},
             spells: [],
-            wizardry: 1,
             mutations: [],
           },
         }),
@@ -288,9 +284,7 @@ describe('runBootstrap', () => {
           dodgingSkill: 8.1,
           shieldSkill: 0,
           spellcasting: 12.4,
-          schoolSkills: {},
           spells: [],
-          wizardry: 1,
           mutations: [],
         },
       }),

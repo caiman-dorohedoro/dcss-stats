@@ -1,0 +1,678 @@
+{
+  "playerName": "blister",
+  "version": "0.35-a0-241-g5b54ce7fc3",
+  "species": "Octopode",
+  "ac": 35,
+  "ev": 14,
+  "sh": 33,
+  "strength": 36,
+  "intelligence": 54,
+  "dexterity": 18,
+  "bodyArmour": "none",
+  "shield": "tower shield",
+  "footwear": "none",
+  "orb": "none",
+  "amulet": "amulet of Vitality",
+  "rings": [
+    "randart ring",
+    "randart ring",
+    "ring of the Octopus King",
+    "randart ring",
+    "randart ring",
+    "randart ring",
+    "ring of wizardry",
+    "ring of willpower"
+  ],
+  "shieldDetails": {
+    "rawName": "tower shield of positive energy",
+    "displayName": "tower shield",
+    "artifactKind": "normal",
+    "modifiersText": "=g",
+    "modifiers": [
+      "=g"
+    ]
+  },
+  "amuletDetails": {
+    "rawName": "amulet of Vitality",
+    "displayName": "amulet of Vitality",
+    "artifactKind": "unrand",
+    "modifiersText": "Regen++ RegenMP++",
+    "modifiers": [
+      "Regen++",
+      "RegenMP++"
+    ]
+  },
+  "ringDetails": [
+    {
+      "rawName": "ring \"Cyracic\"",
+      "displayName": "randart ring",
+      "artifactKind": "randart",
+      "modifiersText": "rC+ rN+ Str+3 Int+2 Dex+2",
+      "modifiers": [
+        "rC+",
+        "rN+",
+        "Str+3",
+        "Int+2",
+        "Dex+2"
+      ]
+    },
+    {
+      "rawName": "ring of Lady Luck",
+      "displayName": "randart ring",
+      "artifactKind": "randart",
+      "modifiersText": "Str+7 Dex+6",
+      "modifiers": [
+        "Str+7",
+        "Dex+6"
+      ]
+    },
+    {
+      "rawName": "ring of the Octopus King",
+      "displayName": "ring of the Octopus King",
+      "artifactKind": "unrand",
+      "modifiersText": "HP+2 MP+9 AC+2 EV+2 SH+2",
+      "modifiers": [
+        "HP+2",
+        "MP+9",
+        "AC+2",
+        "EV+2",
+        "SH+2"
+      ]
+    },
+    {
+      "rawName": "ring \"Midaonent\"",
+      "displayName": "randart ring",
+      "artifactKind": "randart",
+      "modifiersText": "rC+ Int+9 SInv",
+      "modifiers": [
+        "rC+",
+        "Int+9",
+        "SInv"
+      ]
+    },
+    {
+      "rawName": "ring \"Zalagov\"",
+      "displayName": "randart ring",
+      "artifactKind": "randart",
+      "modifiersText": "^Drain rF++ rCorr",
+      "modifiers": [
+        "^Drain",
+        "rF++",
+        "rCorr"
+      ]
+    },
+    {
+      "rawName": "ring \"Cujovups\"",
+      "displayName": "randart ring",
+      "artifactKind": "randart",
+      "modifiersText": "MP+9 AC+4 Str+5",
+      "modifiers": [
+        "MP+9",
+        "AC+4",
+        "Str+5"
+      ]
+    },
+    {
+      "rawName": "ring of wizardry",
+      "displayName": "ring of wizardry",
+      "artifactKind": "normal",
+      "modifiersText": null,
+      "modifiers": []
+    },
+    {
+      "rawName": "ring of willpower",
+      "displayName": "ring of willpower",
+      "artifactKind": "normal",
+      "modifiersText": null,
+      "modifiers": []
+    }
+  ],
+  "helmet": true,
+  "gloves": false,
+  "bootsOrBarding": false,
+  "cloak": false,
+  "armourSkill": 0,
+  "dodgingSkill": 9,
+  "shieldSkill": 21,
+  "spellcasting": 21,
+  "fighting": 25.4,
+  "shortBlades": 0,
+  "longBlades": 0,
+  "axes": 0,
+  "macesFlails": 0,
+  "polearms": 0,
+  "staves": 0,
+  "rangedWeapons": 0,
+  "throwing": 0,
+  "stealth": 9,
+  "unarmedCombat": 20.4,
+  "conjurations": 6,
+  "hexes": 0,
+  "summonings": 3,
+  "necromancy": 18,
+  "translocations": 12,
+  "transmutations": 0,
+  "fireMagic": 0,
+  "iceMagic": 24,
+  "airMagic": 3,
+  "earthMagic": 6,
+  "poisonMagic": 0,
+  "forgecraft": 0,
+  "alchemy": 12,
+  "invocations": 0,
+  "evocations": 15,
+  "shapeshifting": 17,
+  "mutations": [
+    "powerful",
+    "torment resistance 1",
+    "boosted hp",
+    "slow",
+    "reduced EV",
+    "almost no armour",
+    "amphibious",
+    "8 rings",
+    "(camouflage 1)",
+    "(gelatinous body 1)",
+    "(nimble swimmer 1)",
+    "tentacles",
+    "clever 2",
+    "strong 1 0: Orb of Zot"
+  ],
+  "spells": [
+    {
+      "name": "Vhi's Electric Charg",
+      "failurePercent": 1,
+      "memorized": true
+    },
+    {
+      "name": "Manifold Assault",
+      "failurePercent": 1,
+      "memorized": true
+    },
+    {
+      "name": "Fugue of the Fallen",
+      "failurePercent": 0,
+      "memorized": true
+    },
+    {
+      "name": "Ozocubu's Refrigerat",
+      "failurePercent": 0,
+      "memorized": true
+    },
+    {
+      "name": "Irradiate",
+      "failurePercent": 1,
+      "memorized": true
+    },
+    {
+      "name": "Blink",
+      "failurePercent": 0,
+      "memorized": true
+    },
+    {
+      "name": "Polar Vortex",
+      "failurePercent": 1,
+      "memorized": true
+    },
+    {
+      "name": "Borgnjor's Revivific",
+      "failurePercent": 1,
+      "memorized": true
+    },
+    {
+      "name": "Rimeblight",
+      "failurePercent": 1,
+      "memorized": true
+    },
+    {
+      "name": "Lee's Rapid Deconstr",
+      "failurePercent": 1,
+      "memorized": true
+    },
+    {
+      "name": "Ozocubu's Armour",
+      "failurePercent": 0,
+      "memorized": true
+    },
+    {
+      "name": "Freeze",
+      "failurePercent": 0,
+      "memorized": false
+    },
+    {
+      "name": "Poisonous Vapours",
+      "failurePercent": 0,
+      "memorized": false
+    },
+    {
+      "name": "Soul Splinter",
+      "failurePercent": 0,
+      "memorized": false
+    },
+    {
+      "name": "Lesser Beckoning",
+      "failurePercent": 0,
+      "memorized": false
+    },
+    {
+      "name": "Momentum Strike",
+      "failurePercent": 0,
+      "memorized": false
+    },
+    {
+      "name": "Sublimation of Blood",
+      "failurePercent": 0,
+      "memorized": false
+    },
+    {
+      "name": "Frozen Ramparts",
+      "failurePercent": 0,
+      "memorized": false
+    },
+    {
+      "name": "Maxwell's Portable Pile",
+      "failurePercent": 0,
+      "memorized": false
+    },
+    {
+      "name": "Summon Ice Beast",
+      "failurePercent": 0,
+      "memorized": false
+    },
+    {
+      "name": "Teleport Other",
+      "failurePercent": 0,
+      "memorized": false
+    },
+    {
+      "name": "Vampiric Draining",
+      "failurePercent": 0,
+      "memorized": false
+    },
+    {
+      "name": "Olgreb's Toxic Radiance",
+      "failurePercent": 0,
+      "memorized": false
+    },
+    {
+      "name": "Passage of Golubria",
+      "failurePercent": 0,
+      "memorized": false
+    },
+    {
+      "name": "Curse of Agony",
+      "failurePercent": 0,
+      "memorized": false
+    },
+    {
+      "name": "Foxfire",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Magic Dart",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Sandblast",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Shock",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Slow",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Call Imp",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Construct Spike Launche",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Static Discharge",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Call Canine Familiar",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Confusing Touch",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Mephitic Cloud",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Sigil of Binding",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Swiftness",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Tukima's Dance",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Airstrike",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Cause Fear",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Cigotuvi's Putrefaction",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Dimensional Bullseye",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Eringya's Surprising Cr",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Flame Wave",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Forge Blazeheart Golem",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Forge Lightning Spire",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Fulminant Prism",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Ignite Poison",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Iskenderun's Battlesphe",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Iskenderun's Mystic Bla",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Leda's Liquefaction",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Martyr's Knell",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Petrify",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Rending Blade",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Sticky Flame",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Summon Seismosaurus Egg",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Alistair's Intoxication",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Alistair's Walking Alem",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Arcjolt",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Borgnjor's Vile Clutch",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Detonation Catalyst",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Fireball",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Freezing Cloud",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Hoarfrost Cannonade",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Metabolic Englaciation",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Silence",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Summon Forest",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Summon Mana Viper",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Yara's Violent Unravell",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Bombard",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Death Channel",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Dispersal",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Eringya's Noxious Bog",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Gell's Gavotte",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Permafrost Eruption",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Sculpt Simulacrum",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Haunt",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Infestation",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Conjure Ball Lightning",
+      "failurePercent": 2,
+      "memorized": false
+    },
+    {
+      "name": "Malign Gateway",
+      "failurePercent": 4,
+      "memorized": false
+    },
+    {
+      "name": "Summon Cactus Giant",
+      "failurePercent": 5,
+      "memorized": false
+    },
+    {
+      "name": "Disjunction",
+      "failurePercent": 6,
+      "memorized": false
+    },
+    {
+      "name": "Orb of Destruction",
+      "failurePercent": 9,
+      "memorized": false
+    },
+    {
+      "name": "Magnavolt",
+      "failurePercent": 16,
+      "memorized": false
+    },
+    {
+      "name": "Forge Phalanx Beetle",
+      "failurePercent": 17,
+      "memorized": false
+    },
+    {
+      "name": "Fulsome Fusillade",
+      "failurePercent": 19,
+      "memorized": false
+    },
+    {
+      "name": "Spellspark Servitor",
+      "failurePercent": 28,
+      "memorized": false
+    },
+    {
+      "name": "Summon Hydra",
+      "failurePercent": 28,
+      "memorized": false
+    },
+    {
+      "name": "Lehudib's Crystal Spear",
+      "failurePercent": 52,
+      "memorized": false
+    },
+    {
+      "name": "Diamond Sawblades",
+      "failurePercent": 65,
+      "memorized": false
+    },
+    {
+      "name": "Enfeeble",
+      "failurePercent": 65,
+      "memorized": false
+    },
+    {
+      "name": "Summon Horrible Things",
+      "failurePercent": 89,
+      "memorized": false
+    },
+    {
+      "name": "Discord",
+      "failurePercent": 99,
+      "memorized": false
+    },
+    {
+      "name": "Ignition",
+      "failurePercent": 99,
+      "memorized": false
+    },
+    {
+      "name": "Death's Door",
+      "failurePercent": 8,
+      "memorized": false
+    },
+    {
+      "name": "Fire Storm",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Platinum Paragon",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Shatter",
+      "failurePercent": 100,
+      "memorized": false
+    }
+  ]
+}

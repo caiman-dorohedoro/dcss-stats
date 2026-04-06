@@ -95,17 +95,39 @@ export type SkillsSnapshot = {
   dodgingSkill: number
   shieldSkill: number
   spellcasting: number
-  schoolSkills: Record<string, number>
+  fighting?: number
+  shortBlades?: number
+  longBlades?: number
+  axes?: number
+  macesFlails?: number
+  polearms?: number
+  staves?: number
+  rangedWeapons?: number
+  throwing?: number
+  stealth?: number
+  unarmedCombat?: number
+  conjurations?: number
+  hexes?: number
+  summonings?: number
+  necromancy?: number
+  translocations?: number
+  transmutations?: number
+  fireMagic?: number
+  iceMagic?: number
+  airMagic?: number
+  earthMagic?: number
+  poisonMagic?: number
+  forgecraft?: number
+  alchemy?: number
+  invocations?: number
+  evocations?: number
+  shapeshifting?: number
 }
 
 export type SpellSnapshot = {
   name: string
   failurePercent: number
   memorized: boolean
-}
-
-export type MagicModifiersSnapshot = {
-  wizardry: number | undefined
 }
 
 export type MutationSnapshot = {
@@ -122,7 +144,6 @@ export type ParsedMorgueRecord = BaseStatsSnapshot &
     endedAt: string
     morgueUrl: string
     spells: SpellSnapshot[]
-    wizardry: number
     mutations: string[]
   }
 

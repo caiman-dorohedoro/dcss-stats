@@ -74,7 +74,10 @@ function collectSkills(lines: string[]): string {
   return collectIndentedBlock(lines, startIndex + 1, {
     acceptsLine: (line) => {
       const trimmed = line.trim()
-      return trimmed.length === 0 || /^(?:[+*-]\s*)?Level\s+[0-9]+(?:\.[0-9])?\s+/.test(trimmed)
+      return (
+        trimmed.length === 0 ||
+        /^(?:[O+*-]\s+)?Level\s+[0-9]+(?:\.[0-9])?(?:\([0-9]+(?:\.[0-9])?\))?\s+/.test(trimmed)
+      )
     },
   })
 }

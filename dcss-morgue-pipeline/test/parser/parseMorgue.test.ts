@@ -66,10 +66,9 @@ describe('parseMorgue', () => {
 
     expect(result.ok).toBe(true)
     if (result.ok) {
-      expect(result.record.schoolSkills).toEqual({
-        conjurations: 11.2,
-        fireMagic: 9.7,
-      })
+      expect(result.record.conjurations).toBe(11.2)
+      expect(result.record.fireMagic).toBe(9.7)
+      expect(result.record).not.toHaveProperty('schoolSkills')
       expect(result.record.ac).toBe(4)
       expect(result.record.ev).toBe(11)
       expect(result.record.sh).toBe(0)
@@ -92,15 +91,6 @@ describe('parseMorgue', () => {
     expect(result.ok).toBe(true)
     if (result.ok) {
       expect(result.record.spells).toEqual([])
-    }
-  })
-
-  it('fails the whole parse when wizardry is ambiguous', () => {
-    const result = parseMorgue(loadFixture('fail', 'ambiguous-wizardry.txt'), fixtureMeta())
-
-    expect(result.ok).toBe(false)
-    if (!result.ok) {
-      expect(result.failure.reason).toBe('wizardry_parse_failed')
     }
   })
 

@@ -43,16 +43,8 @@ export function validateStrict(row: Partial<ParsedMorgueTextRecord>): ParsedMorg
     throw new ParseFailure('skill_parse_failed')
   }
 
-  if (!row.schoolSkills) {
-    throw new ParseFailure('school_skill_parse_failed')
-  }
-
   if (row.spells === undefined) {
     throw new ParseFailure('spell_section_parse_failed')
-  }
-
-  if (!isFiniteNumber(row.wizardry)) {
-    throw new ParseFailure('wizardry_parse_failed')
   }
 
   if (!Array.isArray(row.mutations)) {
