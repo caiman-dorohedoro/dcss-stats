@@ -1,0 +1,65 @@
+{
+  "playerName": "dolemite99",
+  "version": "0.35-a0-181-g84ebf06",
+  "species": "Minotaur",
+  "ac": 14,
+  "ev": 6,
+  "sh": 0,
+  "strength": 25,
+  "intelligence": 4,
+  "dexterity": 11,
+  "bodyArmour": "plate armour",
+  "shield": "none",
+  "footwear": "pair of boots",
+  "orb": "none",
+  "amulet": "none",
+  "rings": [
+    "ring of slaying",
+    "ring of flight"
+  ],
+  "bodyArmourDetails": {
+    "rawName": "plate armour",
+    "displayName": "plate armour",
+    "artifactKind": "normal",
+    "modifiersText": null,
+    "modifiers": []
+  },
+  "footwearDetails": {
+    "rawName": "pair of boots",
+    "displayName": "pair of boots",
+    "artifactKind": "normal",
+    "modifiersText": null,
+    "modifiers": []
+  },
+  "ringDetails": [
+    {
+      "rawName": "ring of slaying",
+      "displayName": "ring of slaying",
+      "artifactKind": "normal",
+      "modifiersText": null,
+      "modifiers": []
+    },
+    {
+      "rawName": "ring of flight",
+      "displayName": "ring of flight",
+      "artifactKind": "normal",
+      "modifiersText": null,
+      "modifiers": []
+    }
+  ],
+  "helmet": false,
+  "gloves": false,
+  "bootsOrBarding": true,
+  "cloak": true,
+  "armourSkill": 2.4,
+  "dodgingSkill": 2.1,
+  "shieldSkill": 0,
+  "spellcasting": 0,
+  "schoolSkills": {},
+  "wizardry": 0,
+  "mutations": [
+    "horns 2",
+    "retaliatory headbutt"
+  ],
+  "spells": []
+}

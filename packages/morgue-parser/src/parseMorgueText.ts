@@ -2,6 +2,7 @@ import type { ParseMorgueTextOptions, ParseMorgueTextResult } from './types'
 import { extractBaseStats } from './extractBaseStats'
 import { extractEquipment } from './extractEquipment'
 import { extractMagicModifiers } from './extractMagicModifiers'
+import { extractMutations } from './extractMutations'
 import { extractSkills } from './extractSkills'
 import { extractSpells } from './extractSpells'
 import { ParseFailure, validateStrict } from './validateStrict'
@@ -13,6 +14,7 @@ export function parseMorgueText(text: string, options: ParseMorgueTextOptions = 
       ...extractEquipment(text),
       ...extractSkills(text),
       ...extractMagicModifiers(text),
+      ...extractMutations(text),
       spells: extractSpells(text, {
         canonicalSpellNames: options.canonicalSpellNames,
       }),

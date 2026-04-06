@@ -1,0 +1,78 @@
+{
+  "playerName": "WSnake",
+  "version": "0.35-a0-257-gf9e06672e4",
+  "species": "Draconian",
+  "ac": 11,
+  "ev": 11,
+  "sh": 0,
+  "strength": 16,
+  "intelligence": 25,
+  "dexterity": 19,
+  "bodyArmour": "none",
+  "shield": "none",
+  "footwear": "pair of boots",
+  "orb": "none",
+  "amulet": "amulet of regeneration",
+  "rings": [
+    "randart ring",
+    "ring of intelligence"
+  ],
+  "footwearDetails": {
+    "rawName": "pair of boots",
+    "displayName": "pair of boots",
+    "artifactKind": "normal",
+    "modifiersText": null,
+    "modifiers": []
+  },
+  "amuletDetails": {
+    "rawName": "amulet of regeneration",
+    "displayName": "amulet of regeneration",
+    "artifactKind": "normal",
+    "modifiersText": null,
+    "modifiers": []
+  },
+  "ringDetails": [
+    {
+      "rawName": "ring of Sogam",
+      "displayName": "randart ring",
+      "artifactKind": "randart",
+      "modifiersText": "^Drain rF+++ rC+ Str+6 Dex+2",
+      "modifiers": [
+        "^Drain",
+        "rF+++",
+        "rC+",
+        "Str+6",
+        "Dex+2"
+      ]
+    },
+    {
+      "rawName": "ring of intelligence",
+      "displayName": "ring of intelligence",
+      "artifactKind": "normal",
+      "modifiersText": null,
+      "modifiers": []
+    }
+  ],
+  "helmet": false,
+  "gloves": true,
+  "bootsOrBarding": true,
+  "cloak": true,
+  "armourSkill": 0,
+  "dodgingSkill": 3.1,
+  "shieldSkill": 0,
+  "spellcasting": 10.4,
+  "schoolSkills": {
+    "summonings": 12
+  },
+  "wizardry": 1,
+  "mutations": [
+    "glacial breath",
+    "AC +8",
+    "unfitting armour",
+    "cold resistance 1",
+    "cold-blooded",
+    "inability to use devices",
+    "armoured tail 1"
+  ],
+  "spells": []
+}

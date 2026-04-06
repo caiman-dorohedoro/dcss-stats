@@ -1,0 +1,9 @@
+Equipment:
+
+Armour
+ k - the +10 Black Knight's barding (worn) {Ponderous, rPois rN+}
+ n - the +4 cloak "Rafeal" (worn) {rCorr Str+3}
+ C - the +0 pair of gloves "Muvegouc" (worn) {rPois Int+6}
+ D - the +3 hat "Pilumaed" (worn) {Str+3 Int+4}
+ E - an orb of mayhem (worn)
+ L - the +3 pearl dragon scales "Petz" (worn) {^Drain rN+ Regen+ Str+2 SInv}

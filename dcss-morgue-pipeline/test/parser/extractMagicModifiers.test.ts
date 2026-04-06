@@ -11,11 +11,9 @@ function loadFixture(name: string) {
 }
 
 describe('extractMagicModifiers', () => {
-  it('extracts wizardry, channel, and wild magic modifiers', () => {
+  it('extracts wizardry modifiers', () => {
     expect(extractMagicModifiers(loadFixture('reordered-sections.txt'))).toEqual({
       wizardry: 1,
-      channel: 0,
-      wildMagic: 0,
     })
   })
 })

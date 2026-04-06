@@ -55,13 +55,5 @@ export function validateStrict(row: Partial<ParsedMorgueRecord>): ParsedMorgueRe
     throw new ParseFailure('wizardry_parse_failed')
   }
 
-  if (!isFiniteNumber(row.channel)) {
-    throw new ParseFailure('channel_parse_failed')
-  }
-
-  if (!isFiniteNumber(row.wildMagic)) {
-    throw new ParseFailure('wild_magic_parse_failed')
-  }
-
   return row as ParsedMorgueRecord
 }

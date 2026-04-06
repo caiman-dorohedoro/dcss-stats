@@ -1,0 +1,43 @@
+Dungeon Crawl Stone Soup version 0.35-a0-256-g859e8e3ba0 (webtiles) character file.
+
+Game seed: 10601491174207892515
+
+202159 Skryme the Severer (level 17, -13/163 HPs)
+             Began as a Minotaur Fighter on Apr 4, 2026.
+             Was the Champion of Jiyva.
+             Mangled by a merfolk siren
+             ... wielding a +2 trident of protection
+              (18 damage)
+             ... on level 4 of the Shoals.
+             The game lasted 00:58:34 (20240 turns).
+
+Skryme the Severer (Minotaur Fighter)              Turns: 20240, Time: 00:58:34
+
+Health: -13/163    AC: 10    Str: 33    XL:     17   Next: 6%
+Magic:  27/27      EV: 12    Int:  9    God:    Jiyva [******]
+Gold:   2013       SH: 15    Dex: 10    Spells: 16/16 levels left
+
+rFire   . . .  (100%)   F - +7 broad axe (elec)
+rCold   . . .  (100%)   Z - +2 kite shield {Reflect}
+rNeg    . . .  (100%)   h - +0 troll leather armour {Pargi}
+rPois   +      (33%)    G - +0 cloak {rPois}
+rElec   .      (100%)   (no boots)
+rCorr   +      (50%)    b - amulet of Dazytsee {Dissipate Fly Regen+}
+SInv    .               e - +6 ring of strength
+Will    +....           d - +4 ring of protection
+Stlth   +
+HPRegen 4.47/turn
+MPRegen 1.00/turn
+
+%: reflection
+@: flying, mesmerised, studying Translocations, slimy shroud
+A: horns 3, retaliatory headbutt, claws 3, talons 2, clever 1, regeneration 1,
+eyeballs 1, jelly sensing items, MP-powered wands, efficient magic 1, slime
+shroud, feed off suffering 1
+}: 2/15 runes: barnacled, slimy
+a: Renounce Religion (0%), Oozemancy (0%), Slimify (0%)
+
+Inventory:
+
+Hand Weapons
+ F - a +7 broad axe of electrocution (weapon)

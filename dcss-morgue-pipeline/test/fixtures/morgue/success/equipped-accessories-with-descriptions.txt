@@ -1,0 +1,48 @@
+Inventory:
+
+Armour
+ c - the scarf of the Hungering Gods {Shadows, ^Drain rF++ Str+3 Dex+3}
+   (You found it on level 3 of the Dungeon)
+
+   ^Drain:    It drains your maximum health when unequipped.
+ g - the +3 kite shield of Sloth {Regen+}
+   (You acquired it on level 13 of a ziggurat)
+
+   Regen+:    It increases your rate of health regeneration.
+ k - the +10 Black Knight's barding (worn) {Ponderous, rPois rN+}
+   (You acquired it on level 25 of a ziggurat)
+
+   rPois:     It protects you from poison.
+ n - the +4 cloak "Rafeal" (worn) {rCorr Str+3}
+   (You found it on level 26 of a ziggurat)
+
+   rCorr:     It protects you from acid and corrosion.
+ C - the +0 pair of gloves "Muvegouc" (worn) {rPois Int+6}
+   (You took it off Nikola on level 2 of the Elven Halls)
+
+   rPois:     It protects you from poison.
+ D - the +3 hat "Pilumaed" (worn) {Str+3 Int+4}
+   (You took it off Wiglaf on level 3 of the Elven Halls)
+
+   Str+3:     It affects your strength (+3).
+ E - an orb of mayhem (worn)
+ L - the +3 pearl dragon scales "Petz" (worn) {^Drain rN+ Regen+ Str+2 SInv}
+   (You found it on level 16 of a ziggurat)
+
+   ^Drain:    It drains your maximum health when unequipped.
+
+Jewellery
+ h - the amulet of Vitality (worn) {Regen++ RegenMP++}
+   (You took it off a deep elf death mage on level 3 of the Elven Halls)
+
+   Regen++:   It increases your rate of health regeneration.
+ v - the ring of the Empty Page (worn) {rF+ rN+ AC+4 Stlth+}
+   (You found it on level 7 of a ziggurat)
+
+   rF+:       It protects you from fire.
+ K - the ring "Veveor" (worn) {rElec Will+ MP+4 Int+3 Slay+4}
+   (You found it on level 16 of a ziggurat)
+
+   rElec:     It insulates you from electricity.
+
+Skills:

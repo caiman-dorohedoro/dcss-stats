@@ -21,14 +21,10 @@ export function extractMagicModifiers(text: string): MagicModifiersSnapshot {
   if (!section) {
     return {
       wizardry: 0,
-      channel: 0,
-      wildMagic: 0,
     }
   }
 
   return {
     wizardry: parseModifier(section, 'Wizardry'),
-    channel: parseModifier(section, 'Channel'),
-    wildMagic: parseModifier(section, 'Wild Magic'),
   }
 }

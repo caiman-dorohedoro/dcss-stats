@@ -33,6 +33,30 @@ export function MorgueParserScreen() {
     return JSON.stringify(result.ok ? result.record : result.failure, null, 2)
   }, [result])
 
+  const summarizedRings = useMemo(() => {
+    if (!result?.ok) {
+      return 'none'
+    }
+
+    return summarizeRings(result.record.rings)
+  }, [result])
+
+  const summarizedAmulet = useMemo(() => {
+    if (!result?.ok) {
+      return 'none'
+    }
+
+    return summarizeAmulet(result.record.amulet)
+  }, [result])
+
+  const summarizedMutations = useMemo(() => {
+    if (!result?.ok) {
+      return 'none'
+    }
+
+    return result.record.mutations.length > 0 ? result.record.mutations.join(', ') : 'none'
+  }, [result])
+
   const handleParse = () => {
     startTransition(() => {
       setResult(parseMorgueText(input))
@@ -119,7 +143,12 @@ export function MorgueParserScreen() {
                 <SummaryItem label="Version" value={result.record.version} />
                 <SummaryItem label="AC / EV / SH" value={`${result.record.ac} / ${result.record.ev} / ${result.record.sh}`} />
                 <SummaryItem label="Body Armour" value={result.record.bodyArmour} />
+                <SummaryItem label="Footwear" value={result.record.footwear} />
                 <SummaryItem label="Shield" value={result.record.shield} />
+                <SummaryItem label="Orb" value={result.record.orb} />
+                <SummaryItem label="Amulet" value={summarizedAmulet} />
+                <SummaryItem label="Rings" value={summarizedRings} />
+                <SummaryItem label="Traits / Mutations" value={summarizedMutations} />
                 <SummaryItem label="Spellcasting" value={String(result.record.spellcasting)} />
                 <SummaryItem label="Spell Count" value={String(result.record.spells.length)} />
               </dl>
@@ -205,6 +234,26 @@ export function MorgueParserScreen() {
       </section>
     </main>
   )
+}
+
+function summarizeRings(rings: string[]): string {
+  if (rings.length === 0) {
+    return 'none'
+  }
+
+  const counts = new Map<string, number>()
+
+  for (const ring of rings) {
+    counts.set(ring, (counts.get(ring) ?? 0) + 1)
+  }
+
+  return [...counts.entries()]
+    .map(([label, count]) => (count > 1 ? `${label} x${count}` : label))
+    .join(', ')
+}
+
+function summarizeAmulet(amulet: string): string {
+  return amulet
 }
 
 function StatusBadge({ result }: { result: ParseMorgueTextResult | null }) {

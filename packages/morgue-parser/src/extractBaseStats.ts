@@ -8,27 +8,13 @@ type ExtractBaseStatsOptions = {
 }
 
 function parseVersion(text: string): BaseStatsSnapshot['version'] {
-  const versionText = text.match(/Dungeon Crawl Stone Soup version ([^\n]+)/)?.[1]
+  const versionText = text.match(/Dungeon Crawl Stone Soup version ([^\s(]+)/)?.[1]
 
   if (!versionText) {
     throw new Error('Could not find morgue version line')
   }
 
-  if (/0\.34/i.test(versionText)) {
-    return '0.34'
-  }
-
-  const versionMatch = versionText.match(/0\.(\d+)/)
-
-  if (versionMatch && Number.parseInt(versionMatch[1], 10) > 34) {
-    return 'trunk'
-  }
-
-  if (/git|trunk/i.test(versionText)) {
-    return 'trunk'
-  }
-
-  throw new Error(`Unsupported morgue version: ${versionText}`)
+  return versionText
 }
 
 function parsePlayerName(text: string): string | null {

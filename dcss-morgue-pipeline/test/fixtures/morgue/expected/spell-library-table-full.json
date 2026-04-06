@@ -1,0 +1,63 @@
+{
+  "playerName": "Sorcerer",
+  "version": "0.34.0",
+  "species": "Djinni",
+  "ac": 4,
+  "ev": 11,
+  "sh": 0,
+  "strength": 8,
+  "intelligence": 19,
+  "dexterity": 14,
+  "bodyArmour": "robe",
+  "shield": "buckler",
+  "footwear": "none",
+  "orb": "none",
+  "amulet": "none",
+  "rings": [],
+  "bodyArmourDetails": {
+    "rawName": "robe of Willpower",
+    "displayName": "robe",
+    "artifactKind": "normal",
+    "modifiersText": null,
+    "modifiers": []
+  },
+  "shieldDetails": {
+    "rawName": "buckler",
+    "displayName": "buckler",
+    "artifactKind": "normal",
+    "modifiersText": null,
+    "modifiers": []
+  },
+  "ringDetails": [],
+  "helmet": false,
+  "gloves": false,
+  "bootsOrBarding": false,
+  "cloak": false,
+  "armourSkill": 2.3,
+  "dodgingSkill": 8.1,
+  "shieldSkill": 0,
+  "spellcasting": 12.4,
+  "schoolSkills": {
+    "conjurations": 11.2,
+    "fireMagic": 9.7
+  },
+  "wizardry": 0,
+  "mutations": [],
+  "spells": [
+    {
+      "name": "Flame Wave",
+      "failurePercent": 3,
+      "memorized": true
+    },
+    {
+      "name": "Fireball",
+      "failurePercent": 12,
+      "memorized": false
+    },
+    {
+      "name": "Blink",
+      "failurePercent": 22,
+      "memorized": false
+    }
+  ]
+}

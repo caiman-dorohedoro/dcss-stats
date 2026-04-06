@@ -27,12 +27,13 @@ describe('parseMorgue', () => {
 
     expect(result.ok).toBe(true)
     if (result.ok) {
-      expect(result.record.version).toBe('0.34')
+      expect(result.record.version).toBe('0.34.0')
       expect(result.record.species).toBe('Barachi')
       expect(result.record.ac).toBe(3)
       expect(result.record.ev).toBe(11)
       expect(result.record.sh).toBe(0)
       expect(result.record.bodyArmour).toBe('leather armour')
+      expect(result.record.mutations).toEqual(['amphibious', 'frog-like legs 1', '+LOS'])
       expect(result.record.dodgingSkill).toBe(2.1)
       expect(result.record.spells).toEqual([])
     }
@@ -46,7 +47,7 @@ describe('parseMorgue', () => {
 
     expect(result.ok).toBe(true)
     if (result.ok) {
-      expect(result.record.version).toBe('trunk')
+      expect(result.record.version).toBe('0.35-a0-181-g84ebf06')
       expect(result.record.species).toBe('Minotaur')
       expect(result.record.ac).toBe(14)
       expect(result.record.ev).toBe(6)
@@ -54,6 +55,7 @@ describe('parseMorgue', () => {
       expect(result.record.bodyArmour).toBe('plate armour')
       expect(result.record.bootsOrBarding).toBe(true)
       expect(result.record.cloak).toBe(true)
+      expect(result.record.mutations).toEqual(['horns 2', 'retaliatory headbutt'])
       expect(result.record.armourSkill).toBe(2.4)
       expect(result.record.spells).toEqual([])
     }
@@ -110,7 +112,7 @@ describe('parseMorgue', () => {
 
     expect(result.ok).toBe(true)
     if (result.ok) {
-      expect(result.record.version).toBe('trunk')
+      expect(result.record.version).toBe('0.35-a0-257-gf9e06672e4')
       expect(result.record.species).toBe('Draconian')
       expect(result.record.ac).toBe(11)
       expect(result.record.ev).toBe(11)

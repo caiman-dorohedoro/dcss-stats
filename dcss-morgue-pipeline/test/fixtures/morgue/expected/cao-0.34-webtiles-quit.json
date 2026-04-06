@@ -1,0 +1,41 @@
+{
+  "playerName": "EnsignRicky",
+  "version": "0.34.0",
+  "species": "Barachi",
+  "ac": 3,
+  "ev": 11,
+  "sh": 0,
+  "strength": 12,
+  "intelligence": 9,
+  "dexterity": 15,
+  "bodyArmour": "leather armour",
+  "shield": "none",
+  "footwear": "none",
+  "orb": "none",
+  "amulet": "none",
+  "rings": [],
+  "bodyArmourDetails": {
+    "rawName": "leather armour",
+    "displayName": "leather armour",
+    "artifactKind": "normal",
+    "modifiersText": null,
+    "modifiers": []
+  },
+  "ringDetails": [],
+  "helmet": false,
+  "gloves": false,
+  "bootsOrBarding": false,
+  "cloak": false,
+  "armourSkill": 0,
+  "dodgingSkill": 2.1,
+  "shieldSkill": 0,
+  "spellcasting": 0,
+  "schoolSkills": {},
+  "wizardry": 0,
+  "mutations": [
+    "amphibious",
+    "frog-like legs 1",
+    "+LOS"
+  ],
+  "spells": []
+}

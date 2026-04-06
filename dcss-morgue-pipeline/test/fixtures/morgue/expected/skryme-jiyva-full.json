@@ -1,0 +1,229 @@
+{
+  "playerName": "Skryme",
+  "version": "0.35-a0-256-g859e8e3ba0",
+  "species": "Minotaur",
+  "ac": 10,
+  "ev": 12,
+  "sh": 15,
+  "strength": 33,
+  "intelligence": 9,
+  "dexterity": 10,
+  "bodyArmour": "troll leather armour",
+  "shield": "kite shield",
+  "footwear": "none",
+  "orb": "none",
+  "amulet": "randart amulet",
+  "rings": [
+    "ring of protection",
+    "ring of strength"
+  ],
+  "bodyArmourDetails": {
+    "rawName": "troll leather armour",
+    "displayName": "troll leather armour",
+    "artifactKind": "normal",
+    "modifiersText": "Pargi",
+    "modifiers": [
+      "Pargi"
+    ]
+  },
+  "shieldDetails": {
+    "rawName": "kite shield of reflection",
+    "displayName": "kite shield",
+    "artifactKind": "normal",
+    "modifiersText": null,
+    "modifiers": []
+  },
+  "amuletDetails": {
+    "rawName": "amulet of Dazytsee",
+    "displayName": "randart amulet",
+    "artifactKind": "randart",
+    "modifiersText": "Dissipate Fly Regen+",
+    "modifiers": [
+      "Dissipate",
+      "Fly",
+      "Regen+"
+    ]
+  },
+  "ringDetails": [
+    {
+      "rawName": "ring of protection",
+      "displayName": "ring of protection",
+      "artifactKind": "normal",
+      "modifiersText": null,
+      "modifiers": []
+    },
+    {
+      "rawName": "ring of strength",
+      "displayName": "ring of strength",
+      "artifactKind": "normal",
+      "modifiersText": null,
+      "modifiers": []
+    }
+  ],
+  "helmet": false,
+  "gloves": false,
+  "bootsOrBarding": false,
+  "cloak": true,
+  "armourSkill": 16.3,
+  "dodgingSkill": 6.5,
+  "shieldSkill": 17.7,
+  "spellcasting": 0,
+  "schoolSkills": {},
+  "wizardry": 0,
+  "mutations": [
+    "horns 3",
+    "retaliatory headbutt",
+    "claws 3",
+    "talons 2",
+    "clever 1",
+    "regeneration 1",
+    "eyeballs 1",
+    "jelly sensing items",
+    "MP-powered wands",
+    "efficient magic 1",
+    "slime shroud",
+    "feed off suffering 1"
+  ],
+  "spells": [
+    {
+      "name": "Shock",
+      "failurePercent": 47,
+      "memorized": false
+    },
+    {
+      "name": "Summon Small Mammal",
+      "failurePercent": 47,
+      "memorized": false
+    },
+    {
+      "name": "Grave Claw",
+      "failurePercent": 63,
+      "memorized": false
+    },
+    {
+      "name": "Searing Ray",
+      "failurePercent": 63,
+      "memorized": false
+    },
+    {
+      "name": "Static Discharge",
+      "failurePercent": 63,
+      "memorized": false
+    },
+    {
+      "name": "Confusing Touch",
+      "failurePercent": 85,
+      "memorized": false
+    },
+    {
+      "name": "Stone Arrow",
+      "failurePercent": 85,
+      "memorized": false
+    },
+    {
+      "name": "Summon Ice Beast",
+      "failurePercent": 85,
+      "memorized": false
+    },
+    {
+      "name": "Swiftness",
+      "failurePercent": 85,
+      "memorized": false
+    },
+    {
+      "name": "Volatile Blastmotes",
+      "failurePercent": 85,
+      "memorized": false
+    },
+    {
+      "name": "Airstrike",
+      "failurePercent": 99,
+      "memorized": false
+    },
+    {
+      "name": "Animate Dead",
+      "failurePercent": 99,
+      "memorized": false
+    },
+    {
+      "name": "Cigotuvi's Putrefaction",
+      "failurePercent": 99,
+      "memorized": false
+    },
+    {
+      "name": "Fulminant Prism",
+      "failurePercent": 99,
+      "memorized": false
+    },
+    {
+      "name": "Iskenderun's Mystic Bla",
+      "failurePercent": 99,
+      "memorized": false
+    },
+    {
+      "name": "Leda's Liquefaction",
+      "failurePercent": 99,
+      "memorized": false
+    },
+    {
+      "name": "Olgreb's Toxic Radiance",
+      "failurePercent": 99,
+      "memorized": false
+    },
+    {
+      "name": "Passage of Golubria",
+      "failurePercent": 99,
+      "memorized": false
+    },
+    {
+      "name": "Petrify",
+      "failurePercent": 99,
+      "memorized": false
+    },
+    {
+      "name": "Alistair's Walking Alem",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Arcjolt",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Borgnjor's Vile Clutch",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Curse of Agony",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Freezing Cloud",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Metabolic Englaciation",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Ozocubu's Refrigeration",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Lehudib's Crystal Spear",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Polar Vortex",
+      "failurePercent": 100,
+      "memorized": false
+    }
+  ]
+}

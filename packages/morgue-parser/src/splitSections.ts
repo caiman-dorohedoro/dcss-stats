@@ -57,15 +57,10 @@ function collectInventory(lines: string[]): string {
   }
 
   return collectIndentedBlock(lines, startIndex + 1, {
-    acceptsLine: (line) => {
-      const trimmed = line.trim()
-
-      return (
-        trimmed.length === 0 ||
-        /^[A-Z][A-Za-z &'-]+$/.test(trimmed) ||
-        /^[a-zA-Z0-9] - /.test(trimmed)
-      )
-    },
+    // Inventory includes wrapped description text between item lines.
+    // Keep the whole block until the next top-level section and let
+    // the equipment parser ignore non-item lines.
+    acceptsLine: () => true,
   })
 }
 

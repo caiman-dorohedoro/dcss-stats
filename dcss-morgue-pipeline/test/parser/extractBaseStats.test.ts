@@ -15,7 +15,7 @@ describe('extractBaseStats', () => {
     const parsed = extractBaseStats(loadFixture('reordered-sections.txt'))
 
     expect(parsed).toEqual({
-      version: '0.34',
+      version: '0.34.1',
       species: 'Djinni',
       ac: 4,
       ev: 11,
@@ -30,7 +30,7 @@ describe('extractBaseStats', () => {
     const parsed = extractBaseStats(loadFixture('cao-0.34-webtiles-quit.txt'))
 
     expect(parsed).toEqual({
-      version: '0.34',
+      version: '0.34.0',
       species: 'Barachi',
       ac: 3,
       ev: 11,
@@ -45,7 +45,7 @@ describe('extractBaseStats', () => {
     const parsed = extractBaseStats(loadFixture('cao-trunk-webtiles-death.txt'))
 
     expect(parsed).toEqual({
-      version: 'trunk',
+      version: '0.35-a0-181-g84ebf06',
       species: 'Minotaur',
       ac: 14,
       ev: 6,
@@ -60,7 +60,7 @@ describe('extractBaseStats', () => {
     const parsed = extractBaseStats(loadFixture('demonspawn-abbrev-title.txt'))
 
     expect(parsed).toEqual({
-      version: '0.34',
+      version: '0.34.0',
       species: 'Demonspawn',
       ac: 4,
       ev: 11,
@@ -75,7 +75,7 @@ describe('extractBaseStats', () => {
     const parsed = extractBaseStats(loadFixture('colored-draconian.txt'))
 
     expect(parsed).toEqual({
-      version: 'trunk',
+      version: '0.35-a0-257-gf9e06672e4',
       species: 'Draconian',
       ac: 11,
       ev: 11,

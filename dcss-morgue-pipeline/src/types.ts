@@ -1,4 +1,5 @@
 export type TargetVersion = '0.34' | 'trunk'
+export type MorgueVersion = string
 
 export type ServerId = (typeof ACTIVE_SERVER_IDS)[number]
 
@@ -50,7 +51,7 @@ export type CandidateGame = {
 }
 
 export type BaseStatsSnapshot = {
-  version: TargetVersion
+  version: MorgueVersion
   species: string
   ac: number
   ev: number
@@ -60,9 +61,29 @@ export type BaseStatsSnapshot = {
   dexterity: number
 }
 
+export type ArtifactKind = 'normal' | 'randart' | 'unrand'
+
+export type EquipmentItemSnapshot = {
+  rawName: string
+  displayName: string
+  artifactKind: ArtifactKind
+  modifiersText: string | null
+  modifiers: string[]
+}
+
 export type EquipmentSnapshot = {
   bodyArmour: string | undefined
   shield: string | undefined
+  footwear: string | undefined
+  orb: string | undefined
+  amulet: string | undefined
+  rings: string[]
+  bodyArmourDetails?: EquipmentItemSnapshot
+  shieldDetails?: EquipmentItemSnapshot
+  footwearDetails?: EquipmentItemSnapshot
+  orbDetails?: EquipmentItemSnapshot
+  amuletDetails?: EquipmentItemSnapshot
+  ringDetails?: EquipmentItemSnapshot[]
   helmet: boolean
   gloves: boolean
   bootsOrBarding: boolean
@@ -85,8 +106,10 @@ export type SpellSnapshot = {
 
 export type MagicModifiersSnapshot = {
   wizardry: number | undefined
-  channel: number | undefined
-  wildMagic: number | undefined
+}
+
+export type MutationSnapshot = {
+  mutations: string[]
 }
 
 export type ParsedMorgueRecord = BaseStatsSnapshot &
@@ -100,8 +123,7 @@ export type ParsedMorgueRecord = BaseStatsSnapshot &
     morgueUrl: string
     spells: SpellSnapshot[]
     wizardry: number
-    channel: number
-    wildMagic: number
+    mutations: string[]
   }
 
 export type ParseFailureRecord = {

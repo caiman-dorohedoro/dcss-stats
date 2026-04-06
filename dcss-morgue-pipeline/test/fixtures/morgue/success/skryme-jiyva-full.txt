@@ -1,0 +1,1150 @@
+ Dungeon Crawl Stone Soup version 0.35-a0-256-g859e8e3ba0 (webtiles) character file.
+
+Game seed: 10601491174207892515
+
+202159 Skryme the Severer (level 17, -13/163 HPs)
+             Began as a Minotaur Fighter on Apr 4, 2026.
+             Was the Champion of Jiyva.
+             Mangled by a merfolk siren
+             ... wielding a +2 trident of protection
+              (18 damage)
+             ... on level 4 of the Shoals.
+             The game lasted 00:58:34 (20240 turns).
+
+Skryme the Severer (Minotaur Fighter)              Turns: 20240, Time: 00:58:34
+
+Health: -13/163    AC: 10    Str: 33    XL:     17   Next: 6%
+Magic:  27/27      EV: 12    Int:  9    God:    Jiyva [******]
+Gold:   2013       SH: 15    Dex: 10    Spells: 16/16 levels left
+
+rFire   . . .  (100%)   F - +7 broad axe (elec)
+rCold   . . .  (100%)   Z - +2 kite shield {Reflect}
+rNeg    . . .  (100%)   h - +0 troll leather armour {Pargi}
+rPois   +      (33%)    G - +0 cloak {rPois}
+rElec   .      (100%)   (no boots)
+rCorr   +      (50%)    b - amulet of Dazytsee {Dissipate Fly Regen+}
+SInv    .               e - +6 ring of strength
+Will    +....           d - +4 ring of protection
+Stlth   +         
+HPRegen 4.47/turn
+MPRegen 1.00/turn
+
+%: reflection
+@: flying, mesmerised, studying Translocations, slimy shroud
+A: horns 3, retaliatory headbutt, claws 3, talons 2, clever 1, regeneration 1,
+eyeballs 1, jelly sensing items, MP-powered wands, efficient magic 1, slime
+shroud, feed off suffering 1
+}: 2/15 runes: barnacled, slimy
+a: Renounce Religion (0%), Oozemancy (0%), Slimify (0%)
+
+
+You were on level 4 of the Shoals.
+You worshipped Jiyva.
+Jiyva was exalted by your worship.
+You visited 5 branches of the dungeon, and saw 31 of its levels.
+You also visited: Ice Cave.
+
+You collected 2864 gold pieces.
+You spent 851 gold pieces at shops.
+
+Inventory:
+
+Hand Weapons
+ i - the +1 triple crossbow of Extinguishment {flame, Dex+3}
+   (You found it on level 5 of the Pits of Slime)   
+   
+   Dex+3:     It affects your dexterity (+3).
+   
+   It cannot be enchanted further.
+ C - the +6 shillelagh "Devastator" {shatter}
+   (You found it on level 11 of the Dungeon)   
+   
+   It cannot be enchanted further.
+ F - a +7 broad axe of electrocution (weapon)
+ K - the +7 athame of the Firefly {pain, rF+ rCorr Int+4 Dex+2}
+   (You found it on level 5 of the Pits of Slime)   
+   
+   rF+:       It protects you from fire.
+   rCorr:     It protects you from acid and corrosion.
+   Int+4:     It affects your intelligence (+4).
+   Dex+2:     It affects your dexterity (+2).
+   
+   It cannot be enchanted further.
+ O - a +2 hand cannon of freezing
+ S - the +0 morningstar "Noroifru" {speed, rN+ Will+ Dex+4}
+   (You found it on level 5 of the Lair of Beasts)   
+   
+   rN+:       It protects you from negative energy.
+   Will+:     It increases your willpower.
+   Dex+4:     It affects your dexterity (+4).
+   
+   It cannot be enchanted further.
+ T - the +1 halberd "Orgharuji" {venom, Will+}
+   (You found it on level 5 of the Lair of Beasts)   
+   
+   Will+:     It increases your willpower.
+   
+   It cannot be enchanted further.
+ U - the +8 falchion of Equivalence {flame, Str+7 Int-2}
+   (You found it on level 13 of the Dungeon)   
+   
+   Str+7:     It affects your strength (+7).
+   Int-2:     It affects your intelligence (-2).
+   
+   It cannot be enchanted further.
+Missiles
+ j - 5 javelins
+ l - a curare-tipped dart (quivered)
+ n - 4 throwing nets
+ w - 15 poisoned darts
+ E - 21 boomerangs
+Armour
+ f - a +0 pair of gloves
+ h - a +0 troll leather armour (worn) {Pargi}
+ k - a +0 cloak of willpower
+ t - the +4 chain mail of Terops {Int+4 Dex+3}
+   (You found it on level 5 of the Pits of Slime)   
+   
+   Int+4:     It affects your intelligence (+4).
+   Dex+3:     It affects your dexterity (+3).
+   
+   It cannot be enchanted further.
+ u - a +0 plate armour
+ z - a +2 pair of gloves
+ G - a +0 cloak of poison resistance (worn)
+ L - +0 ice dragon scales
+ Z - a +2 kite shield of reflection (worn)
+Magical Staves
+ c - the necromancy staff "Taarefe" {rC+ rN+ Str+5 Dex+3 Necro}
+   (You found it on level 5 of the Pits of Slime)   
+   
+   [staff of necromancy]
+   
+   rC+:       It protects you from cold.
+   rN+:       It protects you from negative energy.
+   Str+5:     It affects your strength (+5).
+   Dex+3:     It affects your dexterity (+3).
+   Necro:     It increases the power of your Necromancy spells.
+ Y - the necromancy staff "Coimnid" {rElec rC++ rN+ Int-2 Stlth+ Necro}
+   (You found it on level 5 of the Pits of Slime)   
+   
+   [staff of necromancy]
+   
+   rElec:     It insulates you from electricity.
+   rC++:      It greatly protects you from cold.
+   rN+:       It protects you from negative energy.
+   Int-2:     It affects your intelligence (-2).
+   Stlth+:    It makes you more stealthy.
+   Necro:     It increases the power of your Necromancy spells.
+Jewellery
+ a - a +4 ring of slaying
+ b - the amulet of Dazytsee (worn) {Dissipate Fly Regen+}
+   (You found it on level 5 of the Pits of Slime)   
+   
+   [amulet of dissipation]
+   
+   Dissipate: It reduces the duration of hostile enchantments and decays
+   magical
+              contamination more quickly.
+   Fly:       It grants you flight.
+   Regen+:    It increases your rate of health regeneration.
+ d - a +4 ring of protection (worn)
+ e - a +6 ring of strength (worn)
+ p - an amulet of reflection
+ s - an amulet of faith
+ y - a ring of flight
+ A - a ring of protection from fire
+ D - the ring of Makhleb's Hatred {rC+ Wiz Int+5}
+   (You found it on level 5 of the Pits of Slime)   
+   
+   [ring of wizardry]
+   
+   rC+:       It protects you from cold.
+   Wiz:       It increases the success rate of your magical spells.
+   Int+5:     It affects your intelligence (+5).
+ H - a ring of willpower
+ J - a ring of magical power
+ M - a ring of wizardry
+ N - a ring of protection from fire
+ V - an amulet of chemistry
+ W - a +6 ring of intelligence
+Talismans
+ g - the death talisman of the Silversmith {Str+4}
+   (You found it on level 3 of the Dungeon)   
+   
+   [talisman of death]
+   Str+4:     It affects your strength (+4).
+ o - a medusa talisman
+ r - a maw talisman
+ x - a scarab talisman
+ B - an inkwell talisman
+ P - the rimehorn talisman of Altruism {*Corrode Will+ Slay+2}
+   (You found it on level 3 of the Lair of Beasts)   
+   
+   [rimehorn talisman]
+   *Corrode:  It may corrode you when you take damage.
+   Will+:     It increases your willpower.
+   Slay+2:    It affects your accuracy & damage with ranged weapons and melee
+   (+2).
+ R - the quill talisman of the Engineer {Rampage Int-5 Dex+3 Slay+3}
+   (You found it on level 5 of the Lair of Beasts)   
+   
+   [quill talisman]
+   Rampage:   It causes one to take an extra step when moving towards enemies,
+              briefly stunning them if this results in an attack.
+   Int-5:     It affects your intelligence (-5).
+   Dex+3:     It affects your dexterity (+3).
+   Slay+3:    It affects your accuracy & damage with ranged weapons and melee
+   (+3).
+Wands
+ b - a wand of quicksilver (7)
+ e - a wand of charming (6)
+ f - a wand of mindburst (21)
+ c - a wand of iceblast (7)
+ p - a wand of polymorph (8)
+ a - a wand of flame (11)
+ d - a wand of digging (8)
+Scrolls
+ t - 8 scrolls of teleportation
+ s - a scroll of butterflies
+ I - 3 scrolls of immolation
+ V - 2 scrolls of vulnerability
+ a - 3 scrolls of enchant armour
+ i - 3 scrolls of identify
+ x - a scroll of amnesia
+ g - 3 scrolls of fog
+ T - a scroll of torment
+ W - 2 scrolls of brand weapon
+Potions
+ m - 2 potions of might
+ e - a potion of enlightenment
+ i - 2 potions of invisibility
+ A - 2 potions of attraction
+ M - 2 potions of mutation
+ c - 4 potions of curing
+ C - 2 potions of cancellation
+ o - 6 potions of moonshine
+ w - 2 potions of heal wounds
+ r - 3 potions of resistance
+ a - 3 potions of ambrosia
+ b - 4 potions of brilliance
+ L - a potion of lignification
+Miscellaneous
+ g - a +0 phial of floods
+
+
+   Skills:
+ + Level 17.6 Fighting
+ - Level 18.0 Axes
+ - Level 16.3 Armour
+ + Level 6.5 Dodging
+ + Level 17.7 Shields
+ + Level 14.7 Invocations
+
+
+You had 16 spell levels left.
+You didn't know any spells.
+Your spell library contained the following spells:
+
+ Spells                   Type           Power      Damage    Failure   Level
+ Shock                    Conj/Air       0%         1d3       47%         1
+ Summon Small Mammal      Summ           0%         N/A       47%         1
+ Grave Claw               Necr           0%         2d7       63%         2
+ Searing Ray              Conj           0%         2d4       63%         2
+ Static Discharge         Conj/Air       0%         3-3/arc   63%         2
+ Confusing Touch          Hex            0%         N/A       85%         3
+ Stone Arrow              Conj/Erth      0%         3d7       85%         3
+ Summon Ice Beast         Ice/Summ       0%         N/A       85%         3
+ Swiftness                Air            0%         N/A       85%         3
+ Volatile Blastmotes      Fire/Tloc      0%         2d10      85%         3
+ Airstrike                Air            0%         2d(0-16)  99%         4
+ Animate Dead             Necr           0%         N/A       99%         4
+ Cigotuvi's Putrefaction  Necr/Air       0%         N/A       99%         4
+ Fulminant Prism          Conj/Alch      0%         3d5       99%         4
+ Iskenderun's Mystic Bla  Conj/Tloc      0%         2d3 (+2d1 99%         4
+ Leda's Liquefaction      Alch/Erth      0%         N/A       99%         4
+ Olgreb's Toxic Radiance  Alch           0%         N/A       99%         4
+ Passage of Golubria      Tloc           0%         N/A       99%         4
+ Petrify                  Alch/Erth      0%         N/A       99%         4
+ Alistair's Walking Alem  Alch/Frge      0%         N/A       100%        5
+ Arcjolt                  Conj/Air       0%         1d10      100%        5
+ Borgnjor's Vile Clutch   Necr/Erth      0%         N/A       100%        5
+ Curse of Agony           Necr           0%         N/A       100%        5
+ Freezing Cloud           Conj/Ice/Air   0%         6-21      100%        5
+ Metabolic Englaciation   Hex/Ice        0%         N/A       100%        5
+ Ozocubu's Refrigeration  Ice            0%         4d7       100%        7
+ Lehudib's Crystal Spear  Conj/Erth      0%         10d2      100%        8
+ Polar Vortex             Ice            0%         N/A       100%        9
+
+
+Dungeon Overview and Level Annotations
+
+Branches:
+Dungeon (15/15)            Temple (0/1) D:4            Lair (5/5) D:11        
+ Shoals (4/4) Lair:3        Snake (0/4) Lair:2        Slime (5/5) Lair:4      
+    Orc (2/2) D:11            Elf (0/3) Orc:2        Vaults (0/5) D:13        
+ Depths (0/4) D:15          IceCv (visited)         
+
+The Realm of Zot is guarded by orbs of winter.
+
+Altars:
+Cheibriados
+Elyvilon
+Hepliaklqana
+Kikubaaqudgha
+Okawaru
+Qazlal
+Xom
+Zin
+Beogh
+Jiyva
+
+Shops:
+D:1 =(   D:7 *   D:8 **[((   Orc:2 =(!?   Shoals:3 [
+
+Annotations:
+D:2 1 runed translucent door, Crazy Yiuf
+D:14 2 transporters, exclusion: obsidian statue
+Shoals:4 5 transporters
+Slime:5 Royal Jelly
+
+
+Innate Abilities, Weirdness & Mutations
+
+You have a pair of large horns on your head.
+You reflexively headbutt those who attack you in melee.
+You have claws for hands.
+You have razor-sharp toenails.
+Your mind is acute. (Int +4, Str/Dex -1)
+Your natural rate of healing is unusually fast.
+Your body has grown eyes which may confuse attackers. (Acc +3)
+You have a small jelly attached to you that senses nearby items.
+You expend magic power (3 MP) to strengthen your wands.
+Spells you cast cost 1 less MP (to a minimum of 1).
+A fragile, slimy shroud covers you, deflecting attacks.
+You can sometimes gain power from killing poisoned or drained foes.
+
+Message History
+
+The javelin pierces through you. The silver sears you!
+You block the merfolk siren's attack.
+The merfolk javelineer throws a javelin.
+The javelin pierces through you! The silver sears you!
+The merfolk siren chants its luring song.
+The merfolk javelineer throws a javelin.
+The javelin pierces through you! The silver sears you!
+The merfolk siren closely misses you.
+The merfolk javelineer throws a javelin.
+The javelin pierces through you! The silver sears you!
+* * * LOW HITPOINT WARNING * * *
+Unknown command.
+You hit the merfolk javelineer. You claw the merfolk javelineer!
+You headbutt the merfolk javelineer.
+The merfolk javelineer is moderately wounded.
+The merfolk javelineer throws a javelin.
+The javelin pierces through you!
+* * * LOW HITPOINT WARNING * * *
+The silver sears you!
+* * * LOW HITPOINT WARNING * * *
+You block the merfolk siren's attack.
+Unknown command.
+Unknown command.
+You slice the merfolk javelineer!!
+The merfolk javelineer is heavily wounded.
+The merfolk javelineer throws a javelin.
+The javelin misses you. You block the merfolk siren's attack.
+Unknown command.
+You slash the merfolk javelineer!
+You claw the merfolk javelineer, but do no damage.
+Your headbutt misses the merfolk javelineer.
+The merfolk javelineer is heavily wounded.
+The merfolk javelineer throws a javelin.
+The javelin pierces through you!
+* * * LOW HITPOINT WARNING * * *
+The silver sears you!
+* * * LOW HITPOINT WARNING * * *
+The merfolk siren hits you from afar with a +2 trident of protection!!
+You die...
+Jiyva sends a jelly to digest your remains.
+
+≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈
+≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈
+≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈
+≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈
+≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈
+≈≈≈≈≈≈≈≈≈≈≈≈.....
+~~~≈≈≈≈≈≈≈≈.####
+~.~~≈≈≈≈≈≈..#######
+.J.~~≈≈≈≈)##~~~~@m#
+....~≈≈≈≈.~#~~~≈~~~#
+#....~≈≈≈.~##~#m#~##
+#....~~~~.###≈~}~≈#
+###...~~~.# ~~#~#.#
+  #........#~..≈...#
+  #.......###.##~.##
+  #........ ### ###
+ #.......... 
+
+
+You could see a merfolk javelineer and a merfolk siren (mesmerising).
+
+Vanquished Creatures
+  Nikola (Shoals:1)
+  Rupert (D:15)
+  Mlioglotl (Shoals:3)
+  2 sphinx marauders (Shoals:4)
+  A kraken (Shoals:3)
+  Kirke (Lair:4)
+  A frost giant (D:15)
+  An elemental wellspring (Shoals:3)
+  5 merfolk impalers (Shoals:4)
+  2 merfolk javelineers (Shoals:4)
+  An ice dragon (IceCv)
+  Harold (Lair:1)
+  3 hydras
+  An ogre mage (Orc:2)
+  Erica (Lair:2)
+  8 vault guards
+  2 centaur warriors
+  4 merfolk avatars
+  3 boulder beetles
+  2 catoblepae
+  2 merfolk aquamancers
+  An alligator snapping turtle (Shoals:2)
+  A deep troll shaman (Lair:5)
+  8 death yaks
+  9 two-headed ogres
+  4 tengu warriors (D:15)
+  2 satyrs
+  A vampire mage (D:15)
+  8 skysharks
+  3 orc high priests
+  3 occultists (D:15)
+  2 hell knights (D:15)
+  An obsidian bat (Orc:2)
+  A flayed ghost (D:15)
+  8 sea snakes
+  4 water nymphs
+  A lindwurm (Lair:5)
+  26 harpies
+  4 orc knights (Orc:2)
+  3 deep elf pyromancers (D:14)
+  2 necromancers (D:15)
+  11 ugly things
+  2 orc sorcerers (Orc:2)
+  5 cyclopes
+  13 manticores
+  12 fauns
+  9 elephants
+  Joseph (D:7)
+  10 merfolk sirens
+  A black mamba (shapeshifter) (D:14)
+  2 kobold blastminers
+  A guardian serpent (Lair:2)
+  2 ice statues (IceCv)
+  4 black mambas
+  2 guardian sphinx simulacra (D:15)
+  A gargoyle (D:12)
+  8 cane toads
+  A kraken simulacrum (Shoals:4)
+  11 rime drakes
+  9 komodo dragons
+  An efreet (D:15)
+  2 storm dragon zombies (D:15)
+  A tengu conjurer (D:15)
+  3 trolls
+  A queen bee (shapeshifter) (D:13)
+  25 merfolk
+  4 polar bears (Lair:5)
+  2 hornets
+  4 wind drakes
+  A very ugly thing simulacrum (D:15)
+  24 dream sheep
+  6 snapping turtles
+  Sigmund (D:6)
+  Blorkula the orcula (D:8)
+  6 water elementals
+  A centaur simulacrum (D:14)
+  3 wraiths (D:12)
+  6 wyverns
+  3 tengu simulacra (D:15)
+  31 yaks
+  A human simulacrum (D:15)
+  A spriggan zombie (D:15)
+  6 hogs (Lair:4)
+  4 basilisks
+  A steam dragon (D:8)
+  2 wargs (Orc:1)
+  3 lindwurm simulacra (IceCv)
+  An acid dragon (D:12)
+  12 water moccasins
+  Duvessa (D:7)
+  Pargi (D:3)
+  An ugly thing simulacrum (D:15)
+  16 orc warriors
+  2 ice beasts (D:6)
+  2 sky beasts
+  2 laughing skulls (D:14)
+  2 black bears
+  2 ogres
+  3 wolves (Lair:5)
+  4 centaurs
+  A phantom (D:5)
+  3 kobold brigands
+  8 bullfrogs
+  4 komodo dragon simulacra (IceCv)
+  2 gnoll sergeants
+  3 scorpions
+  2 rock fish (D:7)
+  5 wights (D:8)
+  Dowan (D:7)
+  5 vampire bats (D:8)
+  2 howler monkeys
+  A bombardier beetle (D:6)
+  7 steam dragon simulacra (IceCv)
+  16 orc priests
+  4 hounds
+  3 gnoll boudas
+  7 acid dragon simulacra (IceCv)
+  A drude (D:9)
+  2 sleepcaps
+  A water moccasin draugr (D:5)
+  2 clockroaches (D:5)
+  An iguana (D:4)
+  24 orc wizards
+  A centaur zombie (D:5)
+  Robin (D:3)
+  A killer bee zombie (D:5)
+  20 gnolls
+  7 adders
+  A white imp (D:6)
+  2 ufetubi (D:4)
+  3 ribbon worms
+  A dart slug (D:2)
+  74 orcs
+  3 endoplasms (D:1)
+  3 jackals (D:3)
+  3 quokkas
+  4 ball pythons
+  7 bats
+  5 frilled lizards
+  13 goblins
+  14 hobgoblins
+  19 kobolds
+  6 rats
+727 creatures vanquished.
+
+Vanquished Creatures (collateral kills)
+  Louise (Shoals:2)
+  A very ugly thing (D:15)
+  Josephine (D:12)
+  An alligator snapping turtle (Shoals:3)
+  2 orc high priests (Orc:2)
+  2 sea snakes (Shoals:2)
+  A flayed ghost (D:15)
+  An ugly thing (D:9)
+  A cyclops (D:11)
+  A manticore (Shoals:2)
+  4 kobold blastminers
+  2 guardian sphinx simulacra (D:15)
+  2 wraiths (D:12)
+  2 yaks (D:9)
+  3 orc warriors (Orc:2)
+  A kobold brigand (D:9)
+  A bullfrog (D:9)
+  2 orcs
+  A kobold (D:9)
+30 creatures vanquished.
+
+Vanquished Creatures (others)
+  A formless jellyfish (Shoals:4)
+  A very ugly thing (D:15)
+  A great orb of eyes (D:14)
+  2 harpies (Shoals:4)
+  A deep elf pyromancer (D:15)
+  3 meliai (D:15)
+  An unseen horror (D:11)
+  A merfolk (Shoals:4)
+  A hornet (D:11)
+  Prince Ribbit (D:7)
+  A dream sheep (Lair:4)
+  A slime creature (D:15)
+  A steam dragon (D:8)
+  3 water moccasins
+  3 centaurs
+  2 bullfrogs (Lair:4)
+  2 scorpions (D:4)
+  A hound (D:5)
+  51 jellies
+  An orc priest (D:8)
+  An iguana (D:7)
+  An orc wizard (D:8)
+  4 gnolls
+  2 dart slugs
+  7 orcs
+  2 endoplasms (D:3)
+  A hobgoblin (D:4)
+  A quokka (D:3)
+  7 bats
+  4 goblins
+  4 kobolds
+  A rat (D:2)
+114 creatures vanquished.
+
+Grand Total: 871 creatures vanquished
+
+Notes
+Turn   | Place    | Note
+-------+----------+-------------------------------------------
+     0 | D:1      | Skryme the Minotaur Fighter began the quest for the Orb.
+     0 | D:1      | Reached XP level 1. HP: 19/19 MP: 0/0
+   114 | D:1      | Reached XP level 2. HP: 27/27 MP: 1/1
+   170 | D:1      | Found a faded altar of an unknown god.
+   177 | D:1      | Prayed at the altar of an unknown god.
+   177 | D:1      | Became a worshipper of Jiyva Jaru the Shapeless
+   177 | D:1      | Reached * piety under Jiyva
+   203 | D:1      | Found Soujet's Weapon Shoppe.
+   252 | D:1      | Found Aroelengow's Jewellery Emporium.
+   810 | D:2      | Reached skill level 1 in Invocations
+   810 | D:2      | Reached XP level 3. HP: 33/33 MP: 2/2
+   824 | D:2      | Reached skill level 3 in Axes
+   965 | D:2      | Reached ** piety under Jiyva
+  1114 | D:2      | Encountered Crazy Yiuf
+  1549 | D:3      | Encountered Robin
+  1563 | D:3      | Killed Robin
+  1564 | D:3      | Reached XP level 4. HP: 32/40 MP: 2/4
+  1616 | D:3      | Identified the death talisman of the Silversmith {Str+4}
+  1730 | D:3      | Encountered Pargi
+  1738 | D:3      | Killed Pargi
+  1739 | D:3      | Reached XP level 5. HP: 35/47 MP: 5/5
+  2004 | D:4      | Reached skill level 4 in Axes
+  2034 | D:3      | Reached XP level 6. HP: 46/55 MP: 6/6
+  2043 | D:4      | Reached skill level 5 in Armour
+  2053 | D:4      | Reached skill level 5 in Shields
+  2118 | D:4      | Reached skill level 5 in Fighting
+  2149 | D:4      | Reached *** piety under Jiyva
+  2170 | D:4      | Found a glowing silver altar of Zin.
+  2176 | D:4      | Reached skill level 5 in Axes
+  2226 | D:4      | Found a staircase to the Ecumenical Temple.
+  2232 | D:4      | Found a statue of an orb of winter.
+  2234 | D:4      | Found a statue of an orb of winter.
+  2263 | D:4      | Gained mutation: Your mind is acute. (Int +4, Str/Dex -1)
+                  | [Jiyva's grace]
+  2263 | D:4      | Gained mutation: Your mind is very acute. (Int +8, Str/Dex
+                  | -2) [Jiyva's grace]
+  2263 | D:4      | Gained mutation: A fragile, slimy shroud covers you,
+                  | deflecting attacks. [Jiyva's grace]
+  2263 | D:4      | Gained mutation: You are strong. (Str +4, Int/Dex -1)
+                  | [Jiyva's grace]
+  2381 | D:5      | Entered Level 5 of the Dungeon
+  2401 | D:5      | Reached skill level 6 in Axes
+  2570 | D:5      | Identified the +3 dagger "Conservator" {flame, rF+ rCorr
+                  | Str+2 Int-5}
+  2647 | D:5      | Reached **** piety under Jiyva
+  2679 | D:5      | Found an ancient bone altar of Kikubaaqudgha.
+  2885 | D:5      | Reached XP level 8. HP: 70/70 MP: 9/9
+  2954 | D:5      | Found a white marble altar of Elyvilon.
+  3226 | D:6      | Encountered Sigmund
+  3231 | D:6      | Killed Sigmund
+  3232 | D:6      | Reached skill level 7 in Axes
+  3289 | D:6      | Reached ***** piety under Jiyva
+  3386 | D:6      | Reached skill level 8 in Axes
+  3600 | D:6      | Reached skill level 5 in Invocations
+  3600 | D:6      | Reached XP level 9. HP: 76/79 MP: 11/11
+  3880 | D:6      | Lost mutation: Your mind is very acute. (Int +8, Str/Dex
+                  | -2) [Jiyva's grace]
+  3880 | D:6      | Gained mutation: Your natural rate of healing is unusually
+                  | fast. [Jiyva's grace]
+  3880 | D:6      | Gained mutation: You heal very quickly. [Jiyva's grace]
+  3880 | D:6      | Gained mutation: You regenerate. [Jiyva's grace]
+  3880 | D:6      | Gained mutation: Your melee attacks may flood your foes
+                  | with ooze. [Jiyva's grace]
+  4152 | D:7      | Encountered Prince Ribbit
+  4159 | D:7      | Reached skill level 9 in Axes
+  4176 | D:7      | Encountered Duvessa
+  4177 | D:7      | Encountered Dowan
+  4181 | D:7      | Killed Prince Ribbit
+  4203 | D:7      | Killed Dowan
+  4206 | D:7      | Killed Duvessa
+  4233 | D:7      | Found a snail-covered altar of Cheibriados.
+  4350 | D:7      | Encountered Joseph
+  4365 | D:7      | Killed Joseph
+  4366 | D:7      | Reached skill level 10 in Axes
+  4394 | D:7      | Found Leffiam's General Store.
+  4616 | D:8      | Found Desyo's Antique Armour Shop.
+  4674 | D:8      | Found Nasink's Weapon Shoppe.
+  4747 | D:8      | Reached XP level 10. HP: 89/90 MP: 13/13
+  4903 | D:8      | Found Nuat San's General Store.
+  4945 | D:8      | Found Kextev's Assorted Antiques.
+  4957 | D:8      | Bought 2 viscous pink potions for 46 gold pieces
+  4957 | D:8      | Bought a scroll labelled ZEOGENK BESU for 26 gold pieces
+  4957 | D:8      | Bought a scroll labelled TEASHUOBLI for 26 gold pieces
+  4957 | D:8      | Bought a scroll labelled HEDIFFIOSH for 26 gold pieces
+  4966 | D:8      | Encountered Blorkula the orcula
+  4976 | D:8      | Reached skill level 11 in Axes
+  4988 | D:8      | Killed Blorkula the orcula
+  5134 | D:8      | Found a hazy altar of Hepliaklqana.
+  5180 | D:8      | Reached ****** piety under Jiyva
+  5216 | D:8      | Found Nyfuudda's Weapon Shop.
+  5607 | D:9      | Encountered a white ugly thing
+  5617 | D:9      | Killed a white ugly thing
+  5621 | D:9      | Reached skill level 12 in Axes
+  5654 | D:9      | Found a phantasmal passage.
+  5805 | D:9      | Found a stormy altar of Qazlal.
+  5876 | D:9      | Lost mutation: Your melee attacks may flood your foes with
+                  | ooze. [Jiyva's grace]
+  5876 | D:9      | Gained mutation: You can sometimes gain power from killing
+                  | poisoned or drained foes. [Jiyva's grace]
+  5876 | D:9      | Gained mutation: You can regularly gain power from killing
+                  | poisoned or drained foes. [Jiyva's grace]
+  5876 | D:9      | Gained mutation: You are resistant to poisons. (rPois)
+                  | [Jiyva's grace]
+  5876 | D:9      | Gained mutation: Your translucent skin slightly reduces
+                  | your foes' accuracy. (Stealth+) [Jiyva's grace]
+  6039 | D:9      | Found a glowing silver altar of Zin.
+  6122 | D:10     | Entered Level 10 of the Dungeon
+  6182 | D:10     | You fall into a shaft and drop 3 floors!
+  6193 | D:13     | Encountered a boulder beetle
+  6213 | D:13     | Killed a boulder beetle
+  6231 | D:13     | Found a gate to the Vaults.
+  6231 | D:13     | Encountered a vault guard
+  6231 | D:13     | Encountered a vault guard
+  6231 | D:13     | Encountered a vault guard
+  6231 | D:13     | Encountered a vault guard
+  6232 | D:13     | Encountered a vault guard
+  6232 | D:13     | Encountered a vault guard
+  6232 | D:13     | Encountered a vault guard
+  6233 | D:13     | Encountered a vault guard
+  6268 | D:12     | Killed a vault guard
+  6269 | D:12     | Reached XP level 11. HP: 95/99 MP: 15/15
+  6283 | D:12     | Reached skill level 10 in Shields
+  6443 | D:11     | Found a staircase to the Orcish Mines.
+  6443 | D:11     | Encountered a two-headed ogre
+  6456 | D:11     | Killed a two-headed ogre
+  6457 | D:11     | Reached skill level 10 in Fighting
+  6457 | D:11     | Reached skill level 13 in Axes
+  6457 | D:11     | Reached skill level 10 in Armour
+  6479 | D:11     | Encountered a two-headed ogre
+  6486 | D:11     | Killed a two-headed ogre
+  6519 | D:11     | Found a roughly hewn altar of Beogh.
+  6578 | D:11     | Encountered a two-headed ogre
+  6586 | D:11     | Killed a two-headed ogre
+  6766 | D:10     | Found an iron altar of Okawaru.
+  6836 | D:10     | Encountered a two-headed ogre
+  6845 | D:10     | Killed a two-headed ogre
+  7509 | D:11     | Reached skill level 14 in Axes
+  7693 | D:11     | Found a staircase to the Lair.
+  7709 | D:11     | Gained mutation: You are agile. (Dex +4, Str/Int -1)
+                  | [Jiyva's grace]
+  7709 | D:11     | Gained mutation: You are very agile. (Dex +8, Str/Int -2)
+                  | [Jiyva's grace]
+  7709 | D:11     | Gained mutation: You have large cloven feet. [Jiyva's
+                  | grace]
+  7709 | D:11     | Gained mutation: You have hoof-like feet. [Jiyva's grace]
+  7923 | D:11     | Found the +6 shillelagh "Devastator" {shatter}
+  7931 | D:11     | Got the +6 shillelagh "Devastator" {shatter}
+  8099 | D:12     | Encountered Josephine
+  8106 | D:12     | Killed Josephine
+  8423 | D:12     | Reached XP level 12. HP: 110/110 MP: 17/17
+  8473 | Orc:1    | Entered Level 1 of the Orcish Mines
+  8479 | Orc:1    | Encountered an orc high priest
+  8487 | Orc:1    | Killed an orc high priest
+  8667 | Orc:1    | Reached skill level 15 in Axes
+  8850 | Orc:2    | Entered Level 2 of the Orcish Mines
+  8882 | Orc:2    | Encountered an orc high priest
+  8890 | Orc:2    | Killed an orc high priest
+  8986 | Orc:2    | Found a roughly hewn altar of Beogh.
+  9108 | Orc:2    | Encountered a two-headed ogre
+  9122 | Orc:2    | Killed a two-headed ogre
+  9159 | Orc:2    | Encountered an ogre mage
+  9166 | Orc:2    | Killed an ogre mage
+  9170 | Orc:2    | Encountered a two-headed ogre
+  9171 | Orc:2    | Encountered a two-headed ogre
+  9173 | Orc:2    | Encountered an orc high priest
+  9173 | Orc:2    | Encountered an orc high priest
+  9175 | Orc:2    | Killed a two-headed ogre
+  9176 | Orc:2    | Encountered a two-headed ogre
+  9179 | Orc:2    | Reached skill level 16 in Axes
+  9184 | Orc:2    | Killed an orc high priest
+  9184 | Orc:2    | Killed a two-headed ogre
+  9188 | Orc:2    | Killed an orc high priest
+  9189 | Orc:2    | Reached skill level 10 in Invocations
+  9189 | Orc:2    | Killed a two-headed ogre
+  9192 | Orc:2    | Reached XP level 13. HP: 84/119 MP: 10/19
+  9223 | Orc:2    | Identified a scroll of acquirement
+  9225 | Orc:2    | Found Povat's Jewellery Shop.
+  9225 | Orc:2    | Found Vunamod's Magic Scroll Shoppe.
+  9227 | Orc:2    | Found Ruxoror's Antique Weapon Shop.
+  9227 | Orc:2    | Found Dooculai's Distillery.
+  9244 | Orc:2    | Bought a scroll of brand weapon for 204 gold pieces
+  9247 | Orc:2    | Acquired 602 gold pieces
+  9249 | Orc:2    | Bought a scroll of enchant weapon for 160 gold pieces
+  9249 | Orc:2    | Bought a scroll of enchant weapon for 160 gold pieces
+  9249 | Orc:2    | Bought a scroll of enchant weapon for 160 gold pieces
+  9254 | Orc:2    | Bought a scroll of identify for 43 gold pieces
+  9374 | Orc:2    | Found a staircase to the Elven Halls.
+  9604 | Lair:1   | Entered Level 1 of the Lair of Beasts
+  9604 | Lair:1   | Encountered Harold
+  9617 | Lair:1   | Killed Harold
+  9677 | Lair:1   | Lost mutation: You are very agile. (Dex +8, Str/Int -2)
+                  | [Jiyva's grace]
+  9677 | Lair:1   | Lost mutation: You are agile. (Dex +4, Str/Int -1) [Jiyva's
+                  | grace]
+  9677 | Lair:1   | Lost mutation: You are strong. (Str +4, Int/Dex -1)
+                  | [Jiyva's grace]
+  9677 | Lair:1   | Lost mutation: A fragile, slimy shroud covers you,
+                  | deflecting attacks. [Jiyva's grace]
+  9677 | Lair:1   | Gained mutation: You have a pair of large horns on your
+                  | head. [Jiyva's grace]
+  9677 | Lair:1   | Gained mutation: Your body has grown eyes which may confuse
+                  | attackers. (Acc +3) [Jiyva's grace]
+  9677 | Lair:1   | Gained mutation: Your body has grown many eyes which may
+                  | confuse attackers. (Acc +5) [Jiyva's grace]
+  9677 | Lair:1   | Gained mutation: Your body is covered in eyes which may
+                  | confuse attackers. (Acc +7, SInv) [Jiyva's grace]
+ 10369 | Lair:2   | Found a frozen archway.
+ 10372 | Lair:2   | Encountered Erica
+ 10381 | Lair:2   | Killed Erica
+ 10397 | IceCv    | Entered an ice cave
+ 10844 | Lair:2   | Found a staircase to the Snake Pit.
+ 10956 | Lair:2   | Found a glowing silver altar of Zin.
+ 11279 | Lair:3   | Identified the rimehorn talisman of Altruism {*Corrode
+                  | Will+ Slay+2}
+ 11338 | Lair:3   | Lost mutation: You have hoof-like feet. [Jiyva's grace]
+ 11338 | Lair:3   | Lost mutation: You regenerate. [Jiyva's grace]
+ 11338 | Lair:3   | Lost mutation: You heal very quickly. [Jiyva's grace]
+ 11338 | Lair:3   | Lost mutation: Your body is covered in eyes which may
+                  | confuse attackers. (Acc +7, SInv) [Jiyva's grace]
+ 11338 | Lair:3   | Lost mutation: Your translucent skin slightly reduces your
+                  | foes' accuracy. (Stealth+) [Jiyva's grace]
+ 11338 | Lair:3   | Lost mutation: You can regularly gain power from killing
+                  | poisoned or drained foes. [Jiyva's grace]
+ 11338 | Lair:3   | Gained mutation: Spells you cast cost 1 less MP (to a
+                  | minimum of 1). [Jiyva's grace]
+ 11338 | Lair:3   | Gained mutation: Spells you cast cost 2 less MP (to a
+                  | minimum of 1). [Jiyva's grace]
+ 11338 | Lair:3   | Gained mutation: A fragile, slimy shroud covers you,
+                  | deflecting attacks. [Jiyva's grace]
+ 11338 | Lair:3   | Gained mutation: Your body is covered in eyes which may
+                  | confuse attackers. (Acc +7, SInv) [Jiyva's grace]
+ 11484 | Lair:3   | Reached skill level 17 in Axes
+ 11548 | Lair:3   | Found a staircase to the Shoals.
+ 12186 | Lair:4   | Reached XP level 14. HP: 113/130 MP: 21/21
+ 12309 | Lair:4   | Encountered Kirke
+ 12321 | Lair:4   | Killed Kirke
+ 12372 | Lair:4   | Found a staircase to the Slime Pits.
+ 13025 | Lair:5   | Entered Level 5 of the Lair of Beasts
+ 13034 | Lair:5   | Lost mutation: You have large cloven feet. [Jiyva's grace]
+ 13034 | Lair:5   | Lost mutation: Your body is covered in eyes which may
+                  | confuse attackers. (Acc +7, SInv) [Jiyva's grace]
+ 13034 | Lair:5   | Lost mutation: Spells you cast cost 2 less MP (to a minimum
+                  | of 1). [Jiyva's grace]
+ 13034 | Lair:5   | Lost mutation: Spells you cast cost 1 less MP (to a minimum
+                  | of 1). [Jiyva's grace]
+ 13034 | Lair:5   | Gained mutation: Armour fits poorly on your pseudopods.
+                  | [Jiyva's grace]
+ 13034 | Lair:5   | Gained mutation: Armour fits poorly on your large
+                  | pseudopods. [Jiyva's grace]
+ 13034 | Lair:5   | Gained mutation: Armour fits poorly on your massive
+                  | pseudopods. [Jiyva's grace]
+ 13034 | Lair:5   | Gained mutation: Spells you cast cost 1 less MP (to a
+                  | minimum of 1). [Jiyva's grace]
+ 13413 | Lair:5   | Got an earthy gem with 307 turns to spare
+ 13423 | Lair:5   | Identified the quill talisman of the Engineer {Rampage
+                  | Int-5 Dex+3 Slay+3}
+ 13427 | Lair:5   | Identified the +0 morningstar "Noroifru" {speed, rN+ Will+
+                  | Dex+4}
+ 13623 | Lair:5   | Identified the +1 halberd "Orgharuji" {venom, Will+}
+ 13831 | D:13     | Found a white marble altar of Elyvilon.
+ 13835 | D:13     | Identified the +8 falchion of Equivalence {flame, Str+7
+                  | Int-2}
+ 14216 | D:13     | Identified the +6 flail of Daemyxat {venom, rPois rN+
+                  | Dex+2}
+ 14282 | D:14     | Found a transporter.
+ 14283 | D:14     | Encountered a fire giant
+ 14299 | D:14     | Found a transporter.
+ 14390 | D:14     | Reached skill level 18 in Axes
+ 14409 | D:14     | Reached XP level 15. HP: 138/139 MP: 23/23
+ 14618 | D:14     | Reached skill level 15 in Shields
+ 14621 | D:14     | Reached skill level 15 in Armour
+ 14626 | D:14     | Reached skill level 15 in Fighting
+ 14937 | D:15     | Entered Level 15 of the Dungeon
+ 15054 | D:15     | Encountered Rupert
+ 15060 | D:15     | Killed Rupert
+ 15392 | D:15     | Lost mutation: Your natural rate of healing is unusually
+                  | fast. [Jiyva's grace]
+ 15392 | D:15     | Lost mutation: Your body has grown many eyes which may
+                  | confuse attackers. (Acc +5) [Jiyva's grace]
+ 15392 | D:15     | Lost mutation: Armour fits poorly on your massive
+                  | pseudopods. [Jiyva's grace]
+ 15392 | D:15     | Lost mutation: Armour fits poorly on your large pseudopods.
+                  | [Jiyva's grace]
+ 15392 | D:15     | Gained mutation: Your melee attacks may flood your foes
+                  | with ooze. [Jiyva's grace]
+ 15392 | D:15     | Gained mutation: You are partially covered in iridescent
+                  | scales. (AC +2) [Jiyva's grace]
+ 15392 | D:15     | Gained mutation: You are mostly covered in iridescent
+                  | scales. (AC +4) [Jiyva's grace]
+ 15392 | D:15     | Gained mutation: You are completely covered in iridescent
+                  | scales. (AC +6) [Jiyva's grace]
+ 15559 | D:15     | Found a staircase to the Depths.
+ 16219 | Slime:1  | Entered Level 1 of the Pits of Slime
+ 16327 | Slime:3  | Encountered a four-headed slymdra
+ 16327 | Slime:3  | Encountered a rockslime
+ 16327 | Slime:3  | Found a viscous altar of Jiyva.
+ 16410 | Slime:4  | Found a viscous altar of Jiyva.
+ 16460 | Slime:5  | Entered Level 5 of the Pits of Slime
+ 16460 | Slime:5  | Encountered a three-headed slymdra
+ 16526 | Slime:5  | Found a viscous altar of Jiyva.
+ 16535 | Slime:5  | Identified the ring of Makhleb's Hatred {rC+ Wiz Int+5}
+ 16537 | Slime:5  | Identified the +7 athame of the Firefly {pain, rF+ rCorr
+                  | Int+4 Dex+2}
+ 16539 | Slime:5  | Identified the necromancy staff "Coimnid" {rElec rC++ rN+
+                  | Int-2 Stlth+ Necro}
+ 16545 | Slime:5  | Identified the +4 chain mail of Terops {Int+4 Dex+3}
+ 16549 | Slime:5  | Got a starry gem with 568 turns to spare
+ 16551 | Slime:5  | Got a slimy rune of Zot
+ 16552 | Slime:5  | Identified the +1 triple crossbow of Extinguishment {flame,
+                  | Dex+3}
+ 16557 | Slime:5  | Identified the +0 executioner's axe "Fysem Nia" {flame, rN+
+                  | Int+3}
+ 16561 | Slime:5  | Identified the amulet of Dazytsee {Dissipate Fly Regen+}
+ 16580 | Slime:5  | Identified the necromancy staff "Taarefe" {rC+ rN+ Str+5
+                  | Dex+3 Necro}
+ 16960 | Slime:2  | Found a viscous altar of Jiyva.
+ 17065 | Shoals:1 | Entered Level 1 of the Shoals
+ 17442 | Shoals:1 | Encountered Nikola
+ 17454 | Shoals:1 | Killed Nikola
+ 17478 | Shoals:1 | Identified the +3 rapier "Zuentaf" {spect, Fly Will- Str+3
+                  | Int+3}
+ 17851 | Shoals:2 | Reached XP level 16. HP: 97/151 MP: 25/25
+ 17943 | Shoals:2 | Lost mutation: You are completely covered in iridescent
+                  | scales. (AC +6) [Jiyva's grace]
+ 17943 | Shoals:2 | Lost mutation: You are mostly covered in iridescent scales.
+                  | (AC +4) [Jiyva's grace]
+ 17943 | Shoals:2 | Lost mutation: Armour fits poorly on your pseudopods.
+                  | [Jiyva's grace]
+ 17943 | Shoals:2 | Lost mutation: Your melee attacks may flood your foes with
+                  | ooze. [Jiyva's grace]
+ 17943 | Shoals:2 | Gained mutation: You have sharp fingernails. [Jiyva's
+                  | grace]
+ 17943 | Shoals:2 | Gained mutation: You have very sharp fingernails. [Jiyva's
+                  | grace]
+ 17943 | Shoals:2 | Gained mutation: You have claws for hands. [Jiyva's grace]
+ 17943 | Shoals:2 | Gained mutation: Your natural rate of healing is unusually
+                  | fast. [Jiyva's grace]
+ 18021 | Shoals:2 | Reached skill level 1 in Dodging
+ 18096 | Shoals:2 | Encountered Louise
+ 18109 | Shoals:2 | Killed Louise
+ 18136 | Shoals:2 | HP: 6/152 [alligator snapping turtle (36)]
+ 18137 | Shoals:2 | HP: 1/152 [alligator snapping turtle (24)]
+ 18683 | Shoals:3 | Found Ygosoa Hiler's Antique Armour Shoppe.
+ 18844 | Shoals:3 | Encountered a kraken
+ 18854 | Shoals:3 | Killed a kraken
+ 19088 | Shoals:3 | Encountered Mlioglotl
+ 19097 | Shoals:3 | Killed Mlioglotl
+ 19636 | Shoals:4 | Entered Level 4 of the Shoals
+ 19648 | Shoals:4 | Encountered a sphinx marauder
+ 19653 | Shoals:4 | Reached skill level 5 in Dodging
+ 19659 | Shoals:4 | Killed a sphinx marauder
+ 19887 | Shoals:4 | Got a barnacled rune of Zot
+ 19925 | Shoals:4 | Found a transporter.
+ 19930 | Shoals:4 | Found a transporter.
+ 19934 | Shoals:4 | Found a transporter.
+ 19934 | Shoals:4 | Found a transporter.
+ 19945 | Shoals:4 | Encountered a sphinx marauder
+ 19955 | Shoals:4 | Killed a sphinx marauder
+ 20050 | Shoals:4 | Reached XP level 17. HP: 138/162 MP: 27/27
+ 20054 | Shoals:4 | Lost mutation: You are partially covered in iridescent
+                  | scales. (AC +2) [Jiyva's grace]
+ 20054 | Shoals:4 | Lost mutation: You are resistant to poisons. (rPois)
+                  | [Jiyva's grace]
+ 20054 | Shoals:4 | Gained mutation: You expend magic power (3 MP) to
+                  | strengthen your wands. [Jiyva's grace]
+ 20054 | Shoals:4 | Gained mutation: You have a small jelly attached to you
+                  | that senses nearby items. [Jiyva's grace]
+ 20054 | Shoals:4 | Gained mutation: You have sharp toenails. [Jiyva's grace]
+ 20054 | Shoals:4 | Gained mutation: You have razor-sharp toenails. [Jiyva's
+                  | grace]
+ 20060 | Shoals:4 | Found a transporter.
+ 20066 | Shoals:4 | Found a transporter.
+ 20240 | Shoals:4 | HP: 5/163 [merfolk javelineer/javelin (10)]
+ 20240 | Shoals:4 | Mangled by a merfolk siren
+
+Illustrated notes
+
+Levels and vault maps discovered:
+D:1:      dpeg_arrival_shrine, layout_loops_ring, basic_ecumenical_altar,
+          serial_shops, nicolae_shop_stone, nicolae_shop_flopsided
+D:2:      layout_loops_ring, corexii_hall_statues_l, st_stairs_14,
+          kennysheep_nub, uniq_crazy_yiuf_cottage
+D:3:      layout_rooms, uniq_robin, uniq_pargi
+D:4:      layout_rooms, minmay_temple_entry_hall, minmay_ruined_shrine
+D:5:      layout_cave_pods, mainiacjoe_overflow_concentric_impassable,
+          nicolae_kikubaaqudgha_piles_of_ancient_bones,
+          mainiacjoe_overflow_surrounded_room, dreamdust_mushroom_princess,
+          roderic_batcave
+D:6:      layout_basic, minmay_misc_feat_cross, grunt_ministairs_2,
+          minmay_door_square, uniq_sigmund
+D:7:      layout_rooms, nicolae_overflow_crystal_walls, serial_shops,
+          nicolae_shop_back_alley_shop, kennysheep_generic_room_3,
+          minmay_a_box_with_orc_wizards_in_it, uniq_joseph, uniq_prince_ribbit1,
+          uniq_duvessa
+D:8:      layout_loops_corners, nzn_hepliaklqana_mist_gate, serial_shops, shop,
+          nicolae_diamond_shop, nicolae_shop_waterfront, shop,
+          nicolae_shop_window_shopping, minmay_misc_feat_five,
+          kennysheep_generic_room_9, uniq_blorkula_the_orcula
+D:9:      layout_cave_pools, mainiacjoe_overflow_paths,
+          nicolae_zin_silver_trinity, index_necropolis_entry_arbor_path
+D:10:     layout_basic, old_standard_altar
+D:11:     layout_loops_ring, david_lair_shrubbed, minmay_orc_entry_temple_small
+D:12:     layout_cave_pools, hangedman_decor_push, uniq_josephine
+D:13:     layout_basic, erik_vaults_2, nicolae_elyvilon_little_fluffy_clouds,
+          minivault_26
+D:14:     gammafunk_sealed_arena, layout_layer_cave, nicolae_zig_zag_zippers,
+          minmay_bent
+D:15:     regret_index_condemned_cage, layout_long_grid, serial_glass,
+          glass_columns_a, glass_columns_a, uniq_rupert
+Lair:1:   layout_regular_city, minivault_11, nicolae_lair_sylvan_descent,
+          uniq_harold
+Lair:2:   layout_loops_ring, minmay_snake_entry_spellcaster,
+          portal_ice_cave_rime, basic_altar, wander_river, uniq_erica
+Lair:3:   layout_regular_city, minmay_shoals_entry_centaurs, minivault_23,
+          nicolae_lair_yak_garden
+Lair:4:   layout_cave_pods, dpeg_slime_entry_enclosed,
+          chequers_serial_rivers_room_a, grunt_forest_stairs_basic, uniq_kirke
+Lair:5:   grunt_lair_end_beastmaster, layout_long_grid
+Shoals:1: layout_shoals, uniq_nikola
+Shoals:2: layout_shoals, uniq_louise
+Shoals:3: layout_shoals, nicolae_stop_n_shop_1,
+          nicolae_shoals_spring_well_temple, uniq_mlioglotl
+Shoals:4: shoals_end_grunt_ice, layout_shoals, serial_nicolae_subway,
+          nicolae_sub_station_crystal, nicolae_sub_station_stone,
+          nicolae_sub_station_metal
+Slime:1:  nicolae_slime_jelly_donut, layout_caves
+Slime:2:  layout_caves
+Slime:3:  layout_caves
+Slime:4:  layout_caves
+Slime:5:  slime_pit_nicolae_royal_road_to_ruin
+Orc:1:    layout_caves
+Orc:2:    grunt_orc_tribal_feast, layout_caves, basic_altar
+
+Skill      XL: |  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 |
+---------------+-------------------------------------------------+-----
+Fighting       |     4           5  6  7  8  9 11 12 13 14 16 17 | 17.6
+Armour         |     4           5  6  7  8  9 11 12 13 14 16    | 16.3
+Shields        |     4           5  6  7  8  9 11 12 13 14 16 17 | 17.7
+Invocations    |     1     2     3     5  6  7  8 10 11 12 13 14 | 14.7
+Axes           |        3     4  5  6  8 10 12 14 16 17 18       | 18.0
+Dodging        |                                               6 |  6.5
+
+Action                     |  1- 3 |  4- 6 |  7- 9 | 10-12 | 13-15 | 16-18 || total
+---------------------------+-------+-------+-------+-------+-------+-------++-------
+ Attack: Normal            |    94 |   117 |   223 |   374 |   631 |   311 ||  1750
+  Melee: War axe           |   114 |   150 |   310 |   556 |    18 |       ||  1148
+         Headbutt          |    14 |    25 |    79 |   123 |   207 |   112 ||   560
+         Kick              |       |       |       |    48 |   105 |     9 ||   162
+         Broad axe         |       |       |       |       |   886 |   446 ||  1332
+         Pseudopods        |       |       |       |       |    72 |       ||    72
+ Invoke: Oozemancy         |       |       |       |     4 |       |       ||     4
+  Evoke: Wand of flame     |       |       |       |       |       |     1 ||     1
+  Drink: Might             |       |     1 |       |       |       |       ||     1
+         Invisibility      |       |     1 |       |       |       |       ||     1
+         Heal wounds       |       |       |       |       |     1 |     2 ||     3
+         Attraction        |       |       |       |       |     1 |       ||     1
+         Cancellation      |       |       |       |       |     1 |       ||     1
+   Read: Identify          |       |       |       |     3 |     6 |     4 ||    13
+         Enchant weapon    |       |       |       |     1 |     7 |       ||     8
+         Teleportation     |       |       |       |     1 |       |       ||     1
+         Immolation        |       |       |       |     1 |       |       ||     1
+         Amnesia           |       |       |       |     1 |       |       ||     1
+         Enchant armour    |       |       |       |       |     2 |       ||     2
+         Fear              |       |       |       |       |     1 |     2 ||     3
+         Noise             |       |       |       |       |     1 |       ||     1
+         Blinking          |       |       |       |       |     1 |       ||     1
+         Revelation        |       |       |       |       |     1 |       ||     1
+         Acquirement       |       |       |       |       |     1 |       ||     1
+         Brand weapon      |       |       |       |       |     1 |       ||     1
+         Butterflies       |       |       |       |       |     1 |       ||     1
+   Stab: Sleeping          |       |       |       |     4 |     4 |       ||     8
+         Distracted        |       |       |       |     1 |       |       ||     1
+         Confused          |       |       |       |       |    11 |     5 ||    16
+ Armour: Scale mail        |    72 |    42 |       |       |       |       ||   114
+         Troll leather arm |       |   101 |   214 |   294 |   403 |   254 ||  1266
+         None              |       |       |       |       |    23 |       ||    23
+  Dodge: Dodged            |    46 |    74 |   140 |   146 |   128 |   112 ||   646
+  Block: Buckler           |    22 |    31 |    95 |   207 |   196 |       ||   551
+         Reflection        |       |       |     3 |    20 |    35 |    28 ||    86
+         Kite shield       |       |       |       |       |   128 |   279 ||   407
+
+Table legend: (Time is in decaauts)
+ A = Elapsed time spent in this place.
+ B = Non-inter-level travel time spent in this place.
+ C = Inter-level travel time spent in this place.
+ D = Time resting spent in this place.
+ E = Time spent auto-exploring this place.
+ F = Levels seen in this place.
+ G = Mean time per level.
+                   A        B        C        D        E      F       G
+               +--------+--------+--------+--------+--------+-----+--------+
+         Total |  20118 |  18712 |   1406 |    226 |  13557 |  32 |  628.7 |
+       Dungeon |  10991 |  10226 |    765 |    149 |   7733 |  15 |  732.7 |
+          Lair |   3943 |   3554 |    389 |     10 |   2873 |   5 |  788.6 |
+        Shoals |   3073 |   2970 |    103 |     64 |   1921 |   4 |  768.2 |
+    Slime Pits |    794 |    679 |    115 |      0 |    353 |   5 |  158.8 |
+  Orcish Mines |   1010 |    976 |     34 |      3 |    612 |   2 |  505.0 |
+      Ice Cave |    306 |    306 |      0 |      0 |     64 |   1 |  306.0 |
+               +--------+--------+--------+--------+--------+-----+--------+
+
+Top non-repeatable levels by time:
+    D:15: 1065 daAuts
+    D:11: 1057 daAuts
+     D:8: 1020 daAuts
+  Lair:4: 999 daAuts
+Shoals:3: 924 daAuts
+     D:6: 918 daAuts
+     D:2: 872 daAuts
+  Lair:3: 868 daAuts
+Shoals:2: 864 daAuts
+     D:5: 858 daAuts
+  Lair:1: 826 daAuts
+    D:12: 713 daAuts
+Shoals:1: 711 daAuts
+     D:1: 705 daAuts
+    D:10: 693 daAuts
+
+DLua errors:
+
+Table legend:
+ A = God
+ B = Rank
+ C = Start time
+ D = Start piety
+ E = Piety gained
+ F = Piety on gifts
+ G = Piety on penance
+ H = Piety on stepdowns
+ I = Piety decays
+ J = Piety lost (inc. decay)
+         A          B      C       D     E     F     G     H     I     J   
++-----------------+---+---------+-----+-----+-----+-----+-----+-----+-----+
+ Jiyva            | 0 |    1883 |  15 |  16 |   0 |   0 |   0 |   0 |   0 
+ Jiyva            | 1 |    1883 |  30 |  25 |   0 |   0 |   0 |   5 |   5 
+ Jiyva            | 2 |    9994 |  50 |  33 |   0 |   0 |   0 |   8 |   8 
+ Jiyva            | 3 |   22185 |  75 |  25 |   0 |   0 |   0 |   0 |   0 
+ Jiyva            | 4 |   27295 | 100 |  24 |   0 |   0 |   9 |   4 |   4 
+ Jiyva            | 5 |   33971 | 120 |  43 |   0 |   0 |  19 |   4 |   4 
+ Jiyva            | 6 |   52993 | 160 | 121 |   0 |   0 | 362 |  41 |  82 
++-----------------+---+---------+-----+-----+-----+-----+-----+-----+-----+
+
+Conducts for god: Jiyva
+Piety from conduct
+              Conduct |  1- 3 |  4- 6 |  7- 9 | 10-12 | 13-15 | 16-18 || total
+----------------------+-------+-------+-------+-------+-------+-------++-------
+         Exploration  |    34 |    35 |    91 |   156 |   285 |    70 ||   671
+----------------------+-------+-------+-------+-------+-------+-------++-------
+Conduct count
+              Conduct |  1- 3 |  4- 6 |  7- 9 | 10-12 | 13-15 | 16-18 || total
+----------------------+-------+-------+-------+-------+-------+-------++-------
+         Exploration  |  3279 |  3359 |  8722 | 15037 | 27363 |  6716 || 64476
+----------------------+-------+-------+-------+-------+-------+-------++-------
