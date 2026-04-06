@@ -740,6 +740,7 @@ export async function runIncremental(ctx: PipelineContext) {
 - `--fresh-logfiles` also clears cached logfile slices.
 - `--verbose` prints logfile reuse/fetch decisions, candidate selection, fetch URLs, and parse outcomes.
 - `--min-delay-ms` applies to the shared host queue used by both logfile discovery and morgue fetching.
+- Candidate fetch/parse execution may run across hosts in parallel while preserving host-local pacing.
 ```
 
 - [ ] **Step 4: Run full project verification**

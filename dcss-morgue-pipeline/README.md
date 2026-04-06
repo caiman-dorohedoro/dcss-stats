@@ -29,7 +29,7 @@ Help is available with:
 - Audit bundle:
   `npm run audit -- --data-dir /tmp/dcss-bootstrap-test --sample-size 10`
 
-`--verbose` prints runtime resets, logfile reuse/fetch decisions, per-bucket discovery progress, candidate selection, morgue fetch URLs, and parse outcomes.
+`--verbose` prints runtime resets, logfile reuse/fetch decisions, per-bucket discovery progress, candidate selection, morgue fetch URLs, and parse outcomes including `species`, `ac`, `ev`, `sh`, and spell count.
 
 ## CLI Reference
 
@@ -111,7 +111,7 @@ sqlite3 /tmp/dcss-bootstrap-test/pipeline.sqlite \
 - host-based concurrency = 1
 - minimum delay between requests to the same host = 2 seconds by default
 - logfile discovery and morgue fetching share the same host queue
-- different hosts may run in parallel
+- different hosts run in parallel during candidate fetch/parse execution
 
 The same host-queue policy is intended for both logfile discovery and morgue fetching.
 

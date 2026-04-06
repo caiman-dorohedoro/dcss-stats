@@ -1,5 +1,6 @@
 import { readFile } from 'node:fs/promises'
 import path from 'node:path'
+import { getServerManifest } from '../config/manifest'
 import { candidateRepo, migrate, parseResultRepo } from '../db/repos'
 import type { Database } from '../db/openDb'
 import { discoverCandidates as defaultDiscoverCandidates } from '../discovery/discoverCandidates'
@@ -84,13 +85,29 @@ export async function executeSelectedCandidates(
   const candidates = candidateRepo
     .listAll(ctx.db)
     .filter((candidate) => selectedCandidateIds.includes(candidate.candidateId))
+  const candidateIndex = new Map(
+    selectedCandidateIds.map((candidateId, index) => [candidateId, index] as const),
+  )
+  const orderedCandidates = [...candidates].sort(
+    (left, right) =>
+      (candidateIndex.get(left.candidateId) ?? Number.MAX_SAFE_INTEGER) -
+      (candidateIndex.get(right.candidateId) ?? Number.MAX_SAFE_INTEGER),
+  )
 
-  let parsedSuccesses = 0
-  let parsedFailures = 0
+  const candidatesByHost = new Map<string, CandidateGame[]>()
+  for (const candidate of orderedCandidates) {
+    const host = getServerManifest(candidate.serverId).host
+    const hostCandidates = candidatesByHost.get(host) ?? []
+    hostCandidates.push(candidate)
+    candidatesByHost.set(host, hostCandidates)
+  }
 
-  for (const [index, candidate] of candidates.entries()) {
+  async function processCandidate(
+    candidate: CandidateGame,
+    index: number,
+  ): Promise<{ success: boolean }> {
     ctx.log?.(
-      `[candidate ${index + 1}/${candidates.length}] ${candidate.serverId}/${candidate.version} ${candidate.playerName} ended ${candidate.endedAt}`,
+      `[candidate ${index + 1}/${orderedCandidates.length}] ${candidate.serverId}/${candidate.version} ${candidate.playerName} ended ${candidate.endedAt}`,
     )
     const fetchRow = await fetchMorgue(ctx.db, {
       candidate,
@@ -108,8 +125,7 @@ export async function executeSelectedCandidates(
         failureDetail: fetchRow.lastError ?? fetchRow.fetchStatus,
         parsedAt: getNow(ctx),
       })
-      parsedFailures += 1
-      continue
+      return { success: false }
     }
 
     ctx.log?.(`[fetch] success ${candidate.playerName}: ${fetchRow.morgueUrl}`)
@@ -126,30 +142,54 @@ export async function executeSelectedCandidates(
 
     if (result.ok) {
       ctx.log?.(
-        `[parse] success ${candidate.playerName}: species=${result.record.species}, spells=${result.record.spells.length}`,
+        `[parse] success ${candidate.playerName}: species=${result.record.species}, ac=${result.record.ac}, ev=${result.record.ev}, sh=${result.record.sh}, spells=${result.record.spells.length}`,
       )
       parseResultRepo.upsertSuccess(ctx.db, {
         candidateId: candidate.candidateId,
         parsedJson: result.record,
         parsedAt: getNow(ctx),
       })
-      parsedSuccesses += 1
-    } else {
-      ctx.log?.(
-        `[parse] failure ${candidate.playerName}: ${result.failure.reason}${result.failure.detail ? ` (${result.failure.detail})` : ''}`,
-      )
-      parseResultRepo.upsertFailure(ctx.db, {
-        candidateId: candidate.candidateId,
-        failureCode: result.failure.reason,
-        failureDetail: result.failure.detail,
-        parsedAt: getNow(ctx),
-      })
-      parsedFailures += 1
+      return { success: true }
     }
+
+    ctx.log?.(
+      `[parse] failure ${candidate.playerName}: ${result.failure.reason}${result.failure.detail ? ` (${result.failure.detail})` : ''}`,
+    )
+    parseResultRepo.upsertFailure(ctx.db, {
+      candidateId: candidate.candidateId,
+      failureCode: result.failure.reason,
+      failureDetail: result.failure.detail,
+      parsedAt: getNow(ctx),
+    })
+    return { success: false }
   }
 
+  const workerResults = await Promise.all(
+    [...candidatesByHost.values()].map(async (hostCandidates) => {
+      let successes = 0
+      let failures = 0
+
+      for (const candidate of hostCandidates) {
+        const result = await processCandidate(
+          candidate,
+          candidateIndex.get(candidate.candidateId) ?? 0,
+        )
+        if (result.success) {
+          successes += 1
+        } else {
+          failures += 1
+        }
+      }
+
+      return { successes, failures }
+    }),
+  )
+
+  const parsedSuccesses = workerResults.reduce((sum, result) => sum + result.successes, 0)
+  const parsedFailures = workerResults.reduce((sum, result) => sum + result.failures, 0)
+
   return {
-    selectedCandidates: candidates.length,
+    selectedCandidates: orderedCandidates.length,
     parsedSuccesses,
     parsedFailures,
   }

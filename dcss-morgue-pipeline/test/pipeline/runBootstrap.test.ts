@@ -1,10 +1,10 @@
 import { mkdtemp } from 'node:fs/promises'
 import os from 'node:os'
 import path from 'node:path'
-import { describe, expect, it } from 'vitest'
-import { candidateRepo, createInMemoryDb, parseResultRepo } from '../../src/db/repos'
+import { describe, expect, it, vi } from 'vitest'
+import { candidateRepo, createInMemoryDb, migrate, parseResultRepo } from '../../src/db/repos'
 import { writeAuditBundle } from '../../src/audit/writeAuditBundle'
-import { runBootstrap } from '../../src/pipeline/runBootstrap'
+import { executeSelectedCandidates, runBootstrap } from '../../src/pipeline/runBootstrap'
 import type { CandidateGame, MorgueFetchRow } from '../../src/types'
 
 function seedCandidate(
@@ -128,5 +128,90 @@ describe('runBootstrap', () => {
     )
 
     expect(path.basename(auditPath)).toMatch(/^audit-.*\.json$/)
+  })
+
+  it('processes different hosts in parallel while keeping host-local sequencing', async () => {
+    const db = createInMemoryDb()
+    migrate(db)
+    candidateRepo.insertMany(db, [
+      seedCandidate('cao34-a', 'CAO', '0.34'),
+      seedCandidate('cbrg34-a', 'CBRG', '0.34'),
+    ])
+
+    let release!: () => void
+    const releasePromise = new Promise<void>((resolve) => {
+      release = resolve
+    })
+    const started: string[] = []
+
+    const fetchMorgue = vi.fn(async (_db, input): Promise<MorgueFetchRow> => {
+      started.push(input.candidate.serverId)
+      await releasePromise
+
+      return {
+        candidateId: input.candidate.candidateId,
+        morgueUrl: `https://example.test/${input.candidate.candidateId}.txt`,
+        fetchStatus: 'success',
+        httpStatus: 200,
+        localPath: '/virtual/morgue.txt',
+        lastError: null,
+        fetchedAt: '2026-04-05T08:00:00.000Z',
+      }
+    })
+
+    const runPromise = executeSelectedCandidates(
+      {
+        db,
+        options: { perBucket: 1 },
+        fetchMorgue,
+        readMorgueText: async () => 'fixture',
+        parseMorgue: (_text, meta) => ({
+          ok: true as const,
+          record: {
+            candidateId: meta.candidateId,
+            serverId: meta.serverId,
+            playerName: meta.playerName,
+            sourceVersionLabel: meta.sourceVersionLabel,
+            endedAt: meta.endedAt,
+            morgueUrl: meta.morgueUrl,
+            version: '0.34' as const,
+            species: 'Djinni',
+            ac: 4,
+            ev: 11,
+            sh: 0,
+            strength: 8,
+            intelligence: 19,
+            dexterity: 14,
+            bodyArmour: 'robe',
+            shield: 'none',
+            helmet: false,
+            gloves: false,
+            bootsOrBarding: false,
+            cloak: false,
+            armourSkill: 2.3,
+            dodgingSkill: 8.1,
+            shieldSkill: 0,
+            spellcasting: 12.4,
+            schoolSkills: {},
+            spells: [],
+            wizardry: 1,
+            channel: 0,
+            wildMagic: 0,
+          },
+        }),
+      },
+      ['cao34-a', 'cbrg34-a'],
+    )
+
+    await new Promise((resolve) => setTimeout(resolve, 10))
+    expect(started.sort()).toEqual(['CAO', 'CBRG'])
+
+    release()
+
+    await expect(runPromise).resolves.toEqual({
+      selectedCandidates: 2,
+      parsedSuccesses: 2,
+      parsedFailures: 0,
+    })
   })
 })
