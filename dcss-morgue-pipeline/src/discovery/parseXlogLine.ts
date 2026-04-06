@@ -34,30 +34,44 @@ function isTruthyFlag(value: string | undefined): boolean {
   return ['1', 'true', 'yes', 'on', 'wizard', 'wizmode'].includes(value.trim().toLowerCase())
 }
 
-export function isWizardModeRecord(record: Record<string, string>): boolean {
+const EXCLUDED_MODE_MARKERS = ['wizard', 'wizmode', 'exploremode'] as const
+
+function hasExcludedModeMarker(value: string | undefined): boolean {
+  if (!value) {
+    return false
+  }
+
+  return EXCLUDED_MODE_MARKERS.includes(
+    value.trim().toLowerCase() as (typeof EXCLUDED_MODE_MARKERS)[number],
+  )
+}
+
+export function isExcludedModeRecord(record: Record<string, string>): boolean {
   if (
     isTruthyFlag(record.wizmode) ||
     isTruthyFlag(record.wizard) ||
     isTruthyFlag(record.debug) ||
-    ['wizard', 'wizmode'].includes((record.type ?? '').trim().toLowerCase()) ||
-    ['wizard', 'wizmode'].includes((record.mode ?? '').trim().toLowerCase()) ||
-    ['wizard', 'wizmode'].includes((record.game_mode ?? '').trim().toLowerCase()) ||
-    ['wizard', 'wizmode'].includes((record.ktyp ?? '').trim().toLowerCase())
+    hasExcludedModeMarker(record.type) ||
+    hasExcludedModeMarker(record.mode) ||
+    hasExcludedModeMarker(record.game_mode) ||
+    hasExcludedModeMarker(record.ktyp)
   ) {
     return true
   }
 
   return ['tmsg', 'vmsg'].some((field) =>
-    (record[field] ?? '').toLowerCase().includes('wizard mode'),
+    ['wizard mode', 'explore mode'].some((phrase) =>
+      (record[field] ?? '').toLowerCase().includes(phrase),
+    ),
   )
 }
 
-export function isWizardModeLine(line: string): boolean {
-  return isWizardModeRecord(parseXlogRecord(line))
+export function isExcludedModeLine(line: string): boolean {
+  return isExcludedModeRecord(parseXlogRecord(line))
 }
 
-export function isWizardModeCandidate(candidate: Pick<CandidateGame, 'rawXlogLine'>): boolean {
-  return isWizardModeLine(candidate.rawXlogLine)
+export function isExcludedModeCandidate(candidate: Pick<CandidateGame, 'rawXlogLine'>): boolean {
+  return isExcludedModeLine(candidate.rawXlogLine)
 }
 
 function getRequiredField(record: Record<string, string>, key: string): string {
@@ -112,8 +126,8 @@ export function normalizeXlogTimestamp(value: string): string {
 export function parseXlogLine(line: string, ctx: ParseXlogContext): CandidateGame {
   const record = parseXlogRecord(line)
 
-  if (isWizardModeRecord(record)) {
-    throw new Error('Wizard mode candidate excluded')
+  if (isExcludedModeRecord(record)) {
+    throw new Error('Excluded game mode candidate')
   }
 
   const sourceVersionLabel = getRequiredField(record, 'v')

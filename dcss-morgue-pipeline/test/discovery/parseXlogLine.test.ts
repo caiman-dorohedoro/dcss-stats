@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { isWizardModeLine, parseXlogLine } from '../../src/discovery/parseXlogLine'
+import { isExcludedModeLine, parseXlogLine } from '../../src/discovery/parseXlogLine'
 
 describe('parseXlogLine', () => {
   it('parses xlog key/value pairs with :: escapes and zero-based months', () => {
@@ -33,10 +33,16 @@ describe('parseXlogLine', () => {
     expect(row.version).toBe('0.34')
   })
 
-  it('detects wizard mode markers and rejects those candidates', () => {
+  it('detects excluded game modes and rejects those candidates', () => {
     expect(
-      isWizardModeLine(
+      isExcludedModeLine(
         'name=alice:start=20260305000102S:v=0.34:end=20260305010203S:tmsg=ok:wizmode=1',
+      ),
+    ).toBe(true)
+
+    expect(
+      isExcludedModeLine(
+        'name=alice:start=20260305000102S:v=0.34:end=20260305010203S:tmsg=entered explore mode:ktyp=exploremode',
       ),
     ).toBe(true)
 
@@ -48,7 +54,17 @@ describe('parseXlogLine', () => {
           logfileUrl: 'http://crawl.akrasiac.org/logfile34',
         },
       ),
-    ).toThrow('Wizard mode candidate excluded')
+    ).toThrow('Excluded game mode candidate')
+
+    expect(() =>
+      parseXlogLine(
+        'name=alice:start=20260305000102S:v=0.34:end=20260305010203S:tmsg=entered explore mode:ktyp=exploremode',
+        {
+          serverId: 'CAO',
+          logfileUrl: 'http://crawl.akrasiac.org/logfile34',
+        },
+      ),
+    ).toThrow('Excluded game mode candidate')
   })
 
   it('rejects unsupported source versions instead of mapping them to trunk', () => {

@@ -83,12 +83,13 @@ describe('syncLogfile', () => {
     expect(candidateRepo.count(db)).toBe(1)
   })
 
-  it('skips wizard mode candidates without stopping sync', async () => {
+  it('skips excluded-mode candidates without stopping sync', async () => {
     const db = createInMemoryDb()
     migrate(db)
 
     const text = [
       'name=alice:start=20260305000102S:v=0.34:end=20260305010203S:tmsg=ok:wizmode=1',
+      'name=explorer:start=20260305010203S:v=0.34:end=20260305010303S:tmsg=entered explore mode:ktyp=exploremode',
       'name=bob:start=20260305030405S:v=0.34:end=20260305040506S:tmsg=ok',
       '',
     ].join('\n')
@@ -101,9 +102,9 @@ describe('syncLogfile', () => {
       now: () => '2026-04-05T06:00:00.000Z',
     })
 
-    expect(result.processedLines).toBe(2)
+    expect(result.processedLines).toBe(3)
     expect(result.insertedCandidates).toBe(1)
-    expect(result.rejectedLines).toBe(1)
+    expect(result.rejectedLines).toBe(2)
     expect(candidateRepo.count(db)).toBe(1)
     expect(candidateRepo.listAll(db)[0]?.playerName).toBe('bob')
   })

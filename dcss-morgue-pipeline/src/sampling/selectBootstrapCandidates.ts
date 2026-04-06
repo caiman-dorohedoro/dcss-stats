@@ -1,5 +1,5 @@
 import type { CandidateGame } from '../types'
-import { isWizardModeCandidate } from '../discovery/parseXlogLine'
+import { isExcludedModeCandidate } from '../discovery/parseXlogLine'
 
 function compareCandidates(left: CandidateGame, right: CandidateGame) {
   return left.candidateId.localeCompare(right.candidateId)
@@ -13,7 +13,7 @@ export function selectBootstrapCandidates(
 ): CandidateGame[] {
   const buckets = new Map<string, CandidateGame[]>()
 
-  for (const candidate of candidates.filter((item) => !isWizardModeCandidate(item))) {
+  for (const candidate of candidates.filter((item) => !isExcludedModeCandidate(item))) {
     const bucketKey = `${candidate.serverId}:${candidate.version}`
     const bucket = buckets.get(bucketKey) ?? []
     bucket.push(candidate)

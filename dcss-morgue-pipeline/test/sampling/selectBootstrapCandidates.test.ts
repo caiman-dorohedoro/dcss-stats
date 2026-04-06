@@ -56,13 +56,18 @@ describe('selectBootstrapCandidates', () => {
     })
   })
 
-  it('filters wizard mode candidates before applying per-bucket caps', () => {
+  it('filters excluded-mode candidates before applying per-bucket caps', () => {
     const selected = selectBootstrapCandidates(
       [
         {
           ...seedCandidate('cao34-wiz', 'CAO', '0.34'),
           rawXlogLine:
             'name=wizard:start=20260305000102S:v=0.34:end=20260305010203S:tmsg=ok:wizmode=1',
+        },
+        {
+          ...seedCandidate('cao34-explore', 'CAO', '0.34'),
+          rawXlogLine:
+            'name=explorer:start=20260305000102S:v=0.34:end=20260305010203S:tmsg=entered explore mode:ktyp=exploremode',
         },
         seedCandidate('cao34-real', 'CAO', '0.34'),
         seedCandidate('cao34-real-2', 'CAO', '0.34'),
