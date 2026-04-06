@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs'
 import path from 'node:path'
 import { describe, expect, it } from 'vitest'
-import { extractSpells } from '../../src/parser/extractSpells'
+import { canonicalizeSpellNames, extractSpells } from '../../src/parser/extractSpells'
 
 function loadFixture(name: string) {
   return readFileSync(
@@ -65,9 +65,47 @@ describe('extractSpells', () => {
     })
 
     expect(spells).toContainEqual({
-      name: "Iskenderun's Mystic Bla",
+      name: "Iskenderun's Mystic Blast",
       failurePercent: 17,
       memorized: false,
     })
+  })
+
+  it('restores canonical names when the morgue table truncates long spell names', () => {
+    const parsed = extractSpells(loadFixture('spell-library-table-realistic.txt'), {
+      canonicalSpellNames: [
+        "Iskenderun's Mystic Blast",
+        'Construct Spike Launcher',
+        "Eringya's Surprising Crocodile",
+        "Borgnjor's Revivification",
+      ],
+    })
+
+    expect(parsed).toContainEqual({
+      name: "Iskenderun's Mystic Blast",
+      failurePercent: 17,
+      memorized: false,
+    })
+  })
+
+  it('leaves ambiguous prefixes unchanged', () => {
+    const spells = canonicalizeSpellNames(
+      [
+        {
+          name: 'Blink',
+          failurePercent: 10,
+          memorized: false,
+        },
+      ],
+      ['Blink', 'Blink Range', 'Blink Away'],
+    )
+
+    expect(spells).toEqual([
+      {
+        name: 'Blink',
+        failurePercent: 10,
+        memorized: false,
+      },
+    ])
   })
 })

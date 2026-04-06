@@ -1,3 +1,6 @@
+import { existsSync, readFileSync } from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import type { SpellSnapshot } from '../types'
 import { ParseFailure } from './validateStrict'
 import { splitSections } from './splitSections'
@@ -6,6 +9,85 @@ type ModernSpellColumns = {
   typeStart: number
   failureStart: number
   levelStart: number
+}
+
+const CANONICAL_SPELL_PATH_CANDIDATES = [
+  path.resolve(
+    path.dirname(fileURLToPath(import.meta.url)),
+    '../../../crawl/crawl-ref/source/spl-data.h',
+  ),
+  path.resolve(
+    path.dirname(fileURLToPath(import.meta.url)),
+    '../../../../crawl/crawl-ref/source/spl-data.h',
+  ),
+] as const
+
+let cachedCanonicalSpellNames: string[] | null = null
+
+function loadCanonicalSpellNamesFromCrawl(): string[] {
+  if (cachedCanonicalSpellNames) {
+    return cachedCanonicalSpellNames
+  }
+
+  const spellDataPath = CANONICAL_SPELL_PATH_CANDIDATES.find((candidatePath) => existsSync(candidatePath))
+
+  if (!spellDataPath) {
+    cachedCanonicalSpellNames = []
+    return cachedCanonicalSpellNames
+  }
+
+  const spellDataText = readFileSync(spellDataPath, 'utf8')
+  const matches = spellDataText.matchAll(/SPELL_[A-Z0-9_]+,\s+"([^"]+)"/g)
+  const uniqueNames = new Set<string>()
+
+  for (const match of matches) {
+    const name = match[1]?.trim()
+
+    if (!name) {
+      continue
+    }
+
+    uniqueNames.add(name)
+  }
+
+  cachedCanonicalSpellNames = [...uniqueNames]
+  return cachedCanonicalSpellNames
+}
+
+export function canonicalizeSpellNames(
+  spells: SpellSnapshot[],
+  canonicalSpellNames = loadCanonicalSpellNamesFromCrawl(),
+): SpellSnapshot[] {
+  if (canonicalSpellNames.length === 0) {
+    return spells
+  }
+
+  const exactNameMap = new Map(canonicalSpellNames.map((name) => [name.toLowerCase(), name] as const))
+
+  return spells.map((spell) => {
+    const normalizedName = spell.name.toLowerCase()
+    const exact = exactNameMap.get(normalizedName)
+
+    if (exact) {
+      return {
+        ...spell,
+        name: exact,
+      }
+    }
+
+    const prefixMatches = canonicalSpellNames.filter((candidate) =>
+      candidate.toLowerCase().startsWith(normalizedName),
+    )
+
+    if (prefixMatches.length !== 1) {
+      return spell
+    }
+
+    return {
+      ...spell,
+      name: prefixMatches[0],
+    }
+  })
 }
 
 function parseLegacySpellLine(line: string): SpellSnapshot {
@@ -196,6 +278,18 @@ function dedupeSpells(spells: SpellSnapshot[]): SpellSnapshot[] {
   return [...merged.values()]
 }
 
-export function extractSpells(text: string): SpellSnapshot[] {
-  return dedupeSpells([...parseLegacySpellSection(text), ...parseModernSpellSections(text)])
+export function extractSpells(
+  text: string,
+  options?: {
+    canonicalSpellNames?: readonly string[]
+  },
+): SpellSnapshot[] {
+  const canonicalSpellNames = options?.canonicalSpellNames
+    ? [...options.canonicalSpellNames]
+    : loadCanonicalSpellNamesFromCrawl()
+
+  return canonicalizeSpellNames(
+    dedupeSpells([...parseLegacySpellSection(text), ...parseModernSpellSections(text)]),
+    canonicalSpellNames,
+  )
 }
