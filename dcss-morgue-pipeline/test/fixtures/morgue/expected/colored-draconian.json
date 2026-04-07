@@ -2,6 +2,7 @@
   "playerName": "WSnake",
   "version": "0.35-a0-257-gf9e06672e4",
   "species": "Draconian",
+  "background": "Summoner",
   "ac": 11,
   "ev": 11,
   "sh": 0,
@@ -27,6 +28,8 @@
     "ring of Sogam",
     "ring of intelligence"
   ],
+  "talisman": "none",
+  "form": null,
   "glovesDetails": [
     {
       "rawName": "pair of gloves of dexterity",
@@ -40,14 +43,30 @@
       "ego": "dexterity",
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [
-        "Dex+3"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [
-        "Dex+3"
-      ],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "Dex": 3
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {
+          "Dex": 3
+        },
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "footwearDetails": [
@@ -63,10 +82,26 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "cloakDetails": [
@@ -82,14 +117,30 @@
       "ego": "poison resistance",
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [
-        "rPois"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [
-        "rPois"
-      ],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {},
+        "flags": {
+          "rPois": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {
+          "rPois": true
+        },
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "amuletDetails": {
@@ -104,14 +155,30 @@
     "ego": null,
     "subtypeEffect": "regeneration",
     "propertiesText": null,
-    "properties": [
-      "Regen+"
-    ],
-    "intrinsicProperties": [
-      "Regen+"
-    ],
-    "egoProperties": [],
-    "artifactProperties": []
+    "properties": {
+      "numeric": {
+        "Regen": 1
+      },
+      "flags": {},
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {
+        "Regen": 1
+      },
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    }
   },
   "ringDetails": [
     {
@@ -126,22 +193,40 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "^Drain rF+++ rC+ Str+6 Dex+2",
-      "properties": [
-        "^Drain",
-        "rF+++",
-        "rC+",
-        "Str+6",
-        "Dex+2"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "^Drain",
-        "rF+++",
-        "rC+",
-        "Str+6",
-        "Dex+2"
-      ]
+      "properties": {
+        "numeric": {
+          "rF": 3,
+          "rC": 1,
+          "Str": 6,
+          "Dex": 2
+        },
+        "flags": {},
+        "specials": [
+          "^Drain"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rF": 3,
+          "rC": 1,
+          "Str": 6,
+          "Dex": 2
+        },
+        "flags": {},
+        "specials": [
+          "^Drain"
+        ]
+      }
     },
     {
       "rawName": "ring of intelligence",
@@ -155,14 +240,30 @@
       "ego": null,
       "subtypeEffect": "intelligence",
       "propertiesText": null,
-      "properties": [
-        "Int+6"
-      ],
-      "intrinsicProperties": [
-        "Int+6"
-      ],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "Int": 6
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {
+          "Int": 6
+        },
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "skills": {

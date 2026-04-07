@@ -2,6 +2,7 @@
   "playerName": "questionabletactics",
   "version": "0.35-a0-181-g84ebf06",
   "species": "Gnoll",
+  "background": "Reaver",
   "ac": 39,
   "ev": 33,
   "sh": 13,
@@ -29,6 +30,8 @@
     "ring of dexterity",
     "ring of strength"
   ],
+  "talisman": "none",
+  "form": null,
   "bodyArmourDetails": {
     "rawName": "golden dragon scales",
     "displayName": "golden dragon scales",
@@ -41,18 +44,36 @@
     "ego": null,
     "subtypeEffect": null,
     "propertiesText": null,
-    "properties": [
-      "rF+",
-      "rC+",
-      "rPois"
-    ],
-    "intrinsicProperties": [
-      "rF+",
-      "rC+",
-      "rPois"
-    ],
-    "egoProperties": [],
-    "artifactProperties": []
+    "properties": {
+      "numeric": {
+        "rF": 1,
+        "rC": 1
+      },
+      "flags": {
+        "rPois": true
+      },
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {
+        "rF": 1,
+        "rC": 1
+      },
+      "flags": {
+        "rPois": true
+      },
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    }
   },
   "shieldDetails": {
     "rawName": "buckler of Snakes and Ladders",
@@ -66,20 +87,36 @@
     "ego": null,
     "subtypeEffect": null,
     "propertiesText": "Regen+ Int+3 Dex+7 Stlth-",
-    "properties": [
-      "Regen+",
-      "Int+3",
-      "Dex+7",
-      "Stlth-"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": [
-      "Regen+",
-      "Int+3",
-      "Dex+7",
-      "Stlth-"
-    ]
+    "properties": {
+      "numeric": {
+        "Int": 3,
+        "Dex": 7,
+        "Regen": 1,
+        "Stlth": -1
+      },
+      "flags": {},
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {
+        "Int": 3,
+        "Dex": 7,
+        "Regen": 1,
+        "Stlth": -1
+      },
+      "flags": {},
+      "specials": []
+    }
   },
   "helmetDetails": [
     {
@@ -94,28 +131,48 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rElec rPois rF+ rC+ rN+ Will+ rMut rCorr",
-      "properties": [
-        "rElec",
-        "rPois",
-        "rF+",
-        "rC+",
-        "rN+",
-        "Will+",
-        "rMut",
-        "rCorr"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rElec",
-        "rPois",
-        "rF+",
-        "rC+",
-        "rN+",
-        "Will+",
-        "rMut",
-        "rCorr"
-      ]
+      "properties": {
+        "numeric": {
+          "rF": 1,
+          "rC": 1,
+          "rN": 1,
+          "Will": 1
+        },
+        "flags": {
+          "rPois": true,
+          "rElec": true,
+          "rCorr": true
+        },
+        "specials": [
+          "rMut"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rF": 1,
+          "rC": 1,
+          "rN": 1,
+          "Will": 1
+        },
+        "flags": {
+          "rPois": true,
+          "rElec": true,
+          "rCorr": true
+        },
+        "specials": [
+          "rMut"
+        ]
+      }
     }
   ],
   "glovesDetails": [
@@ -131,14 +188,30 @@
       "ego": "strength",
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [
-        "Str+3"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [
-        "Str+3"
-      ],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "Str": 3
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {
+          "Str": 3
+        },
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "footwearDetails": [
@@ -154,14 +227,30 @@
       "ego": "flying",
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [
-        "Fly"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [
-        "Fly"
-      ],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {},
+        "flags": {
+          "Fly": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {
+          "Fly": true
+        },
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "cloakDetails": [
@@ -177,14 +266,30 @@
       "ego": "willpower",
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [
-        "Will+"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [
-        "Will+"
-      ],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "Will": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {
+          "Will": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "amuletDetails": {
@@ -199,16 +304,32 @@
     "ego": null,
     "subtypeEffect": null,
     "propertiesText": "Faith SInv",
-    "properties": [
-      "Faith",
-      "SInv"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": [
-      "Faith",
-      "SInv"
-    ]
+    "properties": {
+      "numeric": {},
+      "flags": {
+        "SInv": true,
+        "Faith": true
+      },
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {},
+      "flags": {
+        "SInv": true,
+        "Faith": true
+      },
+      "specials": []
+    }
   },
   "ringDetails": [
     {
@@ -223,14 +344,30 @@
       "ego": null,
       "subtypeEffect": "dexterity",
       "propertiesText": null,
-      "properties": [
-        "Dex+6"
-      ],
-      "intrinsicProperties": [
-        "Dex+6"
-      ],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "Dex": 6
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {
+          "Dex": 6
+        },
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "ring of strength",
@@ -244,14 +381,30 @@
       "ego": null,
       "subtypeEffect": "strength",
       "propertiesText": null,
-      "properties": [
-        "Str+6"
-      ],
-      "intrinsicProperties": [
-        "Str+6"
-      ],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "Str": 6
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {
+          "Str": 6
+        },
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "skills": {

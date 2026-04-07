@@ -2,6 +2,7 @@
   "playerName": "jkt",
   "version": "0.35-a0-181-g84ebf06",
   "species": "Poltergeist",
+  "background": "Enchanter",
   "ac": 16,
   "ev": 23,
   "sh": 0,
@@ -30,6 +31,8 @@
     "ring \"Anxiety of Ashenzari\"",
     "ring \"Voungiwe\""
   ],
+  "talisman": "none",
+  "form": null,
   "helmetDetails": [
     {
       "rawName": "hat of the Chained Sun",
@@ -43,18 +46,36 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "Will+, Self, Sorc",
-      "properties": [
-        "Will+",
-        "Self",
-        "Sorc"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "Will+",
-        "Self",
-        "Sorc"
-      ]
+      "properties": {
+        "numeric": {
+          "Will": 1
+        },
+        "flags": {},
+        "specials": [
+          "Self",
+          "Sorc"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Will": 1
+        },
+        "flags": {},
+        "specials": [
+          "Self",
+          "Sorc"
+        ]
+      }
     },
     {
       "rawName": "hat of Ashenzari's Gnosis",
@@ -68,18 +89,36 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "Int+3, Bglg, Comp",
-      "properties": [
-        "Int+3",
-        "Bglg",
-        "Comp"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "Int+3",
-        "Bglg",
-        "Comp"
-      ]
+      "properties": {
+        "numeric": {
+          "Int": 3
+        },
+        "flags": {},
+        "specials": [
+          "Bglg",
+          "Comp"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Int": 3
+        },
+        "flags": {},
+        "specials": [
+          "Bglg",
+          "Comp"
+        ]
+      }
     }
   ],
   "glovesDetails": [
@@ -95,18 +134,36 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "Slay+5, Self, Comp",
-      "properties": [
-        "Slay+5",
-        "Self",
-        "Comp"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "Slay+5",
-        "Self",
-        "Comp"
-      ]
+      "properties": {
+        "numeric": {
+          "Slay": 5
+        },
+        "flags": {},
+        "specials": [
+          "Self",
+          "Comp"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Slay": 5
+        },
+        "flags": {},
+        "specials": [
+          "Self",
+          "Comp"
+        ]
+      }
     }
   ],
   "cloakDetails": [
@@ -122,14 +179,30 @@
       "ego": "willpower",
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [
-        "Will+"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [
-        "Will+"
-      ],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "Will": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {
+          "Will": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "scarf \"Chained Fetters\"",
@@ -143,18 +216,36 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "Repulsion, Bglg, Self",
-      "properties": [
-        "Repulsion",
-        "Bglg",
-        "Self"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "Repulsion",
-        "Bglg",
-        "Self"
-      ]
+      "properties": {
+        "numeric": {},
+        "flags": {
+          "Repulsion": true
+        },
+        "specials": [
+          "Bglg",
+          "Self"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {
+          "Repulsion": true
+        },
+        "specials": [
+          "Bglg",
+          "Self"
+        ]
+      }
     },
     {
       "rawName": "cloak of Ashenzari's Failure",
@@ -168,16 +259,32 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "Melee, Dev",
-      "properties": [
-        "Melee",
-        "Dev"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "Melee",
-        "Dev"
-      ]
+      "properties": {
+        "numeric": {},
+        "flags": {},
+        "specials": [
+          "Melee",
+          "Dev"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": [
+          "Melee",
+          "Dev"
+        ]
+      }
     }
   ],
   "orbDetails": {
@@ -192,14 +299,30 @@
     "ego": "guile",
     "subtypeEffect": null,
     "propertiesText": null,
-    "properties": [
-      "Guile"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "Guile"
-    ],
-    "artifactProperties": []
+    "properties": {
+      "numeric": {},
+      "flags": {
+        "Guile": true
+      },
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {
+        "Guile": true
+      },
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    }
   },
   "amuletDetails": {
     "rawName": "amulet of the Ruined Ether",
@@ -213,18 +336,36 @@
     "ego": null,
     "subtypeEffect": null,
     "propertiesText": "RegenMP+, Cun, Self",
-    "properties": [
-      "RegenMP+",
-      "Cun",
-      "Self"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": [
-      "RegenMP+",
-      "Cun",
-      "Self"
-    ]
+    "properties": {
+      "numeric": {
+        "RegenMP": 1
+      },
+      "flags": {},
+      "specials": [
+        "Cun",
+        "Self"
+      ]
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {
+        "RegenMP": 1
+      },
+      "flags": {},
+      "specials": [
+        "Cun",
+        "Self"
+      ]
+    }
   },
   "ringDetails": [
     {
@@ -239,18 +380,36 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rC+, Comp, Range",
-      "properties": [
-        "rC+",
-        "Comp",
-        "Range"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rC+",
-        "Comp",
-        "Range"
-      ]
+      "properties": {
+        "numeric": {
+          "rC": 1
+        },
+        "flags": {},
+        "specials": [
+          "Comp",
+          "Range"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rC": 1
+        },
+        "flags": {},
+        "specials": [
+          "Comp",
+          "Range"
+        ]
+      }
     },
     {
       "rawName": "ring \"Voungiwe\"",
@@ -264,18 +423,36 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rF+ rCorr MP+6",
-      "properties": [
-        "rF+",
-        "rCorr",
-        "MP+6"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rF+",
-        "rCorr",
-        "MP+6"
-      ]
+      "properties": {
+        "numeric": {
+          "rF": 1,
+          "MP": 6
+        },
+        "flags": {
+          "rCorr": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rF": 1,
+          "MP": 6
+        },
+        "flags": {
+          "rCorr": true
+        },
+        "specials": []
+      }
     }
   ],
   "skills": {

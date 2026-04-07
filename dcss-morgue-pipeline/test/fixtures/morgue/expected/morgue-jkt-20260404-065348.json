@@ -2,6 +2,7 @@
   "playerName": "jkt",
   "version": "0.35-a0-181-g84ebf06",
   "species": "Poltergeist",
+  "background": "Enchanter",
   "ac": 19,
   "ev": 36,
   "sh": 15,
@@ -31,6 +32,8 @@
     "ring of Ashenzari's Prison",
     "ring \"Bylouron\""
   ],
+  "talisman": "none",
+  "form": null,
   "shieldDetails": {
     "rawName": "kite shield of the Wild Blue Yonder",
     "displayName": "kite shield",
@@ -43,26 +46,46 @@
     "ego": null,
     "subtypeEffect": null,
     "propertiesText": "Reflect, rPois Dex+2 Slay-2 SInv, Fort, Melee",
-    "properties": [
-      "Reflect",
-      "rPois",
-      "Dex+2",
-      "Slay-2",
-      "SInv",
-      "Fort",
-      "Melee"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": [
-      "Reflect",
-      "rPois",
-      "Dex+2",
-      "Slay-2",
-      "SInv",
-      "Fort",
-      "Melee"
-    ]
+    "properties": {
+      "numeric": {
+        "Dex": 2,
+        "Slay": -2
+      },
+      "flags": {
+        "rPois": true,
+        "SInv": true,
+        "Reflect": true
+      },
+      "specials": [
+        "Fort",
+        "Melee"
+      ]
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {
+        "Dex": 2,
+        "Slay": -2
+      },
+      "flags": {
+        "rPois": true,
+        "SInv": true,
+        "Reflect": true
+      },
+      "specials": [
+        "Fort",
+        "Melee"
+      ]
+    }
   },
   "helmetDetails": [
     {
@@ -77,18 +100,36 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "Stlth+, Cun, Elem",
-      "properties": [
-        "Stlth+",
-        "Cun",
-        "Elem"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "Stlth+",
-        "Cun",
-        "Elem"
-      ]
+      "properties": {
+        "numeric": {
+          "Stlth": 1
+        },
+        "flags": {},
+        "specials": [
+          "Cun",
+          "Elem"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Stlth": 1
+        },
+        "flags": {},
+        "specials": [
+          "Cun",
+          "Elem"
+        ]
+      }
     }
   ],
   "glovesDetails": [
@@ -104,22 +145,42 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "Str+3 Dex+5 SInv, Cun, Self",
-      "properties": [
-        "Str+3",
-        "Dex+5",
-        "SInv",
-        "Cun",
-        "Self"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "Str+3",
-        "Dex+5",
-        "SInv",
-        "Cun",
-        "Self"
-      ]
+      "properties": {
+        "numeric": {
+          "Str": 3,
+          "Dex": 5
+        },
+        "flags": {
+          "SInv": true
+        },
+        "specials": [
+          "Cun",
+          "Self"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Str": 3,
+          "Dex": 5
+        },
+        "flags": {
+          "SInv": true
+        },
+        "specials": [
+          "Cun",
+          "Self"
+        ]
+      }
     }
   ],
   "footwearDetails": [
@@ -135,16 +196,32 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "Bglg, Dev",
-      "properties": [
-        "Bglg",
-        "Dev"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "Bglg",
-        "Dev"
-      ]
+      "properties": {
+        "numeric": {},
+        "flags": {},
+        "specials": [
+          "Bglg",
+          "Dev"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": [
+          "Bglg",
+          "Dev"
+        ]
+      }
     },
     {
       "rawName": "pair of boots \"Chained the Doldrums\"",
@@ -158,18 +235,36 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "Stlth+, Cun, Self",
-      "properties": [
-        "Stlth+",
-        "Cun",
-        "Self"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "Stlth+",
-        "Cun",
-        "Self"
-      ]
+      "properties": {
+        "numeric": {
+          "Stlth": 1
+        },
+        "flags": {},
+        "specials": [
+          "Cun",
+          "Self"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Stlth": 1
+        },
+        "flags": {},
+        "specials": [
+          "Cun",
+          "Self"
+        ]
+      }
     }
   ],
   "cloakDetails": [
@@ -185,18 +280,36 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "Will+, Dev, Self",
-      "properties": [
-        "Will+",
-        "Dev",
-        "Self"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "Will+",
-        "Dev",
-        "Self"
-      ]
+      "properties": {
+        "numeric": {
+          "Will": 1
+        },
+        "flags": {},
+        "specials": [
+          "Dev",
+          "Self"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Will": 1
+        },
+        "flags": {},
+        "specials": [
+          "Dev",
+          "Self"
+        ]
+      }
     },
     {
       "rawName": "cloak \"Profound the Doldrums\"",
@@ -210,18 +323,36 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rC+, Bglg, Comp",
-      "properties": [
-        "rC+",
-        "Bglg",
-        "Comp"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rC+",
-        "Bglg",
-        "Comp"
-      ]
+      "properties": {
+        "numeric": {
+          "rC": 1
+        },
+        "flags": {},
+        "specials": [
+          "Bglg",
+          "Comp"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rC": 1
+        },
+        "flags": {},
+        "specials": [
+          "Bglg",
+          "Comp"
+        ]
+      }
     }
   ],
   "amuletDetails": {
@@ -236,20 +367,38 @@
     "ego": null,
     "subtypeEffect": null,
     "propertiesText": "rF+ RegenMP+, Self, Sorc",
-    "properties": [
-      "rF+",
-      "RegenMP+",
-      "Self",
-      "Sorc"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": [
-      "rF+",
-      "RegenMP+",
-      "Self",
-      "Sorc"
-    ]
+    "properties": {
+      "numeric": {
+        "rF": 1,
+        "RegenMP": 1
+      },
+      "flags": {},
+      "specials": [
+        "Self",
+        "Sorc"
+      ]
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {
+        "rF": 1,
+        "RegenMP": 1
+      },
+      "flags": {},
+      "specials": [
+        "Self",
+        "Sorc"
+      ]
+    }
   },
   "ringDetails": [
     {
@@ -264,18 +413,36 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rC+, Cun, Comp",
-      "properties": [
-        "rC+",
-        "Cun",
-        "Comp"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rC+",
-        "Cun",
-        "Comp"
-      ]
+      "properties": {
+        "numeric": {
+          "rC": 1
+        },
+        "flags": {},
+        "specials": [
+          "Cun",
+          "Comp"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rC": 1
+        },
+        "flags": {},
+        "specials": [
+          "Cun",
+          "Comp"
+        ]
+      }
     },
     {
       "rawName": "ring \"Bylouron\"",
@@ -289,18 +456,34 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rF+ EV+5 Slay+5",
-      "properties": [
-        "rF+",
-        "EV+5",
-        "Slay+5"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rF+",
-        "EV+5",
-        "Slay+5"
-      ]
+      "properties": {
+        "numeric": {
+          "rF": 1,
+          "Slay": 5,
+          "EV": 5
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rF": 1,
+          "Slay": 5,
+          "EV": 5
+        },
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "skills": {

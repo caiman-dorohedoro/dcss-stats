@@ -2,6 +2,7 @@
   "playerName": "exant",
   "version": "0.34.0",
   "species": "Octopode",
+  "background": "Brigand",
   "ac": 3,
   "ev": 34,
   "sh": 19,
@@ -27,6 +28,8 @@
     "ring of Dyryepto",
     "ring \"Ynoedy\""
   ],
+  "talisman": "none",
+  "form": null,
   "shieldDetails": {
     "rawName": "kite shield of Evenfall",
     "displayName": "kite shield",
@@ -39,20 +42,40 @@
     "ego": null,
     "subtypeEffect": null,
     "propertiesText": "Reflect, *Corrode Int+3 Dex+2",
-    "properties": [
-      "Reflect",
-      "*Corrode",
-      "Int+3",
-      "Dex+2"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": [
-      "Reflect",
-      "*Corrode",
-      "Int+3",
-      "Dex+2"
-    ]
+    "properties": {
+      "numeric": {
+        "Int": 3,
+        "Dex": 2
+      },
+      "flags": {
+        "Reflect": true
+      },
+      "specials": [
+        "*Corrode"
+      ]
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {
+        "Int": 3,
+        "Dex": 2
+      },
+      "flags": {
+        "Reflect": true
+      },
+      "specials": [
+        "*Corrode"
+      ]
+    }
   },
   "amuletDetails": {
     "rawName": "amulet \"Umpul\"",
@@ -66,16 +89,32 @@
     "ego": null,
     "subtypeEffect": null,
     "propertiesText": "RegenMP+ Int+3",
-    "properties": [
-      "RegenMP+",
-      "Int+3"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": [
-      "RegenMP+",
-      "Int+3"
-    ]
+    "properties": {
+      "numeric": {
+        "Int": 3,
+        "RegenMP": 1
+      },
+      "flags": {},
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {
+        "Int": 3,
+        "RegenMP": 1
+      },
+      "flags": {},
+      "specials": []
+    }
   },
   "ringDetails": [
     {
@@ -90,14 +129,30 @@
       "ego": null,
       "subtypeEffect": "poison resistance",
       "propertiesText": null,
-      "properties": [
-        "rPois"
-      ],
-      "intrinsicProperties": [
-        "rPois"
-      ],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {},
+        "flags": {
+          "rPois": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {
+          "rPois": true
+        },
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "ring of protection from cold",
@@ -111,14 +166,30 @@
       "ego": null,
       "subtypeEffect": "protection from cold",
       "propertiesText": null,
-      "properties": [
-        "rC+"
-      ],
-      "intrinsicProperties": [
-        "rC+"
-      ],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "rC": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {
+          "rC": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "ring of evasion",
@@ -132,14 +203,30 @@
       "ego": null,
       "subtypeEffect": "evasion",
       "propertiesText": null,
-      "properties": [
-        "EV+5"
-      ],
-      "intrinsicProperties": [
-        "EV+5"
-      ],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "EV": 5
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {
+          "EV": 5
+        },
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "ring of dexterity",
@@ -153,14 +240,30 @@
       "ego": null,
       "subtypeEffect": "dexterity",
       "propertiesText": null,
-      "properties": [
-        "Dex+6"
-      ],
-      "intrinsicProperties": [
-        "Dex+6"
-      ],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "Dex": 6
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {
+          "Dex": 6
+        },
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "ring of protection",
@@ -174,14 +277,30 @@
       "ego": null,
       "subtypeEffect": "protection",
       "propertiesText": null,
-      "properties": [
-        "AC+4"
-      ],
-      "intrinsicProperties": [
-        "AC+4"
-      ],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "AC": 4
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {
+          "AC": 4
+        },
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "ring of slaying",
@@ -195,14 +314,30 @@
       "ego": null,
       "subtypeEffect": "slaying",
       "propertiesText": null,
-      "properties": [
-        "Slay+4"
-      ],
-      "intrinsicProperties": [
-        "Slay+4"
-      ],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "Slay": 4
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {
+          "Slay": 4
+        },
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "ring of Dyryepto",
@@ -216,16 +351,34 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rElec Int+6",
-      "properties": [
-        "rElec",
-        "Int+6"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rElec",
-        "Int+6"
-      ]
+      "properties": {
+        "numeric": {
+          "Int": 6
+        },
+        "flags": {
+          "rElec": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Int": 6
+        },
+        "flags": {
+          "rElec": true
+        },
+        "specials": []
+      }
     },
     {
       "rawName": "ring \"Ynoedy\"",
@@ -239,20 +392,38 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rF+ Dex-3 SInv Stlth+",
-      "properties": [
-        "rF+",
-        "Dex-3",
-        "SInv",
-        "Stlth+"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rF+",
-        "Dex-3",
-        "SInv",
-        "Stlth+"
-      ]
+      "properties": {
+        "numeric": {
+          "rF": 1,
+          "Dex": -3,
+          "Stlth": 1
+        },
+        "flags": {
+          "SInv": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rF": 1,
+          "Dex": -3,
+          "Stlth": 1
+        },
+        "flags": {
+          "SInv": true
+        },
+        "specials": []
+      }
     }
   ],
   "skills": {

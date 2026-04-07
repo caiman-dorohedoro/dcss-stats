@@ -2,6 +2,7 @@
   "playerName": "Tyrellia",
   "version": "0.35-a0-181-g84ebf06",
   "species": "Demonspawn",
+  "background": "Monk",
   "ac": 46,
   "ev": 7,
   "sh": 32,
@@ -27,6 +28,8 @@
     "ring of Zutivi",
     "ring of Urajuxuz"
   ],
+  "talisman": "none",
+  "form": null,
   "bodyArmourDetails": {
     "rawName": "golden dragon scales of Vyoxih",
     "displayName": "golden dragon scales",
@@ -39,25 +42,44 @@
     "ego": null,
     "subtypeEffect": null,
     "propertiesText": "rElec rPois rF+ rC+ Regen+ Dex-5",
-    "properties": [
-      "rElec",
-      "rPois",
-      "rF+",
-      "rC+",
-      "Regen+",
-      "Dex-5"
-    ],
-    "intrinsicProperties": [
-      "rF+",
-      "rC+",
-      "rPois"
-    ],
-    "egoProperties": [],
-    "artifactProperties": [
-      "rElec",
-      "Regen+",
-      "Dex-5"
-    ]
+    "properties": {
+      "numeric": {
+        "rF": 1,
+        "rC": 1,
+        "Dex": -5,
+        "Regen": 1
+      },
+      "flags": {
+        "rPois": true,
+        "rElec": true
+      },
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {
+        "rF": 1,
+        "rC": 1
+      },
+      "flags": {
+        "rPois": true
+      },
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {
+        "Dex": -5,
+        "Regen": 1
+      },
+      "flags": {
+        "rElec": true
+      },
+      "specials": []
+    }
   },
   "shieldDetails": {
     "rawName": "tower shield of protection",
@@ -71,14 +93,30 @@
     "ego": "protection",
     "subtypeEffect": null,
     "propertiesText": null,
-    "properties": [
-      "AC+3"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "AC+3"
-    ],
-    "artifactProperties": []
+    "properties": {
+      "numeric": {
+        "AC": 3
+      },
+      "flags": {},
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {
+        "AC": 3
+      },
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    }
   },
   "helmetDetails": [
     {
@@ -93,20 +131,38 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "^Drain Will+++ Regen+ Int+4",
-      "properties": [
-        "^Drain",
-        "Will+++",
-        "Regen+",
-        "Int+4"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "^Drain",
-        "Will+++",
-        "Regen+",
-        "Int+4"
-      ]
+      "properties": {
+        "numeric": {
+          "Will": 3,
+          "Int": 4,
+          "Regen": 1
+        },
+        "flags": {},
+        "specials": [
+          "^Drain"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Will": 3,
+          "Int": 4,
+          "Regen": 1
+        },
+        "flags": {},
+        "specials": [
+          "^Drain"
+        ]
+      }
     }
   ],
   "glovesDetails": [
@@ -122,18 +178,34 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "Infuse+∞ VampMP -Cast",
-      "properties": [
-        "Infuse+∞",
-        "VampMP",
-        "-Cast"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "Infuse+∞",
-        "VampMP",
-        "-Cast"
-      ]
+      "properties": {
+        "numeric": {},
+        "flags": {},
+        "specials": [
+          "Infuse+∞",
+          "VampMP",
+          "-Cast"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": [
+          "Infuse+∞",
+          "VampMP",
+          "-Cast"
+        ]
+      }
     }
   ],
   "footwearDetails": [
@@ -149,14 +221,30 @@
       "ego": "rampaging",
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [
-        "Rampage"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [
-        "Rampage"
-      ],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {},
+        "flags": {
+          "Rampage": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {
+          "Rampage": true
+        },
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "amuletDetails": {
@@ -171,14 +259,30 @@
     "ego": null,
     "subtypeEffect": "reflection",
     "propertiesText": null,
-    "properties": [
-      "Reflect"
-    ],
-    "intrinsicProperties": [
-      "Reflect"
-    ],
-    "egoProperties": [],
-    "artifactProperties": []
+    "properties": {
+      "numeric": {},
+      "flags": {
+        "Reflect": true
+      },
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {
+        "Reflect": true
+      },
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    }
   },
   "ringDetails": [
     {
@@ -193,20 +297,38 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rPois rN+++ Int+9 Dex-2",
-      "properties": [
-        "rPois",
-        "rN+++",
-        "Int+9",
-        "Dex-2"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rPois",
-        "rN+++",
-        "Int+9",
-        "Dex-2"
-      ]
+      "properties": {
+        "numeric": {
+          "rN": 3,
+          "Int": 9,
+          "Dex": -2
+        },
+        "flags": {
+          "rPois": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rN": 3,
+          "Int": 9,
+          "Dex": -2
+        },
+        "flags": {
+          "rPois": true
+        },
+        "specials": []
+      }
     },
     {
       "rawName": "ring of Urajuxuz",
@@ -220,16 +342,34 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "Int+4 SInv",
-      "properties": [
-        "Int+4",
-        "SInv"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "Int+4",
-        "SInv"
-      ]
+      "properties": {
+        "numeric": {
+          "Int": 4
+        },
+        "flags": {
+          "SInv": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Int": 4
+        },
+        "flags": {
+          "SInv": true
+        },
+        "specials": []
+      }
     }
   ],
   "skills": {

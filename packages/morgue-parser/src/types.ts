@@ -4,6 +4,7 @@ export type BaseStatsSnapshot = {
   playerName: string | null
   version: MorgueVersion
   species: string
+  background: string | null
   ac: number
   ev: number
   sh: number
@@ -13,8 +14,75 @@ export type BaseStatsSnapshot = {
 }
 
 export type ArtifactKind = 'normal' | 'randart' | 'unrand'
-export type EquipmentObjectClass = 'armour' | 'jewellery'
-export type EquipmentEquipState = 'worn' | 'haunted'
+export type EquipmentObjectClass = 'armour' | 'jewellery' | 'talisman'
+export type EquipmentEquipState = 'worn' | 'haunted' | 'melded'
+
+export type EquipmentNumericPropertyKey =
+  | 'rF'
+  | 'rC'
+  | 'rN'
+  | 'Will'
+  | 'Str'
+  | 'Int'
+  | 'Dex'
+  | 'Slay'
+  | 'AC'
+  | 'EV'
+  | 'SH'
+  | 'HP'
+  | 'MP'
+  | 'Regen'
+  | 'RegenMP'
+  | 'Stlth'
+
+export type EquipmentFlagPropertyKey =
+  | 'rPois'
+  | 'rElec'
+  | 'rCorr'
+  | 'SInv'
+  | 'Fly'
+  | 'Reflect'
+  | 'Faith'
+  | 'Spirit'
+  | 'Wiz'
+  | 'Acrobat'
+  | 'Rampage'
+  | 'Harm'
+  | 'Shadows'
+  | 'Repulsion'
+  | 'Archmagi'
+  | 'Light'
+  | 'Mayhem'
+  | 'Guile'
+  | 'Energy'
+  | 'Air'
+  | 'Fire'
+  | 'Ice'
+  | 'Earth'
+  | 'Wildshape'
+  | 'Chemistry'
+  | 'Dissipate'
+  | 'Attunement'
+  | 'Mesmerism'
+  | 'Stardust'
+  | 'Hurl'
+  | 'Snipe'
+  | 'Bear'
+  | 'Archery'
+  | 'Command'
+  | 'Death'
+  | 'Resonance'
+  | 'Parrying'
+  | 'Glass'
+  | 'Pyromania'
+  | 'Ponderous'
+  | 'Inv'
+
+export type EquipmentPropertyBag = {
+  numeric: Partial<Record<EquipmentNumericPropertyKey, number>>
+  flags: Partial<Record<EquipmentFlagPropertyKey, true>>
+  specials: string[]
+}
 
 export type EquipmentItemSnapshot = {
   rawName: string
@@ -28,10 +96,10 @@ export type EquipmentItemSnapshot = {
   ego: string | null
   subtypeEffect: string | null
   propertiesText: string | null
-  properties: string[]
-  intrinsicProperties: string[]
-  egoProperties: string[]
-  artifactProperties: string[]
+  properties: EquipmentPropertyBag
+  intrinsicProperties: EquipmentPropertyBag
+  egoProperties: EquipmentPropertyBag
+  artifactProperties: EquipmentPropertyBag
 }
 
 export type EquipmentSnapshot = {
@@ -45,6 +113,7 @@ export type EquipmentSnapshot = {
   orb: string | undefined
   amulet: string | undefined
   rings: string[]
+  talisman: string | undefined
   bodyArmourDetails?: EquipmentItemSnapshot
   shieldDetails?: EquipmentItemSnapshot
   helmetDetails?: EquipmentItemSnapshot[]
@@ -54,6 +123,7 @@ export type EquipmentSnapshot = {
   orbDetails?: EquipmentItemSnapshot
   amuletDetails?: EquipmentItemSnapshot
   ringDetails?: EquipmentItemSnapshot[]
+  talismanDetails?: EquipmentItemSnapshot
 }
 
 export type SkillLevelsSnapshot = {
@@ -110,6 +180,10 @@ export type MutationSnapshot = {
   mutations: MutationEntrySnapshot[]
 }
 
+export type FormSnapshot = {
+  form: string | null
+}
+
 export type ParsedMorgueTextRecord = BaseStatsSnapshot & {
   bodyArmour: string
   shield: string
@@ -121,6 +195,8 @@ export type ParsedMorgueTextRecord = BaseStatsSnapshot & {
   orb: string
   amulet: string
   rings: string[]
+  talisman: string
+  form: string | null
   bodyArmourDetails?: EquipmentItemSnapshot
   shieldDetails?: EquipmentItemSnapshot
   helmetDetails?: EquipmentItemSnapshot[]
@@ -130,6 +206,7 @@ export type ParsedMorgueTextRecord = BaseStatsSnapshot & {
   orbDetails?: EquipmentItemSnapshot
   amuletDetails?: EquipmentItemSnapshot
   ringDetails?: EquipmentItemSnapshot[]
+  talismanDetails?: EquipmentItemSnapshot
   skills: SkillLevelsSnapshot
   effectiveSkills: SkillLevelsSnapshot
   spells: SpellSnapshot[]

@@ -2,6 +2,7 @@
   "playerName": "midori369",
   "version": "0.35-a0-257-gf9e06672e4",
   "species": "Mountain Dwarf",
+  "background": "Forgewright",
   "ac": 37,
   "ev": 9,
   "sh": 9,
@@ -29,6 +30,8 @@
     "ring of wizardry",
     "ring of the Byakko"
   ],
+  "talisman": "none",
+  "form": null,
   "bodyArmourDetails": {
     "rawName": "fire dragon scales of Undesirable Species",
     "displayName": "fire dragon scales",
@@ -41,25 +44,41 @@
     "ego": null,
     "subtypeEffect": null,
     "propertiesText": "rF++ rC- rN+ Will+ Int+6 Slay-5",
-    "properties": [
-      "rF++",
-      "rC-",
-      "rN+",
-      "Will+",
-      "Int+6",
-      "Slay-5"
-    ],
-    "intrinsicProperties": [
-      "rF++",
-      "rC-"
-    ],
-    "egoProperties": [],
-    "artifactProperties": [
-      "rN+",
-      "Will+",
-      "Int+6",
-      "Slay-5"
-    ]
+    "properties": {
+      "numeric": {
+        "rF": 2,
+        "rC": -1,
+        "rN": 1,
+        "Will": 1,
+        "Int": 6,
+        "Slay": -5
+      },
+      "flags": {},
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {
+        "rF": 2,
+        "rC": -1
+      },
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {
+        "rN": 1,
+        "Will": 1,
+        "Int": 6,
+        "Slay": -5
+      },
+      "flags": {},
+      "specials": []
+    }
   },
   "shieldDetails": {
     "rawName": "buckler of cold resistance",
@@ -73,14 +92,30 @@
     "ego": "cold resistance",
     "subtypeEffect": null,
     "propertiesText": null,
-    "properties": [
-      "rC+"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "rC+"
-    ],
-    "artifactProperties": []
+    "properties": {
+      "numeric": {
+        "rC": 1
+      },
+      "flags": {},
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {
+        "rC": 1
+      },
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    }
   },
   "helmetDetails": [
     {
@@ -95,14 +130,30 @@
       "ego": "intelligence",
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [
-        "Int+3"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [
-        "Int+3"
-      ],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "Int": 3
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {
+          "Int": 3
+        },
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "glovesDetails": [
@@ -118,20 +169,40 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "^Contam rPois rF+ rC+",
-      "properties": [
-        "^Contam",
-        "rPois",
-        "rF+",
-        "rC+"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "^Contam",
-        "rPois",
-        "rF+",
-        "rC+"
-      ]
+      "properties": {
+        "numeric": {
+          "rF": 1,
+          "rC": 1
+        },
+        "flags": {
+          "rPois": true
+        },
+        "specials": [
+          "^Contam"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rF": 1,
+          "rC": 1
+        },
+        "flags": {
+          "rPois": true
+        },
+        "specials": [
+          "^Contam"
+        ]
+      }
     }
   ],
   "footwearDetails": [
@@ -147,14 +218,30 @@
       "ego": "flying",
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [
-        "Fly"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [
-        "Fly"
-      ],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {},
+        "flags": {
+          "Fly": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {
+          "Fly": true
+        },
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "cloakDetails": [
@@ -170,14 +257,30 @@
       "ego": "willpower",
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [
-        "Will+"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [
-        "Will+"
-      ],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "Will": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {
+          "Will": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "amuletDetails": {
@@ -192,14 +295,30 @@
     "ego": null,
     "subtypeEffect": "magic regeneration",
     "propertiesText": null,
-    "properties": [
-      "RegenMP+"
-    ],
-    "intrinsicProperties": [
-      "RegenMP+"
-    ],
-    "egoProperties": [],
-    "artifactProperties": []
+    "properties": {
+      "numeric": {
+        "RegenMP": 1
+      },
+      "flags": {},
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {
+        "RegenMP": 1
+      },
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    }
   },
   "ringDetails": [
     {
@@ -214,14 +333,30 @@
       "ego": null,
       "subtypeEffect": "wizardry",
       "propertiesText": null,
-      "properties": [
-        "Wiz"
-      ],
-      "intrinsicProperties": [
-        "Wiz"
-      ],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {},
+        "flags": {
+          "Wiz": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {
+          "Wiz": true
+        },
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "ring of the Byakko",
@@ -235,22 +370,40 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rElec rPois Will- rCorr SInv",
-      "properties": [
-        "rElec",
-        "rPois",
-        "Will-",
-        "rCorr",
-        "SInv"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rElec",
-        "rPois",
-        "Will-",
-        "rCorr",
-        "SInv"
-      ]
+      "properties": {
+        "numeric": {
+          "Will": -1
+        },
+        "flags": {
+          "rPois": true,
+          "rElec": true,
+          "rCorr": true,
+          "SInv": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Will": -1
+        },
+        "flags": {
+          "rPois": true,
+          "rElec": true,
+          "rCorr": true,
+          "SInv": true
+        },
+        "specials": []
+      }
     }
   ],
   "skills": {

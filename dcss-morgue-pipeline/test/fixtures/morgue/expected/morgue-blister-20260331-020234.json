@@ -2,6 +2,7 @@
   "playerName": "blister",
   "version": "0.35-a0-241-g5b54ce7fc3",
   "species": "Octopode",
+  "background": "Ice Elementalist",
   "ac": 35,
   "ev": 14,
   "sh": 33,
@@ -29,6 +30,8 @@
     "ring of wizardry",
     "ring of willpower"
   ],
+  "talisman": "granite talisman \"Iffich\"",
+  "form": "statue-form",
   "shieldDetails": {
     "rawName": "tower shield of positive energy",
     "displayName": "tower shield of positive energy",
@@ -41,14 +44,32 @@
     "ego": "positive energy",
     "subtypeEffect": null,
     "propertiesText": "=g",
-    "properties": [
-      "rN+"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "rN+"
-    ],
-    "artifactProperties": []
+    "properties": {
+      "numeric": {
+        "rN": 1
+      },
+      "flags": {},
+      "specials": [
+        "=g"
+      ]
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {
+        "rN": 1
+      },
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    }
   },
   "helmetDetails": [
     {
@@ -63,16 +84,32 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "Int+6 Stlth+",
-      "properties": [
-        "Int+6",
-        "Stlth+"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "Int+6",
-        "Stlth+"
-      ]
+      "properties": {
+        "numeric": {
+          "Int": 6,
+          "Stlth": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Int": 6,
+          "Stlth": 1
+        },
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "amuletDetails": {
@@ -87,16 +124,32 @@
     "ego": null,
     "subtypeEffect": null,
     "propertiesText": "Regen++ RegenMP++",
-    "properties": [
-      "Regen++",
-      "RegenMP++"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": [
-      "Regen++",
-      "RegenMP++"
-    ]
+    "properties": {
+      "numeric": {
+        "Regen": 2,
+        "RegenMP": 2
+      },
+      "flags": {},
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {
+        "Regen": 2,
+        "RegenMP": 2
+      },
+      "flags": {},
+      "specials": []
+    }
   },
   "ringDetails": [
     {
@@ -111,22 +164,38 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rC+ rN+ Str+3 Int+2 Dex+2",
-      "properties": [
-        "rC+",
-        "rN+",
-        "Str+3",
-        "Int+2",
-        "Dex+2"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rC+",
-        "rN+",
-        "Str+3",
-        "Int+2",
-        "Dex+2"
-      ]
+      "properties": {
+        "numeric": {
+          "rC": 1,
+          "rN": 1,
+          "Str": 3,
+          "Int": 2,
+          "Dex": 2
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rC": 1,
+          "rN": 1,
+          "Str": 3,
+          "Int": 2,
+          "Dex": 2
+        },
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "ring of Lady Luck",
@@ -140,16 +209,32 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "Str+7 Dex+6",
-      "properties": [
-        "Str+7",
-        "Dex+6"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "Str+7",
-        "Dex+6"
-      ]
+      "properties": {
+        "numeric": {
+          "Str": 7,
+          "Dex": 6
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Str": 7,
+          "Dex": 6
+        },
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "ring of the Octopus King",
@@ -163,22 +248,38 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "HP+2 MP+9 AC+2 EV+2 SH+2",
-      "properties": [
-        "HP+2",
-        "MP+9",
-        "AC+2",
-        "EV+2",
-        "SH+2"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "HP+2",
-        "MP+9",
-        "AC+2",
-        "EV+2",
-        "SH+2"
-      ]
+      "properties": {
+        "numeric": {
+          "AC": 2,
+          "EV": 2,
+          "SH": 2,
+          "HP": 2,
+          "MP": 9
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "AC": 2,
+          "EV": 2,
+          "SH": 2,
+          "HP": 2,
+          "MP": 9
+        },
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "ring \"Midaonent\"",
@@ -192,18 +293,36 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rC+ Int+9 SInv",
-      "properties": [
-        "rC+",
-        "Int+9",
-        "SInv"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rC+",
-        "Int+9",
-        "SInv"
-      ]
+      "properties": {
+        "numeric": {
+          "rC": 1,
+          "Int": 9
+        },
+        "flags": {
+          "SInv": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rC": 1,
+          "Int": 9
+        },
+        "flags": {
+          "SInv": true
+        },
+        "specials": []
+      }
     },
     {
       "rawName": "ring \"Zalagov\"",
@@ -217,18 +336,38 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "^Drain rF++ rCorr",
-      "properties": [
-        "^Drain",
-        "rF++",
-        "rCorr"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "^Drain",
-        "rF++",
-        "rCorr"
-      ]
+      "properties": {
+        "numeric": {
+          "rF": 2
+        },
+        "flags": {
+          "rCorr": true
+        },
+        "specials": [
+          "^Drain"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rF": 2
+        },
+        "flags": {
+          "rCorr": true
+        },
+        "specials": [
+          "^Drain"
+        ]
+      }
     },
     {
       "rawName": "ring \"Cujovups\"",
@@ -242,18 +381,34 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "MP+9 AC+4 Str+5",
-      "properties": [
-        "MP+9",
-        "AC+4",
-        "Str+5"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "MP+9",
-        "AC+4",
-        "Str+5"
-      ]
+      "properties": {
+        "numeric": {
+          "Str": 5,
+          "AC": 4,
+          "MP": 9
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Str": 5,
+          "AC": 4,
+          "MP": 9
+        },
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "ring of wizardry",
@@ -267,14 +422,30 @@
       "ego": null,
       "subtypeEffect": "wizardry",
       "propertiesText": null,
-      "properties": [
-        "Wiz"
-      ],
-      "intrinsicProperties": [
-        "Wiz"
-      ],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {},
+        "flags": {
+          "Wiz": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {
+          "Wiz": true
+        },
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "ring of willpower",
@@ -288,16 +459,75 @@
       "ego": null,
       "subtypeEffect": "willpower",
       "propertiesText": null,
-      "properties": [
-        "Will+"
-      ],
-      "intrinsicProperties": [
-        "Will+"
-      ],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "Will": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {
+          "Will": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
+  "talismanDetails": {
+    "rawName": "granite talisman \"Iffich\"",
+    "displayName": "granite talisman \"Iffich\"",
+    "objectClass": "talisman",
+    "equipState": "worn",
+    "isCursed": false,
+    "baseType": "granite talisman",
+    "enchant": null,
+    "artifactKind": "randart",
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": "rC+ Str+4 SInv",
+    "properties": {
+      "numeric": {
+        "rC": 1,
+        "Str": 4
+      },
+      "flags": {
+        "SInv": true
+      },
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {
+        "rC": 1,
+        "Str": 4
+      },
+      "flags": {
+        "SInv": true
+      },
+      "specials": []
+    }
+  },
   "skills": {
     "fighting": 25.4,
     "macesFlails": 0,

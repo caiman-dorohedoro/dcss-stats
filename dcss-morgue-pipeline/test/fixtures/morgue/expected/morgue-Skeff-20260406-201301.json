@@ -2,6 +2,7 @@
   "playerName": "Skeff",
   "version": "0.35-a0-257-gf9e06672e4",
   "species": "Poltergeist",
+  "background": "Reaver",
   "ac": 22,
   "ev": 16,
   "sh": 0,
@@ -31,6 +32,8 @@
     "ring of intelligence",
     "ring of intelligence"
   ],
+  "talisman": "none",
+  "form": null,
   "helmetDetails": [
     {
       "rawName": "hat of Pondering",
@@ -44,20 +47,38 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "Ponderous, Will+ MP+10 Int+5",
-      "properties": [
-        "Ponderous",
-        "Will+",
-        "MP+10",
-        "Int+5"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "Ponderous",
-        "Will+",
-        "MP+10",
-        "Int+5"
-      ]
+      "properties": {
+        "numeric": {
+          "Will": 1,
+          "Int": 5,
+          "MP": 10
+        },
+        "flags": {
+          "Ponderous": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Will": 1,
+          "Int": 5,
+          "MP": 10
+        },
+        "flags": {
+          "Ponderous": true
+        },
+        "specials": []
+      }
     }
   ],
   "glovesDetails": [
@@ -73,14 +94,30 @@
       "ego": "dexterity",
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [
-        "Dex+3"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [
-        "Dex+3"
-      ],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "Dex": 3
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {
+          "Dex": 3
+        },
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "footwearDetails": [
@@ -96,10 +133,26 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "pair of boots of flying",
@@ -113,14 +166,30 @@
       "ego": "flying",
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [
-        "Fly"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [
-        "Fly"
-      ],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {},
+        "flags": {
+          "Fly": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {
+          "Fly": true
+        },
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "pair of boots",
@@ -134,10 +203,26 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "cloakDetails": [
@@ -153,10 +238,26 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "amuletDetails": {
@@ -171,14 +272,30 @@
     "ego": null,
     "subtypeEffect": "regeneration",
     "propertiesText": null,
-    "properties": [
-      "Regen+"
-    ],
-    "intrinsicProperties": [
-      "Regen+"
-    ],
-    "egoProperties": [],
-    "artifactProperties": []
+    "properties": {
+      "numeric": {
+        "Regen": 1
+      },
+      "flags": {},
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {
+        "Regen": 1
+      },
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    }
   },
   "ringDetails": [
     {
@@ -193,14 +310,30 @@
       "ego": null,
       "subtypeEffect": "intelligence",
       "propertiesText": null,
-      "properties": [
-        "Int+6"
-      ],
-      "intrinsicProperties": [
-        "Int+6"
-      ],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "Int": 6
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {
+          "Int": 6
+        },
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "ring of intelligence",
@@ -214,14 +347,30 @@
       "ego": null,
       "subtypeEffect": "intelligence",
       "propertiesText": null,
-      "properties": [
-        "Int+6"
-      ],
-      "intrinsicProperties": [
-        "Int+6"
-      ],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "Int": 6
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {
+          "Int": 6
+        },
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "skills": {

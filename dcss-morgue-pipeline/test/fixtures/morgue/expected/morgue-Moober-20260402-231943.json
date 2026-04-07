@@ -2,6 +2,7 @@
   "playerName": "Moober",
   "version": "0.35-a0-181-g84ebf06",
   "species": "Demonspawn",
+  "background": "Hunter",
   "ac": 14,
   "ev": 27,
   "sh": 0,
@@ -27,6 +28,8 @@
     "ring of New Discoveries",
     "ring of Suxzeiv"
   ],
+  "talisman": "death talisman of Lan Byow",
+  "form": "death-form",
   "bodyArmourDetails": {
     "rawName": "moon troll leather armour",
     "displayName": "moon troll leather armour",
@@ -39,20 +42,38 @@
     "ego": null,
     "subtypeEffect": null,
     "propertiesText": "Spirit, Regen++ MP+5",
-    "properties": [
-      "Spirit",
-      "Regen++",
-      "MP+5"
-    ],
-    "intrinsicProperties": [
-      "Regen+"
-    ],
-    "egoProperties": [],
-    "artifactProperties": [
-      "Spirit",
-      "Regen++",
-      "MP+5"
-    ]
+    "properties": {
+      "numeric": {
+        "MP": 5,
+        "Regen": 2
+      },
+      "flags": {
+        "Spirit": true
+      },
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {
+        "Regen": 1
+      },
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {
+        "MP": 5,
+        "Regen": 1
+      },
+      "flags": {
+        "Spirit": true
+      },
+      "specials": []
+    }
   },
   "helmetDetails": [
     {
@@ -67,20 +88,40 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "Spirit, Bear, *Rage Will++",
-      "properties": [
-        "Spirit",
-        "Bear",
-        "*Rage",
-        "Will++"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "Spirit",
-        "Bear",
-        "*Rage",
-        "Will++"
-      ]
+      "properties": {
+        "numeric": {
+          "Will": 2
+        },
+        "flags": {
+          "Spirit": true,
+          "Bear": true
+        },
+        "specials": [
+          "*Rage"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Will": 2
+        },
+        "flags": {
+          "Spirit": true,
+          "Bear": true
+        },
+        "specials": [
+          "*Rage"
+        ]
+      }
     }
   ],
   "footwearDetails": [
@@ -96,14 +137,30 @@
       "ego": "stealth",
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [
-        "Stlth+"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [
-        "Stlth+"
-      ],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "Stlth": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {
+          "Stlth": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "cloakDetails": [
@@ -119,20 +176,38 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rC+ rF+, rElec Slay+3",
-      "properties": [
-        "rC+",
-        "rF+",
-        "rElec",
-        "Slay+3"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rC+",
-        "rF+",
-        "rElec",
-        "Slay+3"
-      ]
+      "properties": {
+        "numeric": {
+          "rF": 1,
+          "rC": 1,
+          "Slay": 3
+        },
+        "flags": {
+          "rElec": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rF": 1,
+          "rC": 1,
+          "Slay": 3
+        },
+        "flags": {
+          "rElec": true
+        },
+        "specials": []
+      }
     }
   ],
   "orbDetails": {
@@ -147,14 +222,30 @@
     "ego": "mesmerism",
     "subtypeEffect": null,
     "propertiesText": null,
-    "properties": [
-      "Mesmerism"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "Mesmerism"
-    ],
-    "artifactProperties": []
+    "properties": {
+      "numeric": {},
+      "flags": {
+        "Mesmerism": true
+      },
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {
+        "Mesmerism": true
+      },
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    }
   },
   "amuletDetails": {
     "rawName": "amulet of Vitality",
@@ -168,16 +259,32 @@
     "ego": null,
     "subtypeEffect": null,
     "propertiesText": "Regen++ RegenMP++",
-    "properties": [
-      "Regen++",
-      "RegenMP++"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": [
-      "Regen++",
-      "RegenMP++"
-    ]
+    "properties": {
+      "numeric": {
+        "Regen": 2,
+        "RegenMP": 2
+      },
+      "flags": {},
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {
+        "Regen": 2,
+        "RegenMP": 2
+      },
+      "flags": {},
+      "specials": []
+    }
   },
   "ringDetails": [
     {
@@ -192,20 +299,38 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rPois rF+ Dex+7 Stlth+",
-      "properties": [
-        "rPois",
-        "rF+",
-        "Dex+7",
-        "Stlth+"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rPois",
-        "rF+",
-        "Dex+7",
-        "Stlth+"
-      ]
+      "properties": {
+        "numeric": {
+          "rF": 1,
+          "Dex": 7,
+          "Stlth": 1
+        },
+        "flags": {
+          "rPois": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rF": 1,
+          "Dex": 7,
+          "Stlth": 1
+        },
+        "flags": {
+          "rPois": true
+        },
+        "specials": []
+      }
     },
     {
       "rawName": "ring of Suxzeiv",
@@ -219,20 +344,75 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rElec rCorr Dex+6",
-      "properties": [
-        "rElec",
-        "rCorr",
-        "Dex+6"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rElec",
-        "rCorr",
-        "Dex+6"
-      ]
+      "properties": {
+        "numeric": {
+          "Dex": 6
+        },
+        "flags": {
+          "rElec": true,
+          "rCorr": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Dex": 6
+        },
+        "flags": {
+          "rElec": true,
+          "rCorr": true
+        },
+        "specials": []
+      }
     }
   ],
+  "talismanDetails": {
+    "rawName": "death talisman of Lan Byow",
+    "displayName": "death talisman of Lan Byow",
+    "objectClass": "talisman",
+    "equipState": "worn",
+    "isCursed": false,
+    "baseType": "death talisman",
+    "enchant": null,
+    "artifactKind": "randart",
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": "Str+3",
+    "properties": {
+      "numeric": {
+        "Str": 3
+      },
+      "flags": {},
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {
+        "Str": 3
+      },
+      "flags": {},
+      "specials": []
+    }
+  },
   "skills": {
     "fighting": 27,
     "macesFlails": 0.2,

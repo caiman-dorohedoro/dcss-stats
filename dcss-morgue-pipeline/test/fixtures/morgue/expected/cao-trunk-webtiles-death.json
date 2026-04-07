@@ -2,6 +2,7 @@
   "playerName": "dolemite99",
   "version": "0.35-a0-181-g84ebf06",
   "species": "Minotaur",
+  "background": "Berserker",
   "ac": 14,
   "ev": 6,
   "sh": 0,
@@ -25,6 +26,8 @@
     "ring of slaying",
     "ring of flight"
   ],
+  "talisman": "none",
+  "form": null,
   "bodyArmourDetails": {
     "rawName": "plate armour",
     "displayName": "plate armour",
@@ -37,10 +40,26 @@
     "ego": null,
     "subtypeEffect": null,
     "propertiesText": null,
-    "properties": [],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": []
+    "properties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    }
   },
   "footwearDetails": [
     {
@@ -55,10 +74,26 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "cloakDetails": [
@@ -74,10 +109,26 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "ringDetails": [
@@ -93,14 +144,30 @@
       "ego": null,
       "subtypeEffect": "slaying",
       "propertiesText": null,
-      "properties": [
-        "Slay+4"
-      ],
-      "intrinsicProperties": [
-        "Slay+4"
-      ],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "Slay": 4
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {
+          "Slay": 4
+        },
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "ring of flight",
@@ -114,14 +181,30 @@
       "ego": null,
       "subtypeEffect": "flight",
       "propertiesText": null,
-      "properties": [
-        "Fly"
-      ],
-      "intrinsicProperties": [
-        "Fly"
-      ],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {},
+        "flags": {
+          "Fly": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {
+          "Fly": true
+        },
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "skills": {

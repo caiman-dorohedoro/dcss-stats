@@ -361,11 +361,35 @@ The detailed object shape is `EquipmentItemSnapshot`.
 ## EquipmentItemSnapshot
 
 ```ts
+type EquipmentPropertyBag = {
+  numeric: Partial<Record<
+    | 'rF'
+    | 'rC'
+    | 'rN'
+    | 'Will'
+    | 'Str'
+    | 'Int'
+    | 'Dex'
+    | 'Slay'
+    | 'AC'
+    | 'EV'
+    | 'SH'
+    | 'HP'
+    | 'MP'
+    | 'Regen'
+    | 'RegenMP'
+    | 'Stlth',
+    number
+  >>
+  flags: Partial<Record<string, true>>
+  specials: string[]
+}
+
 type EquipmentItemSnapshot = {
   rawName: string
   displayName: string
-  objectClass: 'armour' | 'jewellery'
-  equipState: 'worn' | 'haunted'
+  objectClass: 'armour' | 'jewellery' | 'talisman'
+  equipState: 'worn' | 'haunted' | 'melded'
   isCursed: boolean
   baseType: string | null
   enchant: number | null
@@ -373,10 +397,10 @@ type EquipmentItemSnapshot = {
   ego: string | null
   subtypeEffect: string | null
   propertiesText: string | null
-  properties: string[]
-  intrinsicProperties: string[]
-  egoProperties: string[]
-  artifactProperties: string[]
+  properties: EquipmentPropertyBag
+  intrinsicProperties: EquipmentPropertyBag
+  egoProperties: EquipmentPropertyBag
+  artifactProperties: EquipmentPropertyBag
 }
 ```
 
@@ -410,6 +434,7 @@ A coarse Crawl-style category:
 
 - `armour`
 - `jewellery`
+- `talisman`
 
 This intentionally mirrors Crawl's large item categories more than our UI slot
 names do.
@@ -420,6 +445,7 @@ The wearing state preserved from the morgue line:
 
 - `worn`
 - `haunted`
+- `melded`
 
 This exists because poltergeist morgues explicitly distinguish normal equipped
 items from haunted auxiliary items.
@@ -515,7 +541,7 @@ This is kept for debugging, audit, and future re-interpretation.
 
 #### `properties`
 
-The final normalized property list for the item.
+The final normalized property bag for the item.
 
 This is the primary downstream field to query when you need to answer things
 like:
@@ -524,12 +550,34 @@ like:
 - does it boost `Int`?
 - does it have `Will+`?
 
-Examples:
+The bag is split into:
 
-- `["rC+"]`
-- `["Int+3"]`
-- `["Fly"]`
-- `["rF++", "rC-", "rN+", "Will+", "Int+6", "Slay-5"]`
+- `numeric`
+  - stackable numeric effects such as `rF++`, `Will+`, `Int+6`, `Slay-5`
+- `flags`
+  - boolean effects such as `rPois`, `rElec`, `rCorr`, `SInv`, `Fly`, `Wiz`
+- `specials`
+  - textual effects that do not fit the numeric/flag model cleanly, such as
+    `Infuse+∞`, `VampMP`, `^Drain`, or Ashenzari curse tags like `Comp`
+
+Example:
+
+```json
+{
+  "properties": {
+    "numeric": {
+      "rF": 2,
+      "rC": -1,
+      "rN": 1,
+      "Will": 1,
+      "Int": 6,
+      "Slay": -5
+    },
+    "flags": {},
+    "specials": []
+  }
+}
+```
 
 #### `intrinsicProperties`
 
@@ -540,7 +588,14 @@ Example:
 ```json
 {
   "baseType": "fire dragon scales",
-  "intrinsicProperties": ["rF++", "rC-"]
+  "intrinsicProperties": {
+    "numeric": {
+      "rF": 2,
+      "rC": -1
+    },
+    "flags": {},
+    "specials": []
+  }
 }
 ```
 
@@ -552,9 +607,9 @@ Properties introduced by a normal armour ego.
 
 Examples:
 
-- `buckler of cold resistance` -> `["rC+"]`
-- `hat of intelligence` -> `["Int+3"]`
-- `pair of boots of flying` -> `["Fly"]`
+- `buckler of cold resistance` -> `{ numeric: { rC: 1 } }`
+- `hat of intelligence` -> `{ numeric: { Int: 3 } }`
+- `pair of boots of flying` -> `{ flags: { Fly: true } }`
 
 #### `artifactProperties`
 
@@ -566,7 +621,16 @@ Example:
 {
   "baseType": "fire dragon scales",
   "artifactKind": "randart",
-  "artifactProperties": ["rN+", "Will+", "Int+6", "Slay-5"]
+  "artifactProperties": {
+    "numeric": {
+      "rN": 1,
+      "Will": 1,
+      "Int": 6,
+      "Slay": -5
+    },
+    "flags": {},
+    "specials": []
+  }
 }
 ```
 
@@ -587,6 +651,14 @@ Examples:
 
 At the same time, consumers often want the final answer immediately, so the
 model also exposes combined `properties`.
+
+This is especially important for intrinsic + artefact stacking cases. For
+example, if a base armour intrinsically grants `rN+` and a randart roll adds
+another `rN+`, Crawl displays that as `rN++`. The parser therefore stores:
+
+- `intrinsicProperties.numeric.rN = 1`
+- `artifactProperties.numeric.rN = 1`
+- `properties.numeric.rN = 2`
 
 In other words:
 
@@ -614,10 +686,26 @@ Parsed model:
   "artifactKind": "normal",
   "ego": "cold resistance",
   "displayName": "buckler of cold resistance",
-  "properties": ["rC+"],
-  "intrinsicProperties": [],
-  "egoProperties": ["rC+"],
-  "artifactProperties": []
+  "properties": {
+    "numeric": { "rC": 1 },
+    "flags": {},
+    "specials": []
+  },
+  "intrinsicProperties": {
+    "numeric": {},
+    "flags": {},
+    "specials": []
+  },
+  "egoProperties": {
+    "numeric": { "rC": 1 },
+    "flags": {},
+    "specials": []
+  },
+  "artifactProperties": {
+    "numeric": {},
+    "flags": {},
+    "specials": []
+  }
 }
 ```
 
@@ -639,10 +727,26 @@ Parsed model:
   "artifactKind": "normal",
   "ego": "intelligence",
   "displayName": "hat of intelligence",
-  "properties": ["Int+3"],
-  "intrinsicProperties": [],
-  "egoProperties": ["Int+3"],
-  "artifactProperties": []
+  "properties": {
+    "numeric": { "Int": 3 },
+    "flags": {},
+    "specials": []
+  },
+  "intrinsicProperties": {
+    "numeric": {},
+    "flags": {},
+    "specials": []
+  },
+  "egoProperties": {
+    "numeric": { "Int": 3 },
+    "flags": {},
+    "specials": []
+  },
+  "artifactProperties": {
+    "numeric": {},
+    "flags": {},
+    "specials": []
+  }
 }
 ```
 
@@ -664,10 +768,26 @@ Parsed model:
   "artifactKind": "normal",
   "ego": "flying",
   "displayName": "pair of boots of flying",
-  "properties": ["Fly"],
-  "intrinsicProperties": [],
-  "egoProperties": ["Fly"],
-  "artifactProperties": []
+  "properties": {
+    "numeric": {},
+    "flags": { "Fly": true },
+    "specials": []
+  },
+  "intrinsicProperties": {
+    "numeric": {},
+    "flags": {},
+    "specials": []
+  },
+  "egoProperties": {
+    "numeric": {},
+    "flags": { "Fly": true },
+    "specials": []
+  },
+  "artifactProperties": {
+    "numeric": {},
+    "flags": {},
+    "specials": []
+  }
 }
 ```
 
@@ -689,10 +809,33 @@ Parsed model:
   "artifactKind": "randart",
   "ego": null,
   "displayName": "fire dragon scales",
-  "properties": ["rF++", "rC-", "rN+", "Will+", "Int+6", "Slay-5"],
-  "intrinsicProperties": ["rF++", "rC-"],
-  "egoProperties": [],
-  "artifactProperties": ["rN+", "Will+", "Int+6", "Slay-5"]
+  "properties": {
+    "numeric": {
+      "rF": 2,
+      "rC": -1,
+      "rN": 1,
+      "Will": 1,
+      "Int": 6,
+      "Slay": -5
+    },
+    "flags": {},
+    "specials": []
+  },
+  "intrinsicProperties": {
+    "numeric": { "rF": 2, "rC": -1 },
+    "flags": {},
+    "specials": []
+  },
+  "egoProperties": {
+    "numeric": {},
+    "flags": {},
+    "specials": []
+  },
+  "artifactProperties": {
+    "numeric": { "rN": 1, "Will": 1, "Int": 6, "Slay": -5 },
+    "flags": {},
+    "specials": []
+  }
 }
 ```
 
@@ -714,7 +857,11 @@ Parsed model:
   "artifactKind": "normal",
   "subtypeEffect": "wizardry",
   "displayName": "ring of wizardry",
-  "properties": ["Wiz"]
+  "properties": {
+    "numeric": {},
+    "flags": { "Wiz": true },
+    "specials": []
+  }
 }
 ```
 
@@ -725,7 +872,11 @@ Parsed model:
   "artifactKind": "normal",
   "subtypeEffect": "magic regeneration",
   "displayName": "amulet of magic regeneration",
-  "properties": ["RegenMP+"]
+  "properties": {
+    "numeric": { "RegenMP": 1 },
+    "flags": {},
+    "specials": []
+  }
 }
 ```
 
@@ -746,8 +897,16 @@ Parsed model:
   "enchant": 3,
   "artifactKind": "unrand",
   "displayName": "Mad Mage's Maulers",
-  "properties": ["Infuse+∞", "VampMP", "-Cast"],
-  "artifactProperties": ["Infuse+∞", "VampMP", "-Cast"]
+  "properties": {
+    "numeric": {},
+    "flags": {},
+    "specials": ["Infuse+∞", "VampMP", "-Cast"]
+  },
+  "artifactProperties": {
+    "numeric": {},
+    "flags": {},
+    "specials": ["Infuse+∞", "VampMP", "-Cast"]
+  }
 }
 ```
 
@@ -771,8 +930,16 @@ Parsed model:
   "baseType": "gloves",
   "enchant": 3,
   "artifactKind": "unrand",
-  "properties": ["Slay+5", "Self", "Comp"],
-  "artifactProperties": ["Slay+5", "Self", "Comp"]
+  "properties": {
+    "numeric": { "Slay": 5 },
+    "flags": {},
+    "specials": ["Self", "Comp"]
+  },
+  "artifactProperties": {
+    "numeric": { "Slay": 5 },
+    "flags": {},
+    "specials": ["Self", "Comp"]
+  }
 }
 ```
 
@@ -815,13 +982,14 @@ not a full item database.
 
 Important limits:
 
-- only the property families we can identify confidently are split into
-  `intrinsicProperties`, `egoProperties`, and `artifactProperties`
-- some items may still rely on `propertiesText` plus the combined `properties`
-  if Crawl's full internal decomposition is not inferable from the morgue text
-  alone
-- `objectClass` is currently coarse and uses only `armour` and `jewellery`
-  because that is enough for the currently modeled equipped slots
+- some effects only fit cleanly into `specials`, not `numeric` or `flags`
+- if a morgue only exposes the final displayed property and not the exact source
+  split, the parser infers `artifactProperties` by subtracting intrinsic/ego
+  contributions from the final displayed `properties`
+- duplicated boolean effects cannot always be attributed perfectly from morgue
+  text alone
+- `objectClass` is still intentionally coarse and uses only `armour`,
+  `jewellery`, and `talisman`
 
 When in doubt:
 

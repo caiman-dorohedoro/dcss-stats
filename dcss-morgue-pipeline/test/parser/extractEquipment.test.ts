@@ -2,12 +2,21 @@ import { readFileSync } from 'node:fs'
 import path from 'node:path'
 import { describe, expect, it } from 'vitest'
 import { extractEquipment } from '../../src/parser/extractEquipment'
+import type { EquipmentPropertyBag } from '../../src/types'
 
 function loadFixture(directory: 'success' | 'fail' | 'full', name: string) {
   return readFileSync(
     path.resolve(process.cwd(), `test/fixtures/morgue/${directory}/${name}`),
     'utf8',
   )
+}
+
+function bag(input: Partial<EquipmentPropertyBag> = {}): EquipmentPropertyBag {
+  return {
+    numeric: input.numeric ?? {},
+    flags: input.flags ?? {},
+    specials: input.specials ?? [],
+  }
 }
 
 describe('extractEquipment', () => {
@@ -29,7 +38,7 @@ describe('extractEquipment', () => {
       enchant: 0,
       artifactKind: 'normal',
       ego: null,
-      properties: [],
+      properties: bag(),
     })
   })
 
@@ -49,21 +58,21 @@ describe('extractEquipment', () => {
       enchant: 3,
       artifactKind: 'normal',
       ego: 'cold resistance',
-      properties: ['rC+'],
-      egoProperties: ['rC+'],
-      artifactProperties: [],
+      properties: bag({ numeric: { rC: 1 } }),
+      egoProperties: bag({ numeric: { rC: 1 } }),
+      artifactProperties: bag(),
     })
 
     expect(parsed.footwearDetails?.[0]).toMatchObject({
       baseType: 'boots',
       ego: 'flying',
-      properties: ['Fly'],
+      properties: bag({ flags: { Fly: true } }),
     })
 
     expect(parsed.helmetDetails?.[0]).toMatchObject({
       baseType: 'hat',
       ego: 'intelligence',
-      properties: ['Int+3'],
+      properties: bag({ numeric: { Int: 3 } }),
     })
   })
 
@@ -78,9 +87,21 @@ describe('extractEquipment', () => {
       enchant: 8,
       artifactKind: 'randart',
       ego: null,
-      intrinsicProperties: ['rF++', 'rC-'],
-      artifactProperties: ['rN+', 'Will+', 'Int+6', 'Slay-5'],
-      properties: ['rF++', 'rC-', 'rN+', 'Will+', 'Int+6', 'Slay-5'],
+      intrinsicProperties: bag({ numeric: { rF: 2, rC: -1 } }),
+      artifactProperties: bag({ numeric: { rN: 1, Will: 1, Int: 6, Slay: -5 } }),
+      properties: bag({ numeric: { rF: 2, rC: -1, rN: 1, Will: 1, Int: 6, Slay: -5 } }),
+    })
+  })
+
+  it('keeps combined properties alongside split sources for intrinsic randart armour bonuses', () => {
+    const parsed = extractEquipment(loadFixture('full', 'morgue-FF96-20260407-041444.txt'))
+
+    expect(parsed.bodyArmourDetails).toMatchObject({
+      rawName: 'pearl dragon scales of Benevolence',
+      baseType: 'pearl dragon scales',
+      intrinsicProperties: bag({ numeric: { rN: 1 } }),
+      artifactProperties: bag({ numeric: { rN: 1 } }),
+      properties: bag({ numeric: { rN: 2 } }),
     })
   })
 
@@ -95,21 +116,27 @@ describe('extractEquipment', () => {
       baseType: 'amulet',
       artifactKind: 'normal',
       subtypeEffect: 'magic regeneration',
-      intrinsicProperties: ['RegenMP+'],
-      properties: ['RegenMP+'],
+      intrinsicProperties: bag({ numeric: { RegenMP: 1 } }),
+      properties: bag({ numeric: { RegenMP: 1 } }),
     })
 
     expect(parsed.ringDetails?.[0]).toMatchObject({
       baseType: 'ring',
       subtypeEffect: 'wizardry',
-      properties: ['Wiz'],
+      properties: bag({ flags: { Wiz: true } }),
     })
 
     expect(parsed.ringDetails?.[1]).toMatchObject({
       rawName: 'ring of the Byakko',
       artifactKind: 'randart',
-      properties: ['rElec', 'rPois', 'Will-', 'rCorr', 'SInv'],
-      artifactProperties: ['rElec', 'rPois', 'Will-', 'rCorr', 'SInv'],
+      properties: bag({
+        numeric: { Will: -1 },
+        flags: { rElec: true, rPois: true, rCorr: true, SInv: true },
+      }),
+      artifactProperties: bag({
+        numeric: { Will: -1 },
+        flags: { rElec: true, rPois: true, rCorr: true, SInv: true },
+      }),
     })
   })
 
@@ -126,8 +153,8 @@ describe('extractEquipment', () => {
       baseType: 'gloves',
       enchant: 3,
       artifactKind: 'unrand',
-      properties: ['Infuse+∞', 'VampMP', '-Cast'],
-      artifactProperties: ['Infuse+∞', 'VampMP', '-Cast'],
+      properties: bag({ specials: ['Infuse+∞', 'VampMP', '-Cast'] }),
+      artifactProperties: bag({ specials: ['Infuse+∞', 'VampMP', '-Cast'] }),
     })
   })
 
@@ -139,9 +166,13 @@ describe('extractEquipment', () => {
     expect(parsed.rings).toEqual(['ring of the Empty Page', 'ring "Veveor"'])
     expect(parsed.cloaks).toEqual(['cloak "Rafeal"'])
 
-    expect(parsed.bodyArmourDetails?.intrinsicProperties).toEqual(['rN+'])
-    expect(parsed.bodyArmourDetails?.artifactProperties).toEqual(['^Drain', 'Regen+', 'Str+2', 'SInv'])
-    expect(parsed.amuletDetails?.artifactProperties).toEqual(['Regen++', 'RegenMP++'])
+    expect(parsed.bodyArmourDetails?.intrinsicProperties).toEqual(bag({ numeric: { rN: 1 } }))
+    expect(parsed.bodyArmourDetails?.artifactProperties).toEqual(
+      bag({ numeric: { Regen: 1, Str: 2 }, flags: { SInv: true }, specials: ['^Drain'] }),
+    )
+    expect(parsed.amuletDetails?.artifactProperties).toEqual(
+      bag({ numeric: { Regen: 2, RegenMP: 2 } }),
+    )
   })
 
   it('keeps multiple haunted aux items for poltergeists instead of collapsing them', () => {
@@ -186,5 +217,39 @@ describe('extractEquipment', () => {
       'scarf "Chained Fetters"',
       'cloak of Ashenzari\'s Failure',
     ])
+  })
+
+  it('preserves melded equipment and the equipped talisman slot', () => {
+    const parsed = extractEquipment(loadFixture('success', 'melded-equipment-and-talisman.txt'))
+
+    expect(parsed.bodyArmour).toBe('acid dragon scales "Discomfort of Ashenzari"')
+    expect(parsed.helmets).toEqual(['helmet of the Shattered Mistrust'])
+    expect(parsed.talisman).toBe('hive talisman "Wekitiug"')
+
+    expect(parsed.bodyArmourDetails).toMatchObject({
+      equipState: 'melded',
+      isCursed: true,
+      baseType: 'acid dragon scales',
+      artifactKind: 'randart',
+      intrinsicProperties: bag({ flags: { rCorr: true } }),
+      artifactProperties: bag({ specials: ['Elem', 'Sorc'] }),
+    })
+
+    expect(parsed.helmetDetails?.[0]).toMatchObject({
+      equipState: 'melded',
+      isCursed: true,
+      baseType: 'helmet',
+      artifactKind: 'randart',
+      artifactProperties: bag({ numeric: { Int: 3 }, specials: ['Comp', 'Sorc'] }),
+    })
+
+    expect(parsed.talismanDetails).toMatchObject({
+      rawName: 'hive talisman "Wekitiug"',
+      objectClass: 'talisman',
+      equipState: 'worn',
+      baseType: 'hive talisman',
+      artifactKind: 'randart',
+      properties: bag({ numeric: { rC: -1, Will: 3 }, flags: { rElec: true } }),
+    })
   })
 })

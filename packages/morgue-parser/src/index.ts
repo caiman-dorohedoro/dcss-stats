@@ -2,6 +2,7 @@ export { DEFAULT_SPECIES_NAMES } from './canonicalSpecies'
 export { DEFAULT_CANONICAL_SPELL_NAMES } from './canonicalSpellNames'
 export { extractBaseStats } from './extractBaseStats'
 export { extractEquipment } from './extractEquipment'
+export { extractForm } from './extractForm'
 export { extractMutations } from './extractMutations'
 export { canonicalizeSpellNames, extractSpells } from './extractSpells'
 export { extractSkills } from './extractSkills'
@@ -14,7 +15,9 @@ export type {
   EquipmentEquipState,
   EquipmentItemSnapshot,
   EquipmentObjectClass,
+  EquipmentPropertyBag,
   EquipmentSnapshot,
+  FormSnapshot,
   MorgueVersion,
   MutationEntrySnapshot,
   MutationSnapshot,

@@ -2,6 +2,7 @@
   "playerName": "t4s4d4r",
   "version": "0.35-a0-257-gf9e06672e4",
   "species": "Gnoll",
+  "background": "Earth Elementalist",
   "ac": 27,
   "ev": 15,
   "sh": 18,
@@ -29,6 +30,8 @@
     "ring of Ashenzari's Affliction",
     "ring of the Tortoise"
   ],
+  "talisman": "none",
+  "form": null,
   "bodyArmourDetails": {
     "rawName": "leather armour of the Chained Blue Moon",
     "displayName": "leather armour",
@@ -41,18 +44,36 @@
     "ego": null,
     "subtypeEffect": null,
     "propertiesText": "rPois, Elem, Melee",
-    "properties": [
-      "rPois",
-      "Elem",
-      "Melee"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": [
-      "rPois",
-      "Elem",
-      "Melee"
-    ]
+    "properties": {
+      "numeric": {},
+      "flags": {
+        "rPois": true
+      },
+      "specials": [
+        "Elem",
+        "Melee"
+      ]
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {},
+      "flags": {
+        "rPois": true
+      },
+      "specials": [
+        "Elem",
+        "Melee"
+      ]
+    }
   },
   "shieldDetails": {
     "rawName": "kite shield of the Ensconced Nihilism",
@@ -66,18 +87,36 @@
     "ego": null,
     "subtypeEffect": null,
     "propertiesText": "rCorr, Sorc, Comp",
-    "properties": [
-      "rCorr",
-      "Sorc",
-      "Comp"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": [
-      "rCorr",
-      "Sorc",
-      "Comp"
-    ]
+    "properties": {
+      "numeric": {},
+      "flags": {
+        "rCorr": true
+      },
+      "specials": [
+        "Sorc",
+        "Comp"
+      ]
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {},
+      "flags": {
+        "rCorr": true
+      },
+      "specials": [
+        "Sorc",
+        "Comp"
+      ]
+    }
   },
   "helmetDetails": [
     {
@@ -92,20 +131,38 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "Fly rElec, Self, Elem",
-      "properties": [
-        "Fly",
-        "rElec",
-        "Self",
-        "Elem"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "Fly",
-        "rElec",
-        "Self",
-        "Elem"
-      ]
+      "properties": {
+        "numeric": {},
+        "flags": {
+          "rElec": true,
+          "Fly": true
+        },
+        "specials": [
+          "Self",
+          "Elem"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {
+          "rElec": true,
+          "Fly": true
+        },
+        "specials": [
+          "Self",
+          "Elem"
+        ]
+      }
     }
   ],
   "glovesDetails": [
@@ -121,18 +178,34 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rC+ rN++ Dex-4",
-      "properties": [
-        "rC+",
-        "rN++",
-        "Dex-4"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rC+",
-        "rN++",
-        "Dex-4"
-      ]
+      "properties": {
+        "numeric": {
+          "rC": 1,
+          "rN": 2,
+          "Dex": -4
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rC": 1,
+          "rN": 2,
+          "Dex": -4
+        },
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "footwearDetails": [
@@ -148,16 +221,32 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "Elem, Fort",
-      "properties": [
-        "Elem",
-        "Fort"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "Elem",
-        "Fort"
-      ]
+      "properties": {
+        "numeric": {},
+        "flags": {},
+        "specials": [
+          "Elem",
+          "Fort"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": [
+          "Elem",
+          "Fort"
+        ]
+      }
     }
   ],
   "cloakDetails": [
@@ -173,20 +262,38 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rC+ rF+, Sorc, Elem",
-      "properties": [
-        "rC+",
-        "rF+",
-        "Sorc",
-        "Elem"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rC+",
-        "rF+",
-        "Sorc",
-        "Elem"
-      ]
+      "properties": {
+        "numeric": {
+          "rF": 1,
+          "rC": 1
+        },
+        "flags": {},
+        "specials": [
+          "Sorc",
+          "Elem"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rF": 1,
+          "rC": 1
+        },
+        "flags": {},
+        "specials": [
+          "Sorc",
+          "Elem"
+        ]
+      }
     }
   ],
   "amuletDetails": {
@@ -201,22 +308,40 @@
     "ego": null,
     "subtypeEffect": null,
     "propertiesText": "rN+ Will+++ Clar, Elem, Self",
-    "properties": [
-      "rN+",
-      "Will+++",
-      "Clar",
-      "Elem",
-      "Self"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": [
-      "rN+",
-      "Will+++",
-      "Clar",
-      "Elem",
-      "Self"
-    ]
+    "properties": {
+      "numeric": {
+        "rN": 1,
+        "Will": 3
+      },
+      "flags": {},
+      "specials": [
+        "Clar",
+        "Elem",
+        "Self"
+      ]
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {
+        "rN": 1,
+        "Will": 3
+      },
+      "flags": {},
+      "specials": [
+        "Clar",
+        "Elem",
+        "Self"
+      ]
+    }
   },
   "ringDetails": [
     {
@@ -231,26 +356,46 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rPois rC++ Will+ Wiz Dex-3, Fort, Self",
-      "properties": [
-        "rPois",
-        "rC++",
-        "Will+",
-        "Wiz",
-        "Dex-3",
-        "Fort",
-        "Self"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rPois",
-        "rC++",
-        "Will+",
-        "Wiz",
-        "Dex-3",
-        "Fort",
-        "Self"
-      ]
+      "properties": {
+        "numeric": {
+          "rC": 2,
+          "Will": 1,
+          "Dex": -3
+        },
+        "flags": {
+          "rPois": true,
+          "Wiz": true
+        },
+        "specials": [
+          "Fort",
+          "Self"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rC": 2,
+          "Will": 1,
+          "Dex": -3
+        },
+        "flags": {
+          "rPois": true,
+          "Wiz": true
+        },
+        "specials": [
+          "Fort",
+          "Self"
+        ]
+      }
     },
     {
       "rawName": "ring of the Tortoise",
@@ -264,18 +409,36 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "AC+8, Fort, Elem",
-      "properties": [
-        "AC+8",
-        "Fort",
-        "Elem"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "AC+8",
-        "Fort",
-        "Elem"
-      ]
+      "properties": {
+        "numeric": {
+          "AC": 8
+        },
+        "flags": {},
+        "specials": [
+          "Fort",
+          "Elem"
+        ]
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "AC": 8
+        },
+        "flags": {},
+        "specials": [
+          "Fort",
+          "Elem"
+        ]
+      }
     }
   ],
   "skills": {

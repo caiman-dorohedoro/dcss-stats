@@ -2,6 +2,7 @@
   "playerName": "Mneme",
   "version": "0.35-a0-258-g8c878a6c5f",
   "species": "Djinni",
+  "background": "Fire Elementalist",
   "ac": 8,
   "ev": 29,
   "sh": 0,
@@ -27,6 +28,8 @@
     "ring of Qetetip",
     "ring of the Past"
   ],
+  "talisman": "none",
+  "form": null,
   "bodyArmourDetails": {
     "rawName": "robe of cold resistance",
     "displayName": "robe of cold resistance",
@@ -39,14 +42,30 @@
     "ego": "cold resistance",
     "subtypeEffect": null,
     "propertiesText": null,
-    "properties": [
-      "rC+"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "rC+"
-    ],
-    "artifactProperties": []
+    "properties": {
+      "numeric": {
+        "rC": 1
+      },
+      "flags": {},
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {
+        "rC": 1
+      },
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    }
   },
   "helmetDetails": [
     {
@@ -61,14 +80,30 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rN+",
-      "properties": [
-        "rN+"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rN+"
-      ]
+      "properties": {
+        "numeric": {
+          "rN": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rN": 1
+        },
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "glovesDetails": [
@@ -84,18 +119,36 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "Hurl, Will+ Dex+2",
-      "properties": [
-        "Hurl",
-        "Will+",
-        "Dex+2"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "Hurl",
-        "Will+",
-        "Dex+2"
-      ]
+      "properties": {
+        "numeric": {
+          "Will": 1,
+          "Dex": 2
+        },
+        "flags": {
+          "Hurl": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Will": 1,
+          "Dex": 2
+        },
+        "flags": {
+          "Hurl": true
+        },
+        "specials": []
+      }
     }
   ],
   "cloakDetails": [
@@ -111,16 +164,32 @@
       "ego": "resistance",
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [
-        "rC+",
-        "rF+"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [
-        "rC+",
-        "rF+"
-      ],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "rF": 1,
+          "rC": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {
+          "rF": 1,
+          "rC": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "orbDetails": {
@@ -135,14 +204,30 @@
     "ego": "pyromania",
     "subtypeEffect": null,
     "propertiesText": null,
-    "properties": [
-      "Pyromania"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "Pyromania"
-    ],
-    "artifactProperties": []
+    "properties": {
+      "numeric": {},
+      "flags": {
+        "Pyromania": true
+      },
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {
+        "Pyromania": true
+      },
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    }
   },
   "amuletDetails": {
     "rawName": "amulet of regeneration",
@@ -156,14 +241,30 @@
     "ego": null,
     "subtypeEffect": "regeneration",
     "propertiesText": null,
-    "properties": [
-      "Regen+"
-    ],
-    "intrinsicProperties": [
-      "Regen+"
-    ],
-    "egoProperties": [],
-    "artifactProperties": []
+    "properties": {
+      "numeric": {
+        "Regen": 1
+      },
+      "flags": {},
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {
+        "Regen": 1
+      },
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    }
   },
   "ringDetails": [
     {
@@ -178,20 +279,38 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rElec rN++ rCorr Int+6",
-      "properties": [
-        "rElec",
-        "rN++",
-        "rCorr",
-        "Int+6"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rElec",
-        "rN++",
-        "rCorr",
-        "Int+6"
-      ]
+      "properties": {
+        "numeric": {
+          "rN": 2,
+          "Int": 6
+        },
+        "flags": {
+          "rElec": true,
+          "rCorr": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rN": 2,
+          "Int": 6
+        },
+        "flags": {
+          "rElec": true,
+          "rCorr": true
+        },
+        "specials": []
+      }
     },
     {
       "rawName": "ring of the Past",
@@ -205,20 +324,38 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rC+ EV+5 Str-4 SInv",
-      "properties": [
-        "rC+",
-        "EV+5",
-        "Str-4",
-        "SInv"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rC+",
-        "EV+5",
-        "Str-4",
-        "SInv"
-      ]
+      "properties": {
+        "numeric": {
+          "rC": 1,
+          "Str": -4,
+          "EV": 5
+        },
+        "flags": {
+          "SInv": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rC": 1,
+          "Str": -4,
+          "EV": 5
+        },
+        "flags": {
+          "SInv": true
+        },
+        "specials": []
+      }
     }
   ],
   "skills": {

@@ -2,6 +2,7 @@
   "playerName": "Mneme",
   "version": "0.35-a0-256-g859e8e3ba0",
   "species": "Poltergeist",
+  "background": "Enchanter",
   "ac": 10,
   "ev": 2,
   "sh": 0,
@@ -30,6 +31,8 @@
     "ring \"Lecas\"",
     "ring \"Biffeacs\""
   ],
+  "talisman": "none",
+  "form": null,
   "glovesDetails": [
     {
       "rawName": "pair of gloves of the Hills",
@@ -43,20 +46,38 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rElec rF+ Regen+ Dex-2",
-      "properties": [
-        "rElec",
-        "rF+",
-        "Regen+",
-        "Dex-2"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rElec",
-        "rF+",
-        "Regen+",
-        "Dex-2"
-      ]
+      "properties": {
+        "numeric": {
+          "rF": 1,
+          "Dex": -2,
+          "Regen": 1
+        },
+        "flags": {
+          "rElec": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rF": 1,
+          "Dex": -2,
+          "Regen": 1
+        },
+        "flags": {
+          "rElec": true
+        },
+        "specials": []
+      }
     }
   ],
   "footwearDetails": [
@@ -72,16 +93,32 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rC+ Str+4",
-      "properties": [
-        "rC+",
-        "Str+4"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rC+",
-        "Str+4"
-      ]
+      "properties": {
+        "numeric": {
+          "rC": 1,
+          "Str": 4
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rC": 1,
+          "Str": 4
+        },
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "pair of boots of rampaging",
@@ -95,14 +132,30 @@
       "ego": "rampaging",
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [
-        "Rampage"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [
-        "Rampage"
-      ],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {},
+        "flags": {
+          "Rampage": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {
+          "Rampage": true
+        },
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "cloakDetails": [
@@ -118,14 +171,30 @@
       "ego": "willpower",
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [
-        "Will+"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [
-        "Will+"
-      ],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "Will": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {
+          "Will": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "scarf of repulsion",
@@ -139,14 +208,30 @@
       "ego": "repulsion",
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [
-        "Repulsion"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [
-        "Repulsion"
-      ],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {},
+        "flags": {
+          "Repulsion": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {
+          "Repulsion": true
+        },
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "scarf of Untold Secrets",
@@ -160,18 +245,36 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "+Inv, rCorr Str+4",
-      "properties": [
-        "+Inv",
-        "rCorr",
-        "Str+4"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "+Inv",
-        "rCorr",
-        "Str+4"
-      ]
+      "properties": {
+        "numeric": {
+          "Str": 4
+        },
+        "flags": {
+          "rCorr": true,
+          "Inv": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Str": 4
+        },
+        "flags": {
+          "rCorr": true,
+          "Inv": true
+        },
+        "specials": []
+      }
     }
   ],
   "orbDetails": {
@@ -186,14 +289,30 @@
     "ego": "guile",
     "subtypeEffect": null,
     "propertiesText": null,
-    "properties": [
-      "Guile"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "Guile"
-    ],
-    "artifactProperties": []
+    "properties": {
+      "numeric": {},
+      "flags": {
+        "Guile": true
+      },
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {
+        "Guile": true
+      },
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    }
   },
   "amuletDetails": {
     "rawName": "amulet of the Cockroach",
@@ -207,18 +326,34 @@
     "ego": null,
     "subtypeEffect": null,
     "propertiesText": "rF+ Regen+ Int+3",
-    "properties": [
-      "rF+",
-      "Regen+",
-      "Int+3"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": [
-      "rF+",
-      "Regen+",
-      "Int+3"
-    ]
+    "properties": {
+      "numeric": {
+        "rF": 1,
+        "Int": 3,
+        "Regen": 1
+      },
+      "flags": {},
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {
+        "rF": 1,
+        "Int": 3,
+        "Regen": 1
+      },
+      "flags": {},
+      "specials": []
+    }
   },
   "ringDetails": [
     {
@@ -233,16 +368,32 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "Will++ MP+9",
-      "properties": [
-        "Will++",
-        "MP+9"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "Will++",
-        "MP+9"
-      ]
+      "properties": {
+        "numeric": {
+          "Will": 2,
+          "MP": 9
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Will": 2,
+          "MP": 9
+        },
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "ring \"Biffeacs\"",
@@ -256,18 +407,36 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rElec Dex+6 SInv",
-      "properties": [
-        "rElec",
-        "Dex+6",
-        "SInv"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rElec",
-        "Dex+6",
-        "SInv"
-      ]
+      "properties": {
+        "numeric": {
+          "Dex": 6
+        },
+        "flags": {
+          "rElec": true,
+          "SInv": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Dex": 6
+        },
+        "flags": {
+          "rElec": true,
+          "SInv": true
+        },
+        "specials": []
+      }
     }
   ],
   "skills": {

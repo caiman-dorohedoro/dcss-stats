@@ -2,6 +2,7 @@
   "playerName": "mmoncure",
   "version": "0.35-a0-258-g8c878a6c5f",
   "species": "Poltergeist",
+  "background": "Hexslinger",
   "ac": 36,
   "ev": 31,
   "sh": 5,
@@ -30,6 +31,8 @@
     "ring of Cuopomec",
     "ring \"Veipnoni\""
   ],
+  "talisman": "none",
+  "form": null,
   "helmetDetails": [
     {
       "rawName": "helmet of sniping",
@@ -43,14 +46,30 @@
       "ego": "sniping",
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [
-        "Snipe"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [
-        "Snipe"
-      ],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {},
+        "flags": {
+          "Snipe": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {
+          "Snipe": true
+        },
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "hat of a bailey",
@@ -64,14 +83,30 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rC+",
-      "properties": [
-        "rC+"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rC+"
-      ]
+      "properties": {
+        "numeric": {
+          "rC": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rC": 1
+        },
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "footwearDetails": [
@@ -87,14 +122,30 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "Regen+",
-      "properties": [
-        "Regen+"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "Regen+"
-      ]
+      "properties": {
+        "numeric": {
+          "Regen": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Regen": 1
+        },
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "pair of boots of the Morning",
@@ -108,18 +159,36 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rElec rN+ Regen+",
-      "properties": [
-        "rElec",
-        "rN+",
-        "Regen+"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rElec",
-        "rN+",
-        "Regen+"
-      ]
+      "properties": {
+        "numeric": {
+          "rN": 1,
+          "Regen": 1
+        },
+        "flags": {
+          "rElec": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rN": 1,
+          "Regen": 1
+        },
+        "flags": {
+          "rElec": true
+        },
+        "specials": []
+      }
     }
   ],
   "cloakDetails": [
@@ -135,10 +204,26 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "cloak of willpower",
@@ -152,14 +237,30 @@
       "ego": "willpower",
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [
-        "Will+"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [
-        "Will+"
-      ],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "Will": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {
+          "Will": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "amuletDetails": {
@@ -174,14 +275,30 @@
     "ego": null,
     "subtypeEffect": "reflection",
     "propertiesText": null,
-    "properties": [
-      "Reflect"
-    ],
-    "intrinsicProperties": [
-      "Reflect"
-    ],
-    "egoProperties": [],
-    "artifactProperties": []
+    "properties": {
+      "numeric": {},
+      "flags": {
+        "Reflect": true
+      },
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {
+        "Reflect": true
+      },
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    }
   },
   "ringDetails": [
     {
@@ -196,18 +313,36 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rF+ rCorr AC+4",
-      "properties": [
-        "rF+",
-        "rCorr",
-        "AC+4"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rF+",
-        "rCorr",
-        "AC+4"
-      ]
+      "properties": {
+        "numeric": {
+          "rF": 1,
+          "AC": 4
+        },
+        "flags": {
+          "rCorr": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rF": 1,
+          "AC": 4
+        },
+        "flags": {
+          "rCorr": true
+        },
+        "specials": []
+      }
     },
     {
       "rawName": "ring \"Veipnoni\"",
@@ -221,22 +356,40 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "rElec rC+ Dex+5 Slay+4 Stlth-",
-      "properties": [
-        "rElec",
-        "rC+",
-        "Dex+5",
-        "Slay+4",
-        "Stlth-"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "rElec",
-        "rC+",
-        "Dex+5",
-        "Slay+4",
-        "Stlth-"
-      ]
+      "properties": {
+        "numeric": {
+          "rC": 1,
+          "Dex": 5,
+          "Slay": 4,
+          "Stlth": -1
+        },
+        "flags": {
+          "rElec": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "rC": 1,
+          "Dex": 5,
+          "Slay": 4,
+          "Stlth": -1
+        },
+        "flags": {
+          "rElec": true
+        },
+        "specials": []
+      }
     }
   ],
   "skills": {

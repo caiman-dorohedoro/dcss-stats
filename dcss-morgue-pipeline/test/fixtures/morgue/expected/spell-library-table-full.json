@@ -2,6 +2,7 @@
   "playerName": "Sorcerer",
   "version": "0.34.0",
   "species": "Djinni",
+  "background": "Fire Elementalist",
   "ac": 4,
   "ev": 11,
   "sh": 0,
@@ -18,6 +19,8 @@
   "orb": "none",
   "amulet": "none",
   "rings": [],
+  "talisman": "none",
+  "form": null,
   "bodyArmourDetails": {
     "rawName": "robe of Willpower",
     "displayName": "robe of willpower",
@@ -30,14 +33,30 @@
     "ego": "willpower",
     "subtypeEffect": null,
     "propertiesText": null,
-    "properties": [
-      "Will+"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "Will+"
-    ],
-    "artifactProperties": []
+    "properties": {
+      "numeric": {
+        "Will": 1
+      },
+      "flags": {},
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {
+        "Will": 1
+      },
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    }
   },
   "shieldDetails": {
     "rawName": "buckler",
@@ -51,10 +70,26 @@
     "ego": null,
     "subtypeEffect": null,
     "propertiesText": null,
-    "properties": [],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": []
+    "properties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    }
   },
   "skills": {
     "fighting": 0,

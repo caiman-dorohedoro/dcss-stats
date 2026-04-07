@@ -2,6 +2,7 @@
   "playerName": "knorpule3000",
   "version": "0.35-a0-257-gf9e06672e4",
   "species": "Gargoyle",
+  "background": "Enchanter",
   "ac": 37,
   "ev": 15,
   "sh": 0,
@@ -29,6 +30,8 @@
     "ring of resist corrosion",
     "ring \"Tith\""
   ],
+  "talisman": "none",
+  "form": null,
   "bodyArmourDetails": {
     "rawName": "skin of Zhor",
     "displayName": "skin of Zhor",
@@ -41,18 +44,38 @@
     "ego": null,
     "subtypeEffect": null,
     "propertiesText": "*Englaciate rC+++ SInv",
-    "properties": [
-      "*Englaciate",
-      "rC+++",
-      "SInv"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": [
-      "*Englaciate",
-      "rC+++",
-      "SInv"
-    ]
+    "properties": {
+      "numeric": {
+        "rC": 3
+      },
+      "flags": {
+        "SInv": true
+      },
+      "specials": [
+        "*Englaciate"
+      ]
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {
+        "rC": 3
+      },
+      "flags": {
+        "SInv": true
+      },
+      "specials": [
+        "*Englaciate"
+      ]
+    }
   },
   "helmetDetails": [
     {
@@ -67,14 +90,30 @@
       "ego": "ice",
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [
-        "Ice"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [
-        "Ice"
-      ],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {},
+        "flags": {
+          "Ice": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {
+          "Ice": true
+        },
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "glovesDetails": [
@@ -90,10 +129,26 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "footwearDetails": [
@@ -109,14 +164,30 @@
       "ego": "stealth",
       "subtypeEffect": null,
       "propertiesText": null,
-      "properties": [
-        "Stlth+"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [
-        "Stlth+"
-      ],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {
+          "Stlth": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {
+          "Stlth": 1
+        },
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "cloakDetails": [
@@ -132,18 +203,36 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "+Inv, Will+ Int+2",
-      "properties": [
-        "+Inv",
-        "Will+",
-        "Int+2"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "+Inv",
-        "Will+",
-        "Int+2"
-      ]
+      "properties": {
+        "numeric": {
+          "Will": 1,
+          "Int": 2
+        },
+        "flags": {
+          "Inv": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Will": 1,
+          "Int": 2
+        },
+        "flags": {
+          "Inv": true
+        },
+        "specials": []
+      }
     }
   ],
   "orbDetails": {
@@ -158,14 +247,30 @@
     "ego": "attunement",
     "subtypeEffect": null,
     "propertiesText": null,
-    "properties": [
-      "Attunement"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "Attunement"
-    ],
-    "artifactProperties": []
+    "properties": {
+      "numeric": {},
+      "flags": {
+        "Attunement": true
+      },
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {
+        "Attunement": true
+      },
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    }
   },
   "amuletDetails": {
     "rawName": "amulet of Rogere",
@@ -179,20 +284,38 @@
     "ego": null,
     "subtypeEffect": null,
     "propertiesText": "Chemistry rF+ rC+ rN+",
-    "properties": [
-      "Chemistry",
-      "rF+",
-      "rC+",
-      "rN+"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": [
-      "Chemistry",
-      "rF+",
-      "rC+",
-      "rN+"
-    ]
+    "properties": {
+      "numeric": {
+        "rF": 1,
+        "rC": 1,
+        "rN": 1
+      },
+      "flags": {
+        "Chemistry": true
+      },
+      "specials": []
+    },
+    "intrinsicProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "egoProperties": {
+      "numeric": {},
+      "flags": {},
+      "specials": []
+    },
+    "artifactProperties": {
+      "numeric": {
+        "rF": 1,
+        "rC": 1,
+        "rN": 1
+      },
+      "flags": {
+        "Chemistry": true
+      },
+      "specials": []
+    }
   },
   "ringDetails": [
     {
@@ -207,14 +330,30 @@
       "ego": null,
       "subtypeEffect": "resist corrosion",
       "propertiesText": null,
-      "properties": [
-        "rCorr"
-      ],
-      "intrinsicProperties": [
-        "rCorr"
-      ],
-      "egoProperties": [],
-      "artifactProperties": []
+      "properties": {
+        "numeric": {},
+        "flags": {
+          "rCorr": true
+        },
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {
+          "rCorr": true
+        },
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      }
     },
     {
       "rawName": "ring \"Tith\"",
@@ -228,16 +367,32 @@
       "ego": null,
       "subtypeEffect": null,
       "propertiesText": "MP+9 Int+4",
-      "properties": [
-        "MP+9",
-        "Int+4"
-      ],
-      "intrinsicProperties": [],
-      "egoProperties": [],
-      "artifactProperties": [
-        "MP+9",
-        "Int+4"
-      ]
+      "properties": {
+        "numeric": {
+          "Int": 4,
+          "MP": 9
+        },
+        "flags": {},
+        "specials": []
+      },
+      "intrinsicProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "egoProperties": {
+        "numeric": {},
+        "flags": {},
+        "specials": []
+      },
+      "artifactProperties": {
+        "numeric": {
+          "Int": 4,
+          "MP": 9
+        },
+        "flags": {},
+        "specials": []
+      }
     }
   ],
   "skills": {
