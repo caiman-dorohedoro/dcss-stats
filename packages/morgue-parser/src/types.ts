@@ -13,13 +13,22 @@ export type BaseStatsSnapshot = {
 }
 
 export type ArtifactKind = 'normal' | 'randart' | 'unrand'
+export type EquipmentObjectClass = 'armour' | 'jewellery'
 
 export type EquipmentItemSnapshot = {
   rawName: string
   displayName: string
+  objectClass: EquipmentObjectClass
+  baseType: string | null
+  enchant: number | null
   artifactKind: ArtifactKind
-  modifiersText: string | null
-  modifiers: string[]
+  ego: string | null
+  subtypeEffect: string | null
+  propertiesText: string | null
+  properties: string[]
+  intrinsicProperties: string[]
+  egoProperties: string[]
+  artifactProperties: string[]
 }
 
 export type EquipmentSnapshot = {
@@ -35,10 +44,13 @@ export type EquipmentSnapshot = {
   orbDetails?: EquipmentItemSnapshot
   amuletDetails?: EquipmentItemSnapshot
   ringDetails?: EquipmentItemSnapshot[]
-  helmet: boolean
-  gloves: boolean
+  helmet: string | undefined
+  gloves: string | undefined
   bootsOrBarding: boolean
-  cloak: boolean
+  cloak: string | undefined
+  helmetDetails?: EquipmentItemSnapshot
+  glovesDetails?: EquipmentItemSnapshot
+  cloakDetails?: EquipmentItemSnapshot
 }
 
 export type SkillsSnapshot = {
@@ -98,10 +110,13 @@ export type ParsedMorgueTextRecord = BaseStatsSnapshot & {
   orbDetails?: EquipmentItemSnapshot
   amuletDetails?: EquipmentItemSnapshot
   ringDetails?: EquipmentItemSnapshot[]
-  helmet: boolean
-  gloves: boolean
+  helmet: string
+  gloves: string
   bootsOrBarding: boolean
-  cloak: boolean
+  cloak: string
+  helmetDetails?: EquipmentItemSnapshot
+  glovesDetails?: EquipmentItemSnapshot
+  cloakDetails?: EquipmentItemSnapshot
   armourSkill: number
   dodgingSkill: number
   shieldSkill: number

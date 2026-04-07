@@ -8,7 +8,7 @@
   "strength": 8,
   "intelligence": 19,
   "dexterity": 14,
-  "bodyArmour": "robe",
+  "bodyArmour": "robe of willpower",
   "shield": "buckler",
   "footwear": "none",
   "orb": "none",
@@ -16,23 +16,43 @@
   "rings": [],
   "bodyArmourDetails": {
     "rawName": "robe of Willpower",
-    "displayName": "robe",
+    "displayName": "robe of willpower",
+    "objectClass": "armour",
+    "baseType": "robe",
+    "enchant": 2,
     "artifactKind": "normal",
-    "modifiersText": null,
-    "modifiers": []
+    "ego": "willpower",
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [
+      "Will+"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [
+      "Will+"
+    ],
+    "artifactProperties": []
   },
   "shieldDetails": {
     "rawName": "buckler",
     "displayName": "buckler",
+    "objectClass": "armour",
+    "baseType": "buckler",
+    "enchant": 0,
     "artifactKind": "normal",
-    "modifiersText": null,
-    "modifiers": []
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [],
+    "intrinsicProperties": [],
+    "egoProperties": [],
+    "artifactProperties": []
   },
   "ringDetails": [],
-  "helmet": false,
-  "gloves": false,
+  "helmet": "none",
+  "gloves": "none",
   "bootsOrBarding": false,
-  "cloak": false,
+  "cloak": "none",
   "armourSkill": 2.3,
   "dodgingSkill": 8.1,
   "shieldSkill": 0,

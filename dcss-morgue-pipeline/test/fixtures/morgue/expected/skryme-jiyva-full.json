@@ -9,7 +9,7 @@
   "intelligence": 9,
   "dexterity": 10,
   "bodyArmour": "troll leather armour",
-  "shield": "kite shield",
+  "shield": "kite shield of reflection",
   "footwear": "none",
   "orb": "none",
   "amulet": "randart amulet",
@@ -20,25 +20,78 @@
   "bodyArmourDetails": {
     "rawName": "troll leather armour",
     "displayName": "troll leather armour",
+    "objectClass": "armour",
+    "baseType": "troll leather armour",
+    "enchant": 0,
     "artifactKind": "normal",
-    "modifiersText": "Pargi",
-    "modifiers": [
-      "Pargi"
-    ]
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": "Pargi",
+    "properties": [
+      "Regen+"
+    ],
+    "intrinsicProperties": [
+      "Regen+"
+    ],
+    "egoProperties": [],
+    "artifactProperties": []
   },
   "shieldDetails": {
     "rawName": "kite shield of reflection",
-    "displayName": "kite shield",
+    "displayName": "kite shield of reflection",
+    "objectClass": "armour",
+    "baseType": "kite shield",
+    "enchant": 2,
     "artifactKind": "normal",
-    "modifiersText": null,
-    "modifiers": []
+    "ego": "reflection",
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [
+      "Reflect"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [
+      "Reflect"
+    ],
+    "artifactProperties": []
+  },
+  "cloakDetails": {
+    "rawName": "cloak of poison resistance",
+    "displayName": "cloak of poison resistance",
+    "objectClass": "armour",
+    "baseType": "cloak",
+    "enchant": 0,
+    "artifactKind": "normal",
+    "ego": "poison resistance",
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [
+      "rPois"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [
+      "rPois"
+    ],
+    "artifactProperties": []
   },
   "amuletDetails": {
     "rawName": "amulet of Dazytsee",
     "displayName": "randart amulet",
+    "objectClass": "jewellery",
+    "baseType": "amulet",
+    "enchant": null,
     "artifactKind": "randart",
-    "modifiersText": "Dissipate Fly Regen+",
-    "modifiers": [
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": "Dissipate Fly Regen+",
+    "properties": [
+      "Dissipate",
+      "Fly",
+      "Regen+"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [],
+    "artifactProperties": [
       "Dissipate",
       "Fly",
       "Regen+"
@@ -48,22 +101,46 @@
     {
       "rawName": "ring of protection",
       "displayName": "ring of protection",
+      "objectClass": "jewellery",
+      "baseType": "ring",
+      "enchant": 4,
       "artifactKind": "normal",
-      "modifiersText": null,
-      "modifiers": []
+      "ego": null,
+      "subtypeEffect": "protection",
+      "propertiesText": null,
+      "properties": [
+        "AC+4"
+      ],
+      "intrinsicProperties": [
+        "AC+4"
+      ],
+      "egoProperties": [],
+      "artifactProperties": []
     },
     {
       "rawName": "ring of strength",
       "displayName": "ring of strength",
+      "objectClass": "jewellery",
+      "baseType": "ring",
+      "enchant": 6,
       "artifactKind": "normal",
-      "modifiersText": null,
-      "modifiers": []
+      "ego": null,
+      "subtypeEffect": "strength",
+      "propertiesText": null,
+      "properties": [
+        "Str+6"
+      ],
+      "intrinsicProperties": [
+        "Str+6"
+      ],
+      "egoProperties": [],
+      "artifactProperties": []
     }
   ],
-  "helmet": false,
-  "gloves": false,
+  "helmet": "none",
+  "gloves": "none",
   "bootsOrBarding": false,
-  "cloak": true,
+  "cloak": "cloak of poison resistance",
   "armourSkill": 16.3,
   "dodgingSkill": 6.5,
   "shieldSkill": 17.7,

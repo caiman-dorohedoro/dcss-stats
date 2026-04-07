@@ -20,9 +20,21 @@
   "bodyArmourDetails": {
     "rawName": "skin of Zhor",
     "displayName": "skin of Zhor",
+    "objectClass": "armour",
+    "baseType": "animal skin",
+    "enchant": 4,
     "artifactKind": "unrand",
-    "modifiersText": "*Englaciate rC+++ SInv",
-    "modifiers": [
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": "*Englaciate rC+++ SInv",
+    "properties": [
+      "*Englaciate",
+      "rC+++",
+      "SInv"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [],
+    "artifactProperties": [
       "*Englaciate",
       "rC+++",
       "SInv"
@@ -31,23 +43,117 @@
   "footwearDetails": {
     "rawName": "pair of boots of stealth",
     "displayName": "pair of boots of stealth",
+    "objectClass": "armour",
+    "baseType": "boots",
+    "enchant": 2,
     "artifactKind": "normal",
-    "modifiersText": null,
-    "modifiers": []
+    "ego": "stealth",
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [
+      "Stlth+"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [
+      "Stlth+"
+    ],
+    "artifactProperties": []
+  },
+  "helmetDetails": {
+    "rawName": "helmet of ice",
+    "displayName": "helmet of ice",
+    "objectClass": "armour",
+    "baseType": "helmet",
+    "enchant": 2,
+    "artifactKind": "normal",
+    "ego": "ice",
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [
+      "Ice"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [
+      "Ice"
+    ],
+    "artifactProperties": []
+  },
+  "glovesDetails": {
+    "rawName": "pair of gloves",
+    "displayName": "pair of gloves",
+    "objectClass": "armour",
+    "baseType": "gloves",
+    "enchant": 2,
+    "artifactKind": "normal",
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [],
+    "intrinsicProperties": [],
+    "egoProperties": [],
+    "artifactProperties": []
+  },
+  "cloakDetails": {
+    "rawName": "scarf \"Naur Sott\"",
+    "displayName": "scarf \"Naur Sott\"",
+    "objectClass": "armour",
+    "baseType": "scarf",
+    "enchant": null,
+    "artifactKind": "randart",
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": "+Inv, Will+ Int+2",
+    "properties": [
+      "+Inv",
+      "Will+",
+      "Int+2"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [],
+    "artifactProperties": [
+      "+Inv",
+      "Will+",
+      "Int+2"
+    ]
   },
   "orbDetails": {
     "rawName": "orb of attunement",
     "displayName": "orb of attunement",
+    "objectClass": "armour",
+    "baseType": "orb",
+    "enchant": null,
     "artifactKind": "normal",
-    "modifiersText": null,
-    "modifiers": []
+    "ego": "attunement",
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [
+      "Attunement"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [
+      "Attunement"
+    ],
+    "artifactProperties": []
   },
   "amuletDetails": {
     "rawName": "amulet of Rogere",
     "displayName": "randart amulet",
+    "objectClass": "jewellery",
+    "baseType": "amulet",
+    "enchant": null,
     "artifactKind": "randart",
-    "modifiersText": "Chemistry rF+ rC+ rN+",
-    "modifiers": [
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": "Chemistry rF+ rC+ rN+",
+    "properties": [
+      "Chemistry",
+      "rF+",
+      "rC+",
+      "rN+"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [],
+    "artifactProperties": [
       "Chemistry",
       "rF+",
       "rC+",
@@ -58,25 +164,48 @@
     {
       "rawName": "ring of resist corrosion",
       "displayName": "ring of resist corrosion",
+      "objectClass": "jewellery",
+      "baseType": "ring",
+      "enchant": null,
       "artifactKind": "normal",
-      "modifiersText": null,
-      "modifiers": []
+      "ego": null,
+      "subtypeEffect": "resist corrosion",
+      "propertiesText": null,
+      "properties": [
+        "rCorr"
+      ],
+      "intrinsicProperties": [
+        "rCorr"
+      ],
+      "egoProperties": [],
+      "artifactProperties": []
     },
     {
       "rawName": "ring \"Tith\"",
       "displayName": "randart ring",
+      "objectClass": "jewellery",
+      "baseType": "ring",
+      "enchant": null,
       "artifactKind": "randart",
-      "modifiersText": "MP+9 Int+4",
-      "modifiers": [
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "MP+9 Int+4",
+      "properties": [
+        "MP+9",
+        "Int+4"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
         "MP+9",
         "Int+4"
       ]
     }
   ],
-  "helmet": true,
-  "gloves": true,
+  "helmet": "helmet of ice",
+  "gloves": "pair of gloves",
   "bootsOrBarding": true,
-  "cloak": true,
+  "cloak": "scarf \"Naur Sott\"",
   "armourSkill": 7.5,
   "dodgingSkill": 13.8,
   "shieldSkill": 0,

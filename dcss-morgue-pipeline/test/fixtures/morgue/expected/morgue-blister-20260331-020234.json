@@ -9,7 +9,7 @@
   "intelligence": 54,
   "dexterity": 18,
   "bodyArmour": "none",
-  "shield": "tower shield",
+  "shield": "tower shield of positive energy",
   "footwear": "none",
   "orb": "none",
   "amulet": "amulet of Vitality",
@@ -25,19 +25,61 @@
   ],
   "shieldDetails": {
     "rawName": "tower shield of positive energy",
-    "displayName": "tower shield",
+    "displayName": "tower shield of positive energy",
+    "objectClass": "armour",
+    "baseType": "tower shield",
+    "enchant": 8,
     "artifactKind": "normal",
-    "modifiersText": "=g",
-    "modifiers": [
-      "=g"
+    "ego": "positive energy",
+    "subtypeEffect": null,
+    "propertiesText": "=g",
+    "properties": [
+      "rN+"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [
+      "rN+"
+    ],
+    "artifactProperties": []
+  },
+  "helmetDetails": {
+    "rawName": "hat of Sif Muna, Wizarding",
+    "displayName": "hat of Sif Muna, Wizarding",
+    "objectClass": "armour",
+    "baseType": "hat",
+    "enchant": 2,
+    "artifactKind": "randart",
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": "Int+6 Stlth+",
+    "properties": [
+      "Int+6",
+      "Stlth+"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [],
+    "artifactProperties": [
+      "Int+6",
+      "Stlth+"
     ]
   },
   "amuletDetails": {
     "rawName": "amulet of Vitality",
     "displayName": "amulet of Vitality",
+    "objectClass": "jewellery",
+    "baseType": "amulet",
+    "enchant": null,
     "artifactKind": "unrand",
-    "modifiersText": "Regen++ RegenMP++",
-    "modifiers": [
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": "Regen++ RegenMP++",
+    "properties": [
+      "Regen++",
+      "RegenMP++"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [],
+    "artifactProperties": [
       "Regen++",
       "RegenMP++"
     ]
@@ -46,9 +88,23 @@
     {
       "rawName": "ring \"Cyracic\"",
       "displayName": "randart ring",
+      "objectClass": "jewellery",
+      "baseType": "ring",
+      "enchant": null,
       "artifactKind": "randart",
-      "modifiersText": "rC+ rN+ Str+3 Int+2 Dex+2",
-      "modifiers": [
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "rC+ rN+ Str+3 Int+2 Dex+2",
+      "properties": [
+        "rC+",
+        "rN+",
+        "Str+3",
+        "Int+2",
+        "Dex+2"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
         "rC+",
         "rN+",
         "Str+3",
@@ -59,9 +115,20 @@
     {
       "rawName": "ring of Lady Luck",
       "displayName": "randart ring",
+      "objectClass": "jewellery",
+      "baseType": "ring",
+      "enchant": null,
       "artifactKind": "randart",
-      "modifiersText": "Str+7 Dex+6",
-      "modifiers": [
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "Str+7 Dex+6",
+      "properties": [
+        "Str+7",
+        "Dex+6"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
         "Str+7",
         "Dex+6"
       ]
@@ -69,9 +136,23 @@
     {
       "rawName": "ring of the Octopus King",
       "displayName": "ring of the Octopus King",
+      "objectClass": "jewellery",
+      "baseType": "ring",
+      "enchant": null,
       "artifactKind": "unrand",
-      "modifiersText": "HP+2 MP+9 AC+2 EV+2 SH+2",
-      "modifiers": [
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "HP+2 MP+9 AC+2 EV+2 SH+2",
+      "properties": [
+        "HP+2",
+        "MP+9",
+        "AC+2",
+        "EV+2",
+        "SH+2"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
         "HP+2",
         "MP+9",
         "AC+2",
@@ -82,9 +163,21 @@
     {
       "rawName": "ring \"Midaonent\"",
       "displayName": "randart ring",
+      "objectClass": "jewellery",
+      "baseType": "ring",
+      "enchant": null,
       "artifactKind": "randart",
-      "modifiersText": "rC+ Int+9 SInv",
-      "modifiers": [
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "rC+ Int+9 SInv",
+      "properties": [
+        "rC+",
+        "Int+9",
+        "SInv"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
         "rC+",
         "Int+9",
         "SInv"
@@ -93,9 +186,21 @@
     {
       "rawName": "ring \"Zalagov\"",
       "displayName": "randart ring",
+      "objectClass": "jewellery",
+      "baseType": "ring",
+      "enchant": null,
       "artifactKind": "randart",
-      "modifiersText": "^Drain rF++ rCorr",
-      "modifiers": [
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "^Drain rF++ rCorr",
+      "properties": [
+        "^Drain",
+        "rF++",
+        "rCorr"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
         "^Drain",
         "rF++",
         "rCorr"
@@ -104,9 +209,21 @@
     {
       "rawName": "ring \"Cujovups\"",
       "displayName": "randart ring",
+      "objectClass": "jewellery",
+      "baseType": "ring",
+      "enchant": null,
       "artifactKind": "randart",
-      "modifiersText": "MP+9 AC+4 Str+5",
-      "modifiers": [
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "MP+9 AC+4 Str+5",
+      "properties": [
+        "MP+9",
+        "AC+4",
+        "Str+5"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
         "MP+9",
         "AC+4",
         "Str+5"
@@ -115,22 +232,46 @@
     {
       "rawName": "ring of wizardry",
       "displayName": "ring of wizardry",
+      "objectClass": "jewellery",
+      "baseType": "ring",
+      "enchant": null,
       "artifactKind": "normal",
-      "modifiersText": null,
-      "modifiers": []
+      "ego": null,
+      "subtypeEffect": "wizardry",
+      "propertiesText": null,
+      "properties": [
+        "Wiz"
+      ],
+      "intrinsicProperties": [
+        "Wiz"
+      ],
+      "egoProperties": [],
+      "artifactProperties": []
     },
     {
       "rawName": "ring of willpower",
       "displayName": "ring of willpower",
+      "objectClass": "jewellery",
+      "baseType": "ring",
+      "enchant": null,
       "artifactKind": "normal",
-      "modifiersText": null,
-      "modifiers": []
+      "ego": null,
+      "subtypeEffect": "willpower",
+      "propertiesText": null,
+      "properties": [
+        "Will+"
+      ],
+      "intrinsicProperties": [
+        "Will+"
+      ],
+      "egoProperties": [],
+      "artifactProperties": []
     }
   ],
-  "helmet": true,
-  "gloves": false,
+  "helmet": "hat of Sif Muna, Wizarding",
+  "gloves": "none",
   "bootsOrBarding": false,
-  "cloak": false,
+  "cloak": "none",
   "armourSkill": 0,
   "dodgingSkill": 9,
   "shieldSkill": 21,

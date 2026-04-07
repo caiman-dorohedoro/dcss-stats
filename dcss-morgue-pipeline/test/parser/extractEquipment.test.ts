@@ -3,7 +3,7 @@ import path from 'node:path'
 import { describe, expect, it } from 'vitest'
 import { extractEquipment } from '../../src/parser/extractEquipment'
 
-function loadFixture(directory: 'success' | 'fail', name: string) {
+function loadFixture(directory: 'success' | 'fail' | 'full', name: string) {
   return readFileSync(
     path.resolve(process.cwd(), `test/fixtures/morgue/${directory}/${name}`),
     'utf8',
@@ -11,261 +11,130 @@ function loadFixture(directory: 'success' | 'fail', name: string) {
 }
 
 describe('extractEquipment', () => {
-  it('returns bodyArmour=none and shield=none when no worn item is present', () => {
+  it('keeps none for missing primary slots while parsing simple aux armour items', () => {
     const parsed = extractEquipment(loadFixture('success', 'body-armour-none.txt'))
 
-    expect(parsed).toEqual({
-      bodyArmour: 'none',
-      shield: 'none',
-      footwear: 'pair of boots',
-      orb: 'none',
-      amulet: 'none',
-      rings: [],
-      footwearDetails: {
-        rawName: 'pair of boots',
-        displayName: 'pair of boots',
-        artifactKind: 'normal',
-        modifiersText: null,
-        modifiers: [],
-      },
-      ringDetails: [],
-      helmet: true,
-      gloves: true,
-      bootsOrBarding: true,
-      cloak: true,
+    expect(parsed.bodyArmour).toBe('none')
+    expect(parsed.shield).toBe('none')
+    expect(parsed.footwear).toBe('pair of boots')
+    expect(parsed.helmet).toBe('hat')
+    expect(parsed.gloves).toBe('pair of gloves')
+    expect(parsed.cloak).toBe('cloak')
+
+    expect(parsed.footwearDetails).toMatchObject({
+      objectClass: 'armour',
+      baseType: 'boots',
+      enchant: 0,
+      artifactKind: 'normal',
+      ego: null,
+      properties: [],
     })
   })
 
-  it('extracts canonical equipment labels and slot booleans', () => {
-    const parsed = extractEquipment(loadFixture('success', 'reordered-sections.txt'))
+  it('infers normal armour egos from explicit names and terse morgue stats', () => {
+    const parsed = extractEquipment(loadFixture('full', 'morgue-midori369-20260406-191652.txt'))
 
-    expect(parsed).toEqual({
-      bodyArmour: 'robe',
-      shield: 'buckler',
-      footwear: 'pair of boots',
-      orb: 'none',
-      amulet: 'none',
-      rings: [],
-      bodyArmourDetails: {
-        rawName: 'robe of Willpower',
-        displayName: 'robe',
-        artifactKind: 'normal',
-        modifiersText: null,
-        modifiers: [],
-      },
-      shieldDetails: {
-        rawName: 'buckler',
-        displayName: 'buckler',
-        artifactKind: 'normal',
-        modifiersText: null,
-        modifiers: [],
-      },
-      footwearDetails: {
-        rawName: 'pair of boots',
-        displayName: 'pair of boots',
-        artifactKind: 'normal',
-        modifiersText: null,
-        modifiers: [],
-      },
-      ringDetails: [],
-      helmet: true,
-      gloves: true,
-      bootsOrBarding: true,
-      cloak: false,
+    expect(parsed.shield).toBe('buckler of cold resistance')
+    expect(parsed.footwear).toBe('pair of boots of flying')
+    expect(parsed.helmet).toBe('hat of intelligence')
+    expect(parsed.cloak).toBe('cloak of willpower')
+
+    expect(parsed.shieldDetails).toMatchObject({
+      objectClass: 'armour',
+      baseType: 'buckler',
+      enchant: 3,
+      artifactKind: 'normal',
+      ego: 'cold resistance',
+      properties: ['rC+'],
+      egoProperties: ['rC+'],
+      artifactProperties: [],
+    })
+
+    expect(parsed.footwearDetails).toMatchObject({
+      baseType: 'boots',
+      ego: 'flying',
+      properties: ['Fly'],
+    })
+
+    expect(parsed.helmetDetails).toMatchObject({
+      baseType: 'hat',
+      ego: 'intelligence',
+      properties: ['Int+3'],
     })
   })
 
-  it('treats haunted aux armour as equipped without mistaking jewellery for body armour', () => {
-    const parsed = extractEquipment(loadFixture('success', 'poltergeist-aux-armour.txt'))
+  it('splits intrinsic and artifact properties for randart dragon scales', () => {
+    const parsed = extractEquipment(loadFixture('full', 'morgue-midori369-20260406-191652.txt'))
 
-    expect(parsed).toEqual({
-      bodyArmour: 'none',
-      shield: 'none',
-      footwear: 'none',
-      orb: 'none',
-      amulet: 'amulet of reflection',
-      rings: ['ring of dexterity'],
-      amuletDetails: {
-        rawName: 'amulet of reflection',
-        displayName: 'amulet of reflection',
-        artifactKind: 'normal',
-        modifiersText: null,
-        modifiers: [],
-      },
-      ringDetails: [
-        {
-          rawName: 'ring of dexterity',
-          displayName: 'ring of dexterity',
-          artifactKind: 'normal',
-          modifiersText: null,
-          modifiers: [],
-        },
-      ],
-      helmet: true,
-      gloves: false,
-      bootsOrBarding: false,
-      cloak: true,
+    expect(parsed.bodyArmour).toBe('fire dragon scales')
+    expect(parsed.bodyArmourDetails).toMatchObject({
+      rawName: 'fire dragon scales of Undesirable Species',
+      objectClass: 'armour',
+      baseType: 'fire dragon scales',
+      enchant: 8,
+      artifactKind: 'randart',
+      ego: null,
+      intrinsicProperties: ['rF++', 'rC-'],
+      artifactProperties: ['rN+', 'Will+', 'Int+6', 'Slay-5'],
+      properties: ['rF++', 'rC-', 'rN+', 'Will+', 'Int+6', 'Slay-5'],
     })
   })
 
-  it('detects non-basic body armour like dragon scales instead of falling back to none', () => {
-    const parsed = extractEquipment(loadFixture('success', 'dragon-scales-body-armour.txt'))
+  it('keeps randart jewellery generic while preserving detailed properties', () => {
+    const parsed = extractEquipment(loadFixture('full', 'morgue-midori369-20260406-191652.txt'))
 
-    expect(parsed).toEqual({
-      bodyArmour: 'pearl dragon scales',
-      shield: 'none',
-      footwear: "Black Knight's barding",
-      orb: 'orb of mayhem',
-      amulet: 'none',
-      rings: [],
-      bodyArmourDetails: {
-        rawName: 'pearl dragon scales "Petz"',
-        displayName: 'pearl dragon scales',
-        artifactKind: 'randart',
-        modifiersText: '^Drain rN+ Regen+ Str+2 SInv',
-        modifiers: ['^Drain', 'rN+', 'Regen+', 'Str+2', 'SInv'],
-      },
-      footwearDetails: {
-        rawName: "Black Knight's barding",
-        displayName: "Black Knight's barding",
-        artifactKind: 'unrand',
-        modifiersText: 'Ponderous, rPois rN+',
-        modifiers: ['Ponderous', 'rPois', 'rN+'],
-      },
-      orbDetails: {
-        rawName: 'orb of mayhem',
-        displayName: 'orb of mayhem',
-        artifactKind: 'normal',
-        modifiersText: null,
-        modifiers: [],
-      },
-      ringDetails: [],
-      helmet: true,
-      gloves: true,
-      bootsOrBarding: true,
-      cloak: true,
+    expect(parsed.amulet).toBe('amulet of magic regeneration')
+    expect(parsed.rings).toEqual(['ring of wizardry', 'randart ring'])
+
+    expect(parsed.amuletDetails).toMatchObject({
+      objectClass: 'jewellery',
+      baseType: 'amulet',
+      artifactKind: 'normal',
+      subtypeEffect: 'magic regeneration',
+      intrinsicProperties: ['RegenMP+'],
+      properties: ['RegenMP+'],
+    })
+
+    expect(parsed.ringDetails?.[0]).toMatchObject({
+      baseType: 'ring',
+      subtypeEffect: 'wizardry',
+      properties: ['Wiz'],
+    })
+
+    expect(parsed.ringDetails?.[1]).toMatchObject({
+      rawName: 'ring of the Byakko',
+      artifactKind: 'randart',
+      properties: ['rElec', 'rPois', 'Will-', 'rCorr', 'SInv'],
+      artifactProperties: ['rElec', 'rPois', 'Will-', 'rCorr', 'SInv'],
     })
   })
 
-  it('extracts orb, amulet, rings, and footwear item names from equipped slots', () => {
-    const parsed = extractEquipment(loadFixture('success', 'equipped-accessories.txt'))
+  it('keeps known unrand gloves by name while storing structured properties', () => {
+    const parsed = extractEquipment(loadFixture('full', 'morgue-Tyrellia-20260406-181223.txt'))
 
-    expect(parsed).toEqual({
-      bodyArmour: 'pearl dragon scales',
-      shield: 'none',
-      footwear: "Black Knight's barding",
-      orb: 'orb of mayhem',
-      amulet: 'amulet of Vitality',
-      rings: ['randart ring', 'randart ring'],
-      bodyArmourDetails: {
-        rawName: 'pearl dragon scales "Petz"',
-        displayName: 'pearl dragon scales',
-        artifactKind: 'randart',
-        modifiersText: '^Drain rN+ Regen+ Str+2 SInv',
-        modifiers: ['^Drain', 'rN+', 'Regen+', 'Str+2', 'SInv'],
-      },
-      footwearDetails: {
-        rawName: "Black Knight's barding",
-        displayName: "Black Knight's barding",
-        artifactKind: 'unrand',
-        modifiersText: 'Ponderous, rPois rN+',
-        modifiers: ['Ponderous', 'rPois', 'rN+'],
-      },
-      orbDetails: {
-        rawName: 'orb of mayhem',
-        displayName: 'orb of mayhem',
-        artifactKind: 'normal',
-        modifiersText: null,
-        modifiers: [],
-      },
-      amuletDetails: {
-        rawName: 'amulet of Vitality',
-        displayName: 'amulet of Vitality',
-        artifactKind: 'unrand',
-        modifiersText: 'Regen++ RegenMP++',
-        modifiers: ['Regen++', 'RegenMP++'],
-      },
-      ringDetails: [
-        {
-          rawName: 'ring "Veveor"',
-          displayName: 'randart ring',
-          artifactKind: 'randart',
-          modifiersText: 'rElec Will+ MP+4 Int+3 Slay+4',
-          modifiers: ['rElec', 'Will+', 'MP+4', 'Int+3', 'Slay+4'],
-        },
-        {
-          rawName: 'ring of the Empty Page',
-          displayName: 'randart ring',
-          artifactKind: 'randart',
-          modifiersText: 'rF+ rN+ AC+4 Stlth+',
-          modifiers: ['rF+', 'rN+', 'AC+4', 'Stlth+'],
-        },
-      ],
-      helmet: true,
-      gloves: true,
-      bootsOrBarding: true,
-      cloak: true,
+    expect(parsed.gloves).toBe("Mad Mage's Maulers")
+    expect(parsed.glovesDetails).toMatchObject({
+      rawName: "Mad Mage's Maulers",
+      displayName: "Mad Mage's Maulers",
+      objectClass: 'armour',
+      baseType: 'gloves',
+      enchant: 3,
+      artifactKind: 'unrand',
+      properties: ['Infuse+∞', 'VampMP', '-Cast'],
+      artifactProperties: ['Infuse+∞', 'VampMP', '-Cast'],
     })
   })
 
-  it('keeps parsing equipped items when inventory descriptions are interleaved between entries', () => {
+  it('continues parsing equipped items when descriptions are interleaved in inventory', () => {
     const parsed = extractEquipment(loadFixture('success', 'equipped-accessories-with-descriptions.txt'))
 
-    expect(parsed).toEqual({
-      bodyArmour: 'pearl dragon scales',
-      shield: 'none',
-      footwear: "Black Knight's barding",
-      orb: 'orb of mayhem',
-      amulet: 'amulet of Vitality',
-      rings: ['randart ring', 'randart ring'],
-      bodyArmourDetails: {
-        rawName: 'pearl dragon scales "Petz"',
-        displayName: 'pearl dragon scales',
-        artifactKind: 'randart',
-        modifiersText: '^Drain rN+ Regen+ Str+2 SInv',
-        modifiers: ['^Drain', 'rN+', 'Regen+', 'Str+2', 'SInv'],
-      },
-      footwearDetails: {
-        rawName: "Black Knight's barding",
-        displayName: "Black Knight's barding",
-        artifactKind: 'unrand',
-        modifiersText: 'Ponderous, rPois rN+',
-        modifiers: ['Ponderous', 'rPois', 'rN+'],
-      },
-      orbDetails: {
-        rawName: 'orb of mayhem',
-        displayName: 'orb of mayhem',
-        artifactKind: 'normal',
-        modifiersText: null,
-        modifiers: [],
-      },
-      amuletDetails: {
-        rawName: 'amulet of Vitality',
-        displayName: 'amulet of Vitality',
-        artifactKind: 'unrand',
-        modifiersText: 'Regen++ RegenMP++',
-        modifiers: ['Regen++', 'RegenMP++'],
-      },
-      ringDetails: [
-        {
-          rawName: 'ring of the Empty Page',
-          displayName: 'randart ring',
-          artifactKind: 'randart',
-          modifiersText: 'rF+ rN+ AC+4 Stlth+',
-          modifiers: ['rF+', 'rN+', 'AC+4', 'Stlth+'],
-        },
-        {
-          rawName: 'ring "Veveor"',
-          displayName: 'randart ring',
-          artifactKind: 'randart',
-          modifiersText: 'rElec Will+ MP+4 Int+3 Slay+4',
-          modifiers: ['rElec', 'Will+', 'MP+4', 'Int+3', 'Slay+4'],
-        },
-      ],
-      helmet: true,
-      gloves: true,
-      bootsOrBarding: true,
-      cloak: true,
-    })
+    expect(parsed.bodyArmour).toBe('pearl dragon scales')
+    expect(parsed.amulet).toBe('amulet of Vitality')
+    expect(parsed.rings).toEqual(['randart ring', 'randart ring'])
+    expect(parsed.cloak).toBe('cloak "Rafeal"')
+
+    expect(parsed.bodyArmourDetails?.intrinsicProperties).toEqual(['rN+'])
+    expect(parsed.bodyArmourDetails?.artifactProperties).toEqual(['^Drain', 'Regen+', 'Str+2', 'SInv'])
+    expect(parsed.amuletDetails?.artifactProperties).toEqual(['Regen++', 'RegenMP++'])
   })
 })

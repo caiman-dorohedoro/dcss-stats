@@ -20,24 +20,96 @@
   "footwearDetails": {
     "rawName": "pair of boots",
     "displayName": "pair of boots",
+    "objectClass": "armour",
+    "baseType": "boots",
+    "enchant": 0,
     "artifactKind": "normal",
-    "modifiersText": null,
-    "modifiers": []
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [],
+    "intrinsicProperties": [],
+    "egoProperties": [],
+    "artifactProperties": []
+  },
+  "glovesDetails": {
+    "rawName": "pair of gloves of dexterity",
+    "displayName": "pair of gloves of dexterity",
+    "objectClass": "armour",
+    "baseType": "gloves",
+    "enchant": 0,
+    "artifactKind": "normal",
+    "ego": "dexterity",
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [
+      "Dex+3"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [
+      "Dex+3"
+    ],
+    "artifactProperties": []
+  },
+  "cloakDetails": {
+    "rawName": "cloak of poison resistance",
+    "displayName": "cloak of poison resistance",
+    "objectClass": "armour",
+    "baseType": "cloak",
+    "enchant": 0,
+    "artifactKind": "normal",
+    "ego": "poison resistance",
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [
+      "rPois"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [
+      "rPois"
+    ],
+    "artifactProperties": []
   },
   "amuletDetails": {
     "rawName": "amulet of regeneration",
     "displayName": "amulet of regeneration",
+    "objectClass": "jewellery",
+    "baseType": "amulet",
+    "enchant": null,
     "artifactKind": "normal",
-    "modifiersText": null,
-    "modifiers": []
+    "ego": null,
+    "subtypeEffect": "regeneration",
+    "propertiesText": null,
+    "properties": [
+      "Regen+"
+    ],
+    "intrinsicProperties": [
+      "Regen+"
+    ],
+    "egoProperties": [],
+    "artifactProperties": []
   },
   "ringDetails": [
     {
       "rawName": "ring of Sogam",
       "displayName": "randart ring",
+      "objectClass": "jewellery",
+      "baseType": "ring",
+      "enchant": null,
       "artifactKind": "randart",
-      "modifiersText": "^Drain rF+++ rC+ Str+6 Dex+2",
-      "modifiers": [
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "^Drain rF+++ rC+ Str+6 Dex+2",
+      "properties": [
+        "^Drain",
+        "rF+++",
+        "rC+",
+        "Str+6",
+        "Dex+2"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
         "^Drain",
         "rF+++",
         "rC+",
@@ -48,15 +120,27 @@
     {
       "rawName": "ring of intelligence",
       "displayName": "ring of intelligence",
+      "objectClass": "jewellery",
+      "baseType": "ring",
+      "enchant": 6,
       "artifactKind": "normal",
-      "modifiersText": null,
-      "modifiers": []
+      "ego": null,
+      "subtypeEffect": "intelligence",
+      "propertiesText": null,
+      "properties": [
+        "Int+6"
+      ],
+      "intrinsicProperties": [
+        "Int+6"
+      ],
+      "egoProperties": [],
+      "artifactProperties": []
     }
   ],
-  "helmet": false,
-  "gloves": true,
+  "helmet": "none",
+  "gloves": "pair of gloves of dexterity",
   "bootsOrBarding": true,
-  "cloak": true,
+  "cloak": "cloak of poison resistance",
   "armourSkill": 0,
   "dodgingSkill": 3.1,
   "shieldSkill": 0,

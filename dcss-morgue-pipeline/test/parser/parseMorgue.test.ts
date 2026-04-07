@@ -54,7 +54,7 @@ describe('parseMorgue', () => {
       expect(result.record.sh).toBe(0)
       expect(result.record.bodyArmour).toBe('plate armour')
       expect(result.record.bootsOrBarding).toBe(true)
-      expect(result.record.cloak).toBe(true)
+      expect(result.record.cloak).toBe('cloak')
       expect(result.record.mutations).toEqual(['horns 2', 'retaliatory headbutt'])
       expect(result.record.armourSkill).toBe(2.4)
       expect(result.record.spells).toEqual([])

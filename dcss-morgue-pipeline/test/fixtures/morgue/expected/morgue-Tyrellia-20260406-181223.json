@@ -1,0 +1,645 @@
+{
+  "playerName": "Tyrellia",
+  "version": "0.35-a0-181-g84ebf06",
+  "species": "Demonspawn",
+  "ac": 46,
+  "ev": 7,
+  "sh": 32,
+  "strength": 18,
+  "intelligence": 28,
+  "dexterity": 20,
+  "bodyArmour": "golden dragon scales",
+  "shield": "tower shield of protection",
+  "footwear": "pair of boots of rampaging",
+  "orb": "none",
+  "amulet": "amulet of reflection",
+  "rings": [
+    "randart ring",
+    "randart ring"
+  ],
+  "bodyArmourDetails": {
+    "rawName": "golden dragon scales of Vyoxih",
+    "displayName": "golden dragon scales",
+    "objectClass": "armour",
+    "baseType": "golden dragon scales",
+    "enchant": 11,
+    "artifactKind": "randart",
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": "rElec rPois rF+ rC+ Regen+ Dex-5",
+    "properties": [
+      "rElec",
+      "rPois",
+      "rF+",
+      "rC+",
+      "Regen+",
+      "Dex-5"
+    ],
+    "intrinsicProperties": [
+      "rF+",
+      "rC+",
+      "rPois"
+    ],
+    "egoProperties": [],
+    "artifactProperties": [
+      "rElec",
+      "Regen+",
+      "Dex-5"
+    ]
+  },
+  "shieldDetails": {
+    "rawName": "tower shield of protection",
+    "displayName": "tower shield of protection",
+    "objectClass": "armour",
+    "baseType": "tower shield",
+    "enchant": 4,
+    "artifactKind": "normal",
+    "ego": "protection",
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [
+      "AC+3"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [
+      "AC+3"
+    ],
+    "artifactProperties": []
+  },
+  "footwearDetails": {
+    "rawName": "pair of boots of rampaging",
+    "displayName": "pair of boots of rampaging",
+    "objectClass": "armour",
+    "baseType": "boots",
+    "enchant": 0,
+    "artifactKind": "normal",
+    "ego": "rampaging",
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [
+      "Rampage"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [
+      "Rampage"
+    ],
+    "artifactProperties": []
+  },
+  "helmetDetails": {
+    "rawName": "hat of Datusoth",
+    "displayName": "hat of Datusoth",
+    "objectClass": "armour",
+    "baseType": "hat",
+    "enchant": 3,
+    "artifactKind": "randart",
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": "^Drain Will+++ Regen+ Int+4",
+    "properties": [
+      "^Drain",
+      "Will+++",
+      "Regen+",
+      "Int+4"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [],
+    "artifactProperties": [
+      "^Drain",
+      "Will+++",
+      "Regen+",
+      "Int+4"
+    ]
+  },
+  "glovesDetails": {
+    "rawName": "Mad Mage's Maulers",
+    "displayName": "Mad Mage's Maulers",
+    "objectClass": "armour",
+    "baseType": "gloves",
+    "enchant": 3,
+    "artifactKind": "unrand",
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": "Infuse+∞ VampMP -Cast",
+    "properties": [
+      "Infuse+∞",
+      "VampMP",
+      "-Cast"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [],
+    "artifactProperties": [
+      "Infuse+∞",
+      "VampMP",
+      "-Cast"
+    ]
+  },
+  "amuletDetails": {
+    "rawName": "amulet of reflection",
+    "displayName": "amulet of reflection",
+    "objectClass": "jewellery",
+    "baseType": "amulet",
+    "enchant": null,
+    "artifactKind": "normal",
+    "ego": null,
+    "subtypeEffect": "reflection",
+    "propertiesText": null,
+    "properties": [
+      "Reflect"
+    ],
+    "intrinsicProperties": [
+      "Reflect"
+    ],
+    "egoProperties": [],
+    "artifactProperties": []
+  },
+  "ringDetails": [
+    {
+      "rawName": "ring of Zutivi",
+      "displayName": "randart ring",
+      "objectClass": "jewellery",
+      "baseType": "ring",
+      "enchant": null,
+      "artifactKind": "randart",
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "rPois rN+++ Int+9 Dex-2",
+      "properties": [
+        "rPois",
+        "rN+++",
+        "Int+9",
+        "Dex-2"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
+        "rPois",
+        "rN+++",
+        "Int+9",
+        "Dex-2"
+      ]
+    },
+    {
+      "rawName": "ring of Urajuxuz",
+      "displayName": "randart ring",
+      "objectClass": "jewellery",
+      "baseType": "ring",
+      "enchant": null,
+      "artifactKind": "randart",
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "Int+4 SInv",
+      "properties": [
+        "Int+4",
+        "SInv"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
+        "Int+4",
+        "SInv"
+      ]
+    }
+  ],
+  "helmet": "hat of Datusoth",
+  "gloves": "Mad Mage's Maulers",
+  "bootsOrBarding": true,
+  "cloak": "none",
+  "armourSkill": 20,
+  "dodgingSkill": 10,
+  "shieldSkill": 20,
+  "spellcasting": 0,
+  "fighting": 20,
+  "shortBlades": 14,
+  "longBlades": 6.1,
+  "axes": 0,
+  "macesFlails": 3.9,
+  "polearms": 0,
+  "staves": 0,
+  "rangedWeapons": 0,
+  "throwing": 0,
+  "stealth": 0,
+  "unarmedCombat": 0,
+  "conjurations": 0,
+  "hexes": 0,
+  "summonings": 0,
+  "necromancy": 0,
+  "translocations": 0,
+  "transmutations": 0,
+  "fireMagic": 0,
+  "iceMagic": 0,
+  "airMagic": 0,
+  "earthMagic": 0,
+  "poisonMagic": 0,
+  "forgecraft": 0,
+  "alchemy": 0,
+  "invocations": 20,
+  "evocations": 18.1,
+  "shapeshifting": 0,
+  "mutations": [
+    "thin skeletal structure 3",
+    "demonic guardian 3",
+    "icemail 1",
+    "robust 3",
+    "condensation shield",
+    "weakness stinger 3",
+    "Dis destruction",
+    "Mark of Atrocity"
+  ],
+  "spells": [
+    {
+      "name": "Blink",
+      "failurePercent": 100,
+      "memorized": true
+    },
+    {
+      "name": "Kinetic Grapnel",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Kiss of Death",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Sandblast",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Shock",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Soul Splinter",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Summon Small Mammal",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Call Imp",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Ensorcelled Hibernation",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Lesser Beckoning",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Mercury Arrow",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Momentum Strike",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Static Discharge",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Sublimation of Blood",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Call Canine Familiar",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Gloom",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Inner Flame",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Launch Clockwork Bee",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Passwall",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Sigil of Binding",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Summon Ice Beast",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Swiftness",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Teleport Other",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Tukima's Dance",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Vampiric Draining",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Volatile Blastmotes",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Animate Dead",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Awaken Armour",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Brom's Barrelling Boulder",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Cause Fear",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Dimensional Bullseye",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Dispel Undead",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Eringya's Surprising Crocodile",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Flame Wave",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Forge Lightning Spire",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Fulminant Prism",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Ignite Poison",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Iskenderun's Battlesphere",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Iskenderun's Mystic Blast",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Leda's Liquefaction",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Martyr's Knell",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Olgreb's Toxic Radiance",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Petrify",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Rending Blade",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Sticky Flame",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Summon Seismosaurus Egg",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Alistair's Walking Alembic",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Arcjolt",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Borgnjor's Vile Clutch",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Curse of Agony",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Detonation Catalyst",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Fireball",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Lee's Rapid Deconstruction",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Nazja's Percussive Tempering",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Silence",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Summon Forest",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Summon Mana Viper",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Bombard",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Death Channel",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Eringya's Noxious Bog",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Forge Phalanx Beetle",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Fortress Blast",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Gell's Gavotte",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Permafrost Eruption",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Plasma Beam",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Summon Cactus Giant",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Diamond Sawblades",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Magnavolt",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Manifold Assault",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Orb of Destruction",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Rimeblight",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Spellspark Servitor",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Sphinx Sisters",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Summon Hydra",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Borgnjor's Revivification",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Ignition",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Lehudib's Crystal Spear",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Polar Vortex",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Shatter",
+      "failurePercent": 100,
+      "memorized": false
+    }
+  ]
+}

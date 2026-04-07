@@ -20,9 +20,23 @@
   "bodyArmourDetails": {
     "rawName": "moon troll leather armour",
     "displayName": "moon troll leather armour",
+    "objectClass": "armour",
+    "baseType": "troll leather armour",
+    "enchant": 5,
     "artifactKind": "unrand",
-    "modifiersText": "Spirit, Regen++ MP+5",
-    "modifiers": [
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": "Spirit, Regen++ MP+5",
+    "properties": [
+      "Spirit",
+      "Regen++",
+      "MP+5"
+    ],
+    "intrinsicProperties": [
+      "Regen+"
+    ],
+    "egoProperties": [],
+    "artifactProperties": [
       "Spirit",
       "Regen++",
       "MP+5"
@@ -31,23 +45,108 @@
   "footwearDetails": {
     "rawName": "pair of boots of stealth",
     "displayName": "pair of boots of stealth",
+    "objectClass": "armour",
+    "baseType": "boots",
+    "enchant": 2,
     "artifactKind": "normal",
-    "modifiersText": null,
-    "modifiers": []
+    "ego": "stealth",
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [
+      "Stlth+"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [
+      "Stlth+"
+    ],
+    "artifactProperties": []
+  },
+  "helmetDetails": {
+    "rawName": "hat of the Bear Spirit",
+    "displayName": "hat of the Bear Spirit",
+    "objectClass": "armour",
+    "baseType": "hat",
+    "enchant": 2,
+    "artifactKind": "unrand",
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": "Spirit, Bear, *Rage Will++",
+    "properties": [
+      "Spirit",
+      "Bear",
+      "*Rage",
+      "Will++"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [],
+    "artifactProperties": [
+      "Spirit",
+      "Bear",
+      "*Rage",
+      "Will++"
+    ]
+  },
+  "cloakDetails": {
+    "rawName": "scarf \"Wiapirghias\"",
+    "displayName": "scarf \"Wiapirghias\"",
+    "objectClass": "armour",
+    "baseType": "scarf",
+    "enchant": null,
+    "artifactKind": "randart",
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": "rC+ rF+, rElec Slay+3",
+    "properties": [
+      "rC+",
+      "rF+",
+      "rElec",
+      "Slay+3"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [],
+    "artifactProperties": [
+      "rC+",
+      "rF+",
+      "rElec",
+      "Slay+3"
+    ]
   },
   "orbDetails": {
     "rawName": "orb of mesmerism",
     "displayName": "orb of mesmerism",
+    "objectClass": "armour",
+    "baseType": "orb",
+    "enchant": null,
     "artifactKind": "normal",
-    "modifiersText": null,
-    "modifiers": []
+    "ego": "mesmerism",
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [
+      "Mesmerism"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [
+      "Mesmerism"
+    ],
+    "artifactProperties": []
   },
   "amuletDetails": {
     "rawName": "amulet of Vitality",
     "displayName": "amulet of Vitality",
+    "objectClass": "jewellery",
+    "baseType": "amulet",
+    "enchant": null,
     "artifactKind": "unrand",
-    "modifiersText": "Regen++ RegenMP++",
-    "modifiers": [
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": "Regen++ RegenMP++",
+    "properties": [
+      "Regen++",
+      "RegenMP++"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [],
+    "artifactProperties": [
       "Regen++",
       "RegenMP++"
     ]
@@ -56,9 +155,22 @@
     {
       "rawName": "ring of New Discoveries",
       "displayName": "randart ring",
+      "objectClass": "jewellery",
+      "baseType": "ring",
+      "enchant": null,
       "artifactKind": "randart",
-      "modifiersText": "rPois rF+ Dex+7 Stlth+",
-      "modifiers": [
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "rPois rF+ Dex+7 Stlth+",
+      "properties": [
+        "rPois",
+        "rF+",
+        "Dex+7",
+        "Stlth+"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
         "rPois",
         "rF+",
         "Dex+7",
@@ -68,19 +180,31 @@
     {
       "rawName": "ring of Suxzeiv",
       "displayName": "randart ring",
+      "objectClass": "jewellery",
+      "baseType": "ring",
+      "enchant": null,
       "artifactKind": "randart",
-      "modifiersText": "rElec rCorr Dex+6",
-      "modifiers": [
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "rElec rCorr Dex+6",
+      "properties": [
+        "rElec",
+        "rCorr",
+        "Dex+6"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
         "rElec",
         "rCorr",
         "Dex+6"
       ]
     }
   ],
-  "helmet": true,
-  "gloves": false,
+  "helmet": "hat of the Bear Spirit",
+  "gloves": "none",
   "bootsOrBarding": true,
-  "cloak": true,
+  "cloak": "scarf \"Wiapirghias\"",
   "armourSkill": 10.6,
   "dodgingSkill": 10.6,
   "shieldSkill": 0,

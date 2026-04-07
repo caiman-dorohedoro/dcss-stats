@@ -20,37 +20,92 @@
   "bodyArmourDetails": {
     "rawName": "plate armour",
     "displayName": "plate armour",
+    "objectClass": "armour",
+    "baseType": "plate armour",
+    "enchant": 0,
     "artifactKind": "normal",
-    "modifiersText": null,
-    "modifiers": []
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [],
+    "intrinsicProperties": [],
+    "egoProperties": [],
+    "artifactProperties": []
   },
   "footwearDetails": {
     "rawName": "pair of boots",
     "displayName": "pair of boots",
+    "objectClass": "armour",
+    "baseType": "boots",
+    "enchant": 0,
     "artifactKind": "normal",
-    "modifiersText": null,
-    "modifiers": []
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [],
+    "intrinsicProperties": [],
+    "egoProperties": [],
+    "artifactProperties": []
+  },
+  "cloakDetails": {
+    "rawName": "cloak",
+    "displayName": "cloak",
+    "objectClass": "armour",
+    "baseType": "cloak",
+    "enchant": 1,
+    "artifactKind": "normal",
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [],
+    "intrinsicProperties": [],
+    "egoProperties": [],
+    "artifactProperties": []
   },
   "ringDetails": [
     {
       "rawName": "ring of slaying",
       "displayName": "ring of slaying",
+      "objectClass": "jewellery",
+      "baseType": "ring",
+      "enchant": 4,
       "artifactKind": "normal",
-      "modifiersText": null,
-      "modifiers": []
+      "ego": null,
+      "subtypeEffect": "slaying",
+      "propertiesText": null,
+      "properties": [
+        "Slay+4"
+      ],
+      "intrinsicProperties": [
+        "Slay+4"
+      ],
+      "egoProperties": [],
+      "artifactProperties": []
     },
     {
       "rawName": "ring of flight",
       "displayName": "ring of flight",
+      "objectClass": "jewellery",
+      "baseType": "ring",
+      "enchant": null,
       "artifactKind": "normal",
-      "modifiersText": null,
-      "modifiers": []
+      "ego": null,
+      "subtypeEffect": "flight",
+      "propertiesText": null,
+      "properties": [
+        "Fly"
+      ],
+      "intrinsicProperties": [
+        "Fly"
+      ],
+      "egoProperties": [],
+      "artifactProperties": []
     }
   ],
-  "helmet": false,
-  "gloves": false,
+  "helmet": "none",
+  "gloves": "none",
   "bootsOrBarding": true,
-  "cloak": true,
+  "cloak": "cloak",
   "armourSkill": 2.4,
   "dodgingSkill": 2.1,
   "shieldSkill": 0,
