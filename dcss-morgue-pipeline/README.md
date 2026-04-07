@@ -8,6 +8,9 @@ The parser's field model, Crawl-source references, and equipment/property
 rationale are documented in
 [packages/morgue-parser/PARSER_MODEL.md](/Users/hyeon/playground/dcss-stats/packages/morgue-parser/PARSER_MODEL.md).
 
+A change log for the parser model, including what changed and why, is in
+[packages/morgue-parser/PARSER_CHANGELOG.md](/Users/hyeon/playground/dcss-stats/packages/morgue-parser/PARSER_CHANGELOG.md).
+
 ## Commands
 
 - `npm test`
