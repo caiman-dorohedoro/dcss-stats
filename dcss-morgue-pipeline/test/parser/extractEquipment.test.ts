@@ -16,13 +16,15 @@ describe('extractEquipment', () => {
 
     expect(parsed.bodyArmour).toBe('none')
     expect(parsed.shield).toBe('none')
-    expect(parsed.footwear).toBe('pair of boots')
-    expect(parsed.helmet).toBe('hat')
-    expect(parsed.gloves).toBe('pair of gloves')
-    expect(parsed.cloak).toBe('cloak')
+    expect(parsed.footwear).toEqual(['pair of boots'])
+    expect(parsed.helmets).toEqual(['hat'])
+    expect(parsed.gloves).toEqual(['pair of gloves'])
+    expect(parsed.cloaks).toEqual(['cloak'])
 
-    expect(parsed.footwearDetails).toMatchObject({
+    expect(parsed.footwearDetails?.[0]).toMatchObject({
       objectClass: 'armour',
+      equipState: 'worn',
+      isCursed: false,
       baseType: 'boots',
       enchant: 0,
       artifactKind: 'normal',
@@ -35,12 +37,14 @@ describe('extractEquipment', () => {
     const parsed = extractEquipment(loadFixture('full', 'morgue-midori369-20260406-191652.txt'))
 
     expect(parsed.shield).toBe('buckler of cold resistance')
-    expect(parsed.footwear).toBe('pair of boots of flying')
-    expect(parsed.helmet).toBe('hat of intelligence')
-    expect(parsed.cloak).toBe('cloak of willpower')
+    expect(parsed.footwear).toEqual(['pair of boots of flying'])
+    expect(parsed.helmets).toEqual(['hat of intelligence'])
+    expect(parsed.cloaks).toEqual(['cloak of willpower'])
 
     expect(parsed.shieldDetails).toMatchObject({
       objectClass: 'armour',
+      equipState: 'worn',
+      isCursed: false,
       baseType: 'buckler',
       enchant: 3,
       artifactKind: 'normal',
@@ -50,13 +54,13 @@ describe('extractEquipment', () => {
       artifactProperties: [],
     })
 
-    expect(parsed.footwearDetails).toMatchObject({
+    expect(parsed.footwearDetails?.[0]).toMatchObject({
       baseType: 'boots',
       ego: 'flying',
       properties: ['Fly'],
     })
 
-    expect(parsed.helmetDetails).toMatchObject({
+    expect(parsed.helmetDetails?.[0]).toMatchObject({
       baseType: 'hat',
       ego: 'intelligence',
       properties: ['Int+3'],
@@ -112,11 +116,13 @@ describe('extractEquipment', () => {
   it('keeps known unrand gloves by name while storing structured properties', () => {
     const parsed = extractEquipment(loadFixture('full', 'morgue-Tyrellia-20260406-181223.txt'))
 
-    expect(parsed.gloves).toBe("Mad Mage's Maulers")
-    expect(parsed.glovesDetails).toMatchObject({
+    expect(parsed.gloves).toEqual(["Mad Mage's Maulers"])
+    expect(parsed.glovesDetails?.[0]).toMatchObject({
       rawName: "Mad Mage's Maulers",
       displayName: "Mad Mage's Maulers",
       objectClass: 'armour',
+      equipState: 'worn',
+      isCursed: false,
       baseType: 'gloves',
       enchant: 3,
       artifactKind: 'unrand',
@@ -131,10 +137,54 @@ describe('extractEquipment', () => {
     expect(parsed.bodyArmour).toBe('pearl dragon scales "Petz"')
     expect(parsed.amulet).toBe('amulet of Vitality')
     expect(parsed.rings).toEqual(['ring of the Empty Page', 'ring "Veveor"'])
-    expect(parsed.cloak).toBe('cloak "Rafeal"')
+    expect(parsed.cloaks).toEqual(['cloak "Rafeal"'])
 
     expect(parsed.bodyArmourDetails?.intrinsicProperties).toEqual(['rN+'])
     expect(parsed.bodyArmourDetails?.artifactProperties).toEqual(['^Drain', 'Regen+', 'Str+2', 'SInv'])
     expect(parsed.amuletDetails?.artifactProperties).toEqual(['Regen++', 'RegenMP++'])
+  })
+
+  it('keeps multiple haunted aux items for poltergeists instead of collapsing them', () => {
+    const parsed = extractEquipment(loadFixture('full', 'morgue-Skeff-20260406-201301.txt'))
+
+    expect(parsed.bodyArmour).toBe('none')
+    expect(parsed.helmets).toEqual(['hat of Pondering'])
+    expect(parsed.gloves).toEqual(['pair of gloves of dexterity'])
+    expect(parsed.footwear).toEqual([
+      'pair of boots',
+      'pair of boots of flying',
+      'pair of boots',
+    ])
+    expect(parsed.cloaks).toEqual(['cloak'])
+
+    expect(parsed.footwearDetails?.map((item) => item.equipState)).toEqual([
+      'haunted',
+      'haunted',
+      'haunted',
+    ])
+  })
+
+  it('classifies cursed haunted gauntlets as gloves instead of body armour', () => {
+    const parsed = extractEquipment(loadFixture('full', 'morgue-jkt-20260406-212621.txt'))
+
+    expect(parsed.bodyArmour).toBe('none')
+    expect(parsed.gloves).toEqual(['pair of gauntlets of War'])
+    expect(parsed.glovesDetails?.[0]).toMatchObject({
+      rawName: 'pair of gauntlets of War',
+      displayName: 'gauntlets of War',
+      equipState: 'haunted',
+      isCursed: true,
+      baseType: 'gloves',
+      artifactKind: 'unrand',
+    })
+    expect(parsed.helmets).toEqual([
+      'hat of the Chained Sun',
+      'hat of Ashenzari\'s Gnosis',
+    ])
+    expect(parsed.cloaks).toEqual([
+      'cloak of willpower',
+      'scarf "Chained Fetters"',
+      'cloak of Ashenzari\'s Failure',
+    ])
   })
 })

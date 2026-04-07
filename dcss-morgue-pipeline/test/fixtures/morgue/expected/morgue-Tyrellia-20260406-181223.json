@@ -10,11 +10,17 @@
   "dexterity": 20,
   "bodyArmour": "golden dragon scales of Vyoxih",
   "shield": "tower shield of protection",
-  "helmet": "hat of Datusoth",
-  "gloves": "Mad Mage's Maulers",
-  "footwear": "pair of boots of rampaging",
+  "helmets": [
+    "hat of Datusoth"
+  ],
+  "gloves": [
+    "Mad Mage's Maulers"
+  ],
+  "footwear": [
+    "pair of boots of rampaging"
+  ],
   "bootsOrBarding": true,
-  "cloak": "none",
+  "cloaks": [],
   "orb": "none",
   "amulet": "amulet of reflection",
   "rings": [
@@ -25,6 +31,8 @@
     "rawName": "golden dragon scales of Vyoxih",
     "displayName": "golden dragon scales",
     "objectClass": "armour",
+    "equipState": "worn",
+    "isCursed": false,
     "baseType": "golden dragon scales",
     "enchant": 11,
     "artifactKind": "randart",
@@ -55,6 +63,8 @@
     "rawName": "tower shield of protection",
     "displayName": "tower shield of protection",
     "objectClass": "armour",
+    "equipState": "worn",
+    "isCursed": false,
     "baseType": "tower shield",
     "enchant": 4,
     "artifactKind": "normal",
@@ -70,77 +80,91 @@
     ],
     "artifactProperties": []
   },
-  "helmetDetails": {
-    "rawName": "hat of Datusoth",
-    "displayName": "hat of Datusoth",
-    "objectClass": "armour",
-    "baseType": "hat",
-    "enchant": 3,
-    "artifactKind": "randart",
-    "ego": null,
-    "subtypeEffect": null,
-    "propertiesText": "^Drain Will+++ Regen+ Int+4",
-    "properties": [
-      "^Drain",
-      "Will+++",
-      "Regen+",
-      "Int+4"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": [
-      "^Drain",
-      "Will+++",
-      "Regen+",
-      "Int+4"
-    ]
-  },
-  "glovesDetails": {
-    "rawName": "Mad Mage's Maulers",
-    "displayName": "Mad Mage's Maulers",
-    "objectClass": "armour",
-    "baseType": "gloves",
-    "enchant": 3,
-    "artifactKind": "unrand",
-    "ego": null,
-    "subtypeEffect": null,
-    "propertiesText": "Infuse+∞ VampMP -Cast",
-    "properties": [
-      "Infuse+∞",
-      "VampMP",
-      "-Cast"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": [
-      "Infuse+∞",
-      "VampMP",
-      "-Cast"
-    ]
-  },
-  "footwearDetails": {
-    "rawName": "pair of boots of rampaging",
-    "displayName": "pair of boots of rampaging",
-    "objectClass": "armour",
-    "baseType": "boots",
-    "enchant": 0,
-    "artifactKind": "normal",
-    "ego": "rampaging",
-    "subtypeEffect": null,
-    "propertiesText": null,
-    "properties": [
-      "Rampage"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "Rampage"
-    ],
-    "artifactProperties": []
-  },
+  "helmetDetails": [
+    {
+      "rawName": "hat of Datusoth",
+      "displayName": "hat of Datusoth",
+      "objectClass": "armour",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "hat",
+      "enchant": 3,
+      "artifactKind": "randart",
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "^Drain Will+++ Regen+ Int+4",
+      "properties": [
+        "^Drain",
+        "Will+++",
+        "Regen+",
+        "Int+4"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
+        "^Drain",
+        "Will+++",
+        "Regen+",
+        "Int+4"
+      ]
+    }
+  ],
+  "glovesDetails": [
+    {
+      "rawName": "Mad Mage's Maulers",
+      "displayName": "Mad Mage's Maulers",
+      "objectClass": "armour",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "gloves",
+      "enchant": 3,
+      "artifactKind": "unrand",
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "Infuse+∞ VampMP -Cast",
+      "properties": [
+        "Infuse+∞",
+        "VampMP",
+        "-Cast"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
+        "Infuse+∞",
+        "VampMP",
+        "-Cast"
+      ]
+    }
+  ],
+  "footwearDetails": [
+    {
+      "rawName": "pair of boots of rampaging",
+      "displayName": "pair of boots of rampaging",
+      "objectClass": "armour",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "boots",
+      "enchant": 0,
+      "artifactKind": "normal",
+      "ego": "rampaging",
+      "subtypeEffect": null,
+      "propertiesText": null,
+      "properties": [
+        "Rampage"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [
+        "Rampage"
+      ],
+      "artifactProperties": []
+    }
+  ],
   "amuletDetails": {
     "rawName": "amulet of reflection",
     "displayName": "amulet of reflection",
     "objectClass": "jewellery",
+    "equipState": "worn",
+    "isCursed": false,
     "baseType": "amulet",
     "enchant": null,
     "artifactKind": "normal",
@@ -161,6 +185,8 @@
       "rawName": "ring of Zutivi",
       "displayName": "randart ring",
       "objectClass": "jewellery",
+      "equipState": "worn",
+      "isCursed": false,
       "baseType": "ring",
       "enchant": null,
       "artifactKind": "randart",
@@ -186,6 +212,8 @@
       "rawName": "ring of Urajuxuz",
       "displayName": "randart ring",
       "objectClass": "jewellery",
+      "equipState": "worn",
+      "isCursed": false,
       "baseType": "ring",
       "enchant": null,
       "artifactKind": "randart",
@@ -214,6 +242,39 @@
     "throwing": 0,
     "shortBlades": 14,
     "longBlades": 6.1,
+    "rangedWeapons": 0,
+    "armour": 20,
+    "dodging": 10,
+    "shields": 20,
+    "stealth": 0,
+    "spellcasting": 0,
+    "conjurations": 0,
+    "hexes": 0,
+    "summonings": 0,
+    "necromancy": 0,
+    "forgecraft": 0,
+    "translocations": 0,
+    "transmutations": 0,
+    "alchemy": 0,
+    "fireMagic": 0,
+    "iceMagic": 0,
+    "airMagic": 0,
+    "earthMagic": 0,
+    "poisonMagic": 0,
+    "invocations": 20,
+    "evocations": 18.1,
+    "shapeshifting": 0
+  },
+  "effectiveSkills": {
+    "fighting": 20,
+    "macesFlails": 3.9,
+    "axes": 0,
+    "polearms": 0,
+    "staves": 0,
+    "unarmedCombat": 0,
+    "throwing": 0,
+    "shortBlades": 14.4,
+    "longBlades": 10.9,
     "rangedWeapons": 0,
     "armour": 20,
     "dodging": 10,

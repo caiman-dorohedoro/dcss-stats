@@ -10,11 +10,13 @@
   "dexterity": 10,
   "bodyArmour": "troll leather armour",
   "shield": "kite shield of reflection",
-  "helmet": "none",
-  "gloves": "none",
-  "footwear": "none",
+  "helmets": [],
+  "gloves": [],
+  "footwear": [],
   "bootsOrBarding": false,
-  "cloak": "cloak of poison resistance",
+  "cloaks": [
+    "cloak of poison resistance"
+  ],
   "orb": "none",
   "amulet": "amulet of Dazytsee",
   "rings": [
@@ -25,6 +27,8 @@
     "rawName": "troll leather armour",
     "displayName": "troll leather armour",
     "objectClass": "armour",
+    "equipState": "worn",
+    "isCursed": false,
     "baseType": "troll leather armour",
     "enchant": 0,
     "artifactKind": "normal",
@@ -44,6 +48,8 @@
     "rawName": "kite shield of reflection",
     "displayName": "kite shield of reflection",
     "objectClass": "armour",
+    "equipState": "worn",
+    "isCursed": false,
     "baseType": "kite shield",
     "enchant": 2,
     "artifactKind": "normal",
@@ -59,29 +65,35 @@
     ],
     "artifactProperties": []
   },
-  "cloakDetails": {
-    "rawName": "cloak of poison resistance",
-    "displayName": "cloak of poison resistance",
-    "objectClass": "armour",
-    "baseType": "cloak",
-    "enchant": 0,
-    "artifactKind": "normal",
-    "ego": "poison resistance",
-    "subtypeEffect": null,
-    "propertiesText": null,
-    "properties": [
-      "rPois"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "rPois"
-    ],
-    "artifactProperties": []
-  },
+  "cloakDetails": [
+    {
+      "rawName": "cloak of poison resistance",
+      "displayName": "cloak of poison resistance",
+      "objectClass": "armour",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "cloak",
+      "enchant": 0,
+      "artifactKind": "normal",
+      "ego": "poison resistance",
+      "subtypeEffect": null,
+      "propertiesText": null,
+      "properties": [
+        "rPois"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [
+        "rPois"
+      ],
+      "artifactProperties": []
+    }
+  ],
   "amuletDetails": {
     "rawName": "amulet of Dazytsee",
     "displayName": "randart amulet",
     "objectClass": "jewellery",
+    "equipState": "worn",
+    "isCursed": false,
     "baseType": "amulet",
     "enchant": null,
     "artifactKind": "randart",
@@ -106,6 +118,8 @@
       "rawName": "ring of protection",
       "displayName": "ring of protection",
       "objectClass": "jewellery",
+      "equipState": "worn",
+      "isCursed": false,
       "baseType": "ring",
       "enchant": 4,
       "artifactKind": "normal",
@@ -125,6 +139,8 @@
       "rawName": "ring of strength",
       "displayName": "ring of strength",
       "objectClass": "jewellery",
+      "equipState": "worn",
+      "isCursed": false,
       "baseType": "ring",
       "enchant": 6,
       "artifactKind": "normal",
@@ -142,6 +158,39 @@
     }
   ],
   "skills": {
+    "fighting": 17.6,
+    "macesFlails": 0,
+    "axes": 18,
+    "polearms": 0,
+    "staves": 0,
+    "unarmedCombat": 0,
+    "throwing": 0,
+    "shortBlades": 0,
+    "longBlades": 0,
+    "rangedWeapons": 0,
+    "armour": 16.3,
+    "dodging": 6.5,
+    "shields": 17.7,
+    "stealth": 0,
+    "spellcasting": 0,
+    "conjurations": 0,
+    "hexes": 0,
+    "summonings": 0,
+    "necromancy": 0,
+    "forgecraft": 0,
+    "translocations": 0,
+    "transmutations": 0,
+    "alchemy": 0,
+    "fireMagic": 0,
+    "iceMagic": 0,
+    "airMagic": 0,
+    "earthMagic": 0,
+    "poisonMagic": 0,
+    "invocations": 14.7,
+    "evocations": 0,
+    "shapeshifting": 0
+  },
+  "effectiveSkills": {
     "fighting": 17.6,
     "macesFlails": 0,
     "axes": 18,

@@ -63,11 +63,14 @@ export type BaseStatsSnapshot = {
 
 export type ArtifactKind = 'normal' | 'randart' | 'unrand'
 export type EquipmentObjectClass = 'armour' | 'jewellery'
+export type EquipmentEquipState = 'worn' | 'haunted'
 
 export type EquipmentItemSnapshot = {
   rawName: string
   displayName: string
   objectClass: EquipmentObjectClass
+  equipState: EquipmentEquipState
+  isCursed: boolean
   baseType: string | null
   enchant: number | null
   artifactKind: ArtifactKind
@@ -83,20 +86,20 @@ export type EquipmentItemSnapshot = {
 export type EquipmentSnapshot = {
   bodyArmour: string | undefined
   shield: string | undefined
-  helmet: string | undefined
-  gloves: string | undefined
-  footwear: string | undefined
+  helmets: string[]
+  gloves: string[]
+  footwear: string[]
   bootsOrBarding: boolean
-  cloak: string | undefined
+  cloaks: string[]
   orb: string | undefined
   amulet: string | undefined
   rings: string[]
   bodyArmourDetails?: EquipmentItemSnapshot
   shieldDetails?: EquipmentItemSnapshot
-  helmetDetails?: EquipmentItemSnapshot
-  glovesDetails?: EquipmentItemSnapshot
-  footwearDetails?: EquipmentItemSnapshot
-  cloakDetails?: EquipmentItemSnapshot
+  helmetDetails?: EquipmentItemSnapshot[]
+  glovesDetails?: EquipmentItemSnapshot[]
+  footwearDetails?: EquipmentItemSnapshot[]
+  cloakDetails?: EquipmentItemSnapshot[]
   orbDetails?: EquipmentItemSnapshot
   amuletDetails?: EquipmentItemSnapshot
   ringDetails?: EquipmentItemSnapshot[]
@@ -138,6 +141,7 @@ export type SkillLevelsSnapshot = {
 
 export type SkillsSnapshot = {
   skills: SkillLevelsSnapshot
+  effectiveSkills: SkillLevelsSnapshot
 }
 
 export type SpellSnapshot = {

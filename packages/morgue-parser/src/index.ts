@@ -9,7 +9,11 @@ export { parseMorgueText } from './parseMorgueText'
 export { splitSections } from './splitSections'
 export { ParseFailure, validateStrict } from './validateStrict'
 export type {
+  ArtifactKind,
   BaseStatsSnapshot,
+  EquipmentEquipState,
+  EquipmentItemSnapshot,
+  EquipmentObjectClass,
   EquipmentSnapshot,
   MorgueVersion,
   MutationEntrySnapshot,

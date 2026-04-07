@@ -10,11 +10,19 @@
   "dexterity": 10,
   "bodyArmour": "skin of Zhor",
   "shield": "none",
-  "helmet": "helmet of ice",
-  "gloves": "pair of gloves",
-  "footwear": "pair of boots of stealth",
+  "helmets": [
+    "helmet of ice"
+  ],
+  "gloves": [
+    "pair of gloves"
+  ],
+  "footwear": [
+    "pair of boots of stealth"
+  ],
   "bootsOrBarding": true,
-  "cloak": "scarf \"Naur Sott\"",
+  "cloaks": [
+    "scarf \"Naur Sott\""
+  ],
   "orb": "orb of attunement",
   "amulet": "amulet of Rogere",
   "rings": [
@@ -25,6 +33,8 @@
     "rawName": "skin of Zhor",
     "displayName": "skin of Zhor",
     "objectClass": "armour",
+    "equipState": "worn",
+    "isCursed": false,
     "baseType": "animal skin",
     "enchant": 4,
     "artifactKind": "unrand",
@@ -44,86 +54,104 @@
       "SInv"
     ]
   },
-  "helmetDetails": {
-    "rawName": "helmet of ice",
-    "displayName": "helmet of ice",
-    "objectClass": "armour",
-    "baseType": "helmet",
-    "enchant": 2,
-    "artifactKind": "normal",
-    "ego": "ice",
-    "subtypeEffect": null,
-    "propertiesText": null,
-    "properties": [
-      "Ice"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "Ice"
-    ],
-    "artifactProperties": []
-  },
-  "glovesDetails": {
-    "rawName": "pair of gloves",
-    "displayName": "pair of gloves",
-    "objectClass": "armour",
-    "baseType": "gloves",
-    "enchant": 2,
-    "artifactKind": "normal",
-    "ego": null,
-    "subtypeEffect": null,
-    "propertiesText": null,
-    "properties": [],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": []
-  },
-  "footwearDetails": {
-    "rawName": "pair of boots of stealth",
-    "displayName": "pair of boots of stealth",
-    "objectClass": "armour",
-    "baseType": "boots",
-    "enchant": 2,
-    "artifactKind": "normal",
-    "ego": "stealth",
-    "subtypeEffect": null,
-    "propertiesText": null,
-    "properties": [
-      "Stlth+"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "Stlth+"
-    ],
-    "artifactProperties": []
-  },
-  "cloakDetails": {
-    "rawName": "scarf \"Naur Sott\"",
-    "displayName": "scarf \"Naur Sott\"",
-    "objectClass": "armour",
-    "baseType": "scarf",
-    "enchant": null,
-    "artifactKind": "randart",
-    "ego": null,
-    "subtypeEffect": null,
-    "propertiesText": "+Inv, Will+ Int+2",
-    "properties": [
-      "+Inv",
-      "Will+",
-      "Int+2"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": [
-      "+Inv",
-      "Will+",
-      "Int+2"
-    ]
-  },
+  "helmetDetails": [
+    {
+      "rawName": "helmet of ice",
+      "displayName": "helmet of ice",
+      "objectClass": "armour",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "helmet",
+      "enchant": 2,
+      "artifactKind": "normal",
+      "ego": "ice",
+      "subtypeEffect": null,
+      "propertiesText": null,
+      "properties": [
+        "Ice"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [
+        "Ice"
+      ],
+      "artifactProperties": []
+    }
+  ],
+  "glovesDetails": [
+    {
+      "rawName": "pair of gloves",
+      "displayName": "pair of gloves",
+      "objectClass": "armour",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "gloves",
+      "enchant": 2,
+      "artifactKind": "normal",
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": null,
+      "properties": [],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": []
+    }
+  ],
+  "footwearDetails": [
+    {
+      "rawName": "pair of boots of stealth",
+      "displayName": "pair of boots of stealth",
+      "objectClass": "armour",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "boots",
+      "enchant": 2,
+      "artifactKind": "normal",
+      "ego": "stealth",
+      "subtypeEffect": null,
+      "propertiesText": null,
+      "properties": [
+        "Stlth+"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [
+        "Stlth+"
+      ],
+      "artifactProperties": []
+    }
+  ],
+  "cloakDetails": [
+    {
+      "rawName": "scarf \"Naur Sott\"",
+      "displayName": "scarf \"Naur Sott\"",
+      "objectClass": "armour",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "scarf",
+      "enchant": null,
+      "artifactKind": "randart",
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "+Inv, Will+ Int+2",
+      "properties": [
+        "+Inv",
+        "Will+",
+        "Int+2"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
+        "+Inv",
+        "Will+",
+        "Int+2"
+      ]
+    }
+  ],
   "orbDetails": {
     "rawName": "orb of attunement",
     "displayName": "orb of attunement",
     "objectClass": "armour",
+    "equipState": "worn",
+    "isCursed": false,
     "baseType": "orb",
     "enchant": null,
     "artifactKind": "normal",
@@ -143,6 +171,8 @@
     "rawName": "amulet of Rogere",
     "displayName": "randart amulet",
     "objectClass": "jewellery",
+    "equipState": "worn",
+    "isCursed": false,
     "baseType": "amulet",
     "enchant": null,
     "artifactKind": "randart",
@@ -169,6 +199,8 @@
       "rawName": "ring of resist corrosion",
       "displayName": "ring of resist corrosion",
       "objectClass": "jewellery",
+      "equipState": "worn",
+      "isCursed": false,
       "baseType": "ring",
       "enchant": null,
       "artifactKind": "normal",
@@ -188,6 +220,8 @@
       "rawName": "ring \"Tith\"",
       "displayName": "randart ring",
       "objectClass": "jewellery",
+      "equipState": "worn",
+      "isCursed": false,
       "baseType": "ring",
       "enchant": null,
       "artifactKind": "randart",
@@ -207,6 +241,39 @@
     }
   ],
   "skills": {
+    "fighting": 20,
+    "macesFlails": 0,
+    "axes": 0,
+    "polearms": 0,
+    "staves": 12,
+    "unarmedCombat": 0,
+    "throwing": 0,
+    "shortBlades": 4.6,
+    "longBlades": 0,
+    "rangedWeapons": 0,
+    "armour": 7.5,
+    "dodging": 13.8,
+    "shields": 0,
+    "stealth": 7.3,
+    "spellcasting": 15.2,
+    "conjurations": 18,
+    "hexes": 5,
+    "summonings": 0,
+    "necromancy": 0,
+    "forgecraft": 12,
+    "translocations": 10,
+    "transmutations": 0,
+    "alchemy": 0,
+    "fireMagic": 0,
+    "iceMagic": 12,
+    "airMagic": 0,
+    "earthMagic": 17.8,
+    "poisonMagic": 0,
+    "invocations": 20.1,
+    "evocations": 11.8,
+    "shapeshifting": 0
+  },
+  "effectiveSkills": {
     "fighting": 20,
     "macesFlails": 0,
     "axes": 0,

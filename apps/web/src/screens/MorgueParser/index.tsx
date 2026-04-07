@@ -49,6 +49,14 @@ export function MorgueParserScreen() {
     return summarizeAmulet(result.record.amulet)
   }, [result])
 
+  const summarizedFootwear = useMemo(() => {
+    if (!result?.ok) {
+      return 'none'
+    }
+
+    return summarizeEquipmentList(result.record.footwear)
+  }, [result])
+
   const summarizedMutations = useMemo(() => {
     if (!result?.ok) {
       return 'none'
@@ -147,7 +155,7 @@ export function MorgueParserScreen() {
                 <SummaryItem label="Version" value={result.record.version} />
                 <SummaryItem label="AC / EV / SH" value={`${result.record.ac} / ${result.record.ev} / ${result.record.sh}`} />
                 <SummaryItem label="Body Armour" value={result.record.bodyArmour} />
-                <SummaryItem label="Footwear" value={result.record.footwear} />
+                <SummaryItem label="Footwear" value={summarizedFootwear} />
                 <SummaryItem label="Shield" value={result.record.shield} />
                 <SummaryItem label="Orb" value={result.record.orb} />
                 <SummaryItem label="Amulet" value={summarizedAmulet} />
@@ -241,14 +249,18 @@ export function MorgueParserScreen() {
 }
 
 function summarizeRings(rings: string[]): string {
-  if (rings.length === 0) {
+  return summarizeEquipmentList(rings)
+}
+
+function summarizeEquipmentList(values: string[]): string {
+  if (values.length === 0) {
     return 'none'
   }
 
   const counts = new Map<string, number>()
 
-  for (const ring of rings) {
-    counts.set(ring, (counts.get(ring) ?? 0) + 1)
+  for (const value of values) {
+    counts.set(value, (counts.get(value) ?? 0) + 1)
   }
 
   return [...counts.entries()]

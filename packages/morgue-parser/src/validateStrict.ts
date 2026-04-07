@@ -37,10 +37,15 @@ export function validateStrict(row: Partial<ParsedMorgueTextRecord>): ParsedMorg
 
   if (
     !row.skills
+    || !row.effectiveSkills
     || !isFiniteNumber(row.skills.armour)
     || !isFiniteNumber(row.skills.dodging)
     || !isFiniteNumber(row.skills.shields)
     || !isFiniteNumber(row.skills.spellcasting)
+    || !isFiniteNumber(row.effectiveSkills.armour)
+    || !isFiniteNumber(row.effectiveSkills.dodging)
+    || !isFiniteNumber(row.effectiveSkills.shields)
+    || !isFiniteNumber(row.effectiveSkills.spellcasting)
   ) {
     throw new ParseFailure('skill_parse_failed')
   }

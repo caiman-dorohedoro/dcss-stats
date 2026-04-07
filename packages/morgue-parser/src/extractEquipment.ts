@@ -1,5 +1,6 @@
 import type {
   ArtifactKind,
+  EquipmentEquipState,
   EquipmentItemSnapshot,
   EquipmentObjectClass,
   EquipmentSnapshot,
@@ -109,6 +110,7 @@ const UNRAND_HEAD_ITEMS = [
 const UNRAND_GLOVE_ITEMS = [
   { name: "Delatra's gloves", baseType: 'gloves' },
   { name: "fencer's gloves", baseType: 'gloves' },
+  { name: 'gauntlets of War', baseType: 'gloves' },
   { name: 'gloves of the gadgeteer', baseType: 'gloves' },
   { name: "Mad Mage's Maulers", baseType: 'gloves' },
 ] as const satisfies readonly KnownUnrand[]
@@ -338,6 +340,8 @@ const FOOTWEAR_PATTERNS = [
 const GLOVE_PATTERNS = [
   { label: 'pair of gloves', baseType: 'gloves' },
   { label: 'gloves', baseType: 'gloves' },
+  { label: 'pair of gauntlets', baseType: 'gloves' },
+  { label: 'gauntlets', baseType: 'gloves' },
 ] as const
 
 const BASE_PATTERNS_BY_SLOT = {
@@ -409,20 +413,41 @@ function normalizeSpacing(value: string): string {
 }
 
 function cleanItemName(line: string): string {
-  return normalizeSpacing(
+  let value = normalizeSpacing(
     line
       .replace(/^[a-z0-9] - /i, '')
       .replace(/\s+\((?:worn|haunted)\).*$/i, '')
-      .replace(/\s+\{.*$/, '')
-      .replace(/^\s*the\s+/i, '')
-      .replace(/^\s*an?\s+/i, '')
-      .replace(/^[+-]\d+\s+/, ''),
+      .replace(/\s+\{.*$/, ''),
   )
+
+  let changed = true
+  while (changed) {
+    const nextValue = normalizeSpacing(
+      value
+        .replace(/^\s*the\s+/i, '')
+        .replace(/^\s*an?\s+/i, '')
+        .replace(/^\s*cursed\s+/i, '')
+        .replace(/^[+-]\d+\s+/, ''),
+    )
+    changed = nextValue !== value
+    value = nextValue
+  }
+
+  return value
 }
 
 function extractEnchantment(line: string): number | null {
-  const match = line.match(/^[a-z0-9] - (?:the |an? )?([+-]\d+)/i)
+  const normalized = line.replace(/^[a-z0-9] - /i, '')
+  const match = normalized.match(/^(?:the\s+)?(?:cursed\s+)?(?:an?\s+)?([+-]\d+)/i)
   return match ? Number.parseInt(match[1], 10) : null
+}
+
+function extractEquipState(line: string): EquipmentEquipState {
+  return /\(haunted\)/i.test(line) ? 'haunted' : 'worn'
+}
+
+function isCursed(line: string): boolean {
+  return /\bcursed\b/i.test(line)
 }
 
 function extractPropertiesText(line: string): string | null {
@@ -483,8 +508,14 @@ function getObjectClass(slot: EquipmentSlot): EquipmentObjectClass {
   return slot === 'amulet' || slot === 'ring' ? 'jewellery' : 'armour'
 }
 
+function normalizeKnownUnrandName(value: string): string {
+  return value.toLowerCase().replace(/^pair of /i, '').trim()
+}
+
 function findKnownUnrand(slot: EquipmentSlot, rawName: string): KnownUnrand | undefined {
-  return KNOWN_UNRAND_BY_SLOT[slot].find((item) => item.name.toLowerCase() === rawName.toLowerCase())
+  const normalizedRawName = normalizeKnownUnrandName(rawName)
+
+  return KNOWN_UNRAND_BY_SLOT[slot].find((item) => normalizeKnownUnrandName(item.name) === normalizedRawName)
 }
 
 function detectBaseType(slot: EquipmentSlot, rawName: string, knownUnrand?: KnownUnrand): string | null {
@@ -751,6 +782,8 @@ function buildEquipmentItem(slot: EquipmentSlot, line: string | undefined): Equi
   const propertiesText = extractPropertiesText(line)
   const extractedProperties = extractProperties(propertiesText)
   const objectClass = getObjectClass(slot)
+  const equipState = extractEquipState(line)
+  const cursed = isCursed(line)
   const knownUnrand = findKnownUnrand(slot, rawName)
   const baseType = detectBaseType(slot, rawName, knownUnrand)
   const enchant = extractEnchantment(line)
@@ -770,6 +803,8 @@ function buildEquipmentItem(slot: EquipmentSlot, line: string | undefined): Equi
     rawName,
     displayName: getDisplayName(slot, rawName, artifactKind, baseType, ego, subtypeEffect),
     objectClass,
+    equipState,
+    isCursed: cursed,
     baseType,
     enchant,
     artifactKind,
@@ -781,6 +816,12 @@ function buildEquipmentItem(slot: EquipmentSlot, line: string | undefined): Equi
     egoProperties,
     artifactProperties,
   }
+}
+
+function buildEquipmentItems(slot: EquipmentSlot, lines: string[]): EquipmentItemSnapshot[] {
+  return lines
+    .map((line) => buildEquipmentItem(slot, line))
+    .filter((item): item is EquipmentItemSnapshot => Boolean(item))
 }
 
 export function extractEquipment(text: string): EquipmentSnapshot {
@@ -801,7 +842,7 @@ export function extractEquipment(text: string): EquipmentSnapshot {
     /\bhood\b/i,
     ...exactNamePatterns(UNRAND_HEAD_ITEMS),
   ]
-  const glovesPatterns = [/\bgloves\b/i, ...exactNamePatterns(UNRAND_GLOVE_ITEMS)]
+  const glovesPatterns = [/\bgloves\b/i, /\bgauntlets\b/i, ...exactNamePatterns(UNRAND_GLOVE_ITEMS)]
   const bootsPatterns = [/\bboots\b/i, /\bbarding\b/i]
   const cloakPatterns = [/\bcloak\b/i, /\bscarf\b/i, ...exactNamePatterns(UNRAND_CLOAK_ITEMS)]
   const shieldPatterns = SHIELD_LABELS.map((label) => new RegExp(`\\b${label}\\b`, 'i'))
@@ -818,10 +859,10 @@ export function extractEquipment(text: string): EquipmentSnapshot {
   ]
 
   const shieldLine = armourLines.find((line) => hasAny(line, shieldPatterns))
-  const footwearLine = armourLines.find((line) => hasAny(line, bootsPatterns))
-  const helmetLine = armourLines.find((line) => hasAny(line, headPatterns))
-  const glovesLine = armourLines.find((line) => hasAny(line, glovesPatterns))
-  const cloakLine = armourLines.find((line) => hasAny(line, cloakPatterns))
+  const footwearLines = armourLines.filter((line) => hasAny(line, bootsPatterns))
+  const helmetLines = armourLines.filter((line) => hasAny(line, headPatterns))
+  const glovesLines = armourLines.filter((line) => hasAny(line, glovesPatterns))
+  const cloakLines = armourLines.filter((line) => hasAny(line, cloakPatterns))
   const orbLine = armourLines.find((line) => hasAny(line, orbPatterns))
   const bodyArmourLine = armourLines.find((line) => !hasAny(line, nonBodyPatterns))
   const amuletLine = jewelleryLines.find((line) => hasAny(line, amuletPatterns))
@@ -829,35 +870,33 @@ export function extractEquipment(text: string): EquipmentSnapshot {
 
   const bodyArmourDetails = buildEquipmentItem('bodyArmour', bodyArmourLine)
   const shieldDetails = buildEquipmentItem('shield', shieldLine)
-  const footwearDetails = buildEquipmentItem('footwear', footwearLine)
-  const helmetDetails = buildEquipmentItem('helmet', helmetLine)
-  const glovesDetails = buildEquipmentItem('gloves', glovesLine)
-  const cloakDetails = buildEquipmentItem('cloak', cloakLine)
+  const footwearDetails = buildEquipmentItems('footwear', footwearLines)
+  const helmetDetails = buildEquipmentItems('helmet', helmetLines)
+  const glovesDetails = buildEquipmentItems('gloves', glovesLines)
+  const cloakDetails = buildEquipmentItems('cloak', cloakLines)
   const orbDetails = buildEquipmentItem('orb', orbLine)
   const amuletDetails = buildEquipmentItem('amulet', amuletLine)
-  const ringDetails = ringLines
-    .map((line) => buildEquipmentItem('ring', line))
-    .filter((item): item is EquipmentItemSnapshot => Boolean(item))
+  const ringDetails = buildEquipmentItems('ring', ringLines)
 
   return {
     bodyArmour: bodyArmourDetails?.rawName ?? 'none',
     shield: shieldDetails?.rawName ?? 'none',
-    helmet: helmetDetails?.rawName ?? 'none',
-    gloves: glovesDetails?.rawName ?? 'none',
-    footwear: footwearDetails?.rawName ?? 'none',
-    bootsOrBarding: Boolean(footwearLine),
-    cloak: cloakDetails?.rawName ?? 'none',
+    helmets: helmetDetails.map((item) => item.rawName),
+    gloves: glovesDetails.map((item) => item.rawName),
+    footwear: footwearDetails.map((item) => item.rawName),
+    bootsOrBarding: footwearDetails.length > 0,
+    cloaks: cloakDetails.map((item) => item.rawName),
     orb: orbDetails?.rawName ?? 'none',
     amulet: amuletDetails?.rawName ?? 'none',
     rings: ringDetails.map((ring) => ring.rawName),
     bodyArmourDetails,
     shieldDetails,
-    helmetDetails,
-    glovesDetails,
-    footwearDetails,
-    cloakDetails,
+    helmetDetails: helmetDetails.length > 0 ? helmetDetails : undefined,
+    glovesDetails: glovesDetails.length > 0 ? glovesDetails : undefined,
+    footwearDetails: footwearDetails.length > 0 ? footwearDetails : undefined,
+    cloakDetails: cloakDetails.length > 0 ? cloakDetails : undefined,
     orbDetails,
     amuletDetails,
-    ringDetails,
+    ringDetails: ringDetails.length > 0 ? ringDetails : undefined,
   }
 }

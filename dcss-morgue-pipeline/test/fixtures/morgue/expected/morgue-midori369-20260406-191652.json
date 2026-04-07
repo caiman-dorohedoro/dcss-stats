@@ -10,11 +10,19 @@
   "dexterity": 8,
   "bodyArmour": "fire dragon scales of Undesirable Species",
   "shield": "buckler of cold resistance",
-  "helmet": "hat of intelligence",
-  "gloves": "pair of gloves of Neluicyoz",
-  "footwear": "pair of boots of flying",
+  "helmets": [
+    "hat of intelligence"
+  ],
+  "gloves": [
+    "pair of gloves of Neluicyoz"
+  ],
+  "footwear": [
+    "pair of boots of flying"
+  ],
   "bootsOrBarding": true,
-  "cloak": "cloak of willpower",
+  "cloaks": [
+    "cloak of willpower"
+  ],
   "orb": "none",
   "amulet": "amulet of magic regeneration",
   "rings": [
@@ -25,6 +33,8 @@
     "rawName": "fire dragon scales of Undesirable Species",
     "displayName": "fire dragon scales",
     "objectClass": "armour",
+    "equipState": "worn",
+    "isCursed": false,
     "baseType": "fire dragon scales",
     "enchant": 8,
     "artifactKind": "randart",
@@ -55,6 +65,8 @@
     "rawName": "buckler of cold resistance",
     "displayName": "buckler of cold resistance",
     "objectClass": "armour",
+    "equipState": "worn",
+    "isCursed": false,
     "baseType": "buckler",
     "enchant": 3,
     "artifactKind": "normal",
@@ -70,92 +82,110 @@
     ],
     "artifactProperties": []
   },
-  "helmetDetails": {
-    "rawName": "hat of intelligence",
-    "displayName": "hat of intelligence",
-    "objectClass": "armour",
-    "baseType": "hat",
-    "enchant": 2,
-    "artifactKind": "normal",
-    "ego": "intelligence",
-    "subtypeEffect": null,
-    "propertiesText": null,
-    "properties": [
-      "Int+3"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "Int+3"
-    ],
-    "artifactProperties": []
-  },
-  "glovesDetails": {
-    "rawName": "pair of gloves of Neluicyoz",
-    "displayName": "pair of gloves of Neluicyoz",
-    "objectClass": "armour",
-    "baseType": "gloves",
-    "enchant": 4,
-    "artifactKind": "randart",
-    "ego": null,
-    "subtypeEffect": null,
-    "propertiesText": "^Contam rPois rF+ rC+",
-    "properties": [
-      "^Contam",
-      "rPois",
-      "rF+",
-      "rC+"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": [
-      "^Contam",
-      "rPois",
-      "rF+",
-      "rC+"
-    ]
-  },
-  "footwearDetails": {
-    "rawName": "pair of boots of flying",
-    "displayName": "pair of boots of flying",
-    "objectClass": "armour",
-    "baseType": "boots",
-    "enchant": 2,
-    "artifactKind": "normal",
-    "ego": "flying",
-    "subtypeEffect": null,
-    "propertiesText": null,
-    "properties": [
-      "Fly"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "Fly"
-    ],
-    "artifactProperties": []
-  },
-  "cloakDetails": {
-    "rawName": "cloak of willpower",
-    "displayName": "cloak of willpower",
-    "objectClass": "armour",
-    "baseType": "cloak",
-    "enchant": 2,
-    "artifactKind": "normal",
-    "ego": "willpower",
-    "subtypeEffect": null,
-    "propertiesText": null,
-    "properties": [
-      "Will+"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "Will+"
-    ],
-    "artifactProperties": []
-  },
+  "helmetDetails": [
+    {
+      "rawName": "hat of intelligence",
+      "displayName": "hat of intelligence",
+      "objectClass": "armour",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "hat",
+      "enchant": 2,
+      "artifactKind": "normal",
+      "ego": "intelligence",
+      "subtypeEffect": null,
+      "propertiesText": null,
+      "properties": [
+        "Int+3"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [
+        "Int+3"
+      ],
+      "artifactProperties": []
+    }
+  ],
+  "glovesDetails": [
+    {
+      "rawName": "pair of gloves of Neluicyoz",
+      "displayName": "pair of gloves of Neluicyoz",
+      "objectClass": "armour",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "gloves",
+      "enchant": 4,
+      "artifactKind": "randart",
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "^Contam rPois rF+ rC+",
+      "properties": [
+        "^Contam",
+        "rPois",
+        "rF+",
+        "rC+"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
+        "^Contam",
+        "rPois",
+        "rF+",
+        "rC+"
+      ]
+    }
+  ],
+  "footwearDetails": [
+    {
+      "rawName": "pair of boots of flying",
+      "displayName": "pair of boots of flying",
+      "objectClass": "armour",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "boots",
+      "enchant": 2,
+      "artifactKind": "normal",
+      "ego": "flying",
+      "subtypeEffect": null,
+      "propertiesText": null,
+      "properties": [
+        "Fly"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [
+        "Fly"
+      ],
+      "artifactProperties": []
+    }
+  ],
+  "cloakDetails": [
+    {
+      "rawName": "cloak of willpower",
+      "displayName": "cloak of willpower",
+      "objectClass": "armour",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "cloak",
+      "enchant": 2,
+      "artifactKind": "normal",
+      "ego": "willpower",
+      "subtypeEffect": null,
+      "propertiesText": null,
+      "properties": [
+        "Will+"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [
+        "Will+"
+      ],
+      "artifactProperties": []
+    }
+  ],
   "amuletDetails": {
     "rawName": "amulet of magic regeneration",
     "displayName": "amulet of magic regeneration",
     "objectClass": "jewellery",
+    "equipState": "worn",
+    "isCursed": false,
     "baseType": "amulet",
     "enchant": null,
     "artifactKind": "normal",
@@ -176,6 +206,8 @@
       "rawName": "ring of wizardry",
       "displayName": "ring of wizardry",
       "objectClass": "jewellery",
+      "equipState": "worn",
+      "isCursed": false,
       "baseType": "ring",
       "enchant": null,
       "artifactKind": "normal",
@@ -195,6 +227,8 @@
       "rawName": "ring of the Byakko",
       "displayName": "randart ring",
       "objectClass": "jewellery",
+      "equipState": "worn",
+      "isCursed": false,
       "baseType": "ring",
       "enchant": null,
       "artifactKind": "randart",
@@ -220,6 +254,39 @@
     }
   ],
   "skills": {
+    "fighting": 25.5,
+    "macesFlails": 0,
+    "axes": 0,
+    "polearms": 0,
+    "staves": 0,
+    "unarmedCombat": 0,
+    "throwing": 0,
+    "shortBlades": 0,
+    "longBlades": 0,
+    "rangedWeapons": 0,
+    "armour": 18,
+    "dodging": 1.3,
+    "shields": 12,
+    "stealth": 1.4,
+    "spellcasting": 18,
+    "conjurations": 19,
+    "hexes": 0,
+    "summonings": 0,
+    "necromancy": 0,
+    "forgecraft": 23,
+    "translocations": 0,
+    "transmutations": 0,
+    "alchemy": 2,
+    "fireMagic": 27,
+    "iceMagic": 0,
+    "airMagic": 2,
+    "earthMagic": 9,
+    "poisonMagic": 0,
+    "invocations": 15,
+    "evocations": 9,
+    "shapeshifting": 0
+  },
+  "effectiveSkills": {
     "fighting": 25.5,
     "macesFlails": 0,
     "axes": 0,

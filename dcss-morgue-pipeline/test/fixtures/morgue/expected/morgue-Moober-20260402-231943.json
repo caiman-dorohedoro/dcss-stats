@@ -10,11 +10,17 @@
   "dexterity": 42,
   "bodyArmour": "moon troll leather armour",
   "shield": "none",
-  "helmet": "hat of the Bear Spirit",
-  "gloves": "none",
-  "footwear": "pair of boots of stealth",
+  "helmets": [
+    "hat of the Bear Spirit"
+  ],
+  "gloves": [],
+  "footwear": [
+    "pair of boots of stealth"
+  ],
   "bootsOrBarding": true,
-  "cloak": "scarf \"Wiapirghias\"",
+  "cloaks": [
+    "scarf \"Wiapirghias\""
+  ],
   "orb": "orb of mesmerism",
   "amulet": "amulet of Vitality",
   "rings": [
@@ -25,6 +31,8 @@
     "rawName": "moon troll leather armour",
     "displayName": "moon troll leather armour",
     "objectClass": "armour",
+    "equipState": "worn",
+    "isCursed": false,
     "baseType": "troll leather armour",
     "enchant": 5,
     "artifactKind": "unrand",
@@ -46,79 +54,93 @@
       "MP+5"
     ]
   },
-  "helmetDetails": {
-    "rawName": "hat of the Bear Spirit",
-    "displayName": "hat of the Bear Spirit",
-    "objectClass": "armour",
-    "baseType": "hat",
-    "enchant": 2,
-    "artifactKind": "unrand",
-    "ego": null,
-    "subtypeEffect": null,
-    "propertiesText": "Spirit, Bear, *Rage Will++",
-    "properties": [
-      "Spirit",
-      "Bear",
-      "*Rage",
-      "Will++"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": [
-      "Spirit",
-      "Bear",
-      "*Rage",
-      "Will++"
-    ]
-  },
-  "footwearDetails": {
-    "rawName": "pair of boots of stealth",
-    "displayName": "pair of boots of stealth",
-    "objectClass": "armour",
-    "baseType": "boots",
-    "enchant": 2,
-    "artifactKind": "normal",
-    "ego": "stealth",
-    "subtypeEffect": null,
-    "propertiesText": null,
-    "properties": [
-      "Stlth+"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "Stlth+"
-    ],
-    "artifactProperties": []
-  },
-  "cloakDetails": {
-    "rawName": "scarf \"Wiapirghias\"",
-    "displayName": "scarf \"Wiapirghias\"",
-    "objectClass": "armour",
-    "baseType": "scarf",
-    "enchant": null,
-    "artifactKind": "randart",
-    "ego": null,
-    "subtypeEffect": null,
-    "propertiesText": "rC+ rF+, rElec Slay+3",
-    "properties": [
-      "rC+",
-      "rF+",
-      "rElec",
-      "Slay+3"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": [
-      "rC+",
-      "rF+",
-      "rElec",
-      "Slay+3"
-    ]
-  },
+  "helmetDetails": [
+    {
+      "rawName": "hat of the Bear Spirit",
+      "displayName": "hat of the Bear Spirit",
+      "objectClass": "armour",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "hat",
+      "enchant": 2,
+      "artifactKind": "unrand",
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "Spirit, Bear, *Rage Will++",
+      "properties": [
+        "Spirit",
+        "Bear",
+        "*Rage",
+        "Will++"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
+        "Spirit",
+        "Bear",
+        "*Rage",
+        "Will++"
+      ]
+    }
+  ],
+  "footwearDetails": [
+    {
+      "rawName": "pair of boots of stealth",
+      "displayName": "pair of boots of stealth",
+      "objectClass": "armour",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "boots",
+      "enchant": 2,
+      "artifactKind": "normal",
+      "ego": "stealth",
+      "subtypeEffect": null,
+      "propertiesText": null,
+      "properties": [
+        "Stlth+"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [
+        "Stlth+"
+      ],
+      "artifactProperties": []
+    }
+  ],
+  "cloakDetails": [
+    {
+      "rawName": "scarf \"Wiapirghias\"",
+      "displayName": "scarf \"Wiapirghias\"",
+      "objectClass": "armour",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "scarf",
+      "enchant": null,
+      "artifactKind": "randart",
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "rC+ rF+, rElec Slay+3",
+      "properties": [
+        "rC+",
+        "rF+",
+        "rElec",
+        "Slay+3"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
+        "rC+",
+        "rF+",
+        "rElec",
+        "Slay+3"
+      ]
+    }
+  ],
   "orbDetails": {
     "rawName": "orb of mesmerism",
     "displayName": "orb of mesmerism",
     "objectClass": "armour",
+    "equipState": "worn",
+    "isCursed": false,
     "baseType": "orb",
     "enchant": null,
     "artifactKind": "normal",
@@ -138,6 +160,8 @@
     "rawName": "amulet of Vitality",
     "displayName": "amulet of Vitality",
     "objectClass": "jewellery",
+    "equipState": "worn",
+    "isCursed": false,
     "baseType": "amulet",
     "enchant": null,
     "artifactKind": "unrand",
@@ -160,6 +184,8 @@
       "rawName": "ring of New Discoveries",
       "displayName": "randart ring",
       "objectClass": "jewellery",
+      "equipState": "worn",
+      "isCursed": false,
       "baseType": "ring",
       "enchant": null,
       "artifactKind": "randart",
@@ -185,6 +211,8 @@
       "rawName": "ring of Suxzeiv",
       "displayName": "randart ring",
       "objectClass": "jewellery",
+      "equipState": "worn",
+      "isCursed": false,
       "baseType": "ring",
       "enchant": null,
       "artifactKind": "randart",
@@ -215,6 +243,39 @@
     "throwing": 0,
     "shortBlades": 20,
     "longBlades": 20.8,
+    "rangedWeapons": 18.9,
+    "armour": 10.6,
+    "dodging": 10.6,
+    "shields": 0,
+    "stealth": 10.9,
+    "spellcasting": 21.1,
+    "conjurations": 0.4,
+    "hexes": 0,
+    "summonings": 0.2,
+    "necromancy": 0,
+    "forgecraft": 0,
+    "translocations": 19.4,
+    "transmutations": 0,
+    "alchemy": 0.2,
+    "fireMagic": 0,
+    "iceMagic": 0.2,
+    "airMagic": 0,
+    "earthMagic": 0,
+    "poisonMagic": 0,
+    "invocations": 0,
+    "evocations": 3.6,
+    "shapeshifting": 26
+  },
+  "effectiveSkills": {
+    "fighting": 27,
+    "macesFlails": 0.3,
+    "axes": 0,
+    "polearms": 0.5,
+    "staves": 0.4,
+    "unarmedCombat": 0,
+    "throwing": 0,
+    "shortBlades": 23.5,
+    "longBlades": 23.8,
     "rangedWeapons": 18.9,
     "armour": 10.6,
     "dodging": 10.6,

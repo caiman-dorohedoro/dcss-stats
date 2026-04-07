@@ -90,6 +90,10 @@ Relevant structures:
 - `crawl/crawl-ref/source/equipment-slot.h`
   - slot enums such as `SLOT_BODY_ARMOUR`, `SLOT_HELMET`, `SLOT_GLOVES`,
     `SLOT_BOOTS`, `SLOT_BARDING`, `SLOT_CLOAK`, `SLOT_RING`, `SLOT_AMULET`
+  - `SLOT_HAUNTED_AUX` for poltergeist-compatible haunted auxiliary equipment
+- `crawl/crawl-ref/source/player-equip.cc`
+  - compatible slot mapping, including how `SLOT_HAUNTED_AUX` expands to
+    helmet/gloves/boots/cloak compatibility
 - `crawl/crawl-ref/source/item-def.h`
   - `item_def`
 
@@ -149,7 +153,11 @@ Code:
 
 ## Skills
 
-Skills live under a single `skills` object.
+Skills live under two parallel objects:
+
+- `skills`: the base trained skill values
+- `effectiveSkills`: the current displayed values after temporary or passive
+  modifiers are applied
 
 Examples:
 
@@ -166,12 +174,16 @@ Examples:
 - `skills.earthMagic`
 - `skills.invocations`
 - `skills.evocations`
+- `effectiveSkills.fighting`
+- `effectiveSkills.spellcasting`
 
 Why this is nested:
 
 - it groups skill state cleanly as one subsystem
 - downstream consumers still get direct key access like `skills.armour`
 - it avoids mixing dozens of skill keys with unrelated top-level record fields
+- it preserves both the stable underlying value and the currently effective
+  value without forcing consumers to reverse-engineer parenthesized morgue text
 
 The parser accepts both older and newer morgue skill line formats, including
 modern lines such as:
@@ -179,6 +191,14 @@ modern lines such as:
 - `O Level 27 Fighting`
 - `- Level 20.0(23.5) Short Blades`
 - `+ Level 7.5 Armour`
+
+When a skill line includes a parenthesized value, the parser stores:
+
+- the first value in `skills`
+- the parenthesized value in `effectiveSkills`
+
+When no parenthesized value is present, `effectiveSkills` falls back to the
+same value as `skills`.
 
 Unknown future skills are ignored rather than causing a parse failure.
 
@@ -276,34 +296,48 @@ light cleanup such as removing:
 - leading enchant prefix
 - trailing `(worn)`
 
-These are:
+Singular slot summaries:
 
 - `bodyArmour`
 - `shield`
-- `footwear`
 - `orb`
 - `amulet`
-- `rings`
-- `helmet`
+
+List-valued slot summaries:
+
+- `helmets`
 - `gloves`
-- `cloak`
+- `footwear`
+- `cloaks`
+- `rings`
+
+Other equipment flags:
+
 - `bootsOrBarding`
 
 Examples:
 
 - `bodyArmour: "fire dragon scales of Undesirable Species"`
 - `shield: "buckler of cold resistance"`
-- `helmet: "hat of intelligence"`
+- `helmets: ["hat of intelligence"]`
+- `footwear: ["pair of boots of flying"]`
+- `cloaks: ["cloak of willpower"]`
 - `amulet: "amulet of magic regeneration"`
 - `rings: ["ring of wizardry", "ring of the Byakko"]`
-- `gloves: "Mad Mage's Maulers"`
+- `gloves: ["Mad Mage's Maulers"]`
 
 These are meant to preserve the exact morgue-facing identity of the equipped
 item. They are intentionally not the main semantic layer anymore.
 
+The list-valued aux slots are deliberate. Crawl can support more than one
+compatible aux item in edge cases such as poltergeists, whose haunted auxiliary
+equipment is modeled through `SLOT_HAUNTED_AUX`. Morgues for those characters
+can show multiple haunted hats, boots, cloaks, or gloves at once, so the parser
+keeps them all instead of collapsing to a single slot string.
+
 ### 2. Detailed slot objects
 
-Each equipped slot may also carry a detailed object:
+Each equipped slot may also carry a detailed object or list of objects:
 
 - `bodyArmourDetails`
 - `shieldDetails`
@@ -315,7 +349,14 @@ Each equipped slot may also carry a detailed object:
 - `glovesDetails`
 - `cloakDetails`
 
-The detailed object is `EquipmentItemSnapshot`.
+The aux detail fields are arrays:
+
+- `helmetDetails: EquipmentItemSnapshot[]`
+- `glovesDetails: EquipmentItemSnapshot[]`
+- `footwearDetails: EquipmentItemSnapshot[]`
+- `cloakDetails: EquipmentItemSnapshot[]`
+
+The detailed object shape is `EquipmentItemSnapshot`.
 
 ## EquipmentItemSnapshot
 
@@ -324,6 +365,8 @@ type EquipmentItemSnapshot = {
   rawName: string
   displayName: string
   objectClass: 'armour' | 'jewellery'
+  equipState: 'worn' | 'haunted'
+  isCursed: boolean
   baseType: string | null
   enchant: number | null
   artifactKind: 'normal' | 'randart' | 'unrand'
@@ -370,6 +413,23 @@ A coarse Crawl-style category:
 
 This intentionally mirrors Crawl's large item categories more than our UI slot
 names do.
+
+#### `equipState`
+
+The wearing state preserved from the morgue line:
+
+- `worn`
+- `haunted`
+
+This exists because poltergeist morgues explicitly distinguish normal equipped
+items from haunted auxiliary items.
+
+#### `isCursed`
+
+Whether the morgue line marked the item as cursed.
+
+This is stored as state instead of being left embedded in the item name because
+cursedness is not part of Crawl's item identity.
 
 #### `baseType`
 
@@ -691,33 +751,47 @@ Parsed model:
 }
 ```
 
+### Cursed haunted aux equipment
+
+Morgue:
+
+```text
+the cursed +3 pair of gauntlets of War (haunted) {Slay+5, Self, Comp}
+```
+
+Parsed model:
+
+```json
+{
+  "rawName": "pair of gauntlets of War",
+  "displayName": "gauntlets of War",
+  "objectClass": "armour",
+  "equipState": "haunted",
+  "isCursed": true,
+  "baseType": "gloves",
+  "enchant": 3,
+  "artifactKind": "unrand",
+  "properties": ["Slay+5", "Self", "Comp"],
+  "artifactProperties": ["Slay+5", "Self", "Comp"]
+}
+```
+
 ## Summary Naming Rules
 
-The slot summary fields intentionally do not preserve every raw item name.
+The slot summary fields keep the cleaned morgue-facing item names.
 
-Current rules:
+Examples:
 
-- normal armour with ego keeps a semantic display name
-  - `hat of intelligence`
-  - `buckler of cold resistance`
-- normal jewellery keeps its subtype-style name
-  - `ring of wizardry`
-  - `amulet of magic regeneration`
-- randart rings, amulets, and orbs are generalized
-  - `randart ring`
-  - `randart amulet`
-  - `randart orb`
-- unrands keep their specific names
-  - `Mad Mage's Maulers`
-  - `skin of Zhor`
-  - `amulet of Vitality`
+- `bodyArmour: "fire dragon scales of Undesirable Species"`
+- `helmets: ["hat of intelligence"]`
+- `gloves: ["Mad Mage's Maulers"]`
+- `rings: ["ring of wizardry", "ring of the Byakko"]`
 
 Why:
 
-- generic randart semantic names are better for aggregation
-- specific unrand names are stable and meaningful
-- raw summary fields still retain the original equipped names
-- details retain both `rawName` and semantic `displayName`
+- summary fields should match what the morgue visibly showed
+- downstream tools often want a quick readable label without opening detail
+- details still retain the semantic `displayName` and all structural fields
 
 ## Tests and Golden Fixtures
 

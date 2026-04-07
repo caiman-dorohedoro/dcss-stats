@@ -10,11 +10,19 @@
   "dexterity": 44,
   "bodyArmour": "golden dragon scales",
   "shield": "buckler of Snakes and Ladders",
-  "helmet": "hat of the Alchemist",
-  "gloves": "pair of gloves of strength",
-  "footwear": "pair of boots of flying",
+  "helmets": [
+    "hat of the Alchemist"
+  ],
+  "gloves": [
+    "pair of gloves of strength"
+  ],
+  "footwear": [
+    "pair of boots of flying"
+  ],
   "bootsOrBarding": true,
-  "cloak": "cloak of willpower",
+  "cloaks": [
+    "cloak of willpower"
+  ],
   "orb": "none",
   "amulet": "amulet of Puwn",
   "rings": [
@@ -25,6 +33,8 @@
     "rawName": "golden dragon scales",
     "displayName": "golden dragon scales",
     "objectClass": "armour",
+    "equipState": "worn",
+    "isCursed": false,
     "baseType": "golden dragon scales",
     "enchant": 7,
     "artifactKind": "normal",
@@ -48,6 +58,8 @@
     "rawName": "buckler of Snakes and Ladders",
     "displayName": "buckler",
     "objectClass": "armour",
+    "equipState": "worn",
+    "isCursed": false,
     "baseType": "buckler",
     "enchant": 0,
     "artifactKind": "randart",
@@ -69,100 +81,118 @@
       "Stlth-"
     ]
   },
-  "helmetDetails": {
-    "rawName": "hat of the Alchemist",
-    "displayName": "hat of the Alchemist",
-    "objectClass": "armour",
-    "baseType": "hat",
-    "enchant": -2,
-    "artifactKind": "unrand",
-    "ego": null,
-    "subtypeEffect": null,
-    "propertiesText": "rElec rPois rF+ rC+ rN+ Will+ rMut rCorr",
-    "properties": [
-      "rElec",
-      "rPois",
-      "rF+",
-      "rC+",
-      "rN+",
-      "Will+",
-      "rMut",
-      "rCorr"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": [
-      "rElec",
-      "rPois",
-      "rF+",
-      "rC+",
-      "rN+",
-      "Will+",
-      "rMut",
-      "rCorr"
-    ]
-  },
-  "glovesDetails": {
-    "rawName": "pair of gloves of strength",
-    "displayName": "pair of gloves of strength",
-    "objectClass": "armour",
-    "baseType": "gloves",
-    "enchant": 2,
-    "artifactKind": "normal",
-    "ego": "strength",
-    "subtypeEffect": null,
-    "propertiesText": null,
-    "properties": [
-      "Str+3"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "Str+3"
-    ],
-    "artifactProperties": []
-  },
-  "footwearDetails": {
-    "rawName": "pair of boots of flying",
-    "displayName": "pair of boots of flying",
-    "objectClass": "armour",
-    "baseType": "boots",
-    "enchant": 2,
-    "artifactKind": "normal",
-    "ego": "flying",
-    "subtypeEffect": null,
-    "propertiesText": null,
-    "properties": [
-      "Fly"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "Fly"
-    ],
-    "artifactProperties": []
-  },
-  "cloakDetails": {
-    "rawName": "cloak of willpower",
-    "displayName": "cloak of willpower",
-    "objectClass": "armour",
-    "baseType": "cloak",
-    "enchant": 2,
-    "artifactKind": "normal",
-    "ego": "willpower",
-    "subtypeEffect": null,
-    "propertiesText": null,
-    "properties": [
-      "Will+"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "Will+"
-    ],
-    "artifactProperties": []
-  },
+  "helmetDetails": [
+    {
+      "rawName": "hat of the Alchemist",
+      "displayName": "hat of the Alchemist",
+      "objectClass": "armour",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "hat",
+      "enchant": -2,
+      "artifactKind": "unrand",
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "rElec rPois rF+ rC+ rN+ Will+ rMut rCorr",
+      "properties": [
+        "rElec",
+        "rPois",
+        "rF+",
+        "rC+",
+        "rN+",
+        "Will+",
+        "rMut",
+        "rCorr"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
+        "rElec",
+        "rPois",
+        "rF+",
+        "rC+",
+        "rN+",
+        "Will+",
+        "rMut",
+        "rCorr"
+      ]
+    }
+  ],
+  "glovesDetails": [
+    {
+      "rawName": "pair of gloves of strength",
+      "displayName": "pair of gloves of strength",
+      "objectClass": "armour",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "gloves",
+      "enchant": 2,
+      "artifactKind": "normal",
+      "ego": "strength",
+      "subtypeEffect": null,
+      "propertiesText": null,
+      "properties": [
+        "Str+3"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [
+        "Str+3"
+      ],
+      "artifactProperties": []
+    }
+  ],
+  "footwearDetails": [
+    {
+      "rawName": "pair of boots of flying",
+      "displayName": "pair of boots of flying",
+      "objectClass": "armour",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "boots",
+      "enchant": 2,
+      "artifactKind": "normal",
+      "ego": "flying",
+      "subtypeEffect": null,
+      "propertiesText": null,
+      "properties": [
+        "Fly"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [
+        "Fly"
+      ],
+      "artifactProperties": []
+    }
+  ],
+  "cloakDetails": [
+    {
+      "rawName": "cloak of willpower",
+      "displayName": "cloak of willpower",
+      "objectClass": "armour",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "cloak",
+      "enchant": 2,
+      "artifactKind": "normal",
+      "ego": "willpower",
+      "subtypeEffect": null,
+      "propertiesText": null,
+      "properties": [
+        "Will+"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [
+        "Will+"
+      ],
+      "artifactProperties": []
+    }
+  ],
   "amuletDetails": {
     "rawName": "amulet of Puwn",
     "displayName": "randart amulet",
     "objectClass": "jewellery",
+    "equipState": "worn",
+    "isCursed": false,
     "baseType": "amulet",
     "enchant": null,
     "artifactKind": "randart",
@@ -185,6 +215,8 @@
       "rawName": "ring of dexterity",
       "displayName": "ring of dexterity",
       "objectClass": "jewellery",
+      "equipState": "worn",
+      "isCursed": false,
       "baseType": "ring",
       "enchant": 6,
       "artifactKind": "normal",
@@ -204,6 +236,8 @@
       "rawName": "ring of strength",
       "displayName": "ring of strength",
       "objectClass": "jewellery",
+      "equipState": "worn",
+      "isCursed": false,
       "baseType": "ring",
       "enchant": 6,
       "artifactKind": "normal",
@@ -221,6 +255,39 @@
     }
   ],
   "skills": {
+    "fighting": 19.9,
+    "macesFlails": 19.4,
+    "axes": 19.4,
+    "polearms": 23.5,
+    "staves": 19.4,
+    "unarmedCombat": 19.4,
+    "throwing": 19.4,
+    "shortBlades": 20.3,
+    "longBlades": 19.4,
+    "rangedWeapons": 19.4,
+    "armour": 19.4,
+    "dodging": 19.9,
+    "shields": 19.4,
+    "stealth": 19.4,
+    "spellcasting": 20,
+    "conjurations": 17.4,
+    "hexes": 16.6,
+    "summonings": 20.1,
+    "necromancy": 16.6,
+    "forgecraft": 16.6,
+    "translocations": 16.6,
+    "transmutations": 0,
+    "alchemy": 16.6,
+    "fireMagic": 16.6,
+    "iceMagic": 16.6,
+    "airMagic": 16.6,
+    "earthMagic": 16.6,
+    "poisonMagic": 0,
+    "invocations": 23.2,
+    "evocations": 19.4,
+    "shapeshifting": 18
+  },
+  "effectiveSkills": {
     "fighting": 19.9,
     "macesFlails": 19.4,
     "axes": 19.4,

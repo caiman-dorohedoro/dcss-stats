@@ -78,7 +78,7 @@ function parseSkillLines(text: string) {
     .filter(Boolean)
     .map((line) => {
       const match = line.match(
-        /^(?:[O+*-]\s+)?Level\s+([0-9]+(?:\.[0-9])?)(?:\([0-9]+(?:\.[0-9])?\))?\s+(.+?)$/,
+        /^(?:[O+*-]\s+)?Level\s+([0-9]+(?:\.[0-9])?)(?:\(([0-9]+(?:\.[0-9])?)\))?\s+(.+?)$/,
       )
 
       if (!match) {
@@ -86,8 +86,9 @@ function parseSkillLines(text: string) {
       }
 
       return {
-        name: match[2].trim(),
+        name: match[3].trim(),
         level: Number(match[1]),
+        effectiveLevel: match[2] ? Number(match[2]) : Number(match[1]),
       }
     })
 }
@@ -95,6 +96,7 @@ function parseSkillLines(text: string) {
 export function extractSkills(text: string): SkillsSnapshot {
   const parsed = parseSkillLines(text)
   const skills: SkillLevelsSnapshot = { ...DEFAULT_SKILL_LEVELS }
+  const effectiveSkills: SkillLevelsSnapshot = { ...DEFAULT_SKILL_LEVELS }
 
   for (const entry of parsed) {
     const normalizedName = SKILL_NAME_MAP[entry.name.toLowerCase() as keyof typeof SKILL_NAME_MAP]
@@ -106,7 +108,8 @@ export function extractSkills(text: string): SkillsSnapshot {
     }
 
     skills[normalizedName] = entry.level
+    effectiveSkills[normalizedName] = entry.effectiveLevel
   }
 
-  return { skills }
+  return { skills, effectiveSkills }
 }
