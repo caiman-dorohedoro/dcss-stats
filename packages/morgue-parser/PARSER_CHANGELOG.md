@@ -49,13 +49,14 @@ the parsed row preserves the exact morgue version so downstream tools can:
 
 ### What changed
 
-The parser now stores `background` in addition to `species`.
+The parser now stores `background` in addition to `species`, and preserves
+`speciesVariant` when the canonical `species` loses useful detail.
 
 Examples:
 
 - `Formicid Fighter` -> `species: "Formicid"`, `background: "Fighter"`
 - `Djinni Fire Elementalist` -> `species: "Djinni"`, `background: "Fire Elementalist"`
-- `Red Draconian Summoner` -> `species: "Draconian"`, `background: "Summoner"`
+- `Red Draconian Summoner` -> `species: "Draconian"`, `speciesVariant: "Red Draconian"`, `background: "Summoner"`
 
 ### Why
 

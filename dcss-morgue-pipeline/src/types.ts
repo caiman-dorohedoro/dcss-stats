@@ -54,6 +54,7 @@ export type CandidateGame = {
 export type BaseStatsSnapshot = {
   version: MorgueVersion
   species: string
+  speciesVariant: string | null
   background: string | null
   xl: number
   ac: number

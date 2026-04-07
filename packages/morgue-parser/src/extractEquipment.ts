@@ -83,7 +83,7 @@ const UNRAND_BODY_ARMOUR_ITEMS = [
 const UNRAND_SHIELD_ITEMS = [
   { name: 'tower shield of Ignorance', baseType: 'tower shield' },
   { name: 'shield "Bullseye"' },
-  { name: 'shield of Resistance' },
+  { name: 'shield of Resistance', baseType: 'kite shield' },
   { name: 'shield of the Gong' },
   { name: "Storm Queen's Shield" },
   { name: "warlock's mirror" },
@@ -1162,7 +1162,10 @@ export function extractEquipment(text: string): EquipmentSnapshot {
   const glovesPatterns = [/\bgloves\b/i, /\bgauntlets\b/i, ...exactNamePatterns(UNRAND_GLOVE_ITEMS)]
   const bootsPatterns = [/\bboots\b/i, /\bbarding\b/i]
   const cloakPatterns = [/\bcloak\b/i, /\bscarf\b/i, ...exactNamePatterns(UNRAND_CLOAK_ITEMS)]
-  const shieldPatterns = SHIELD_LABELS.map((label) => new RegExp(`\\b${label}\\b`, 'i'))
+  const shieldPatterns = [
+    ...SHIELD_LABELS.map((label) => new RegExp(`\\b${label}\\b`, 'i')),
+    ...exactNamePatterns(UNRAND_SHIELD_ITEMS),
+  ]
   const orbPatterns = [/\borb\b/i]
   const amuletPatterns = [/\bamulet\b/i, /\bnecklace\b/i, /\bpendant\b/i, /\bbrooch\b/i]
   const ringPatterns = [/\bring\b/i]

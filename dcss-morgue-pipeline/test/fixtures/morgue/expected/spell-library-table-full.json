@@ -2,6 +2,7 @@
   "playerName": "Sorcerer",
   "version": "0.34.0",
   "species": "Djinni",
+  "speciesVariant": null,
   "background": "Fire Elementalist",
   "xl": 7,
   "ac": 4,

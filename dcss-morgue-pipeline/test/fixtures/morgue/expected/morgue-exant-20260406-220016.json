@@ -2,6 +2,7 @@
   "playerName": "exant",
   "version": "0.34.0",
   "species": "Octopode",
+  "speciesVariant": null,
   "background": "Brigand",
   "xl": 21,
   "ac": 3,

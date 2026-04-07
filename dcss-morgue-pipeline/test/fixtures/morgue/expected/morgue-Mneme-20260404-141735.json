@@ -2,6 +2,7 @@
   "playerName": "Mneme",
   "version": "0.35-a0-256-g859e8e3ba0",
   "species": "Poltergeist",
+  "speciesVariant": null,
   "background": "Enchanter",
   "xl": 22,
   "ac": 10,

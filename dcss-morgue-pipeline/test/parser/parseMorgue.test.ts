@@ -120,6 +120,7 @@ describe('parseMorgue', () => {
     if (result.ok) {
       expect(result.record.version).toBe('0.35-a0-257-gf9e06672e4')
       expect(result.record.species).toBe('Draconian')
+      expect(result.record.speciesVariant).toBe('White Draconian')
       expect(result.record.ac).toBe(11)
       expect(result.record.ev).toBe(11)
       expect(result.record.sh).toBe(0)

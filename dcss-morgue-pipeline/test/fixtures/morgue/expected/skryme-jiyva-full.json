@@ -2,6 +2,7 @@
   "playerName": "Skryme",
   "version": "0.35-a0-256-g859e8e3ba0",
   "species": "Minotaur",
+  "speciesVariant": null,
   "background": "Fighter",
   "xl": 17,
   "ac": 10,

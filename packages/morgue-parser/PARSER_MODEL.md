@@ -133,6 +133,7 @@ Base stats are intentionally simple:
 - `version`
 - `playerName`
 - `species`
+- `speciesVariant`
 - `background`
 - `xl`
 - `ac`
@@ -148,6 +149,8 @@ Notes:
   `0.35-a0-257-gf9e06672e4`, not a normalized bucket label like `trunk`
 - `species` is normalized to canonical species names, for example colored
   draconians normalize to `Draconian`
+- `speciesVariant` preserves the original descriptor when we intentionally
+  canonicalize `species`, for example `White Draconian`
 
 Code:
 

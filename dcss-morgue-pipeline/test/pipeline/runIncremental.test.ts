@@ -103,6 +103,7 @@ describe('runIncremental', () => {
           morgueUrl: meta.morgueUrl,
           version: '0.34' as const,
           species: 'Djinni',
+          speciesVariant: null,
           background: null,
           xl: 7,
           ac: 4,

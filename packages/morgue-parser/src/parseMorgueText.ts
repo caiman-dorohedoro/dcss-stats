@@ -24,6 +24,7 @@ export function parseMorgueText(text: string, options: ParseMorgueTextOptions = 
       playerName: record.playerName,
       version: record.version,
       species: record.species,
+      speciesVariant: record.speciesVariant,
       background: record.background,
       xl: record.xl,
       ac: record.ac,

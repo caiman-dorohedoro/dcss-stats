@@ -51,15 +51,17 @@ function matchSpecies(descriptor: string, speciesNames: readonly string[]): stri
 
 function parseDescriptor(descriptor: string, speciesNames: readonly string[]): {
   species: string
+  speciesVariant: string | null
   background: string | null
 } {
   const trimmedDescriptor = descriptor.trim()
-  const coloredDraconianMatch = trimmedDescriptor.match(/^[A-Za-z]+ Draconian(?:\s+(.*))?$/)
+  const coloredDraconianMatch = trimmedDescriptor.match(/^([A-Za-z]+ Draconian)(?:\s+(.*))?$/)
 
   if (coloredDraconianMatch) {
     return {
       species: 'Draconian',
-      background: coloredDraconianMatch[1]?.trim() || null,
+      speciesVariant: coloredDraconianMatch[1].trim(),
+      background: coloredDraconianMatch[2]?.trim() || null,
     }
   }
 
@@ -68,6 +70,7 @@ function parseDescriptor(descriptor: string, speciesNames: readonly string[]): {
 
   return {
     species,
+    speciesVariant: null,
     background: background || null,
   }
 }
@@ -96,6 +99,10 @@ function getCharacterDescriptor(text: string): string {
 
 function parseSpecies(text: string, speciesNames: readonly string[]): string {
   return parseDescriptor(getCharacterDescriptor(text), speciesNames).species
+}
+
+function parseSpeciesVariant(text: string, speciesNames: readonly string[]): string | null {
+  return parseDescriptor(getCharacterDescriptor(text), speciesNames).speciesVariant
 }
 
 function parseBackground(text: string, speciesNames: readonly string[]): string | null {
@@ -155,6 +162,7 @@ export function extractBaseStats(text: string, options?: ExtractBaseStatsOptions
     playerName: parsePlayerName(text),
     version: parseVersion(text),
     species: parseSpecies(text, speciesNames),
+    speciesVariant: parseSpeciesVariant(text, speciesNames),
     background: parseBackground(text, speciesNames),
     ...parseDefensiveStats(text),
     ...parsePrimaryStats(text),

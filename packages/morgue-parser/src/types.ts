@@ -4,6 +4,7 @@ export type BaseStatsSnapshot = {
   playerName: string | null
   version: MorgueVersion
   species: string
+  speciesVariant: string | null
   background: string | null
   xl: number
   ac: number

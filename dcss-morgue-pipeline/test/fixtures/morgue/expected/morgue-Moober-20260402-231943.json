@@ -2,6 +2,7 @@
   "playerName": "Moober",
   "version": "0.35-a0-181-g84ebf06",
   "species": "Demonspawn",
+  "speciesVariant": null,
   "background": "Hunter",
   "xl": 27,
   "ac": 14,

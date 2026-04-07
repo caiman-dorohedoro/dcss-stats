@@ -2,6 +2,7 @@
   "playerName": "Mneme",
   "version": "0.35-a0-258-g8c878a6c5f",
   "species": "Djinni",
+  "speciesVariant": null,
   "background": "Fire Elementalist",
   "xl": 24,
   "ac": 8,

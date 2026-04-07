@@ -219,6 +219,26 @@ describe('extractEquipment', () => {
     ])
   })
 
+  it('recognizes known unrand shields even when the name does not include shield subtype text first', () => {
+    const parsed = extractEquipment(`
+Inventory:
+
+Armour
+ C - the +2 shield of Resistance (worn) {rF++ rC++ Will++}
+   (You found it on level 3 of the Elven Halls)
+`)
+
+    expect(parsed.shield).toBe('shield of Resistance')
+    expect(parsed.shieldDetails).toMatchObject({
+      rawName: 'shield of Resistance',
+      objectClass: 'armour',
+      baseType: 'kite shield',
+      artifactKind: 'unrand',
+      properties: bag({ numeric: { rF: 2, rC: 2, Will: 2 } }),
+      artifactProperties: bag({ numeric: { rF: 2, rC: 2, Will: 2 } }),
+    })
+  })
+
   it('preserves melded equipment and the equipped talisman slot', () => {
     const parsed = extractEquipment(loadFixture('success', 'melded-equipment-and-talisman.txt'))
 

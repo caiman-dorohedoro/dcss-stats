@@ -2,6 +2,7 @@
   "playerName": "dolemite99",
   "version": "0.35-a0-181-g84ebf06",
   "species": "Minotaur",
+  "speciesVariant": null,
   "background": "Berserker",
   "xl": 9,
   "ac": 14,

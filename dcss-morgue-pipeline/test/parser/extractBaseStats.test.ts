@@ -17,6 +17,7 @@ describe('extractBaseStats', () => {
     expect(parsed).toEqual({
       version: '0.34.1',
       species: 'Djinni',
+      speciesVariant: null,
       background: 'Fire Elementalist',
       xl: 7,
       ac: 4,
@@ -34,6 +35,7 @@ describe('extractBaseStats', () => {
     expect(parsed).toEqual({
       version: '0.34.0',
       species: 'Barachi',
+      speciesVariant: null,
       background: 'Hunter',
       xl: 1,
       ac: 3,
@@ -51,6 +53,7 @@ describe('extractBaseStats', () => {
     expect(parsed).toEqual({
       version: '0.35-a0-181-g84ebf06',
       species: 'Minotaur',
+      speciesVariant: null,
       background: 'Berserker',
       xl: 9,
       ac: 14,
@@ -68,6 +71,7 @@ describe('extractBaseStats', () => {
     expect(parsed).toEqual({
       version: '0.34.0',
       species: 'Demonspawn',
+      speciesVariant: null,
       background: 'Necromancer',
       xl: 3,
       ac: 4,
@@ -79,12 +83,13 @@ describe('extractBaseStats', () => {
     })
   })
 
-  it('normalizes colored draconian descriptors to canonical Draconian', () => {
+  it('normalizes colored draconian descriptors while preserving the variant', () => {
     const parsed = extractBaseStats(loadFixture('colored-draconian.txt'))
 
     expect(parsed).toEqual({
       version: '0.35-a0-257-gf9e06672e4',
       species: 'Draconian',
+      speciesVariant: 'White Draconian',
       background: 'Summoner',
       xl: 12,
       ac: 11,
