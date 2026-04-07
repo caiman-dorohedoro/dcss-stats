@@ -1,0 +1,586 @@
+{
+  "playerName": "exant",
+  "version": "0.34.0",
+  "species": "Octopode",
+  "ac": 3,
+  "ev": 34,
+  "sh": 19,
+  "strength": 11,
+  "intelligence": 30,
+  "dexterity": 24,
+  "bodyArmour": "none",
+  "shield": "kite shield of Evenfall",
+  "helmets": [],
+  "gloves": [],
+  "footwear": [],
+  "bootsOrBarding": false,
+  "cloaks": [],
+  "orb": "none",
+  "amulet": "amulet \"Umpul\"",
+  "rings": [
+    "ring of poison resistance",
+    "ring of protection from cold",
+    "ring of evasion",
+    "ring of dexterity",
+    "ring of protection",
+    "ring of slaying",
+    "ring of Dyryepto",
+    "ring \"Ynoedy\""
+  ],
+  "shieldDetails": {
+    "rawName": "kite shield of Evenfall",
+    "displayName": "kite shield",
+    "objectClass": "armour",
+    "equipState": "worn",
+    "isCursed": false,
+    "baseType": "kite shield",
+    "enchant": 4,
+    "artifactKind": "randart",
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": "Reflect, *Corrode Int+3 Dex+2",
+    "properties": [
+      "Reflect",
+      "*Corrode",
+      "Int+3",
+      "Dex+2"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [],
+    "artifactProperties": [
+      "Reflect",
+      "*Corrode",
+      "Int+3",
+      "Dex+2"
+    ]
+  },
+  "amuletDetails": {
+    "rawName": "amulet \"Umpul\"",
+    "displayName": "randart amulet",
+    "objectClass": "jewellery",
+    "equipState": "worn",
+    "isCursed": false,
+    "baseType": "amulet",
+    "enchant": null,
+    "artifactKind": "randart",
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": "RegenMP+ Int+3",
+    "properties": [
+      "RegenMP+",
+      "Int+3"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [],
+    "artifactProperties": [
+      "RegenMP+",
+      "Int+3"
+    ]
+  },
+  "ringDetails": [
+    {
+      "rawName": "ring of poison resistance",
+      "displayName": "ring of poison resistance",
+      "objectClass": "jewellery",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "ring",
+      "enchant": null,
+      "artifactKind": "normal",
+      "ego": null,
+      "subtypeEffect": "poison resistance",
+      "propertiesText": null,
+      "properties": [
+        "rPois"
+      ],
+      "intrinsicProperties": [
+        "rPois"
+      ],
+      "egoProperties": [],
+      "artifactProperties": []
+    },
+    {
+      "rawName": "ring of protection from cold",
+      "displayName": "ring of protection from cold",
+      "objectClass": "jewellery",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "ring",
+      "enchant": null,
+      "artifactKind": "normal",
+      "ego": null,
+      "subtypeEffect": "protection from cold",
+      "propertiesText": null,
+      "properties": [
+        "rC+"
+      ],
+      "intrinsicProperties": [
+        "rC+"
+      ],
+      "egoProperties": [],
+      "artifactProperties": []
+    },
+    {
+      "rawName": "ring of evasion",
+      "displayName": "ring of evasion",
+      "objectClass": "jewellery",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "ring",
+      "enchant": 5,
+      "artifactKind": "normal",
+      "ego": null,
+      "subtypeEffect": "evasion",
+      "propertiesText": null,
+      "properties": [
+        "EV+5"
+      ],
+      "intrinsicProperties": [
+        "EV+5"
+      ],
+      "egoProperties": [],
+      "artifactProperties": []
+    },
+    {
+      "rawName": "ring of dexterity",
+      "displayName": "ring of dexterity",
+      "objectClass": "jewellery",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "ring",
+      "enchant": 6,
+      "artifactKind": "normal",
+      "ego": null,
+      "subtypeEffect": "dexterity",
+      "propertiesText": null,
+      "properties": [
+        "Dex+6"
+      ],
+      "intrinsicProperties": [
+        "Dex+6"
+      ],
+      "egoProperties": [],
+      "artifactProperties": []
+    },
+    {
+      "rawName": "ring of protection",
+      "displayName": "ring of protection",
+      "objectClass": "jewellery",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "ring",
+      "enchant": 4,
+      "artifactKind": "normal",
+      "ego": null,
+      "subtypeEffect": "protection",
+      "propertiesText": null,
+      "properties": [
+        "AC+4"
+      ],
+      "intrinsicProperties": [
+        "AC+4"
+      ],
+      "egoProperties": [],
+      "artifactProperties": []
+    },
+    {
+      "rawName": "ring of slaying",
+      "displayName": "ring of slaying",
+      "objectClass": "jewellery",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "ring",
+      "enchant": 4,
+      "artifactKind": "normal",
+      "ego": null,
+      "subtypeEffect": "slaying",
+      "propertiesText": null,
+      "properties": [
+        "Slay+4"
+      ],
+      "intrinsicProperties": [
+        "Slay+4"
+      ],
+      "egoProperties": [],
+      "artifactProperties": []
+    },
+    {
+      "rawName": "ring of Dyryepto",
+      "displayName": "randart ring",
+      "objectClass": "jewellery",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "ring",
+      "enchant": null,
+      "artifactKind": "randart",
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "rElec Int+6",
+      "properties": [
+        "rElec",
+        "Int+6"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
+        "rElec",
+        "Int+6"
+      ]
+    },
+    {
+      "rawName": "ring \"Ynoedy\"",
+      "displayName": "randart ring",
+      "objectClass": "jewellery",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "ring",
+      "enchant": null,
+      "artifactKind": "randart",
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "rF+ Dex-3 SInv Stlth+",
+      "properties": [
+        "rF+",
+        "Dex-3",
+        "SInv",
+        "Stlth+"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
+        "rF+",
+        "Dex-3",
+        "SInv",
+        "Stlth+"
+      ]
+    }
+  ],
+  "skills": {
+    "fighting": 17,
+    "macesFlails": 0,
+    "axes": 0,
+    "polearms": 0,
+    "staves": 0,
+    "unarmedCombat": 0,
+    "throwing": 5,
+    "shortBlades": 14,
+    "longBlades": 7.6,
+    "rangedWeapons": 0,
+    "armour": 0,
+    "dodging": 20,
+    "shields": 14,
+    "stealth": 20,
+    "spellcasting": 3,
+    "conjurations": 3,
+    "hexes": 0,
+    "summonings": 0,
+    "necromancy": 10,
+    "forgecraft": 0,
+    "translocations": 3,
+    "transmutations": 0,
+    "alchemy": 0,
+    "fireMagic": 0,
+    "iceMagic": 0,
+    "airMagic": 9,
+    "earthMagic": 0,
+    "poisonMagic": 0,
+    "invocations": 12,
+    "evocations": 3,
+    "shapeshifting": 0
+  },
+  "effectiveSkills": {
+    "fighting": 17,
+    "macesFlails": 0,
+    "axes": 0,
+    "polearms": 0,
+    "staves": 0,
+    "unarmedCombat": 0,
+    "throwing": 5,
+    "shortBlades": 14.7,
+    "longBlades": 11.8,
+    "rangedWeapons": 0,
+    "armour": 0,
+    "dodging": 20,
+    "shields": 14,
+    "stealth": 20,
+    "spellcasting": 3,
+    "conjurations": 3,
+    "hexes": 0,
+    "summonings": 0,
+    "necromancy": 10,
+    "forgecraft": 0,
+    "translocations": 3,
+    "transmutations": 0,
+    "alchemy": 0,
+    "fireMagic": 0,
+    "iceMagic": 0,
+    "airMagic": 9,
+    "earthMagic": 0,
+    "poisonMagic": 0,
+    "invocations": 12,
+    "evocations": 3,
+    "shapeshifting": 0
+  },
+  "spells": [
+    {
+      "name": "Shock",
+      "failurePercent": 1,
+      "memorized": true
+    },
+    {
+      "name": "Airstrike",
+      "failurePercent": 3,
+      "memorized": true
+    },
+    {
+      "name": "Swiftness",
+      "failurePercent": 1,
+      "memorized": true
+    },
+    {
+      "name": "Blink",
+      "failurePercent": 7,
+      "memorized": true
+    },
+    {
+      "name": "Curse of Agony",
+      "failurePercent": 7,
+      "memorized": true
+    },
+    {
+      "name": "Dispel Undead",
+      "failurePercent": 2,
+      "memorized": true
+    },
+    {
+      "name": "Death Channel",
+      "failurePercent": 36,
+      "memorized": true
+    },
+    {
+      "name": "Soul Splinter",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Magic Dart",
+      "failurePercent": 4,
+      "memorized": false
+    },
+    {
+      "name": "Foxfire",
+      "failurePercent": 9,
+      "memorized": false
+    },
+    {
+      "name": "Freeze",
+      "failurePercent": 16,
+      "memorized": false
+    },
+    {
+      "name": "Kinetic Grapnel",
+      "failurePercent": 16,
+      "memorized": false
+    },
+    {
+      "name": "Sandblast",
+      "failurePercent": 16,
+      "memorized": false
+    },
+    {
+      "name": "Sublimation of Blood",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Fugue of the Fallen",
+      "failurePercent": 1,
+      "memorized": false
+    },
+    {
+      "name": "Cigotuvi's Putrefaction",
+      "failurePercent": 3,
+      "memorized": false
+    },
+    {
+      "name": "Lesser Beckoning",
+      "failurePercent": 7,
+      "memorized": false
+    },
+    {
+      "name": "Searing Ray",
+      "failurePercent": 7,
+      "memorized": false
+    },
+    {
+      "name": "Mephitic Cloud",
+      "failurePercent": 9,
+      "memorized": false
+    },
+    {
+      "name": "Mercury Arrow",
+      "failurePercent": 12,
+      "memorized": false
+    },
+    {
+      "name": "Anguish",
+      "failurePercent": 19,
+      "memorized": false
+    },
+    {
+      "name": "Martyr's Knell",
+      "failurePercent": 19,
+      "memorized": false
+    },
+    {
+      "name": "Construct Spike Launcher",
+      "failurePercent": 22,
+      "memorized": false
+    },
+    {
+      "name": "Hailstorm",
+      "failurePercent": 24,
+      "memorized": false
+    },
+    {
+      "name": "Forge Lightning Spire",
+      "failurePercent": 24,
+      "memorized": false
+    },
+    {
+      "name": "Arcjolt",
+      "failurePercent": 34,
+      "memorized": false
+    },
+    {
+      "name": "Launch Clockwork Bee",
+      "failurePercent": 41,
+      "memorized": false
+    },
+    {
+      "name": "Ozocubu's Armour",
+      "failurePercent": 41,
+      "memorized": false
+    },
+    {
+      "name": "Passwall",
+      "failurePercent": 41,
+      "memorized": false
+    },
+    {
+      "name": "Sigil of Binding",
+      "failurePercent": 41,
+      "memorized": false
+    },
+    {
+      "name": "Summon Ice Beast",
+      "failurePercent": 41,
+      "memorized": false
+    },
+    {
+      "name": "Iskenderun's Mystic Blast",
+      "failurePercent": 41,
+      "memorized": false
+    },
+    {
+      "name": "Borgnjor's Vile Clutch",
+      "failurePercent": 47,
+      "memorized": false
+    },
+    {
+      "name": "Dimensional Bullseye",
+      "failurePercent": 63,
+      "memorized": false
+    },
+    {
+      "name": "Fulminant Prism",
+      "failurePercent": 63,
+      "memorized": false
+    },
+    {
+      "name": "Ignite Poison",
+      "failurePercent": 83,
+      "memorized": false
+    },
+    {
+      "name": "Alistair's Intoxication",
+      "failurePercent": 99,
+      "memorized": false
+    },
+    {
+      "name": "Summon Mana Viper",
+      "failurePercent": 99,
+      "memorized": false
+    },
+    {
+      "name": "Bombard",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Forge Phalanx Beetle",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Sculpt Simulacrum",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Orb of Destruction",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Splinterfrost Shell",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Summon Hydra",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Disjunction",
+      "failurePercent": 100,
+      "memorized": false
+    },
+    {
+      "name": "Polar Vortex",
+      "failurePercent": 100,
+      "memorized": false
+    }
+  ],
+  "mutations": [
+    {
+      "name": "almost no armour",
+      "level": null
+    },
+    {
+      "name": "amphibious",
+      "level": null
+    },
+    {
+      "name": "8 rings",
+      "level": null
+    },
+    {
+      "name": "camouflage",
+      "level": 1
+    },
+    {
+      "name": "gelatinous body",
+      "level": 1
+    },
+    {
+      "name": "nimble swimmer",
+      "level": 1
+    },
+    {
+      "name": "tentacles",
+      "level": null
+    }
+  ]
+}

@@ -108,7 +108,7 @@ function parseModernSpellLine(
 
   const name = line
     .slice(0, columns.typeStart)
-    .replace(/^[a-z] -\s*/, '')
+    .replace(/^[A-Za-z0-9] -\s*/, '')
     .trim()
   const failureField = line.slice(columns.failureStart, columns.levelStart).trim()
   const levelField = line.slice(columns.levelStart).trim()

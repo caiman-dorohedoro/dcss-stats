@@ -91,4 +91,26 @@ describe('parseMorgueText shared parser', () => {
       })
     }
   })
+
+  it('normalizes uppercase spell hotkeys and legacy parenthesized mutations from full morgues', () => {
+    const spellResult = parseMorgueText(loadFullFixture('morgue-jkt-20260404-065348.txt'))
+    const mutationResult = parseMorgueText(loadFullFixture('morgue-exant-20260406-220016.txt'))
+
+    expect(spellResult.ok).toBe(true)
+    if (spellResult.ok) {
+      expect(spellResult.record.spells).toContainEqual({
+        name: "Dragon's Call",
+        failurePercent: 4,
+        memorized: true,
+      })
+    }
+
+    expect(mutationResult.ok).toBe(true)
+    if (mutationResult.ok) {
+      expect(mutationResult.record.mutations).toContainEqual({
+        name: 'nimble swimmer',
+        level: 1,
+      })
+    }
+  })
 })

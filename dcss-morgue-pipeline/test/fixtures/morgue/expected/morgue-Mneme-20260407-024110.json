@@ -1,0 +1,410 @@
+{
+  "playerName": "Mneme",
+  "version": "0.35-a0-258-g8c878a6c5f",
+  "species": "Djinni",
+  "ac": 8,
+  "ev": 29,
+  "sh": 0,
+  "strength": 5,
+  "intelligence": 32,
+  "dexterity": 17,
+  "bodyArmour": "robe of cold resistance",
+  "shield": "none",
+  "helmets": [
+    "hat of a sewer"
+  ],
+  "gloves": [
+    "pair of gloves of Agnosticism"
+  ],
+  "footwear": [],
+  "bootsOrBarding": false,
+  "cloaks": [
+    "scarf of resistance"
+  ],
+  "orb": "orb of pyromania",
+  "amulet": "amulet of regeneration",
+  "rings": [
+    "ring of Qetetip",
+    "ring of the Past"
+  ],
+  "bodyArmourDetails": {
+    "rawName": "robe of cold resistance",
+    "displayName": "robe of cold resistance",
+    "objectClass": "armour",
+    "equipState": "worn",
+    "isCursed": false,
+    "baseType": "robe",
+    "enchant": 1,
+    "artifactKind": "normal",
+    "ego": "cold resistance",
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [
+      "rC+"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [
+      "rC+"
+    ],
+    "artifactProperties": []
+  },
+  "helmetDetails": [
+    {
+      "rawName": "hat of a sewer",
+      "displayName": "hat of a sewer",
+      "objectClass": "armour",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "hat",
+      "enchant": 2,
+      "artifactKind": "randart",
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "rN+",
+      "properties": [
+        "rN+"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
+        "rN+"
+      ]
+    }
+  ],
+  "glovesDetails": [
+    {
+      "rawName": "pair of gloves of Agnosticism",
+      "displayName": "pair of gloves of Agnosticism",
+      "objectClass": "armour",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "gloves",
+      "enchant": 1,
+      "artifactKind": "randart",
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "Hurl, Will+ Dex+2",
+      "properties": [
+        "Hurl",
+        "Will+",
+        "Dex+2"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
+        "Hurl",
+        "Will+",
+        "Dex+2"
+      ]
+    }
+  ],
+  "cloakDetails": [
+    {
+      "rawName": "scarf of resistance",
+      "displayName": "scarf of resistance",
+      "objectClass": "armour",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "scarf",
+      "enchant": null,
+      "artifactKind": "normal",
+      "ego": "resistance",
+      "subtypeEffect": null,
+      "propertiesText": null,
+      "properties": [
+        "rC+",
+        "rF+"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [
+        "rC+",
+        "rF+"
+      ],
+      "artifactProperties": []
+    }
+  ],
+  "orbDetails": {
+    "rawName": "orb of pyromania",
+    "displayName": "orb of pyromania",
+    "objectClass": "armour",
+    "equipState": "worn",
+    "isCursed": false,
+    "baseType": "orb",
+    "enchant": null,
+    "artifactKind": "normal",
+    "ego": "pyromania",
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [
+      "Pyromania"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [
+      "Pyromania"
+    ],
+    "artifactProperties": []
+  },
+  "amuletDetails": {
+    "rawName": "amulet of regeneration",
+    "displayName": "amulet of regeneration",
+    "objectClass": "jewellery",
+    "equipState": "worn",
+    "isCursed": false,
+    "baseType": "amulet",
+    "enchant": null,
+    "artifactKind": "normal",
+    "ego": null,
+    "subtypeEffect": "regeneration",
+    "propertiesText": null,
+    "properties": [
+      "Regen+"
+    ],
+    "intrinsicProperties": [
+      "Regen+"
+    ],
+    "egoProperties": [],
+    "artifactProperties": []
+  },
+  "ringDetails": [
+    {
+      "rawName": "ring of Qetetip",
+      "displayName": "randart ring",
+      "objectClass": "jewellery",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "ring",
+      "enchant": null,
+      "artifactKind": "randart",
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "rElec rN++ rCorr Int+6",
+      "properties": [
+        "rElec",
+        "rN++",
+        "rCorr",
+        "Int+6"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
+        "rElec",
+        "rN++",
+        "rCorr",
+        "Int+6"
+      ]
+    },
+    {
+      "rawName": "ring of the Past",
+      "displayName": "randart ring",
+      "objectClass": "jewellery",
+      "equipState": "worn",
+      "isCursed": false,
+      "baseType": "ring",
+      "enchant": null,
+      "artifactKind": "randart",
+      "ego": null,
+      "subtypeEffect": null,
+      "propertiesText": "rC+ EV+5 Str-4 SInv",
+      "properties": [
+        "rC+",
+        "EV+5",
+        "Str-4",
+        "SInv"
+      ],
+      "intrinsicProperties": [],
+      "egoProperties": [],
+      "artifactProperties": [
+        "rC+",
+        "EV+5",
+        "Str-4",
+        "SInv"
+      ]
+    }
+  ],
+  "skills": {
+    "fighting": 20,
+    "macesFlails": 0,
+    "axes": 0,
+    "polearms": 0,
+    "staves": 0,
+    "unarmedCombat": 0,
+    "throwing": 1,
+    "shortBlades": 0,
+    "longBlades": 0,
+    "rangedWeapons": 0,
+    "armour": 10,
+    "dodging": 20,
+    "shields": 0,
+    "stealth": 10,
+    "spellcasting": 21.6,
+    "conjurations": 21.6,
+    "hexes": 21.6,
+    "summonings": 21.6,
+    "necromancy": 21.6,
+    "forgecraft": 21.6,
+    "translocations": 21.6,
+    "transmutations": 0,
+    "alchemy": 21.6,
+    "fireMagic": 21.6,
+    "iceMagic": 23.2,
+    "airMagic": 22.3,
+    "earthMagic": 21.6,
+    "poisonMagic": 0,
+    "invocations": 0,
+    "evocations": 2,
+    "shapeshifting": 0
+  },
+  "effectiveSkills": {
+    "fighting": 20,
+    "macesFlails": 0,
+    "axes": 0,
+    "polearms": 0,
+    "staves": 0,
+    "unarmedCombat": 0,
+    "throwing": 1,
+    "shortBlades": 0,
+    "longBlades": 0,
+    "rangedWeapons": 0,
+    "armour": 10,
+    "dodging": 20,
+    "shields": 0,
+    "stealth": 10,
+    "spellcasting": 21.6,
+    "conjurations": 21.6,
+    "hexes": 21.6,
+    "summonings": 21.6,
+    "necromancy": 21.6,
+    "forgecraft": 21.6,
+    "translocations": 21.6,
+    "transmutations": 0,
+    "alchemy": 21.6,
+    "fireMagic": 21.6,
+    "iceMagic": 23.2,
+    "airMagic": 22.3,
+    "earthMagic": 21.6,
+    "poisonMagic": 0,
+    "invocations": 0,
+    "evocations": 2,
+    "shapeshifting": 0
+  },
+  "spells": [
+    {
+      "name": "Ozocubu's Armour",
+      "failurePercent": 0,
+      "memorized": true
+    },
+    {
+      "name": "Flame Wave",
+      "failurePercent": 0,
+      "memorized": true
+    },
+    {
+      "name": "Momentum Strike",
+      "failurePercent": 0,
+      "memorized": true
+    },
+    {
+      "name": "Fugue of the Fallen",
+      "failurePercent": 0,
+      "memorized": true
+    },
+    {
+      "name": "Foxfire",
+      "failurePercent": 0,
+      "memorized": true
+    },
+    {
+      "name": "Borgnjor's Vile Clutch",
+      "failurePercent": 0,
+      "memorized": true
+    },
+    {
+      "name": "Forge Monarch Bomb",
+      "failurePercent": 1,
+      "memorized": true
+    },
+    {
+      "name": "Lee's Rapid Deconstruction",
+      "failurePercent": 0,
+      "memorized": true
+    },
+    {
+      "name": "Manifold Assault",
+      "failurePercent": 1,
+      "memorized": true
+    },
+    {
+      "name": "Inner Flame",
+      "failurePercent": 0,
+      "memorized": true
+    },
+    {
+      "name": "Shock",
+      "failurePercent": 0,
+      "memorized": true
+    },
+    {
+      "name": "Volatile Blastmotes",
+      "failurePercent": 0,
+      "memorized": true
+    },
+    {
+      "name": "Borgnjor's Revivification",
+      "failurePercent": 1,
+      "memorized": true
+    },
+    {
+      "name": "Plasma Beam",
+      "failurePercent": 0,
+      "memorized": true
+    },
+    {
+      "name": "Summon Hydra",
+      "failurePercent": 1,
+      "memorized": true
+    },
+    {
+      "name": "Scorch",
+      "failurePercent": 0,
+      "memorized": true
+    }
+  ],
+  "mutations": [
+    {
+      "name": "sickness immunity",
+      "level": null
+    },
+    {
+      "name": "fire resistance",
+      "level": 2
+    },
+    {
+      "name": "cold vulnerability",
+      "level": 1
+    },
+    {
+      "name": "float",
+      "level": null
+    },
+    {
+      "name": "innate caster",
+      "level": null
+    },
+    {
+      "name": "HP casting",
+      "level": null
+    },
+    {
+      "name": "extra vitality",
+      "level": 1
+    },
+    {
+      "name": "see invisible",
+      "level": null
+    },
+    {
+      "name": "evolution",
+      "level": 1
+    }
+  ]
+}

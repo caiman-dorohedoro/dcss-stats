@@ -27,7 +27,8 @@ function collectAbilityLine(header: string): string {
 }
 
 function parseMutationEntry(entry: string): MutationEntrySnapshot {
-  const leveledMatch = entry.match(/^(.*\S)\s+(\d+)$/)
+  const normalizedEntry = entry.replace(/^\((.*)\)$/, '$1').trim()
+  const leveledMatch = normalizedEntry.match(/^(.*\S)\s+(\d+)$/)
 
   if (leveledMatch) {
     return {
@@ -37,7 +38,7 @@ function parseMutationEntry(entry: string): MutationEntrySnapshot {
   }
 
   return {
-    name: entry,
+    name: normalizedEntry,
     level: null,
   }
 }

@@ -10,6 +10,13 @@ function loadFixture(name: string) {
   )
 }
 
+function loadFullFixture(name: string) {
+  return readFileSync(
+    path.resolve(process.cwd(), `test/fixtures/morgue/full/${name}`),
+    'utf8',
+  )
+}
+
 describe('extractSpells', () => {
   it('extracts all listed spells and failure percentages, including unmemorized entries', () => {
     const spells = extractSpells(loadFixture('spell-list-full.txt'))
@@ -107,5 +114,15 @@ describe('extractSpells', () => {
         memorized: false,
       },
     ])
+  })
+
+  it('strips uppercase memorized hotkeys from modern spell tables', () => {
+    const spells = extractSpells(loadFullFixture('morgue-jkt-20260404-065348.txt'))
+
+    expect(spells).toContainEqual({
+      name: "Dragon's Call",
+      failurePercent: 4,
+      memorized: true,
+    })
   })
 })

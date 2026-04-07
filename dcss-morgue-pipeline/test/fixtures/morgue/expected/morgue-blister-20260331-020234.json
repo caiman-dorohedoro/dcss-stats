@@ -895,16 +895,16 @@
       "level": null
     },
     {
-      "name": "(camouflage 1)",
-      "level": null
+      "name": "camouflage",
+      "level": 1
     },
     {
-      "name": "(gelatinous body 1)",
-      "level": null
+      "name": "gelatinous body",
+      "level": 1
     },
     {
-      "name": "(nimble swimmer 1)",
-      "level": null
+      "name": "nimble swimmer",
+      "level": 1
     },
     {
       "name": "tentacles",

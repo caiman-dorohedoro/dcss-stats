@@ -50,4 +50,18 @@ describe('extractMutations', () => {
       ],
     })
   })
+
+  it('normalizes parenthesized legacy mutation entries into leveled traits', () => {
+    expect(extractMutations(loadFullFixture('morgue-exant-20260406-220016.txt'))).toEqual({
+      mutations: [
+        { name: 'almost no armour', level: null },
+        { name: 'amphibious', level: null },
+        { name: '8 rings', level: null },
+        { name: 'camouflage', level: 1 },
+        { name: 'gelatinous body', level: 1 },
+        { name: 'nimble swimmer', level: 1 },
+        { name: 'tentacles', level: null },
+      ],
+    })
+  })
 })
