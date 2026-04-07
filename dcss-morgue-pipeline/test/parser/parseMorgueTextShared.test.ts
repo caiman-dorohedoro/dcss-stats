@@ -113,4 +113,32 @@ describe('parseMorgueText shared parser', () => {
       })
     }
   })
+
+  it('extracts current form state and equipped talismans from full morgues', () => {
+    const deathFormResult = parseMorgueText(loadFullFixture('morgue-Moober-20260402-231943.txt'))
+    const treeFormResult = parseMorgueText(loadFullFixture('morgue-blister-20260331-020234.txt'))
+
+    expect(deathFormResult.ok).toBe(true)
+    if (deathFormResult.ok) {
+      expect(deathFormResult.record.form).toBe('death-form')
+      expect(deathFormResult.record.talisman).toBe('death talisman of Lan Byow')
+      expect(deathFormResult.record.talismanDetails).toMatchObject({
+        objectClass: 'talisman',
+        baseType: 'death talisman',
+        artifactKind: 'randart',
+        equipState: 'worn',
+      })
+    }
+
+    expect(treeFormResult.ok).toBe(true)
+    if (treeFormResult.ok) {
+      expect(treeFormResult.record.form).toBe('statue-form')
+      expect(treeFormResult.record.talisman).toBe('granite talisman "Iffich"')
+      expect(treeFormResult.record.talismanDetails).toMatchObject({
+        objectClass: 'talisman',
+        baseType: 'granite talisman',
+        artifactKind: 'randart',
+      })
+    }
+  })
 })

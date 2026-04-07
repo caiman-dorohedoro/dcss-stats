@@ -1,0 +1,17 @@
+Inventory:
+
+Armour
+ m - the cursed +2 acid dragon scales "Discomfort of Ashenzari" (melded) {rCorr, Elem, Sorc}
+ O - the cursed +2 helmet of the Shattered Mistrust (melded) {Int+3, Comp, Sorc}
+ I - the cursed +3 kite shield of the Esoteric Malaise (worn) {Reflect, Bglg, Dev}
+ l - the cursed +0 cloak "Circumscribed Together" (worn) {rPois, Fort, Bglg}
+ s - the cursed +1 pair of gloves of Apeoromancy (worn) {^Drain Fly Int+2, Sorc, Comp}
+ k - the cursed +0 pair of boots "Shattered Together" (worn) {Self, Cun}
+Jewellery
+ q - amulet of the Fated Discomfort (worn) {RegenMP+, Elem, Dev}
+ y - ring "Manifest Liberalism" (worn) {rC+ Will+, Elem, Sorc}
+ u - ring "Anxiety of Ashenzari" (worn) {rF++ rC+ Int+4 Stlth-, Cun, Comp}
+Talismans
+ o - hive talisman "Wekitiug" (worn) {rElec rC- Will+++}
+
+Skills:

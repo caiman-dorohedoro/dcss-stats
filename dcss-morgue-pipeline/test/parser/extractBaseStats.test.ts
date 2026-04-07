@@ -17,6 +17,7 @@ describe('extractBaseStats', () => {
     expect(parsed).toEqual({
       version: '0.34.1',
       species: 'Djinni',
+      background: 'Fire Elementalist',
       ac: 4,
       ev: 11,
       sh: 0,
@@ -32,6 +33,7 @@ describe('extractBaseStats', () => {
     expect(parsed).toEqual({
       version: '0.34.0',
       species: 'Barachi',
+      background: 'Hunter',
       ac: 3,
       ev: 11,
       sh: 0,
@@ -47,6 +49,7 @@ describe('extractBaseStats', () => {
     expect(parsed).toEqual({
       version: '0.35-a0-181-g84ebf06',
       species: 'Minotaur',
+      background: 'Berserker',
       ac: 14,
       ev: 6,
       sh: 0,
@@ -62,6 +65,7 @@ describe('extractBaseStats', () => {
     expect(parsed).toEqual({
       version: '0.34.0',
       species: 'Demonspawn',
+      background: 'Necromancer',
       ac: 4,
       ev: 11,
       sh: 0,
@@ -77,6 +81,7 @@ describe('extractBaseStats', () => {
     expect(parsed).toEqual({
       version: '0.35-a0-257-gf9e06672e4',
       species: 'Draconian',
+      background: 'Summoner',
       ac: 11,
       ev: 11,
       sh: 0,

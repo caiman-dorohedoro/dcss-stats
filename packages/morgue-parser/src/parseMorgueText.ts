@@ -1,6 +1,7 @@
 import type { ParseMorgueTextOptions, ParseMorgueTextResult } from './types'
 import { extractBaseStats } from './extractBaseStats'
 import { extractEquipment } from './extractEquipment'
+import { extractForm } from './extractForm'
 import { extractMutations } from './extractMutations'
 import { extractSkills } from './extractSkills'
 import { extractSpells } from './extractSpells'
@@ -11,6 +12,7 @@ export function parseMorgueText(text: string, options: ParseMorgueTextOptions = 
     const record = validateStrict({
       ...extractBaseStats(text, { speciesNames: options.speciesNames }),
       ...extractEquipment(text),
+      ...extractForm(text),
       ...extractSkills(text),
       ...extractMutations(text),
       spells: extractSpells(text, {
@@ -22,6 +24,7 @@ export function parseMorgueText(text: string, options: ParseMorgueTextOptions = 
       playerName: record.playerName,
       version: record.version,
       species: record.species,
+      background: record.background,
       ac: record.ac,
       ev: record.ev,
       sh: record.sh,
@@ -38,6 +41,8 @@ export function parseMorgueText(text: string, options: ParseMorgueTextOptions = 
       orb: record.orb,
       amulet: record.amulet,
       rings: record.rings,
+      talisman: record.talisman,
+      form: record.form,
       ...(record.bodyArmourDetails ? { bodyArmourDetails: record.bodyArmourDetails } : {}),
       ...(record.shieldDetails ? { shieldDetails: record.shieldDetails } : {}),
       ...(record.helmetDetails ? { helmetDetails: record.helmetDetails } : {}),
@@ -47,6 +52,7 @@ export function parseMorgueText(text: string, options: ParseMorgueTextOptions = 
       ...(record.orbDetails ? { orbDetails: record.orbDetails } : {}),
       ...(record.amuletDetails ? { amuletDetails: record.amuletDetails } : {}),
       ...(record.ringDetails ? { ringDetails: record.ringDetails } : {}),
+      ...(record.talismanDetails ? { talismanDetails: record.talismanDetails } : {}),
       skills: record.skills,
       effectiveSkills: record.effectiveSkills,
       spells: record.spells,

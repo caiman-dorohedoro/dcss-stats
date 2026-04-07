@@ -1,0 +1,932 @@
+ Dungeon Crawl Stone Soup version 0.35-a0-257-gf9e06672e4 (webtiles) character file.
+
+Game seed: 14708748819747351071
+
+195897 tlatlagkaus the Executioner (level 18, -18/138 HPs)
+             Began as a Formicid Fighter on Apr 6, 2026.
+             Was the Champion of Hepliaklqana.
+             Demolished by a spriggan berserker
+             ... wielding a +0 hand axe
+              (27 damage)
+             ... on level 4 of the Swamp.
+             The game lasted 01:25:20 (10080 turns).
+
+tlatlagkaus the Executioner (Formicid Fighter)     Turns: 10080, Time: 01:25:21
+
+Health: -18/138    AC: 33    Str: 27    XL:     18   Next: 45%
+Magic:  18/18      EV:  4    Int: 10    God:    Hepliaklqana [******]
+Gold:   555        SH: 20    Dex: 13    Spells: 16/17 levels left
+
+rFire   + . .  (50%)    b - +2 battleaxe (flame)
+rCold   + + .  (33%)    r - +2 tower shield {rF+}
+rNeg    + + .  (20%)    I - +2 crystal plate armour {rC+}
+rPois   +      (33%)    i - +0 cloak
+rElec   +      (33%)    d - +1 pair of gloves
+rCorr   .      (100%)   g - +0 pair of gloves
+SInv    +               h - +1 pair of boots
+Will    +....           z - amulet "Bogymeyng" {Wildshape Bane rElec rPois Regen+}
+Stlth                   C - ring of protection from cold
+HPRegen 1.23/turn       l - ring "Urounwuo" {rN++ Slay+4}
+MPRegen 0.16/turn
+
+%: no passive effects
+@: studying 2 skills
+A: reduced essence, permanent stasis, dig shafts and tunnels, antennae 3, four
+strong arms
+}: 1/15 runes: serpentine
+a: Dig (0%), Shaft Self (0%), Renounce Religion (0%), Recall Ancestor (0%),
+Ancestor Identity (0%), Transference (13%), Idealise (56%)
+
+
+You were on level 4 of the Swamp.
+You worshipped Hepliaklqana.
+Hepliaklqana was exalted by your worship.
+You visited 6 branches of the dungeon, and saw 27 of its levels.
+You also visited: Trove, Ice Cave and Volcano.
+
+You collected 1641 gold pieces.
+You spent 1086 gold pieces at shops.
+
+Inventory:
+
+Hand Weapons
+ a - a +4 executioner's axe of electrocution
+ b - a +2 battleaxe of flaming (weapon)
+ j - the +1 demon trident "Bekhloack" {freeze, rElec Will+ SInv}
+   (You found it on level 5 of the Lair of Beasts)   
+   
+   rElec:     It insulates you from electricity.
+   Will+:     It increases your willpower.
+   SInv:      It lets you see invisible.
+   
+   It cannot be enchanted further.
+ F - the +5 rapier of Luxury {reap, ^Contam rF+ rC+}
+   (You found it on level 1 of the Swamp)   
+   
+   ^Contam:   It causes magical contamination when unequipped.
+   rF+:       It protects you from fire.
+   rC+:       It protects you from cold.
+   
+   It cannot be enchanted further.
+ H - the +9 glaive of the Throat {freeze, rN+ Str+4}
+   (You found it in an ice cave)   
+   
+   rN+:       It protects you from negative energy.
+   Str+4:     It affects your strength (+4).
+   
+   It cannot be enchanted further.
+ J - a +1 great sword of freezing
+Missiles
+ e - 32 poisoned darts
+ f - 2 darts of disjunction
+ k - 5 javelins
+ n - 5 silver javelins
+ p - 5 curare-tipped darts (quivered)
+ v - 25 boomerangs
+ w - 2 throwing nets
+ D - 2 atropa-tipped darts
+ E - 2 datura-tipped darts
+Armour
+ d - a +1 pair of gloves (worn)
+ g - a +0 pair of gloves (worn)
+ h - a +1 pair of boots (worn)
+ i - a +0 cloak (worn)
+ r - a +2 tower shield of fire resistance (worn)
+ s - the +5 kite shield of Integrity {Slay+6}
+   (You found it in an ice cave)   
+   
+   Slay+6:    It affects your accuracy & damage with ranged weapons and melee
+   (+6).
+   
+   It cannot be enchanted further.
+ x - a +1 tower shield of protection
+ B - a +2 plate armour of fire resistance
+ G - the +0 cloak "Muovyk" {Harm *Slow rElec rC+ Int+6}
+   (You found it in an ice cave)   
+   
+   Harm:      It increases damage dealt and taken.
+   *Slow:     It may slow you when you take damage.
+   rElec:     It insulates you from electricity.
+   rC+:       It protects you from cold.
+   Int+6:     It affects your intelligence (+6).
+   
+   It cannot be enchanted further.
+ I - a +2 crystal plate armour of cold resistance (worn)
+Magical Staves
+ m - a staff of air
+ u - a staff of fire
+Jewellery
+ l - the ring "Urounwuo" (worn) {rN++ Slay+4}
+   (You found it in a treasure trove)   
+   
+   [ring of slaying]
+   
+   rN++:      It greatly protects you from negative energy.
+   Slay+4:    It affects your accuracy & damage with ranged weapons and melee
+   (+4).
+ o - a +4 ring of protection
+ t - a ring of wizardry
+ y - a ring of protection from fire
+ z - the amulet "Bogymeyng" (worn) {Wildshape Bane rElec rPois Regen+}
+   (You took it off Cassandra on level 10 of the Dungeon)   
+   
+   [amulet of wildshape]
+   
+   Wildshape: It improves your skill with shapeshifting (+5).
+   Bane:      It inflicts you with a random bane when you equip it.
+   rElec:     It insulates you from electricity.
+   rPois:     It protects you from poison.
+   Regen+:    It increases your rate of health regeneration.
+ A - the ring of Zuommy {Str+6 Int+3 Dex+2}
+   (You found it in a treasure trove)   
+   
+   [ring of strength]
+   
+   Str+6:     It affects your strength (+6).
+   Int+3:     It affects your intelligence (+3).
+   Dex+2:     It affects your dexterity (+2).
+ C - a ring of protection from cold (worn)
+ K - the ring "Diuseq" {EV+5 Str+2}
+   (You found it in a treasure trove)   
+   
+   [ring of evasion]
+   
+   EV+5:      It affects your evasion (+5).
+   Str+2:     It affects your strength (+2).
+ L - the ring of the Townfolk {rN+ Str+4}
+   (You found it in a treasure trove)   
+   
+   [ring of positive energy]
+   
+   rN+:       It protects you from negative energy.
+   Str+4:     It affects your strength (+4).
+Wands
+ f - a wand of mindburst (9)
+ c - a wand of roots (8)
+ a - a wand of flame (24)
+ e - a wand of charming (19)
+ b - a wand of quicksilver (9)
+ p - a wand of polymorph (10)
+Scrolls
+ p - 4 scrolls of poison
+ a - 4 scrolls of enchant armour
+ V - 3 scrolls of vulnerability
+ T - 5 scrolls of torment
+ c - a scroll of silence {unknown}
+ x - a scroll of amnesia
+ d - a scroll of immolation {unknown}
+ i - a scroll of identify
+ e - a scroll of noise {unknown}
+Potions
+ m - 2 potions of might
+ A - 5 potions of attraction
+ a - a potion of ambrosia
+ C - 2 potions of cancellation
+ c - 2 potions of curing
+ b - 4 potions of brilliance
+ M - 2 potions of mutation
+ L - a potion of lignification
+ f - a potion of heal wounds {unknown}
+ j - a potion of enlightenment {unknown}
+
+
+   Skills:
+ + Level 17.0 Fighting
+ * Level 22.0(11.0) Axes
+ + Level 13.6 Armour
+ - Level 3.0 Stealth
+ - Level 15.0 Shields
+ - Level 3.5(2.6) Evocations
+
+
+You had 16 spell levels left.
+You knew the following spells:
+
+ Your Spells              Type           Power      Damage    Failure   Level
+a - Apportation           Tloc           0%         N/A       100%        1
+
+Your spell library contained the following spells:
+
+ Spells                   Type           Power      Damage    Failure   Level
+ Jinxbite                 Hex            0%         2d2       100%        2
+ Lesser Beckoning         Tloc           0%         N/A       100%        2
+ Mephitic Cloud           Conj/Alch/Air  0%         N/A       100%        3
+ Anguish                  Hex/Necr       0%         N/A       100%        4
+ Borgnjor's Vile Clutch   Necr/Erth      0%         N/A       100%        5
+ Freezing Cloud           Conj/Ice/Air   0%         6-21      100%        5
+ Yara's Violent Unravell  Hex/Alch       0%         3d3       100%        5
+ Conjure Ball Lightning   Conj/Air       0%         3x3d6     100%        6
+ Enfeeble                 Hex            0%         N/A       100%        7
+ Hellfire Mortar          Fire/Erth/Frge 0%         4d5       100%        7
+ Ozocubu's Refrigeration  Ice            0%         4d7       100%        7
+ Sphinx Sisters           Hex/Summ       0%         N/A       100%        7
+ Infestation              Necr           0%         N/A       100%        8
+ Summon Horrible Things   Summ           0%         N/A       100%        8
+ Polar Vortex             Ice            0%         N/A       100%        9
+
+
+Dungeon Overview and Level Annotations
+
+Branches:
+Dungeon (11/15)            Temple (1/1) D:5            Lair (5/5) D:8         
+  Swamp (4/4) Lair:2        Snake (4/4) Lair:2          Orc (2/2) D:10        
+    Elf (0/3) Orc:2         IceCv (visited)         Volcano (visited)         
+ Slime: Lair:4-5    
+
+The Realm of Zot is guarded by orbs of winter.
+
+Altars:
+Ashenzari
+Cheibriados
+Gozag
+Hepliaklqana
+Kikubaaqudgha
+Makhleb
+Nemelex Xobeh
+Okawaru
+Qazlal
+Ru
+Sif Muna
+Trog
+Uskayaw
+Vehumet
+Wu Jian
+Xom
+Yredelemnul
+Beogh
+
+Shops:
+D:3 [   Orc:1 ::   Orc:2 =(([   Snake:2 :(*(?   Snake:4 (:([:(
+
+Annotations:
+D:8 2 transporters
+Lair:4 exclusion: 2 oklob plants
+Swamp:3 Bai Suzhen
+Snake:3 Mara
+
+
+Innate Abilities, Weirdness & Mutations
+
+Your life essence is reduced to manifest your ancestor. (-10% HP)
+You cannot be hasted, slowed, berserked, paralysed or teleported.
+You can dig through walls and to a lower floor.
+You have a pair of large antennae on your head. (SInv)
+Your four strong arms can wield two-handed weapons with a shield.
+
+Message History
+
+The flame cauterises the wound! You slice the four-headed hydra!!
+You burn the four-headed hydra.
+You slice one of the two-headed hydra's heads off!
+The flame cauterises the wound! You slash the one-headed hydra!
+You burn the one-headed hydra.
+You kill the one-headed hydra!
+You slash the thorn hunter! You burn the thorn hunter terribly.
+You hit the briar patch. You burn the briar patch terribly.
+The grasping roots constrict the four-headed hydra!
+The grasping roots constrict the spriggan berserker!
+The grasping roots constrict the thorn hunter.
+The roots around the four-headed hydra sink back into the ground.
+The thorn hunter hits you but does no damage. x2
+You block the spriggan berserker's attack.
+The four-headed hydra bites you but does no damage. x4
+The swamp dragon is struck by the briar patch's thorns.
+The swamp dragon bites the briar patch!
+The briar patch is destroyed!
+The thorn hunter hits you.
+* * * LOW HITPOINT WARNING * * *
+The thorn hunter hits you but does no damage.
+You block the spriggan berserker's attack.
+You slash the spriggan berserker! You burn the spriggan berserker.
+The spriggan berserker is almost dead.
+You hit the thorn hunter. You burn the thorn hunter terribly.
+You slash the briar patch! You burn the briar patch terribly.
+You destroy the briar patch!
+You hit the briar patch. You burn the briar patch terribly.
+You slice one of the four-headed hydra's heads off!
+The flame cauterises the wound! You slice the three-headed hydra!!
+You burn the three-headed hydra.
+You kill the three-headed hydra!
+The grasping roots constrict the spriggan berserker!
+The grasping roots constrict the thorn hunter!
+The briar patch crumbles away.
+The roots around the thorn hunter sink back into the ground.
+The roots around the spriggan berserker sink back into the ground.
+The spriggan berserker hits you with a +0 hand axe!!
+You die...
+Hepliaklqana delivers you to your ancestors.
+
+    #####
+   #♣≈.~###♣~♣    ♣♣
+   #...~.≈.DD.    §♣
+   #DP#~.~{≈~≈D   ♣)
+  ##.#####~..f    ♣.
+ ##†fPP.## ≈.≈     §
+ ♣≈@~PP≈.##  #  ♣♣♣♣
+#P†iP###.~##    ♣~♣♣
+#.P### ##≈~##  ♣♣...
+#Dk     ##~≈###♣...~
+#≈:k     #♣†)~...~.♣
+#.♣≈     #♣†).≈..~~♣
+#♣{      #≈~~.~..~♣♣
+     {   #~~###♣§†♣
+      { #≈.##  ♣~.♣
+
+
+You could see a thorn hunter, 2 swamp dragons, a spriggan berserker (berserk)
+and a swamp drake.
+
+Vanquished Creatures
+  An Ice Fiend (IceCv)
+  A thorn hunter (Swamp:4)
+  Donald (Swamp:4)
+  An orc warlord (Orc:2)
+  2 eleionomae (Swamp:4)
+  5 bunyips
+  An ice dragon (Swamp:1)
+  12 hydras
+  6 salamander tyrants
+  A merfolk avatar (Lair:5)
+  2 anacondas (Snake:1)
+  2 boulder beetles (Lair:5)
+  A centaur warrior (Volcano)
+  6 alligators
+  10 naga sharpshooters
+  7 naga warriors
+  5 shock serpents
+  A hell knight (Volcano)
+  3 salamander mystics
+  An obsidian bat (Volcano)
+  2 goliath frogs
+  5 sea snakes
+  2 swamp dragons (Swamp:4)
+  A mana viper (Snake:3)
+  2 spriggan druids (Swamp:4)
+  3 naga ritualists
+  An obsidian statue (IceCv)
+  A bog body (Lair:2)
+  A caustic shrike simulacrum (IceCv)
+  2 harpies (Lair:5)
+  An orc knight (Orc:2)
+  7 salamanders
+  A manticore (Lair:4)
+  11 elephants
+  A kobold blastminer (Orc:2)
+  14 black mambas
+  2 guardian serpents
+  13 naga magi
+  2 torpor snails
+  4 cane toads
+  A gargoyle (D:10)
+  14 rime drakes (Lair:4)
+  12 komodo dragons
+  3 yaktaurs (Volcano)
+  A freezing wraith (IceCv)
+  Cassandra (D:10)
+  9 ice devils (IceCv)
+  A troll (Orc:2)
+  7 polar bears
+  3 tyrant leeches
+  2 wind drakes (Lair:5)
+  A spriggan (Swamp:1)
+  6 spriggan simulacra (IceCv)
+  2 hornets
+  3 blink frogs (Lair:5)
+  9 dream sheep
+  6 minotaur simulacra (IceCv)
+  A slime creature (D:10)
+  2 ettin simulacra (IceCv)
+  A shadowghast (D:9)
+  2 hydra simulacra (IceCv)
+  An anaconda simulacrum (IceCv)
+  A wraith (D:10)
+  10 wyverns
+  20 yaks
+  A hog (Lair:4)
+  3 fire bats (Volcano)
+  9 basilisks
+  3 wargs (Orc:2)
+  5 deep troll simulacra (IceCv)
+  A steam dragon (D:7)
+  A vampire mosquito (Swamp:2)
+  22 nagas
+  A lindwurm simulacrum (IceCv)
+  5 swamp worms
+  12 water moccasins
+  3 hell hounds
+  18 orc warriors
+  7 swamp drakes
+  2 sky beasts
+  2 black bears
+  7 ogres
+  3 wolves
+  3 centaurs
+  8 bullfrogs
+  A gnoll sergeant (D:10)
+  2 scorpions (D:6)
+  2 rock fish (D:10)
+  4 wights
+  4 howler monkeys
+  2 electric eels
+  A wyvern zombie (D:8)
+  A lava snake (Volcano)
+  14 orc priests
+  Crazy Yiuf (D:7)
+  A hound (D:5)
+  A gnoll bouda (D:7)
+  2 drudes
+  11 iguanas
+  11 orc wizards
+  A centaur zombie (D:8)
+  12 gnolls
+  5 adders
+  2 training dummies (D:4)
+  A dart slug (D:3)
+  41 orcs
+  2 ribbon worms
+  3 endoplasms (D:3)
+  2 hobgoblins
+  3 quokkas
+  2 ball pythons
+  2 bats
+  3 frilled lizards (Lair:3)
+  5 goblins
+  7 kobolds
+  A rat (D:2)
+530 creatures vanquished.
+
+Vanquished Creatures (collateral kills)
+  Kirke (Lair:4)
+  A thorn hunter (Swamp:4)
+  A fenstrider witch (Swamp:1)
+  2 nagarajas (Snake:4)
+  3 bunyips
+  A salamander tyrant (Snake:4)
+  7 hydras (Swamp:4)
+  An anaconda (Snake:4)
+  A boulder beetle (Lair:5)
+  3 naga sharpshooters (Snake:4)
+  A skyshark (Lair:2)
+  A shock serpent (Snake:4)
+  7 naga warriors
+  A salamander mystic (Snake:4)
+  4 goliath frogs
+  3 sea snakes (Snake:3)
+  A spriggan druid (Swamp:4)
+  2 mana vipers
+  4 swamp dragons
+  A naga ritualist (Snake:2)
+  2 bog bodies
+  A lindwurm (Lair:5)
+  3 orc sorcerers (Orc:2)
+  An ugly thing (D:11)
+  4 salamanders
+  4 elephants
+  A kobold blastminer (Orc:2)
+  6 black mambas
+  8 naga magi
+  A guardian serpent (Snake:1)
+  2 cane toads
+  An unseen horror (D:10)
+  2 rime drakes
+  4 komodo dragons
+  A freezing wraith (IceCv)
+  5 ice devils (IceCv)
+  A troll (Orc:2)
+  2 polar bears
+  A tyrant leech (Swamp:1)
+  A hornet (Swamp:4)
+  4 spriggan simulacra (IceCv)
+  A spriggan (Swamp:4)
+  2 blink frogs (Lair:5)
+  6 dream sheep
+  A minotaur simulacrum (IceCv)
+  2 wyverns (Lair:5)
+  7 yaks
+  A fire bat (Volcano)
+  2 basilisks (Lair:4)
+  3 wargs
+  3 vampire mosquitoes (Swamp:2)
+  2 deep troll simulacra (IceCv)
+  24 nagas
+  7 swamp worms
+  3 water moccasins
+  5 swamp drakes (Swamp:4)
+  7 orc warriors
+  2 ogres (Orc:2)
+  5 wolves
+  3 bullfrogs
+  A gnoll sergeant (D:9)
+  A rock fish (D:10)
+  2 wights (D:10)
+  2 howler monkeys
+  A lava snake (Volcano)
+  5 orc priests
+  4 iguanas
+  8 orc wizards
+  4 gnolls
+  A shadow imp (D:6)
+  23 orcs
+  6 frilled lizards (Lair:3)
+245 creatures vanquished.
+
+Vanquished Creatures (others)
+  A goliath frog (Swamp:1)
+  A black mamba (Snake:4)
+  A bloated husk (Swamp:1)
+  14 battlemagi
+17 creatures vanquished.
+
+Grand Total: 792 creatures vanquished
+
+Notes
+Turn   | Place    | Note
+-------+----------+-------------------------------------------
+     0 | D:1      | tlatlagkaus the Formicid Fighter began the quest for the
+                  | Orb.
+     0 | D:1      | Reached XP level 1. HP: 18/18 MP: 1/1
+    69 | D:2      | Reached skill level 3 in Axes
+    69 | D:2      | Reached XP level 2. HP: 24/24 MP: 2/2
+    97 | D:1      | You fall into a shaft and drop 1 floor!
+   122 | D:2      | You fall into a shaft and drop 2 floors!
+   184 | D:3      | Found a hide-covered altar of Uskayaw.
+   184 | D:3      | Found an ancient bone altar of Kikubaaqudgha.
+   201 | D:3      | Reached XP level 3. HP: 27/29 MP: 3/3
+   269 | D:3      | Found Tuddakk's Armour Shoppe.
+   389 | D:2      | Reached skill level 4 in Axes
+   389 | D:2      | Reached XP level 4. HP: 20/34 MP: 4/4
+   648 | D:4      | Found an ornate altar of the Wu Jian Council.
+   677 | D:4      | Reached XP level 5. HP: 23/36 MP: 5/5
+   717 | D:4      | Reached skill level 5 in Axes
+   830 | D:5      | Entered Level 5 of the Dungeon
+   958 | D:5      | Found a statue of an orb of winter.
+   958 | D:5      | Found a statue of an orb of winter.
+   966 | D:5      | Found a staircase to the Ecumenical Temple.
+   970 | Temple   | Entered the Ecumenical Temple
+   978 | Temple   | Became a worshipper of Hepliaklqana the Forgotten
+  1070 | D:5      | Reached XP level 6. HP: 14/47 MP: 6/6
+  1075 | D:5      | Encountered a black bear
+  1089 | D:5      | Killed a black bear
+  1090 | D:5      | Reached skill level 6 in Axes
+  1274 | D:6      | Encountered a yak
+  1274 | D:6      | Encountered a yak
+  1274 | D:6      | Encountered a yak
+  1274 | D:6      | Encountered a yak
+  1275 | D:6      | Encountered a yak
+  1287 | D:6      | Killed a yak
+  1288 | D:6      | Reached skill level 7 in Axes
+  1288 | D:6      | Reached skill level 1 in Evocations
+  1288 | D:6      | Reached XP level 7. HP: 43/53 MP: 7/7
+  1295 | D:6      | Killed a yak
+  1297 | D:6      | Killed a yak
+  1298 | D:6      | Reached XP level 8. HP: 15/61 MP: 8/8
+  1299 | D:6      | Reached skill level 8 in Axes
+  1307 | D:6      | Reached skill level 5 in Fighting
+  1344 | D:6      | HP: 3/62 [bullfrog (7)]
+  1380 | D:6      | Reached * piety under Hepliaklqana
+  1588 | D:6      | Reached XP level 9. HP: 61/61 MP: 9/9
+  1645 | D:7      | Reached skill level 9 in Axes
+  1708 | D:7      | Encountered Crazy Yiuf
+  1714 | D:7      | Killed Crazy Yiuf
+  1755 | D:7      | Found a bloodstained altar of Trog.
+  1878 | D:3      | Bought a +2 kite shield of protection for 264 gold pieces
+  1893 | D:3      | You fall into a shaft and drop 2 floors!
+  1896 | D:5      | You fall into a shaft and drop 3 floors!
+  1937 | D:8      | Reached skill level 5 in Armour
+  1989 | D:7      | Reached skill level 10 in Axes
+  2120 | D:7      | Found an iron altar of Okawaru.
+  2180 | D:8      | Found a staircase to the Lair.
+  2200 | D:8      | Reached XP level 10. HP: 53/69 MP: 10/10
+  2287 | D:8      | Reached ** piety under Hepliaklqana
+  2288 | D:8      | Remembered your ancestor Takurtum as a battlemage
+  2302 | D:8      | Encountered a deep elf pyromancer
+  2303 | D:8      | Found a transporter.
+  2303 | D:8      | Found a transporter.
+  2303 | D:8      | Encountered a deep elf pyromancer
+  2304 | D:8      | Encountered a seven-headed hydra
+  2344 | D:9      | Found a snail-covered altar of Cheibriados.
+  2354 | D:9      | Reached skill level 5 in Shields
+  2646 | D:9      | Reached skill level 11 in Axes
+  2651 | D:10     | Entered Level 10 of the Dungeon
+  2710 | D:10     | Identified 2 scrolls of acquirement
+  2710 | D:10     | Acquired a +2 executioner's axe of electrocution
+  2747 | D:10     | Encountered an unseen horror
+  2752 | D:10     | Killed an unseen horror
+  2758 | D:10     | Found a stormy altar of Qazlal.
+  2805 | D:10     | Encountered a gargoyle
+  2815 | D:10     | Killed a gargoyle
+  2830 | D:10     | Found a staircase to the Orcish Mines.
+  2838 | Orc:1    | Entered Level 1 of the Orcish Mines
+  2838 | Orc:1    | Found Qilotz Leno's Book Shop.
+  2838 | Orc:1    | Found Bueruic's Book Emporium.
+  3003 | Orc:1    | Reached *** piety under Hepliaklqana
+  3070 | Orc:2    | Entered Level 2 of the Orcish Mines
+  3081 | Orc:2    | Reached XP level 11. HP: 67/77 MP: 11/11
+  3193 | Orc:2    | Found a roughly hewn altar of Beogh.
+  3203 | Orc:2    | Reached skill level 12 in Axes
+  3205 | Orc:2    | Found Hexkawoy's Antique Weapon Shop.
+  3472 | Orc:2    | Encountered an orc warlord
+  3504 | Orc:2    | Killed an orc warlord
+  3701 | Orc:2    | Encountered an orc sorcerer
+  3713 | Orc:2    | Killed an orc sorcerer
+  3952 | Orc:2    | Encountered an orc sorcerer
+  3958 | Orc:2    | Killed an orc sorcerer
+  3959 | Orc:2    | Reached skill level 13 in Axes
+  3963 | Orc:2    | Found a roughly hewn altar of Beogh.
+  3963 | Orc:2    | Found Fadghola's Antique Armour Shop.
+  3966 | Orc:2    | Found Fozex's Antique Weapon Boutique.
+  4021 | Orc:2    | Found a roughly hewn altar of Beogh.
+  4074 | Orc:2    | Reached XP level 12. HP: 79/86 MP: 12/12
+  4101 | Orc:2    | Found a staircase to the Elven Halls.
+  4165 | Orc:2    | Found a roughly hewn altar of Beogh.
+  4166 | Orc:2    | Found Vaenwakly's Jewellery Shoppe.
+  4194 | Orc:2    | Found a roughly hewn altar of Beogh.
+  4369 | Orc:2    | Bought a ring of protection from fire for 350 gold pieces
+  4414 | Orc:1    | Bought a parchment of Apportation for 64 gold pieces
+  4416 | Orc:1    | Learned a level 1 spell: Apportation
+  4446 | D:10     | Identified the amulet "Bogymeyng" {Wildshape Bane rElec
+                  | rPois Regen+}
+  4446 | D:10     | Encountered Cassandra
+  4454 | D:10     | Killed Cassandra
+  4485 | D:10     | Gained bane: Bane of Heatstroke [Equipping an artefact]
+  4546 | D:8      | Acquired a manual of Evocations
+  4565 | Lair:1   | Entered Level 1 of the Lair of Beasts
+  4588 | Lair:1   | Reached skill level 10 in Fighting
+  4619 | Lair:1   | Reached skill level 10 in Shields
+  4620 | Lair:1   | Reached skill level 14 in Axes
+  4635 | Lair:1   | Reached **** piety under Hepliaklqana
+  4813 | Lair:3   | Reached XP level 13. HP: 93/93 MP: 13/13
+  4815 | Lair:3   | Reached skill level 10 in Armour
+  5026 | Lair:3   | Reached skill level 15 in Axes
+  5138 | Lair:3   | Found a dark tunnel.
+  5148 | Volcano  | Entered a volcano
+  5215 | Volcano  | Encountered a centaur warrior
+  5233 | Volcano  | Killed a centaur warrior
+  5268 | Volcano  | Found a burning altar of Makhleb.
+  5304 | Volcano  | Found a burning altar of Makhleb.
+  5478 | Lair:4   | Lost bane: Bane of Heatstroke
+  5498 | Lair:4   | Reached ***** piety under Hepliaklqana
+  5536 | Lair:4   | Reached skill level 1 in Stealth
+  5565 | Lair:4   | Reached skill level 16 in Axes
+  5580 | Lair:4   | Reached XP level 14. HP: 99/103 MP: 14/14
+  5643 | Lair:4   | Identified the +1 animal skin "Qatucweoq" {Rampage}
+  5712 | Lair:5   | Entered Level 5 of the Lair of Beasts
+  5979 | Lair:5   | Reached skill level 17 in Axes
+  6234 | Lair:5   | Identified the +1 demon trident "Bekhloack" {freeze, rElec
+                  | Will+ SInv}
+  6235 | Lair:5   | Got an earthy gem with 2180 turns to spare
+  6283 | Lair:4   | Encountered Kirke
+  6301 | Lair:4   | Killed Kirke
+  6446 | Lair:2   | Reached XP level 15. HP: 102/111 MP: 15/15
+  6456 | Lair:2   | Found a staircase to the Snake Pit.
+  6752 | Lair:2   | Found a staircase to the Swamp.
+  6790 | Snake:1  | Entered Level 1 of the Snake Pit
+  6835 | Snake:1  | You fall into a shaft and drop 1 floor!
+  6835 | Snake:2  | Found Kiarybekk's Book Boutique.
+  6921 | Snake:1  | Reached skill level 18 in Axes
+  7071 | Snake:2  | Found Tiumozeg's Weapon Shop.
+  7151 | Snake:2  | Found Cecu's Magic Scroll Boutique.
+  7161 | Snake:2  | Bought a scroll of enchant weapon for 148 gold pieces
+  7162 | Snake:2  | Bought a scroll of enchant armour for 148 gold pieces
+  7162 | Snake:2  | Bought a scroll of identify for 39 gold pieces
+  7162 | Snake:2  | Bought a scroll of identify for 39 gold pieces
+  7179 | Snake:2  | Found Bozaawis's Weapon Boutique.
+  7202 | Snake:2  | Bought 2 atropa-tipped darts for 34 gold pieces
+  7255 | Snake:2  | Found Baisit's General Store.
+  7388 | Snake:4  | Entered Level 4 of the Snake Pit
+  7408 | Snake:4  | Found Zoculio's Book Shop.
+  7431 | Snake:4  | Reached ****** piety under Hepliaklqana
+  7521 | Snake:4  | Found Seshrom's Weapon Shop.
+  7560 | Snake:4  | Reached XP level 16. HP: 108/113 MP: 14/16
+  7624 | Snake:3  | Reached skill level 19 in Axes
+  7722 | Snake:3  | Encountered Mara
+  7738 | Snake:4  | Found Corph's Armour Boutique.
+  7738 | Snake:4  | Found Eju Gekh's Weapon Shop.
+  7779 | Snake:4  | Found Vilufux's Weapon Boutique.
+  7779 | Snake:4  | Found Kargh's Book Shop.
+  7904 | Snake:4  | Encountered a nagaraja
+  7907 | Snake:4  | Killed a nagaraja
+  7917 | Snake:4  | Reached skill level 15 in Fighting
+  8120 | Snake:4  | Reached skill level 20 in Axes
+  8163 | Snake:4  | Got a jade gem with 963 turns to spare
+  8165 | Snake:4  | Got a serpentine rune of Zot
+  8200 | Snake:4  | Encountered a nagaraja
+  8205 | Snake:4  | Killed a nagaraja
+  8332 | Snake:2  | Reached XP level 17. HP: 89/127 MP: 15/17
+  8476 | Swamp:1  | Entered Level 1 of the Swamp
+  8633 | Swamp:1  | Identified the +5 rapier of Luxury {reap, ^Contam rF+ rC+}
+  8675 | Swamp:1  | Found a glacial archway.
+  8693 | IceCv    | Entered an ice cave
+  8808 | IceCv    | Got the +0 cloak "Muovyk" {Harm *Slow rElec rC+ Int+6}
+  8916 | IceCv    | Identified the +9 glaive of the Throat {freeze, rN+ Str+4}
+  9012 | IceCv    | Reached skill level 15 in Shields
+  9018 | IceCv    | Reached skill level 21 in Axes
+  9074 | IceCv    | Encountered an Ice Fiend
+  9097 | IceCv    | Killed an Ice Fiend
+  9165 | IceCv    | Found the +8 storm bow {elec, penet}
+  9174 | IceCv    | Got the +5 kite shield of Integrity {Slay+6}
+  9287 | Swamp:1  | Found a portal to a secret trove of treasure.
+  9295 | Swamp:1  | Gained bane: Bane of the Dilettante [Entering a Trove]
+  9296 | Trove    | Entered The Octopus King's Forgotten Garden
+  9299 | Trove    | Identified the amulet of the Isitwalangcengce {Spirit Str+3
+                  | SInv}
+  9301 | Trove    | Identified the +3 buckler of Fortitude {rCorr}
+  9311 | Trove    | Identified the ring "Diuseq" {EV+5 Str+2}
+  9326 | Trove    | Identified the ring "Urounwuo" {rN++ Slay+4}
+  9364 | Trove    | Identified the ring of Zuommy {Str+6 Int+3 Dex+2}
+  9390 | Trove    | Identified the ring of the Townfolk {rN+ Str+4}
+  9560 | Swamp:3  | Encountered Bai Suzhen
+  9569 | Swamp:3  | You fall into a shaft and drop 1 floor!
+  9569 | Swamp:4  | Entered Level 4 of the Swamp
+  9693 | Swamp:4  | Reached XP level 18. HP: 137/137 MP: 16/18
+  9775 | Swamp:4  | Encountered Donald
+  9786 | Swamp:4  | Killed Donald
+ 10050 | Swamp:4  | Reached skill level 22 in Axes
+ 10080 | Swamp:4  | Demolished by a spriggan berserker
+
+Illustrated notes
+
+Levels and vault maps discovered:
+D:1:      wander_arrival_peaceful_grave, layout_basic, roderic_nine_men_s_morris
+D:2:      layout_basic, basic_ecumenical_altar, minivault_4,
+          chequers_decorated_corner
+D:3:      layout_basic, gammafunk_temple_overflow_wave, serial_shops, shop
+D:4:      layout_loops_ring, good_gods_temple_1,
+          nicolae_wu_jian_enter_the_monastery, hangedman_glass_teeth
+D:5:      layout_loops_ring, temple_hall_moat, serial_glass, glass_columns_b,
+          glass_columns_b, glass_columns_c, glass_columns_c, glass_columns_c,
+          glass_columns_a, due_unseen_surprise, feat_on_display
+D:6:      layout_layer_cave, mainiacjoe_overflow_alcove_4, serial_rivers,
+          chequers_serial_rivers_room_a, chequers_serial_rivers_large_b,
+          chequers_serial_rivers_small_3, chequers_serial_rivers_room_a
+D:7:      layout_gridville, grunt_dithmenos_smoke_and_mirrors,
+          okawaru_altar_gauntlet_db, nicolae_overflow_streaming_green_lines,
+          serial_shops, nicolae_shop_tiny_waterfront, uniq_crazy_yiuf_cottage
+D:8:      gammafunk_sealed_arena, layout_loops_ring,
+          due_lair_maze_entry_diamond, serial_undead, serial_undead_d,
+          serial_undead_c, serial_undead_c, serial_undead_f, serial_undead_a,
+          chequers_serial_rivers_micro_c, minmay_microvault
+D:9:      layout_stronghold, nicolae_cheibriados_dopplering,
+          kennysheep_small_spiral
+D:10:     layout_loops_ring, lemuel_round_altar, uniq_cassandra
+D:11:     lemuel_slime, layout_basic
+Temple:   hellmonk_temple_rainy
+Lair:1:   layout_chaotic_city, cheibrodos_lair_caveside_slide,
+          grunt_megastairs_3, uniq_grum
+Lair:2:   layout_hall_layers, skrybe_swamp_entry_bodies,
+          guppyfry_snake_entry_island, nicolae_lair_percent_stairs
+Lair:3:   lemuel_reptile_caves, layout_regular_city, enter_volcano_3,
+          cheibrodos_lair_lostbears
+Lair:4:   layout_gridlike, minmay_slime_entry_oklob_enclosed, special_room
+          [special_room_mythical_zoo], nicolae_lair_unfinished_basement,
+          nicolae_lair_sylvan_descent, lemuel_fruit_fields,
+          infiniplex_staircase_pool, uniq_kirke
+Lair:5:   gammafunk_lair_ancient_temple, layout_loops_ring
+Swamp:1:  layout_basic_swamp, portal_ice_cave_entry_dragon,
+          nicolae_trove_entry_diagonal_crystal, infiniplex_staircase_pool_2
+Swamp:2:  layout_falls_marsh, nicolae_swamp_some_circles,
+          nicolae_swamp_spriggan_camp
+Swamp:3:  layout_basic_swamp, evilmike_swamp_ruin_wall,
+          nicolae_swamp_decorative_isthmus, uniq_bai_suzhen
+Swamp:4:  swamp_basic_johnstein, layout_basic_swamp, swamp_pool_5, uniq_donald
+Snake:1:  layout_onion, serial_shops, nicolae_shop_tiny_real_fake_doors,
+          nicolae_snake_gridmaze_tees, drop_trap, nicolae_snake_springs,
+          grunt_megastairs_5
+Snake:2:  layout_layer_cave, serial_shops, nicolae_shop_tiny_glass, shop_statue,
+          shop, shop, nicolae_shop_tiny_waterfront, parchment_shop
+Snake:3:  layout_basic, nicolae_custom_books, uniq_mara, uniq_asterion
+Snake:4:  snake_pit, layout_cave_shapes, serial_shops, nicolae_shop_peninsula,
+          parchment_shop, minmay_shoptagon
+Orc:1:    layout_diamond_mine, serial_shops, nicolae_shop_relaxation,
+          parchment_shop
+Orc:2:    grunt_orc_community_town_hall, layout_caves,
+          grunt_orc_community_big_house_2, grunt_orc_community_big_house_1,
+          grunt_orc_community_house_3, grunt_orc_community_house_1,
+          grunt_orc_community_house_3, grunt_orc_community_house_2, basic_altar
+
+Skill      XL: |  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 |
+---------------+-------------------------------------------------------+-----
+Axes           |  3     4     5  7     8 10 11 13 14 16 17 18 20 21 22 | 22.0
+Evocations     |                 1  2  3                               |  3.5
+Fighting       |                    4  5  6  8  9 10 12 13 14 15 16 17 | 17.0
+Armour         |                       4  5  7  8  9 11 12       13    | 13.6
+Shields        |                             7  8 10       12 14 15    | 15.0
+Stealth        |                                      2  3             |  3.0
+
+Action                     |  1- 3 |  4- 6 |  7- 9 | 10-12 | 13-15 | 16-18 || total
+---------------------------+-------+-------+-------+-------+-------+-------++-------
+ Attack: Normal            |    51 |    80 |   113 |   397 |   494 |   565 ||  1700
+  Melee: War axe           |    53 |    86 |    93 |   368 |    10 |    14 ||   624
+         Hand axe          |       |       |    39 |       |       |       ||    39
+         Executioner's axe |       |       |       |    76 |   284 |   282 ||   642
+         Battleaxe         |       |       |       |       |   381 |   419 ||   800
+         Unarmed           |       |       |       |       |     1 |       ||     1
+  Throw: Dart              |       |       |     4 |       |     2 |       ||     6
+ Invoke: Recall Ancestor   |       |       |     1 |     5 |     4 |    13 ||    23
+         Ancestor Life: Ba |       |       |       |     1 |       |       ||     1
+Ability: Shaft Self        |     2 |       |     2 |       |     1 |     3 ||     8
+         Dig               |     1 |     4 |     2 |    10 |    18 |     2 ||    37
+  Evoke: Wand of roots     |       |     1 |     3 |     3 |     5 |     4 ||    16
+         Wand of flame     |       |       |       |       |     3 |     4 ||     7
+         Wand of mindburst |       |       |       |       |     7 |       ||     7
+  Drink: Cancellation      |     1 |       |       |       |       |       ||     1
+         Invisibility      |     1 |       |       |       |       |       ||     1
+         Ambrosia          |       |     2 |       |       |       |       ||     2
+         Curing            |       |       |       |     1 |     2 |     1 ||     4
+         Resistance        |       |       |       |       |       |     1 ||     1
+   Read: Identify          |       |     4 |     1 |     1 |     6 |       ||    12
+         Acquirement       |       |       |       |     2 |       |       ||     2
+         Poison            |       |       |       |     1 |     1 |     1 ||     3
+         Teleportation     |       |       |       |     1 |       |       ||     1
+         Revelation        |       |       |       |     1 |       |       ||     1
+         Fog               |       |       |       |     1 |       |       ||     1
+         Amnesia           |       |       |       |     1 |       |       ||     1
+         Enchant weapon    |       |       |       |     1 |     1 |       ||     2
+         Fear              |       |       |       |       |     1 |       ||     1
+   Stab: Distracted        |       |       |       |     1 |     2 |     3 ||     6
+ Armour: Scale mail        |    27 |       |       |       |       |       ||    27
+         Chain mail        |     9 |    74 |    29 |       |       |       ||   112
+         Plate armour      |       |       |    65 |   196 |   430 |   242 ||   933
+         Troll leather arm |       |       |       |     5 |       |       ||     5
+         None              |       |       |       |       |     5 |       ||     5
+         Crystal plate arm |       |       |       |       |       |   318 ||   318
+  Dodge: Dodged            |    19 |    41 |    24 |    83 |    84 |    81 ||   332
+  Block: Buckler           |     9 |    27 |    13 |       |       |       ||    49
+         Kite shield       |       |       |    31 |   174 |   128 |       ||   333
+         Tower shield      |       |       |       |       |   322 |   657 ||   979
+
+Table legend: (Time is in decaauts)
+ A = Elapsed time spent in this place.
+ B = Non-inter-level travel time spent in this place.
+ C = Inter-level travel time spent in this place.
+ D = Time resting spent in this place.
+ E = Time spent auto-exploring this place.
+ F = Levels seen in this place.
+ G = Mean time per level.
+                   A        B        C        D        E      F       G
+               +--------+--------+--------+--------+--------+-----+--------+
+         Total |  10552 |  10093 |    459 |      0 |      0 |  30 |  351.7 |
+       Dungeon |   3024 |   2880 |    144 |      0 |      0 |  11 |  274.9 |
+        Temple |     17 |     10 |      7 |      0 |      0 |   1 |   17.0 |
+          Lair |   2188 |   2093 |     95 |      0 |      0 |   5 |  437.6 |
+         Swamp |   1193 |   1123 |     70 |      0 |      0 |   4 |  298.2 |
+     Snake Pit |   1717 |   1663 |     54 |      0 |      0 |   4 |  429.2 |
+  Orcish Mines |   1624 |   1536 |     88 |      0 |      0 |   2 |  812.0 |
+         Trove |    113 |    113 |      0 |      0 |      0 |   1 |  113.0 |
+      Ice Cave |    491 |    491 |      0 |      0 |      0 |   1 |  491.0 |
+       Volcano |    181 |    181 |      0 |      0 |      0 |   1 |  181.0 |
+               +--------+--------+--------+--------+--------+-----+--------+
+
+Top non-repeatable levels by time:
+   Orc:2: 1094 daAuts
+ Snake:4: 840 daAuts
+ Swamp:4: 638 daAuts
+  Lair:5: 604 daAuts
+  Lair:3: 542 daAuts
+   Orc:1: 529 daAuts
+   IceCv: 491 daAuts
+  Lair:2: 455 daAuts
+     D:5: 449 daAuts
+ Snake:2: 426 daAuts
+ Swamp:1: 401 daAuts
+  Lair:4: 401 daAuts
+     D:7: 400 daAuts
+     D:4: 379 daAuts
+     D:6: 341 daAuts
+
+DLua errors:
+
+Table legend:
+ A = God
+ B = Rank
+ C = Start time
+ D = Start piety
+ E = Piety gained
+ F = Piety on gifts
+ G = Piety on penance
+ H = Piety on stepdowns
+ I = Piety decays
+ J = Piety lost (inc. decay)
+         A          B      C       D     E     F     G     H     I     J   
++-----------------+---+---------+-----+-----+-----+-----+-----+-----+-----+
+ Hepliaklqana     | 0 |   10127 |  15 |  16 |   0 |   0 |   0 |   0 |   0 
+ Hepliaklqana     | 1 |   14442 |  30 |  22 |   0 |   0 |   0 |   2 |   2 
+ Hepliaklqana     | 2 |   24147 |  50 |  26 |   0 |   0 |   0 |   1 |   1 
+ Hepliaklqana     | 3 |   31356 |  75 |  27 |   0 |   0 |   1 |   3 |   3 
+ Hepliaklqana     | 4 |   47529 | 100 |  22 |   0 |   0 |   7 |   2 |   2 
+ Hepliaklqana     | 5 |   56553 | 120 |  45 |   0 |   0 |  19 |   5 |   5 
+ Hepliaklqana     | 6 |   78261 | 160 |  27 |   0 |   0 |  20 |   5 |   5 
++-----------------+---+---------+-----+-----+-----+-----+-----+-----+-----+
+
+Conducts for god: Hepliaklqana
+Piety from conduct
+              Conduct |  1- 3 |  4- 6 |  7- 9 | 10-12 | 13-15 | 16-18 || total
+----------------------+-------+-------+-------+-------+-------+-------++-------
+         Exploration  |     0 |     8 |    26 |    65 |    86 |    48 ||   233
+----------------------+-------+-------+-------+-------+-------+-------++-------
+Conduct count
+              Conduct |  1- 3 |  4- 6 |  7- 9 | 10-12 | 13-15 | 16-18 || total
+----------------------+-------+-------+-------+-------+-------+-------++-------
+         Exploration  |     0 |  1512 |  4635 | 11607 | 15349 |  8561 || 41664
+----------------------+-------+-------+-------+-------+-------+-------++-------
+

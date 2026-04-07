@@ -49,26 +49,57 @@ function matchSpecies(descriptor: string, speciesNames: readonly string[]): stri
   return species
 }
 
-function parseSpecies(text: string, speciesNames: readonly string[]): string {
+function parseDescriptor(descriptor: string, speciesNames: readonly string[]): {
+  species: string
+  background: string | null
+} {
+  const trimmedDescriptor = descriptor.trim()
+  const coloredDraconianMatch = trimmedDescriptor.match(/^[A-Za-z]+ Draconian(?:\s+(.*))?$/)
+
+  if (coloredDraconianMatch) {
+    return {
+      species: 'Draconian',
+      background: coloredDraconianMatch[1]?.trim() || null,
+    }
+  }
+
+  const species = matchSpecies(trimmedDescriptor, speciesNames)
+  const background = trimmedDescriptor.slice(species.length).trim()
+
+  return {
+    species,
+    background: background || null,
+  }
+}
+
+function getCharacterDescriptor(text: string): string {
   const beganAsDescriptor = text.match(/^\s*Began as an? (.+?) on [A-Z][a-z]{2} \d{1,2}, \d{4}\.$/m)?.[1]
 
   if (beganAsDescriptor) {
-    return matchSpecies(beganAsDescriptor, speciesNames)
+    return beganAsDescriptor
   }
 
   const directDescriptor = text.match(/You are an? (.+?)\./)?.[1]
 
   if (directDescriptor) {
-    return matchSpecies(directDescriptor, speciesNames)
+    return directDescriptor
   }
 
   const titleDescriptor = text.match(/^[^\n]*\(([^)]+)\)\s+Turns:/m)?.[1]
 
   if (titleDescriptor) {
-    return matchSpecies(titleDescriptor, speciesNames)
+    return titleDescriptor
   }
 
   throw new Error('Could not find species line')
+}
+
+function parseSpecies(text: string, speciesNames: readonly string[]): string {
+  return parseDescriptor(getCharacterDescriptor(text), speciesNames).species
+}
+
+function parseBackground(text: string, speciesNames: readonly string[]): string | null {
+  return parseDescriptor(getCharacterDescriptor(text), speciesNames).background
 }
 
 function parsePrimaryStats(text: string) {
@@ -122,6 +153,7 @@ export function extractBaseStats(text: string, options?: ExtractBaseStatsOptions
     playerName: parsePlayerName(text),
     version: parseVersion(text),
     species: parseSpecies(text, speciesNames),
+    background: parseBackground(text, speciesNames),
     ...parseDefensiveStats(text),
     ...parsePrimaryStats(text),
   }
