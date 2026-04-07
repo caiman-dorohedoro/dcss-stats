@@ -582,7 +582,7 @@ export function extractEquipment(text: string): EquipmentSnapshot {
     shield: normalizeShield(findSlotItem(equipped, 'offhand') ?? 'none'),
     helmet: hasSlot(equipped, 'helmet'),
     gloves: hasSlot(equipped, 'gloves'),
-    bootsOrBarding: hasSlot(equipped, 'boots') || hasSlot(equipped, 'barding'),
+    footwear: findFootwear(equipped),
     cloak: hasSlot(equipped, 'cloak')
   }
 }

@@ -62,7 +62,6 @@ describe('parseMorgue', () => {
       expect(result.record.ev).toBe(6)
       expect(result.record.sh).toBe(0)
       expect(result.record.bodyArmour).toBe('plate armour')
-      expect(result.record.bootsOrBarding).toBe(true)
       expect(result.record.footwear).toEqual(['pair of boots'])
       expect(result.record.cloaks).toEqual(['cloak'])
       expect(result.record.mutations).toEqual([

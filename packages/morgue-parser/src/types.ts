@@ -108,7 +108,6 @@ export type EquipmentSnapshot = {
   helmets: string[]
   gloves: string[]
   footwear: string[]
-  bootsOrBarding: boolean
   cloaks: string[]
   orb: string | undefined
   amulet: string | undefined
@@ -190,7 +189,6 @@ export type ParsedMorgueTextRecord = BaseStatsSnapshot & {
   helmets: string[]
   gloves: string[]
   footwear: string[]
-  bootsOrBarding: boolean
   cloaks: string[]
   orb: string
   amulet: string

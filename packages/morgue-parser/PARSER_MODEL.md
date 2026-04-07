@@ -313,7 +313,6 @@ List-valued slot summaries:
 
 Other equipment flags:
 
-- `bootsOrBarding`
 
 Examples:
 

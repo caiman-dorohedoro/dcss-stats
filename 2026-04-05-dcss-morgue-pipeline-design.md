@@ -54,7 +54,7 @@ The parser must extract these fields successfully or mark the morgue as failed.
 - `shield` (canonical label; `none` allowed)
 - `helmet` (boolean)
 - `gloves` (boolean)
-- `bootsOrBarding` (boolean)
+- `footwear` (boots/barding slot summary)
 - `cloak` (boolean)
 
 #### Required skill/stat fields
@@ -287,7 +287,7 @@ Each successful parse should produce one normalized JSON object.
   "shield": "none",
   "helmet": false,
   "gloves": true,
-  "bootsOrBarding": true,
+  "footwear": ["pair of boots"],
   "cloak": false,
   "armourSkill": 2.3,
   "dodgingSkill": 8.1,

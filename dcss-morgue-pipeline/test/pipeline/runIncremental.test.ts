@@ -114,7 +114,6 @@ describe('runIncremental', () => {
           helmets: [],
           gloves: [],
           footwear: [],
-          bootsOrBarding: false,
           cloaks: [],
           orb: 'none',
           amulet: 'none',

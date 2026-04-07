@@ -36,7 +36,6 @@ export function parseMorgueText(text: string, options: ParseMorgueTextOptions = 
       helmets: record.helmets,
       gloves: record.gloves,
       footwear: record.footwear,
-      bootsOrBarding: record.bootsOrBarding,
       cloaks: record.cloaks,
       orb: record.orb,
       amulet: record.amulet,

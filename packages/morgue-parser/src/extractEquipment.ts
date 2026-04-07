@@ -1203,7 +1203,6 @@ export function extractEquipment(text: string): EquipmentSnapshot {
     helmets: helmetDetails.map((item) => item.rawName),
     gloves: glovesDetails.map((item) => item.rawName),
     footwear: footwearDetails.map((item) => item.rawName),
-    bootsOrBarding: footwearDetails.length > 0,
     cloaks: cloakDetails.map((item) => item.rawName),
     orb: orbDetails?.rawName ?? 'none',
     amulet: amuletDetails?.rawName ?? 'none',
