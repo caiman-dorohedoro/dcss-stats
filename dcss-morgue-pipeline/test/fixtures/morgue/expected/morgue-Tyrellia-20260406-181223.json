@@ -8,14 +8,18 @@
   "strength": 18,
   "intelligence": 28,
   "dexterity": 20,
-  "bodyArmour": "golden dragon scales",
+  "bodyArmour": "golden dragon scales of Vyoxih",
   "shield": "tower shield of protection",
+  "helmet": "hat of Datusoth",
+  "gloves": "Mad Mage's Maulers",
   "footwear": "pair of boots of rampaging",
+  "bootsOrBarding": true,
+  "cloak": "none",
   "orb": "none",
   "amulet": "amulet of reflection",
   "rings": [
-    "randart ring",
-    "randart ring"
+    "ring of Zutivi",
+    "ring of Urajuxuz"
   ],
   "bodyArmourDetails": {
     "rawName": "golden dragon scales of Vyoxih",
@@ -66,25 +70,6 @@
     ],
     "artifactProperties": []
   },
-  "footwearDetails": {
-    "rawName": "pair of boots of rampaging",
-    "displayName": "pair of boots of rampaging",
-    "objectClass": "armour",
-    "baseType": "boots",
-    "enchant": 0,
-    "artifactKind": "normal",
-    "ego": "rampaging",
-    "subtypeEffect": null,
-    "propertiesText": null,
-    "properties": [
-      "Rampage"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "Rampage"
-    ],
-    "artifactProperties": []
-  },
   "helmetDetails": {
     "rawName": "hat of Datusoth",
     "displayName": "hat of Datusoth",
@@ -132,6 +117,25 @@
       "VampMP",
       "-Cast"
     ]
+  },
+  "footwearDetails": {
+    "rawName": "pair of boots of rampaging",
+    "displayName": "pair of boots of rampaging",
+    "objectClass": "armour",
+    "baseType": "boots",
+    "enchant": 0,
+    "artifactKind": "normal",
+    "ego": "rampaging",
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [
+      "Rampage"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [
+      "Rampage"
+    ],
+    "artifactProperties": []
   },
   "amuletDetails": {
     "rawName": "amulet of reflection",
@@ -200,51 +204,39 @@
       ]
     }
   ],
-  "helmet": "hat of Datusoth",
-  "gloves": "Mad Mage's Maulers",
-  "bootsOrBarding": true,
-  "cloak": "none",
-  "armourSkill": 20,
-  "dodgingSkill": 10,
-  "shieldSkill": 20,
-  "spellcasting": 0,
-  "fighting": 20,
-  "shortBlades": 14,
-  "longBlades": 6.1,
-  "axes": 0,
-  "macesFlails": 3.9,
-  "polearms": 0,
-  "staves": 0,
-  "rangedWeapons": 0,
-  "throwing": 0,
-  "stealth": 0,
-  "unarmedCombat": 0,
-  "conjurations": 0,
-  "hexes": 0,
-  "summonings": 0,
-  "necromancy": 0,
-  "translocations": 0,
-  "transmutations": 0,
-  "fireMagic": 0,
-  "iceMagic": 0,
-  "airMagic": 0,
-  "earthMagic": 0,
-  "poisonMagic": 0,
-  "forgecraft": 0,
-  "alchemy": 0,
-  "invocations": 20,
-  "evocations": 18.1,
-  "shapeshifting": 0,
-  "mutations": [
-    "thin skeletal structure 3",
-    "demonic guardian 3",
-    "icemail 1",
-    "robust 3",
-    "condensation shield",
-    "weakness stinger 3",
-    "Dis destruction",
-    "Mark of Atrocity"
-  ],
+  "skills": {
+    "fighting": 20,
+    "macesFlails": 3.9,
+    "axes": 0,
+    "polearms": 0,
+    "staves": 0,
+    "unarmedCombat": 0,
+    "throwing": 0,
+    "shortBlades": 14,
+    "longBlades": 6.1,
+    "rangedWeapons": 0,
+    "armour": 20,
+    "dodging": 10,
+    "shields": 20,
+    "stealth": 0,
+    "spellcasting": 0,
+    "conjurations": 0,
+    "hexes": 0,
+    "summonings": 0,
+    "necromancy": 0,
+    "forgecraft": 0,
+    "translocations": 0,
+    "transmutations": 0,
+    "alchemy": 0,
+    "fireMagic": 0,
+    "iceMagic": 0,
+    "airMagic": 0,
+    "earthMagic": 0,
+    "poisonMagic": 0,
+    "invocations": 20,
+    "evocations": 18.1,
+    "shapeshifting": 0
+  },
   "spells": [
     {
       "name": "Blink",
@@ -640,6 +632,40 @@
       "name": "Shatter",
       "failurePercent": 100,
       "memorized": false
+    }
+  ],
+  "mutations": [
+    {
+      "name": "thin skeletal structure",
+      "level": 3
+    },
+    {
+      "name": "demonic guardian",
+      "level": 3
+    },
+    {
+      "name": "icemail",
+      "level": 1
+    },
+    {
+      "name": "robust",
+      "level": 3
+    },
+    {
+      "name": "condensation shield",
+      "level": null
+    },
+    {
+      "name": "weakness stinger",
+      "level": 3
+    },
+    {
+      "name": "Dis destruction",
+      "level": null
+    },
+    {
+      "name": "Mark of Atrocity",
+      "level": null
     }
   ]
 }

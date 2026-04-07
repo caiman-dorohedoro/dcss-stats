@@ -4,6 +4,10 @@ Strict DCSS 0.34/trunk morgue dataset pipeline scaffold.
 
 The strict parser core now also lives in [packages/morgue-parser](/Users/hyeon/playground/dcss-stats/packages/morgue-parser/README.md), so the same morgue-to-JSON logic can be reused from browser code or other tools without pulling in SQLite, fetch, or logfile state.
 
+The parser's field model, Crawl-source references, and equipment/property
+rationale are documented in
+[packages/morgue-parser/PARSER_MODEL.md](/Users/hyeon/playground/dcss-stats/packages/morgue-parser/PARSER_MODEL.md).
+
 ## Commands
 
 - `npm test`

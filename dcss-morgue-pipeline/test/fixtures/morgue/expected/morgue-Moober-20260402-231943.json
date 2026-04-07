@@ -10,12 +10,16 @@
   "dexterity": 42,
   "bodyArmour": "moon troll leather armour",
   "shield": "none",
+  "helmet": "hat of the Bear Spirit",
+  "gloves": "none",
   "footwear": "pair of boots of stealth",
+  "bootsOrBarding": true,
+  "cloak": "scarf \"Wiapirghias\"",
   "orb": "orb of mesmerism",
   "amulet": "amulet of Vitality",
   "rings": [
-    "randart ring",
-    "randart ring"
+    "ring of New Discoveries",
+    "ring of Suxzeiv"
   ],
   "bodyArmourDetails": {
     "rawName": "moon troll leather armour",
@@ -42,25 +46,6 @@
       "MP+5"
     ]
   },
-  "footwearDetails": {
-    "rawName": "pair of boots of stealth",
-    "displayName": "pair of boots of stealth",
-    "objectClass": "armour",
-    "baseType": "boots",
-    "enchant": 2,
-    "artifactKind": "normal",
-    "ego": "stealth",
-    "subtypeEffect": null,
-    "propertiesText": null,
-    "properties": [
-      "Stlth+"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "Stlth+"
-    ],
-    "artifactProperties": []
-  },
   "helmetDetails": {
     "rawName": "hat of the Bear Spirit",
     "displayName": "hat of the Bear Spirit",
@@ -85,6 +70,25 @@
       "*Rage",
       "Will++"
     ]
+  },
+  "footwearDetails": {
+    "rawName": "pair of boots of stealth",
+    "displayName": "pair of boots of stealth",
+    "objectClass": "armour",
+    "baseType": "boots",
+    "enchant": 2,
+    "artifactKind": "normal",
+    "ego": "stealth",
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [
+      "Stlth+"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [
+      "Stlth+"
+    ],
+    "artifactProperties": []
   },
   "cloakDetails": {
     "rawName": "scarf \"Wiapirghias\"",
@@ -201,56 +205,39 @@
       ]
     }
   ],
-  "helmet": "hat of the Bear Spirit",
-  "gloves": "none",
-  "bootsOrBarding": true,
-  "cloak": "scarf \"Wiapirghias\"",
-  "armourSkill": 10.6,
-  "dodgingSkill": 10.6,
-  "shieldSkill": 0,
-  "spellcasting": 21.1,
-  "fighting": 27,
-  "shortBlades": 20,
-  "longBlades": 20.8,
-  "axes": 0,
-  "macesFlails": 0.2,
-  "polearms": 0.4,
-  "staves": 0.2,
-  "rangedWeapons": 18.9,
-  "throwing": 0,
-  "stealth": 10.9,
-  "unarmedCombat": 0,
-  "conjurations": 0.4,
-  "hexes": 0,
-  "summonings": 0.2,
-  "necromancy": 0,
-  "translocations": 19.4,
-  "transmutations": 0,
-  "fireMagic": 0,
-  "iceMagic": 0.2,
-  "airMagic": 0,
-  "earthMagic": 0,
-  "poisonMagic": 0,
-  "forgecraft": 0,
-  "alchemy": 0.2,
-  "invocations": 0,
-  "evocations": 3.6,
-  "shapeshifting": 26,
-  "mutations": [
-    "vile attack",
-    "siphon essence",
-    "torment immunity",
-    "no potions",
-    "accursed",
-    "ignite blood 3",
-    "(sanguine armour 3)",
-    "demonic magic 3",
-    "corrupting presence 2",
-    "word of chaos",
-    "demonic touch 3",
-    "agile 1",
-    "ephemeral shield"
-  ],
+  "skills": {
+    "fighting": 27,
+    "macesFlails": 0.2,
+    "axes": 0,
+    "polearms": 0.4,
+    "staves": 0.2,
+    "unarmedCombat": 0,
+    "throwing": 0,
+    "shortBlades": 20,
+    "longBlades": 20.8,
+    "rangedWeapons": 18.9,
+    "armour": 10.6,
+    "dodging": 10.6,
+    "shields": 0,
+    "stealth": 10.9,
+    "spellcasting": 21.1,
+    "conjurations": 0.4,
+    "hexes": 0,
+    "summonings": 0.2,
+    "necromancy": 0,
+    "forgecraft": 0,
+    "translocations": 19.4,
+    "transmutations": 0,
+    "alchemy": 0.2,
+    "fireMagic": 0,
+    "iceMagic": 0.2,
+    "airMagic": 0,
+    "earthMagic": 0,
+    "poisonMagic": 0,
+    "invocations": 0,
+    "evocations": 3.6,
+    "shapeshifting": 26
+  },
   "spells": [
     {
       "name": "Manifold Assault",
@@ -736,6 +723,60 @@
       "name": "Shatter",
       "failurePercent": 100,
       "memorized": false
+    }
+  ],
+  "mutations": [
+    {
+      "name": "vile attack",
+      "level": null
+    },
+    {
+      "name": "siphon essence",
+      "level": null
+    },
+    {
+      "name": "torment immunity",
+      "level": null
+    },
+    {
+      "name": "no potions",
+      "level": null
+    },
+    {
+      "name": "accursed",
+      "level": null
+    },
+    {
+      "name": "ignite blood",
+      "level": 3
+    },
+    {
+      "name": "(sanguine armour 3)",
+      "level": null
+    },
+    {
+      "name": "demonic magic",
+      "level": 3
+    },
+    {
+      "name": "corrupting presence",
+      "level": 2
+    },
+    {
+      "name": "word of chaos",
+      "level": null
+    },
+    {
+      "name": "demonic touch",
+      "level": 3
+    },
+    {
+      "name": "agile",
+      "level": 1
+    },
+    {
+      "name": "ephemeral shield",
+      "level": null
     }
   ]
 }

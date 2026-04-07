@@ -35,11 +35,13 @@ export function validateStrict(row: Partial<ParsedMorgueRecord>): ParsedMorgueRe
     throw new ParseFailure('ambiguous_shield')
   }
 
-  if (!isFiniteNumber(row.armourSkill) || !isFiniteNumber(row.dodgingSkill) || !isFiniteNumber(row.shieldSkill)) {
-    throw new ParseFailure('skill_parse_failed')
-  }
-
-  if (!isFiniteNumber(row.spellcasting)) {
+  if (
+    !row.skills
+    || !isFiniteNumber(row.skills.armour)
+    || !isFiniteNumber(row.skills.dodging)
+    || !isFiniteNumber(row.skills.shields)
+    || !isFiniteNumber(row.skills.spellcasting)
+  ) {
     throw new ParseFailure('skill_parse_failed')
   }
 

@@ -10,9 +10,13 @@
   "dexterity": 10,
   "bodyArmour": "troll leather armour",
   "shield": "kite shield of reflection",
+  "helmet": "none",
+  "gloves": "none",
   "footwear": "none",
+  "bootsOrBarding": false,
+  "cloak": "cloak of poison resistance",
   "orb": "none",
-  "amulet": "randart amulet",
+  "amulet": "amulet of Dazytsee",
   "rings": [
     "ring of protection",
     "ring of strength"
@@ -137,55 +141,39 @@
       "artifactProperties": []
     }
   ],
-  "helmet": "none",
-  "gloves": "none",
-  "bootsOrBarding": false,
-  "cloak": "cloak of poison resistance",
-  "armourSkill": 16.3,
-  "dodgingSkill": 6.5,
-  "shieldSkill": 17.7,
-  "spellcasting": 0,
-  "fighting": 17.6,
-  "shortBlades": 0,
-  "longBlades": 0,
-  "axes": 18,
-  "macesFlails": 0,
-  "polearms": 0,
-  "staves": 0,
-  "rangedWeapons": 0,
-  "throwing": 0,
-  "stealth": 0,
-  "unarmedCombat": 0,
-  "conjurations": 0,
-  "hexes": 0,
-  "summonings": 0,
-  "necromancy": 0,
-  "translocations": 0,
-  "transmutations": 0,
-  "fireMagic": 0,
-  "iceMagic": 0,
-  "airMagic": 0,
-  "earthMagic": 0,
-  "poisonMagic": 0,
-  "forgecraft": 0,
-  "alchemy": 0,
-  "invocations": 14.7,
-  "evocations": 0,
-  "shapeshifting": 0,
-  "mutations": [
-    "horns 3",
-    "retaliatory headbutt",
-    "claws 3",
-    "talons 2",
-    "clever 1",
-    "regeneration 1",
-    "eyeballs 1",
-    "jelly sensing items",
-    "MP-powered wands",
-    "efficient magic 1",
-    "slime shroud",
-    "feed off suffering 1"
-  ],
+  "skills": {
+    "fighting": 17.6,
+    "macesFlails": 0,
+    "axes": 18,
+    "polearms": 0,
+    "staves": 0,
+    "unarmedCombat": 0,
+    "throwing": 0,
+    "shortBlades": 0,
+    "longBlades": 0,
+    "rangedWeapons": 0,
+    "armour": 16.3,
+    "dodging": 6.5,
+    "shields": 17.7,
+    "stealth": 0,
+    "spellcasting": 0,
+    "conjurations": 0,
+    "hexes": 0,
+    "summonings": 0,
+    "necromancy": 0,
+    "forgecraft": 0,
+    "translocations": 0,
+    "transmutations": 0,
+    "alchemy": 0,
+    "fireMagic": 0,
+    "iceMagic": 0,
+    "airMagic": 0,
+    "earthMagic": 0,
+    "poisonMagic": 0,
+    "invocations": 14.7,
+    "evocations": 0,
+    "shapeshifting": 0
+  },
   "spells": [
     {
       "name": "Shock",
@@ -326,6 +314,56 @@
       "name": "Polar Vortex",
       "failurePercent": 100,
       "memorized": false
+    }
+  ],
+  "mutations": [
+    {
+      "name": "horns",
+      "level": 3
+    },
+    {
+      "name": "retaliatory headbutt",
+      "level": null
+    },
+    {
+      "name": "claws",
+      "level": 3
+    },
+    {
+      "name": "talons",
+      "level": 2
+    },
+    {
+      "name": "clever",
+      "level": 1
+    },
+    {
+      "name": "regeneration",
+      "level": 1
+    },
+    {
+      "name": "eyeballs",
+      "level": 1
+    },
+    {
+      "name": "jelly sensing items",
+      "level": null
+    },
+    {
+      "name": "MP-powered wands",
+      "level": null
+    },
+    {
+      "name": "efficient magic",
+      "level": 1
+    },
+    {
+      "name": "slime shroud",
+      "level": null
+    },
+    {
+      "name": "feed off suffering",
+      "level": 1
     }
   ]
 }

@@ -54,7 +54,11 @@ export function MorgueParserScreen() {
       return 'none'
     }
 
-    return result.record.mutations.length > 0 ? result.record.mutations.join(', ') : 'none'
+    return result.record.mutations.length > 0
+      ? result.record.mutations
+          .map((entry) => (entry.level === null ? entry.name : `${entry.name} ${entry.level}`))
+          .join(', ')
+      : 'none'
   }, [result])
 
   const handleParse = () => {
@@ -149,7 +153,7 @@ export function MorgueParserScreen() {
                 <SummaryItem label="Amulet" value={summarizedAmulet} />
                 <SummaryItem label="Rings" value={summarizedRings} />
                 <SummaryItem label="Traits / Mutations" value={summarizedMutations} />
-                <SummaryItem label="Spellcasting" value={String(result.record.spellcasting)} />
+                <SummaryItem label="Spellcasting" value={String(result.record.skills.spellcasting)} />
                 <SummaryItem label="Spell Count" value={String(result.record.spells.length)} />
               </dl>
             )}

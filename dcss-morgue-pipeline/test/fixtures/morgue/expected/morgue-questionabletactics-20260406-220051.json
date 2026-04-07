@@ -9,10 +9,14 @@
   "intelligence": 38,
   "dexterity": 44,
   "bodyArmour": "golden dragon scales",
-  "shield": "buckler",
+  "shield": "buckler of Snakes and Ladders",
+  "helmet": "hat of the Alchemist",
+  "gloves": "pair of gloves of strength",
   "footwear": "pair of boots of flying",
+  "bootsOrBarding": true,
+  "cloak": "cloak of willpower",
   "orb": "none",
-  "amulet": "randart amulet",
+  "amulet": "amulet of Puwn",
   "rings": [
     "ring of dexterity",
     "ring of strength"
@@ -65,25 +69,6 @@
       "Stlth-"
     ]
   },
-  "footwearDetails": {
-    "rawName": "pair of boots of flying",
-    "displayName": "pair of boots of flying",
-    "objectClass": "armour",
-    "baseType": "boots",
-    "enchant": 2,
-    "artifactKind": "normal",
-    "ego": "flying",
-    "subtypeEffect": null,
-    "propertiesText": null,
-    "properties": [
-      "Fly"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "Fly"
-    ],
-    "artifactProperties": []
-  },
   "helmetDetails": {
     "rawName": "hat of the Alchemist",
     "displayName": "hat of the Alchemist",
@@ -133,6 +118,25 @@
     "intrinsicProperties": [],
     "egoProperties": [
       "Str+3"
+    ],
+    "artifactProperties": []
+  },
+  "footwearDetails": {
+    "rawName": "pair of boots of flying",
+    "displayName": "pair of boots of flying",
+    "objectClass": "armour",
+    "baseType": "boots",
+    "enchant": 2,
+    "artifactKind": "normal",
+    "ego": "flying",
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [
+      "Fly"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [
+      "Fly"
     ],
     "artifactProperties": []
   },
@@ -216,49 +220,39 @@
       "artifactProperties": []
     }
   ],
-  "helmet": "hat of the Alchemist",
-  "gloves": "pair of gloves of strength",
-  "bootsOrBarding": true,
-  "cloak": "cloak of willpower",
-  "armourSkill": 19.4,
-  "dodgingSkill": 19.9,
-  "shieldSkill": 19.4,
-  "spellcasting": 20,
-  "fighting": 19.9,
-  "shortBlades": 20.3,
-  "longBlades": 19.4,
-  "axes": 19.4,
-  "macesFlails": 19.4,
-  "polearms": 23.5,
-  "staves": 19.4,
-  "rangedWeapons": 19.4,
-  "throwing": 19.4,
-  "stealth": 19.4,
-  "unarmedCombat": 19.4,
-  "conjurations": 17.4,
-  "hexes": 16.6,
-  "summonings": 20.1,
-  "necromancy": 16.6,
-  "translocations": 16.6,
-  "transmutations": 0,
-  "fireMagic": 16.6,
-  "iceMagic": 16.6,
-  "airMagic": 16.6,
-  "earthMagic": 16.6,
-  "poisonMagic": 0,
-  "forgecraft": 16.6,
-  "alchemy": 16.6,
-  "invocations": 23.2,
-  "evocations": 19.4,
-  "shapeshifting": 18,
-  "mutations": [
-    "fangs 1",
-    "treasure sense",
-    "distributed training",
-    "clever 1",
-    "cold resistance 1",
-    "subdued magic 1"
-  ],
+  "skills": {
+    "fighting": 19.9,
+    "macesFlails": 19.4,
+    "axes": 19.4,
+    "polearms": 23.5,
+    "staves": 19.4,
+    "unarmedCombat": 19.4,
+    "throwing": 19.4,
+    "shortBlades": 20.3,
+    "longBlades": 19.4,
+    "rangedWeapons": 19.4,
+    "armour": 19.4,
+    "dodging": 19.9,
+    "shields": 19.4,
+    "stealth": 19.4,
+    "spellcasting": 20,
+    "conjurations": 17.4,
+    "hexes": 16.6,
+    "summonings": 20.1,
+    "necromancy": 16.6,
+    "forgecraft": 16.6,
+    "translocations": 16.6,
+    "transmutations": 0,
+    "alchemy": 16.6,
+    "fireMagic": 16.6,
+    "iceMagic": 16.6,
+    "airMagic": 16.6,
+    "earthMagic": 16.6,
+    "poisonMagic": 0,
+    "invocations": 23.2,
+    "evocations": 19.4,
+    "shapeshifting": 18
+  },
   "spells": [
     {
       "name": "Kiss of Death",
@@ -619,6 +613,32 @@
       "name": "Fire Storm",
       "failurePercent": 99,
       "memorized": false
+    }
+  ],
+  "mutations": [
+    {
+      "name": "fangs",
+      "level": 1
+    },
+    {
+      "name": "treasure sense",
+      "level": null
+    },
+    {
+      "name": "distributed training",
+      "level": null
+    },
+    {
+      "name": "clever",
+      "level": 1
+    },
+    {
+      "name": "cold resistance",
+      "level": 1
+    },
+    {
+      "name": "subdued magic",
+      "level": 1
     }
   ]
 }

@@ -10,28 +10,17 @@
   "dexterity": 19,
   "bodyArmour": "none",
   "shield": "none",
+  "helmet": "none",
+  "gloves": "pair of gloves of dexterity",
   "footwear": "pair of boots",
+  "bootsOrBarding": true,
+  "cloak": "cloak of poison resistance",
   "orb": "none",
   "amulet": "amulet of regeneration",
   "rings": [
-    "randart ring",
+    "ring of Sogam",
     "ring of intelligence"
   ],
-  "footwearDetails": {
-    "rawName": "pair of boots",
-    "displayName": "pair of boots",
-    "objectClass": "armour",
-    "baseType": "boots",
-    "enchant": 0,
-    "artifactKind": "normal",
-    "ego": null,
-    "subtypeEffect": null,
-    "propertiesText": null,
-    "properties": [],
-    "intrinsicProperties": [],
-    "egoProperties": [],
-    "artifactProperties": []
-  },
   "glovesDetails": {
     "rawName": "pair of gloves of dexterity",
     "displayName": "pair of gloves of dexterity",
@@ -49,6 +38,21 @@
     "egoProperties": [
       "Dex+3"
     ],
+    "artifactProperties": []
+  },
+  "footwearDetails": {
+    "rawName": "pair of boots",
+    "displayName": "pair of boots",
+    "objectClass": "armour",
+    "baseType": "boots",
+    "enchant": 0,
+    "artifactKind": "normal",
+    "ego": null,
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [],
+    "intrinsicProperties": [],
+    "egoProperties": [],
     "artifactProperties": []
   },
   "cloakDetails": {
@@ -137,49 +141,68 @@
       "artifactProperties": []
     }
   ],
-  "helmet": "none",
-  "gloves": "pair of gloves of dexterity",
-  "bootsOrBarding": true,
-  "cloak": "cloak of poison resistance",
-  "armourSkill": 0,
-  "dodgingSkill": 3.1,
-  "shieldSkill": 0,
-  "spellcasting": 10.4,
-  "fighting": 2.5,
-  "shortBlades": 0,
-  "longBlades": 0,
-  "axes": 0,
-  "macesFlails": 0,
-  "polearms": 0,
-  "staves": 0,
-  "rangedWeapons": 0,
-  "throwing": 0,
-  "stealth": 0,
-  "unarmedCombat": 0,
-  "conjurations": 0,
-  "hexes": 0,
-  "summonings": 12,
-  "necromancy": 0,
-  "translocations": 0,
-  "transmutations": 0,
-  "fireMagic": 0,
-  "iceMagic": 0,
-  "airMagic": 0,
-  "earthMagic": 0,
-  "poisonMagic": 0,
-  "forgecraft": 0,
-  "alchemy": 0,
-  "invocations": 0,
-  "evocations": 0,
-  "shapeshifting": 0,
+  "skills": {
+    "fighting": 2.5,
+    "macesFlails": 0,
+    "axes": 0,
+    "polearms": 0,
+    "staves": 0,
+    "unarmedCombat": 0,
+    "throwing": 0,
+    "shortBlades": 0,
+    "longBlades": 0,
+    "rangedWeapons": 0,
+    "armour": 0,
+    "dodging": 3.1,
+    "shields": 0,
+    "stealth": 0,
+    "spellcasting": 10.4,
+    "conjurations": 0,
+    "hexes": 0,
+    "summonings": 12,
+    "necromancy": 0,
+    "forgecraft": 0,
+    "translocations": 0,
+    "transmutations": 0,
+    "alchemy": 0,
+    "fireMagic": 0,
+    "iceMagic": 0,
+    "airMagic": 0,
+    "earthMagic": 0,
+    "poisonMagic": 0,
+    "invocations": 0,
+    "evocations": 0,
+    "shapeshifting": 0
+  },
+  "spells": [],
   "mutations": [
-    "glacial breath",
-    "AC +8",
-    "unfitting armour",
-    "cold resistance 1",
-    "cold-blooded",
-    "inability to use devices",
-    "armoured tail 1"
-  ],
-  "spells": []
+    {
+      "name": "glacial breath",
+      "level": null
+    },
+    {
+      "name": "AC +8",
+      "level": null
+    },
+    {
+      "name": "unfitting armour",
+      "level": null
+    },
+    {
+      "name": "cold resistance",
+      "level": 1
+    },
+    {
+      "name": "cold-blooded",
+      "level": null
+    },
+    {
+      "name": "inability to use devices",
+      "level": null
+    },
+    {
+      "name": "armoured tail",
+      "level": 1
+    }
+  ]
 }

@@ -34,57 +34,61 @@ export type EquipmentItemSnapshot = {
 export type EquipmentSnapshot = {
   bodyArmour: string | undefined
   shield: string | undefined
+  helmet: string | undefined
+  gloves: string | undefined
   footwear: string | undefined
+  bootsOrBarding: boolean
+  cloak: string | undefined
   orb: string | undefined
   amulet: string | undefined
   rings: string[]
   bodyArmourDetails?: EquipmentItemSnapshot
   shieldDetails?: EquipmentItemSnapshot
+  helmetDetails?: EquipmentItemSnapshot
+  glovesDetails?: EquipmentItemSnapshot
   footwearDetails?: EquipmentItemSnapshot
+  cloakDetails?: EquipmentItemSnapshot
   orbDetails?: EquipmentItemSnapshot
   amuletDetails?: EquipmentItemSnapshot
   ringDetails?: EquipmentItemSnapshot[]
-  helmet: string | undefined
-  gloves: string | undefined
-  bootsOrBarding: boolean
-  cloak: string | undefined
-  helmetDetails?: EquipmentItemSnapshot
-  glovesDetails?: EquipmentItemSnapshot
-  cloakDetails?: EquipmentItemSnapshot
+}
+
+export type SkillLevelsSnapshot = {
+  fighting: number
+  macesFlails: number
+  axes: number
+  polearms: number
+  staves: number
+  unarmedCombat: number
+  throwing: number
+  shortBlades: number
+  longBlades: number
+  rangedWeapons: number
+  armour: number
+  dodging: number
+  shields: number
+  stealth: number
+  spellcasting: number
+  conjurations: number
+  hexes: number
+  summonings: number
+  necromancy: number
+  forgecraft: number
+  translocations: number
+  transmutations: number
+  alchemy: number
+  fireMagic: number
+  iceMagic: number
+  airMagic: number
+  earthMagic: number
+  poisonMagic: number
+  invocations: number
+  evocations: number
+  shapeshifting: number
 }
 
 export type SkillsSnapshot = {
-  armourSkill: number
-  dodgingSkill: number
-  shieldSkill: number
-  spellcasting: number
-  fighting?: number
-  shortBlades?: number
-  longBlades?: number
-  axes?: number
-  macesFlails?: number
-  polearms?: number
-  staves?: number
-  rangedWeapons?: number
-  throwing?: number
-  stealth?: number
-  unarmedCombat?: number
-  conjurations?: number
-  hexes?: number
-  summonings?: number
-  necromancy?: number
-  translocations?: number
-  transmutations?: number
-  fireMagic?: number
-  iceMagic?: number
-  airMagic?: number
-  earthMagic?: number
-  poisonMagic?: number
-  forgecraft?: number
-  alchemy?: number
-  invocations?: number
-  evocations?: number
-  shapeshifting?: number
+  skills: SkillLevelsSnapshot
 }
 
 export type SpellSnapshot = {
@@ -93,63 +97,38 @@ export type SpellSnapshot = {
   memorized: boolean
 }
 
+export type MutationEntrySnapshot = {
+  name: string
+  level: number | null
+}
+
 export type MutationSnapshot = {
-  mutations: string[]
+  mutations: MutationEntrySnapshot[]
 }
 
 export type ParsedMorgueTextRecord = BaseStatsSnapshot & {
   bodyArmour: string
   shield: string
+  helmet: string
+  gloves: string
   footwear: string
+  bootsOrBarding: boolean
+  cloak: string
   orb: string
   amulet: string
   rings: string[]
   bodyArmourDetails?: EquipmentItemSnapshot
   shieldDetails?: EquipmentItemSnapshot
+  helmetDetails?: EquipmentItemSnapshot
+  glovesDetails?: EquipmentItemSnapshot
   footwearDetails?: EquipmentItemSnapshot
+  cloakDetails?: EquipmentItemSnapshot
   orbDetails?: EquipmentItemSnapshot
   amuletDetails?: EquipmentItemSnapshot
   ringDetails?: EquipmentItemSnapshot[]
-  helmet: string
-  gloves: string
-  bootsOrBarding: boolean
-  cloak: string
-  helmetDetails?: EquipmentItemSnapshot
-  glovesDetails?: EquipmentItemSnapshot
-  cloakDetails?: EquipmentItemSnapshot
-  armourSkill: number
-  dodgingSkill: number
-  shieldSkill: number
-  spellcasting: number
-  fighting?: number
-  shortBlades?: number
-  longBlades?: number
-  axes?: number
-  macesFlails?: number
-  polearms?: number
-  staves?: number
-  rangedWeapons?: number
-  throwing?: number
-  stealth?: number
-  unarmedCombat?: number
-  conjurations?: number
-  hexes?: number
-  summonings?: number
-  necromancy?: number
-  translocations?: number
-  transmutations?: number
-  fireMagic?: number
-  iceMagic?: number
-  airMagic?: number
-  earthMagic?: number
-  poisonMagic?: number
-  forgecraft?: number
-  alchemy?: number
-  invocations?: number
-  evocations?: number
-  shapeshifting?: number
+  skills: SkillLevelsSnapshot
   spells: SpellSnapshot[]
-  mutations: string[]
+  mutations: MutationEntrySnapshot[]
 }
 
 export type ParseFailureRecord = {

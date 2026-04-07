@@ -1,4 +1,4 @@
-import type { MutationSnapshot } from './types'
+import type { MutationEntrySnapshot, MutationSnapshot } from './types'
 import { splitSections } from './splitSections'
 
 const STOP_LINE_PATTERNS = [/^}:/, /^[a-z]:/i, /^\d+:/, /^You /, /^[A-Z][^,]*:$/]
@@ -26,6 +26,22 @@ function collectAbilityLine(header: string): string {
   return collected.join(' ').replace(/\s+/g, ' ').trim()
 }
 
+function parseMutationEntry(entry: string): MutationEntrySnapshot {
+  const leveledMatch = entry.match(/^(.*\S)\s+(\d+)$/)
+
+  if (leveledMatch) {
+    return {
+      name: leveledMatch[1].trim(),
+      level: Number.parseInt(leveledMatch[2], 10),
+    }
+  }
+
+  return {
+    name: entry,
+    level: null,
+  }
+}
+
 export function extractMutations(text: string): MutationSnapshot {
   const abilityLine = collectAbilityLine(splitSections(text).header)
 
@@ -37,6 +53,7 @@ export function extractMutations(text: string): MutationSnapshot {
     mutations: abilityLine
       .split(',')
       .map((entry) => entry.trim())
-      .filter((entry) => entry.length > 0),
+      .filter((entry) => entry.length > 0)
+      .map((entry) => parseMutationEntry(entry)),
   }
 }

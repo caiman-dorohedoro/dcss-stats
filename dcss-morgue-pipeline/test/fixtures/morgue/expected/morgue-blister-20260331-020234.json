@@ -10,16 +10,20 @@
   "dexterity": 18,
   "bodyArmour": "none",
   "shield": "tower shield of positive energy",
+  "helmet": "hat of Sif Muna, Wizarding",
+  "gloves": "none",
   "footwear": "none",
+  "bootsOrBarding": false,
+  "cloak": "none",
   "orb": "none",
   "amulet": "amulet of Vitality",
   "rings": [
-    "randart ring",
-    "randart ring",
+    "ring \"Cyracic\"",
+    "ring of Lady Luck",
     "ring of the Octopus King",
-    "randart ring",
-    "randart ring",
-    "randart ring",
+    "ring \"Midaonent\"",
+    "ring \"Zalagov\"",
+    "ring \"Cujovups\"",
     "ring of wizardry",
     "ring of willpower"
   ],
@@ -268,57 +272,39 @@
       "artifactProperties": []
     }
   ],
-  "helmet": "hat of Sif Muna, Wizarding",
-  "gloves": "none",
-  "bootsOrBarding": false,
-  "cloak": "none",
-  "armourSkill": 0,
-  "dodgingSkill": 9,
-  "shieldSkill": 21,
-  "spellcasting": 21,
-  "fighting": 25.4,
-  "shortBlades": 0,
-  "longBlades": 0,
-  "axes": 0,
-  "macesFlails": 0,
-  "polearms": 0,
-  "staves": 0,
-  "rangedWeapons": 0,
-  "throwing": 0,
-  "stealth": 9,
-  "unarmedCombat": 20.4,
-  "conjurations": 6,
-  "hexes": 0,
-  "summonings": 3,
-  "necromancy": 18,
-  "translocations": 12,
-  "transmutations": 0,
-  "fireMagic": 0,
-  "iceMagic": 24,
-  "airMagic": 3,
-  "earthMagic": 6,
-  "poisonMagic": 0,
-  "forgecraft": 0,
-  "alchemy": 12,
-  "invocations": 0,
-  "evocations": 15,
-  "shapeshifting": 17,
-  "mutations": [
-    "powerful",
-    "torment resistance 1",
-    "boosted hp",
-    "slow",
-    "reduced EV",
-    "almost no armour",
-    "amphibious",
-    "8 rings",
-    "(camouflage 1)",
-    "(gelatinous body 1)",
-    "(nimble swimmer 1)",
-    "tentacles",
-    "clever 2",
-    "strong 1"
-  ],
+  "skills": {
+    "fighting": 25.4,
+    "macesFlails": 0,
+    "axes": 0,
+    "polearms": 0,
+    "staves": 0,
+    "unarmedCombat": 20.4,
+    "throwing": 0,
+    "shortBlades": 0,
+    "longBlades": 0,
+    "rangedWeapons": 0,
+    "armour": 0,
+    "dodging": 9,
+    "shields": 21,
+    "stealth": 9,
+    "spellcasting": 21,
+    "conjurations": 6,
+    "hexes": 0,
+    "summonings": 3,
+    "necromancy": 18,
+    "forgecraft": 0,
+    "translocations": 12,
+    "transmutations": 0,
+    "alchemy": 12,
+    "fireMagic": 0,
+    "iceMagic": 24,
+    "airMagic": 3,
+    "earthMagic": 6,
+    "poisonMagic": 0,
+    "invocations": 0,
+    "evocations": 15,
+    "shapeshifting": 17
+  },
   "spells": [
     {
       "name": "Vhi's Electric Charge",
@@ -814,6 +800,64 @@
       "name": "Shatter",
       "failurePercent": 100,
       "memorized": false
+    }
+  ],
+  "mutations": [
+    {
+      "name": "powerful",
+      "level": null
+    },
+    {
+      "name": "torment resistance",
+      "level": 1
+    },
+    {
+      "name": "boosted hp",
+      "level": null
+    },
+    {
+      "name": "slow",
+      "level": null
+    },
+    {
+      "name": "reduced EV",
+      "level": null
+    },
+    {
+      "name": "almost no armour",
+      "level": null
+    },
+    {
+      "name": "amphibious",
+      "level": null
+    },
+    {
+      "name": "8 rings",
+      "level": null
+    },
+    {
+      "name": "(camouflage 1)",
+      "level": null
+    },
+    {
+      "name": "(gelatinous body 1)",
+      "level": null
+    },
+    {
+      "name": "(nimble swimmer 1)",
+      "level": null
+    },
+    {
+      "name": "tentacles",
+      "level": null
+    },
+    {
+      "name": "clever",
+      "level": 2
+    },
+    {
+      "name": "strong",
+      "level": 1
     }
   ]
 }

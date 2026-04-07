@@ -11,6 +11,9 @@ canonical vocabularies for:
 - species names
 - spell names
 
+The extraction model and its Crawl-source rationale are documented in
+[PARSER_MODEL.md](/Users/hyeon/playground/dcss-stats/packages/morgue-parser/PARSER_MODEL.md).
+
 Pipeline-specific metadata such as `serverId`, `candidateId`, `endedAt`, and
 `morgueUrl` should be added by a wrapper outside this package.
 

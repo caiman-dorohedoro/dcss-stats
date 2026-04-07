@@ -10,12 +10,16 @@
   "dexterity": 10,
   "bodyArmour": "skin of Zhor",
   "shield": "none",
+  "helmet": "helmet of ice",
+  "gloves": "pair of gloves",
   "footwear": "pair of boots of stealth",
+  "bootsOrBarding": true,
+  "cloak": "scarf \"Naur Sott\"",
   "orb": "orb of attunement",
-  "amulet": "randart amulet",
+  "amulet": "amulet of Rogere",
   "rings": [
     "ring of resist corrosion",
-    "randart ring"
+    "ring \"Tith\""
   ],
   "bodyArmourDetails": {
     "rawName": "skin of Zhor",
@@ -39,25 +43,6 @@
       "rC+++",
       "SInv"
     ]
-  },
-  "footwearDetails": {
-    "rawName": "pair of boots of stealth",
-    "displayName": "pair of boots of stealth",
-    "objectClass": "armour",
-    "baseType": "boots",
-    "enchant": 2,
-    "artifactKind": "normal",
-    "ego": "stealth",
-    "subtypeEffect": null,
-    "propertiesText": null,
-    "properties": [
-      "Stlth+"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "Stlth+"
-    ],
-    "artifactProperties": []
   },
   "helmetDetails": {
     "rawName": "helmet of ice",
@@ -91,6 +76,25 @@
     "properties": [],
     "intrinsicProperties": [],
     "egoProperties": [],
+    "artifactProperties": []
+  },
+  "footwearDetails": {
+    "rawName": "pair of boots of stealth",
+    "displayName": "pair of boots of stealth",
+    "objectClass": "armour",
+    "baseType": "boots",
+    "enchant": 2,
+    "artifactKind": "normal",
+    "ego": "stealth",
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [
+      "Stlth+"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [
+      "Stlth+"
+    ],
     "artifactProperties": []
   },
   "cloakDetails": {
@@ -202,50 +206,39 @@
       ]
     }
   ],
-  "helmet": "helmet of ice",
-  "gloves": "pair of gloves",
-  "bootsOrBarding": true,
-  "cloak": "scarf \"Naur Sott\"",
-  "armourSkill": 7.5,
-  "dodgingSkill": 13.8,
-  "shieldSkill": 0,
-  "spellcasting": 15.2,
-  "fighting": 20,
-  "shortBlades": 4.6,
-  "longBlades": 0,
-  "axes": 0,
-  "macesFlails": 0,
-  "polearms": 0,
-  "staves": 12,
-  "rangedWeapons": 0,
-  "throwing": 0,
-  "stealth": 7.3,
-  "unarmedCombat": 0,
-  "conjurations": 18,
-  "hexes": 5,
-  "summonings": 0,
-  "necromancy": 0,
-  "translocations": 10,
-  "transmutations": 0,
-  "fireMagic": 0,
-  "iceMagic": 12,
-  "airMagic": 0,
-  "earthMagic": 17.8,
-  "poisonMagic": 0,
-  "forgecraft": 12,
-  "alchemy": 0,
-  "invocations": 20.1,
-  "evocations": 11.8,
-  "shapeshifting": 0,
-  "mutations": [
-    "sickness immunity",
-    "big wings",
-    "negative energy resistance 1",
-    "electricity resistance",
-    "torment resistance 1",
-    "stone body",
-    "devolution 1"
-  ],
+  "skills": {
+    "fighting": 20,
+    "macesFlails": 0,
+    "axes": 0,
+    "polearms": 0,
+    "staves": 12,
+    "unarmedCombat": 0,
+    "throwing": 0,
+    "shortBlades": 4.6,
+    "longBlades": 0,
+    "rangedWeapons": 0,
+    "armour": 7.5,
+    "dodging": 13.8,
+    "shields": 0,
+    "stealth": 7.3,
+    "spellcasting": 15.2,
+    "conjurations": 18,
+    "hexes": 5,
+    "summonings": 0,
+    "necromancy": 0,
+    "forgecraft": 12,
+    "translocations": 10,
+    "transmutations": 0,
+    "alchemy": 0,
+    "fireMagic": 0,
+    "iceMagic": 12,
+    "airMagic": 0,
+    "earthMagic": 17.8,
+    "poisonMagic": 0,
+    "invocations": 20.1,
+    "evocations": 11.8,
+    "shapeshifting": 0
+  },
   "spells": [
     {
       "name": "Lehudib's Crystal Spear",
@@ -631,6 +624,36 @@
       "name": "Infestation",
       "failurePercent": 100,
       "memorized": false
+    }
+  ],
+  "mutations": [
+    {
+      "name": "sickness immunity",
+      "level": null
+    },
+    {
+      "name": "big wings",
+      "level": null
+    },
+    {
+      "name": "negative energy resistance",
+      "level": 1
+    },
+    {
+      "name": "electricity resistance",
+      "level": null
+    },
+    {
+      "name": "torment resistance",
+      "level": 1
+    },
+    {
+      "name": "stone body",
+      "level": null
+    },
+    {
+      "name": "devolution",
+      "level": 1
     }
   ]
 }

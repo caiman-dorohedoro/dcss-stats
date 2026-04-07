@@ -18,9 +18,43 @@ export function parseMorgueText(text: string, options: ParseMorgueTextOptions = 
       }),
     })
 
+    const orderedRecord = {
+      playerName: record.playerName,
+      version: record.version,
+      species: record.species,
+      ac: record.ac,
+      ev: record.ev,
+      sh: record.sh,
+      strength: record.strength,
+      intelligence: record.intelligence,
+      dexterity: record.dexterity,
+      bodyArmour: record.bodyArmour,
+      shield: record.shield,
+      helmet: record.helmet,
+      gloves: record.gloves,
+      footwear: record.footwear,
+      bootsOrBarding: record.bootsOrBarding,
+      cloak: record.cloak,
+      orb: record.orb,
+      amulet: record.amulet,
+      rings: record.rings,
+      bodyArmourDetails: record.bodyArmourDetails,
+      shieldDetails: record.shieldDetails,
+      helmetDetails: record.helmetDetails,
+      glovesDetails: record.glovesDetails,
+      footwearDetails: record.footwearDetails,
+      cloakDetails: record.cloakDetails,
+      orbDetails: record.orbDetails,
+      amuletDetails: record.amuletDetails,
+      ringDetails: record.ringDetails,
+      skills: record.skills,
+      spells: record.spells,
+      mutations: record.mutations,
+    }
+
     return {
       ok: true,
-      record,
+      record: orderedRecord,
     }
   } catch (error) {
     if (error instanceof ParseFailure) {

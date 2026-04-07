@@ -28,7 +28,11 @@ describe('parseMorgueText shared parser', () => {
       expect(result.record.ac).toBe(3)
       expect(result.record.ev).toBe(11)
       expect(result.record.sh).toBe(0)
-      expect(result.record.mutations).toEqual(['amphibious', 'frog-like legs 1', '+LOS'])
+      expect(result.record.mutations).toEqual([
+        { name: 'amphibious', level: null },
+        { name: 'frog-like legs', level: 1 },
+        { name: '+LOS', level: null },
+      ])
       expect(result.record.spells).toEqual([])
     }
   })

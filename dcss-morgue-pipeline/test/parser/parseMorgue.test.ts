@@ -33,8 +33,12 @@ describe('parseMorgue', () => {
       expect(result.record.ev).toBe(11)
       expect(result.record.sh).toBe(0)
       expect(result.record.bodyArmour).toBe('leather armour')
-      expect(result.record.mutations).toEqual(['amphibious', 'frog-like legs 1', '+LOS'])
-      expect(result.record.dodgingSkill).toBe(2.1)
+      expect(result.record.mutations).toEqual([
+        { name: 'amphibious', level: null },
+        { name: 'frog-like legs', level: 1 },
+        { name: '+LOS', level: null },
+      ])
+      expect(result.record.skills.dodging).toBe(2.1)
       expect(result.record.spells).toEqual([])
     }
   })
@@ -55,8 +59,11 @@ describe('parseMorgue', () => {
       expect(result.record.bodyArmour).toBe('plate armour')
       expect(result.record.bootsOrBarding).toBe(true)
       expect(result.record.cloak).toBe('cloak')
-      expect(result.record.mutations).toEqual(['horns 2', 'retaliatory headbutt'])
-      expect(result.record.armourSkill).toBe(2.4)
+      expect(result.record.mutations).toEqual([
+        { name: 'horns', level: 2 },
+        { name: 'retaliatory headbutt', level: null },
+      ])
+      expect(result.record.skills.armour).toBe(2.4)
       expect(result.record.spells).toEqual([])
     }
   })
@@ -66,9 +73,8 @@ describe('parseMorgue', () => {
 
     expect(result.ok).toBe(true)
     if (result.ok) {
-      expect(result.record.conjurations).toBe(11.2)
-      expect(result.record.fireMagic).toBe(9.7)
-      expect(result.record).not.toHaveProperty('schoolSkills')
+      expect(result.record.skills.conjurations).toBe(11.2)
+      expect(result.record.skills.fireMagic).toBe(9.7)
       expect(result.record.ac).toBe(4)
       expect(result.record.ev).toBe(11)
       expect(result.record.sh).toBe(0)

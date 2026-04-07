@@ -21,18 +21,18 @@ describe('extractMutations', () => {
   it('extracts terse innate traits from the wrapped A: line', () => {
     expect(extractMutations(loadFixture('mutations-wrapped-a-line.txt'))).toEqual({
       mutations: [
-        'horns 3',
-        'retaliatory headbutt',
-        'claws 3',
-        'talons 2',
-        'clever 1',
-        'regeneration 1',
-        'eyeballs 1',
-        'jelly sensing items',
-        'MP-powered wands',
-        'efficient magic 1',
-        'slime shroud',
-        'feed off suffering 1',
+        { name: 'horns', level: 3 },
+        { name: 'retaliatory headbutt', level: null },
+        { name: 'claws', level: 3 },
+        { name: 'talons', level: 2 },
+        { name: 'clever', level: 1 },
+        { name: 'regeneration', level: 1 },
+        { name: 'eyeballs', level: 1 },
+        { name: 'jelly sensing items', level: null },
+        { name: 'MP-powered wands', level: null },
+        { name: 'efficient magic', level: 1 },
+        { name: 'slime shroud', level: null },
+        { name: 'feed off suffering', level: 1 },
       ],
     })
   })
@@ -40,13 +40,13 @@ describe('extractMutations', () => {
   it('stops mutation parsing before orb and rune summary lines', () => {
     expect(extractMutations(loadFullFixture('morgue-knorpule3000-20260405-001540.txt'))).toEqual({
       mutations: [
-        'sickness immunity',
-        'big wings',
-        'negative energy resistance 1',
-        'electricity resistance',
-        'torment resistance 1',
-        'stone body',
-        'devolution 1',
+        { name: 'sickness immunity', level: null },
+        { name: 'big wings', level: null },
+        { name: 'negative energy resistance', level: 1 },
+        { name: 'electricity resistance', level: null },
+        { name: 'torment resistance', level: 1 },
+        { name: 'stone body', level: null },
+        { name: 'devolution', level: 1 },
       ],
     })
   })

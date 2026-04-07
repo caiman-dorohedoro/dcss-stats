@@ -8,14 +8,18 @@
   "strength": 14,
   "intelligence": 38,
   "dexterity": 8,
-  "bodyArmour": "fire dragon scales",
+  "bodyArmour": "fire dragon scales of Undesirable Species",
   "shield": "buckler of cold resistance",
+  "helmet": "hat of intelligence",
+  "gloves": "pair of gloves of Neluicyoz",
   "footwear": "pair of boots of flying",
+  "bootsOrBarding": true,
+  "cloak": "cloak of willpower",
   "orb": "none",
   "amulet": "amulet of magic regeneration",
   "rings": [
     "ring of wizardry",
-    "randart ring"
+    "ring of the Byakko"
   ],
   "bodyArmourDetails": {
     "rawName": "fire dragon scales of Undesirable Species",
@@ -66,25 +70,6 @@
     ],
     "artifactProperties": []
   },
-  "footwearDetails": {
-    "rawName": "pair of boots of flying",
-    "displayName": "pair of boots of flying",
-    "objectClass": "armour",
-    "baseType": "boots",
-    "enchant": 2,
-    "artifactKind": "normal",
-    "ego": "flying",
-    "subtypeEffect": null,
-    "propertiesText": null,
-    "properties": [
-      "Fly"
-    ],
-    "intrinsicProperties": [],
-    "egoProperties": [
-      "Fly"
-    ],
-    "artifactProperties": []
-  },
   "helmetDetails": {
     "rawName": "hat of intelligence",
     "displayName": "hat of intelligence",
@@ -128,6 +113,25 @@
       "rF+",
       "rC+"
     ]
+  },
+  "footwearDetails": {
+    "rawName": "pair of boots of flying",
+    "displayName": "pair of boots of flying",
+    "objectClass": "armour",
+    "baseType": "boots",
+    "enchant": 2,
+    "artifactKind": "normal",
+    "ego": "flying",
+    "subtypeEffect": null,
+    "propertiesText": null,
+    "properties": [
+      "Fly"
+    ],
+    "intrinsicProperties": [],
+    "egoProperties": [
+      "Fly"
+    ],
+    "artifactProperties": []
   },
   "cloakDetails": {
     "rawName": "cloak of willpower",
@@ -215,48 +219,39 @@
       ]
     }
   ],
-  "helmet": "hat of intelligence",
-  "gloves": "pair of gloves of Neluicyoz",
-  "bootsOrBarding": true,
-  "cloak": "cloak of willpower",
-  "armourSkill": 18,
-  "dodgingSkill": 1.3,
-  "shieldSkill": 12,
-  "spellcasting": 18,
-  "fighting": 25.5,
-  "shortBlades": 0,
-  "longBlades": 0,
-  "axes": 0,
-  "macesFlails": 0,
-  "polearms": 0,
-  "staves": 0,
-  "rangedWeapons": 0,
-  "throwing": 0,
-  "stealth": 1.4,
-  "unarmedCombat": 0,
-  "conjurations": 19,
-  "hexes": 0,
-  "summonings": 0,
-  "necromancy": 0,
-  "translocations": 0,
-  "transmutations": 0,
-  "fireMagic": 27,
-  "iceMagic": 0,
-  "airMagic": 2,
-  "earthMagic": 9,
-  "poisonMagic": 0,
-  "forgecraft": 23,
-  "alchemy": 2,
-  "invocations": 15,
-  "evocations": 9,
-  "shapeshifting": 0,
-  "mutations": [
-    "runic magic",
-    "artefact enchanting",
-    "poison resistance",
-    "robust 1",
-    "lucky 1"
-  ],
+  "skills": {
+    "fighting": 25.5,
+    "macesFlails": 0,
+    "axes": 0,
+    "polearms": 0,
+    "staves": 0,
+    "unarmedCombat": 0,
+    "throwing": 0,
+    "shortBlades": 0,
+    "longBlades": 0,
+    "rangedWeapons": 0,
+    "armour": 18,
+    "dodging": 1.3,
+    "shields": 12,
+    "stealth": 1.4,
+    "spellcasting": 18,
+    "conjurations": 19,
+    "hexes": 0,
+    "summonings": 0,
+    "necromancy": 0,
+    "forgecraft": 23,
+    "translocations": 0,
+    "transmutations": 0,
+    "alchemy": 2,
+    "fireMagic": 27,
+    "iceMagic": 0,
+    "airMagic": 2,
+    "earthMagic": 9,
+    "poisonMagic": 0,
+    "invocations": 15,
+    "evocations": 9,
+    "shapeshifting": 0
+  },
   "spells": [
     {
       "name": "Fire Storm",
@@ -917,6 +912,28 @@
       "name": "Shatter",
       "failurePercent": 100,
       "memorized": false
+    }
+  ],
+  "mutations": [
+    {
+      "name": "runic magic",
+      "level": null
+    },
+    {
+      "name": "artefact enchanting",
+      "level": null
+    },
+    {
+      "name": "poison resistance",
+      "level": null
+    },
+    {
+      "name": "robust",
+      "level": 1
+    },
+    {
+      "name": "lucky",
+      "level": 1
     }
   ]
 }

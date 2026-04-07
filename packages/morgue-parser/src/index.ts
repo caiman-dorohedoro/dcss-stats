@@ -12,11 +12,13 @@ export type {
   BaseStatsSnapshot,
   EquipmentSnapshot,
   MorgueVersion,
+  MutationEntrySnapshot,
   MutationSnapshot,
   ParseFailureRecord,
   ParseMorgueTextOptions,
   ParseMorgueTextResult,
   ParsedMorgueTextRecord,
+  SkillLevelsSnapshot,
   SkillsSnapshot,
   SpellSnapshot,
 } from './types'

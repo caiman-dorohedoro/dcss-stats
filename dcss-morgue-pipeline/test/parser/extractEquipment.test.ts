@@ -66,7 +66,7 @@ describe('extractEquipment', () => {
   it('splits intrinsic and artifact properties for randart dragon scales', () => {
     const parsed = extractEquipment(loadFixture('full', 'morgue-midori369-20260406-191652.txt'))
 
-    expect(parsed.bodyArmour).toBe('fire dragon scales')
+    expect(parsed.bodyArmour).toBe('fire dragon scales of Undesirable Species')
     expect(parsed.bodyArmourDetails).toMatchObject({
       rawName: 'fire dragon scales of Undesirable Species',
       objectClass: 'armour',
@@ -84,7 +84,7 @@ describe('extractEquipment', () => {
     const parsed = extractEquipment(loadFixture('full', 'morgue-midori369-20260406-191652.txt'))
 
     expect(parsed.amulet).toBe('amulet of magic regeneration')
-    expect(parsed.rings).toEqual(['ring of wizardry', 'randart ring'])
+    expect(parsed.rings).toEqual(['ring of wizardry', 'ring of the Byakko'])
 
     expect(parsed.amuletDetails).toMatchObject({
       objectClass: 'jewellery',
@@ -128,9 +128,9 @@ describe('extractEquipment', () => {
   it('continues parsing equipped items when descriptions are interleaved in inventory', () => {
     const parsed = extractEquipment(loadFixture('success', 'equipped-accessories-with-descriptions.txt'))
 
-    expect(parsed.bodyArmour).toBe('pearl dragon scales')
+    expect(parsed.bodyArmour).toBe('pearl dragon scales "Petz"')
     expect(parsed.amulet).toBe('amulet of Vitality')
-    expect(parsed.rings).toEqual(['randart ring', 'randart ring'])
+    expect(parsed.rings).toEqual(['ring of the Empty Page', 'ring "Veveor"'])
     expect(parsed.cloak).toBe('cloak "Rafeal"')
 
     expect(parsed.bodyArmourDetails?.intrinsicProperties).toEqual(['rN+'])
