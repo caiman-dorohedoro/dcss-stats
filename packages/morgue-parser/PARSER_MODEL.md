@@ -133,6 +133,8 @@ Base stats are intentionally simple:
 - `version`
 - `playerName`
 - `species`
+- `background`
+- `xl`
 - `ac`
 - `ev`
 - `sh`

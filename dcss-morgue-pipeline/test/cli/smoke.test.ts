@@ -25,6 +25,8 @@ Commands:
         'bootstrap',
         '--per-bucket',
         '3',
+        '--min-xl',
+        '10',
         '--server',
         'CAO,CBRG',
         '--data-dir',
@@ -46,6 +48,7 @@ Commands:
 
     expect(runBootstrapCommand).toHaveBeenCalledWith({
       perBucket: 3,
+      minXl: 10,
       serverIds: ['CAO', 'CBRG'],
       dataDir: '/tmp/dcss-data',
       dryRun: false,
@@ -80,6 +83,7 @@ Parsed failures: 1`,
 
     expect(runIncrementalCommand).toHaveBeenCalledWith({
       perBucket: 10,
+      minXl: undefined,
       since: '2026-04-05T00:00:00.000Z',
       dryRun: true,
       fresh: false,
@@ -96,6 +100,34 @@ Parsed failures: 1`,
       stdout: `Incremental completed.
 Selected candidates: 4
 Dry run enabled: skipped morgue fetch and parse.`,
+    })
+  })
+
+  it('passes min-xl through incremental options', async () => {
+    const runIncrementalCommand = vi.fn().mockResolvedValue({
+      selectedCandidates: 1,
+      parsedSuccesses: 0,
+      parsedFailures: 0,
+    })
+
+    await runCli(
+      ['incremental', '--dry-run', '--since', '2026-04-05T00:00:00Z', '--min-xl', '12'],
+      { runIncrementalCommand },
+    )
+
+    expect(runIncrementalCommand).toHaveBeenCalledWith({
+      perBucket: 10,
+      minXl: 12,
+      since: '2026-04-05T00:00:00.000Z',
+      dryRun: true,
+      fresh: false,
+      freshLogfiles: false,
+      dataDir: undefined,
+      initialTailBytes: undefined,
+      minDelayMs: undefined,
+      timeoutMs: undefined,
+      serverIds: undefined,
+      verbose: false,
     })
   })
 

@@ -20,6 +20,7 @@ export type PipelineSummary = {
 export type PipelineOptions = {
   perBucket: number
   since?: string
+  minXl?: number
   serverIds?: readonly ServerId[]
   dryRun?: boolean
 }
@@ -64,11 +65,16 @@ function getBucketKey(candidate: Pick<CandidateGame, 'serverId' | 'version'>): s
 function getBootstrapEligibleCounts(
   db: Database,
   serverIds: readonly ServerId[] | undefined,
+  minXl: number | undefined,
 ): Map<string, number> {
   const counts = new Map<string, number>()
 
   for (const candidate of filterCandidatesByServerIds(candidateRepo.listBootstrapEligible(db), serverIds)) {
     if (isExcludedModeCandidate(candidate)) {
+      continue
+    }
+
+    if (minXl !== undefined && (candidate.xl === null || candidate.xl < minXl)) {
       continue
     }
 
@@ -110,7 +116,7 @@ async function runBootstrapBackfillPhase(ctx: PipelineContext) {
   }
 
   while (true) {
-    const eligibleCounts = getBootstrapEligibleCounts(ctx.db, ctx.options.serverIds)
+    const eligibleCounts = getBootstrapEligibleCounts(ctx.db, ctx.options.serverIds, ctx.options.minXl)
     const underfilled = [...bucketStates.values()].filter(
       (bucket) =>
         (eligibleCounts.get(`${bucket.serverId}:${bucket.version}`) ?? 0) < ctx.options.perBucket &&
@@ -326,6 +332,7 @@ export async function runBootstrap(ctx: PipelineContext): Promise<PipelineSummar
     filterCandidatesByServerIds(candidateRepo.listBootstrapEligible(ctx.db), ctx.options.serverIds),
     {
       perBucket: ctx.options.perBucket,
+      minXl: ctx.options.minXl,
     },
   )
   ctx.log?.(`[bootstrap] selected ${selected.length} candidates`)

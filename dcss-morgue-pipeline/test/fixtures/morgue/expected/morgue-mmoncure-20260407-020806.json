@@ -3,6 +3,7 @@
   "version": "0.35-a0-258-g8c878a6c5f",
   "species": "Poltergeist",
   "background": "Hexslinger",
+  "xl": 23,
   "ac": 36,
   "ev": 31,
   "sh": 5,

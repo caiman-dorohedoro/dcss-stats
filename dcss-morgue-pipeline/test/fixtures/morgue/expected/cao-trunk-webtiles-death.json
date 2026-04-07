@@ -3,6 +3,7 @@
   "version": "0.35-a0-181-g84ebf06",
   "species": "Minotaur",
   "background": "Berserker",
+  "xl": 9,
   "ac": 14,
   "ev": 6,
   "sh": 0,

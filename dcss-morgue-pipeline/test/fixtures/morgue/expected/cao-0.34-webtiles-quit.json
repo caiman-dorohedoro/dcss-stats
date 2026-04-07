@@ -3,6 +3,7 @@
   "version": "0.34.0",
   "species": "Barachi",
   "background": "Hunter",
+  "xl": 1,
   "ac": 3,
   "ev": 11,
   "sh": 0,

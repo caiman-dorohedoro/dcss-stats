@@ -23,6 +23,10 @@ export function validateStrict(row: Partial<ParsedMorgueTextRecord>): ParsedMorg
     throw new ParseFailure('stat_parse_failed')
   }
 
+  if (!isFiniteNumber(row.xl)) {
+    throw new ParseFailure('xl_parse_failed')
+  }
+
   if (!isFiniteNumber(row.ac) || !isFiniteNumber(row.ev) || !isFiniteNumber(row.sh)) {
     throw new ParseFailure('combat_stat_parse_failed')
   }

@@ -37,6 +37,7 @@ Commands:
 const BOOTSTRAP_USAGE = `Usage: dcss-morgue bootstrap [options]
 Options:
   --per-bucket <n>     Candidates per (server, version) bucket. Default: 10
+  --min-xl <n>         Only sample candidates with xlog XL >= n
   --server <ids>       Comma-separated server ids. Default: all active servers
   --data-dir <path>    Override runtime data directory
   --fresh              Clear DB, morgues, and audit before running, but keep logfile cache
@@ -51,6 +52,7 @@ Options:
 const INCREMENTAL_USAGE = `Usage: dcss-morgue incremental [options]
 Options:
   --per-bucket <n>     Candidates per (server, version) bucket. Default: 10
+  --min-xl <n>         Only sample candidates with xlog XL >= n
   --since <iso8601>    Lower bound for discovered_at. Default: now minus 6 hours
   --server <ids>       Comma-separated server ids. Default: all active servers
   --data-dir <path>    Override runtime data directory
@@ -251,6 +253,7 @@ function parseCommonOptionBag(args: string[]): {
 function parseBootstrapOptions(args: string[]): BootstrapCommandOptions {
   const common = parseCommonOptionBag(args)
   let perBucket = 10
+  let minXl: number | undefined
   let backfillChunkBytes: number | undefined
 
   for (let index = 0; index < common.rest.length; index += 1) {
@@ -258,6 +261,12 @@ function parseBootstrapOptions(args: string[]): BootstrapCommandOptions {
 
     if (current === '--per-bucket') {
       perBucket = parseIntegerOption(current, common.rest[index + 1])
+      index += 1
+      continue
+    }
+
+    if (current === '--min-xl') {
+      minXl = parseIntegerOption(current, common.rest[index + 1])
       index += 1
       continue
     }
@@ -273,6 +282,7 @@ function parseBootstrapOptions(args: string[]): BootstrapCommandOptions {
 
   return {
     perBucket,
+    minXl,
     dataDir: common.parsed.dataDir,
     dryRun: common.parsed.dryRun,
     fresh: common.parsed.fresh,
@@ -289,6 +299,7 @@ function parseBootstrapOptions(args: string[]): BootstrapCommandOptions {
 function parseIncrementalOptions(args: string[]): IncrementalCommandOptions {
   const common = parseCommonOptionBag(args)
   let perBucket = 10
+  let minXl: number | undefined
   let since = getDefaultSinceIso()
 
   for (let index = 0; index < common.rest.length; index += 1) {
@@ -296,6 +307,12 @@ function parseIncrementalOptions(args: string[]): IncrementalCommandOptions {
 
     if (current === '--per-bucket') {
       perBucket = parseIntegerOption(current, common.rest[index + 1])
+      index += 1
+      continue
+    }
+
+    if (current === '--min-xl') {
+      minXl = parseIntegerOption(current, common.rest[index + 1])
       index += 1
       continue
     }
@@ -311,6 +328,7 @@ function parseIncrementalOptions(args: string[]): IncrementalCommandOptions {
 
   return {
     perBucket,
+    minXl,
     since,
     dataDir: common.parsed.dataDir,
     dryRun: common.parsed.dryRun,

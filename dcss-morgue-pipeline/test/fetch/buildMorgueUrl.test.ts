@@ -15,6 +15,7 @@ function seedCandidate(
     version,
     sourceVersionLabel: version === 'trunk' ? 'git' : version,
     playerName,
+    xl: 7,
     endMessage: 'ok',
     startedAt: '2026-04-05T00:00:00.000Z',
     endedAt,

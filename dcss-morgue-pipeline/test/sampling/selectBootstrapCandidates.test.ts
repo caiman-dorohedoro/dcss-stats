@@ -6,6 +6,7 @@ function seedCandidate(
   candidateId: string,
   serverId: CandidateGame['serverId'],
   version: CandidateGame['version'],
+  xl: CandidateGame['xl'] = 12,
 ): CandidateGame {
   return {
     candidateId,
@@ -13,6 +14,7 @@ function seedCandidate(
     version,
     sourceVersionLabel: version === 'trunk' ? 'git' : version,
     playerName: candidateId,
+    xl,
     endMessage: 'ok',
     startedAt: '2026-04-05T00:00:00.000Z',
     endedAt: '2026-04-05T01:00:00.000Z',
@@ -78,6 +80,23 @@ describe('selectBootstrapCandidates', () => {
     expect(selected.map((candidate) => candidate.candidateId)).toEqual([
       'cao34-real',
       'cao34-real-2',
+    ])
+  })
+
+  it('filters candidates below a requested minimum xl', () => {
+    const selected = selectBootstrapCandidates(
+      [
+        seedCandidate('cao34-low', 'CAO', '0.34', 9),
+        seedCandidate('cao34-high', 'CAO', '0.34', 10),
+        seedCandidate('caogit-high', 'CAO', 'trunk', 15),
+        seedCandidate('caogit-missing', 'CAO', 'trunk', null),
+      ],
+      { perBucket: 2, minXl: 10 },
+    )
+
+    expect(selected.map((candidate) => candidate.candidateId)).toEqual([
+      'cao34-high',
+      'caogit-high',
     ])
   })
 })

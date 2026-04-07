@@ -3,6 +3,7 @@
   "version": "0.35-a0-257-gf9e06672e4",
   "species": "Gnoll",
   "background": "Earth Elementalist",
+  "xl": 27,
   "ac": 27,
   "ev": 15,
   "sh": 18,

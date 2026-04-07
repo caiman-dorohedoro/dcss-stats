@@ -3,6 +3,7 @@
   "version": "0.35-a0-257-gf9e06672e4",
   "species": "Draconian",
   "background": "Summoner",
+  "xl": 12,
   "ac": 11,
   "ev": 11,
   "sh": 0,

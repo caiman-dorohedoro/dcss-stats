@@ -13,6 +13,7 @@ function seedCandidate(candidateId: string): CandidateGame {
     version: '0.34',
     sourceVersionLabel: '0.34',
     playerName: 'alice',
+    xl: 7,
     endMessage: 'ok',
     startedAt: '2026-04-05T00:00:00.000Z',
     endedAt: '2026-04-05T01:02:03.000Z',

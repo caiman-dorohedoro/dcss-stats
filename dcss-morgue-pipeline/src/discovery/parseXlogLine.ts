@@ -84,6 +84,22 @@ function getRequiredField(record: Record<string, string>, key: string): string {
   return value
 }
 
+function parseOptionalIntegerField(record: Record<string, string>, key: string): number | null {
+  const value = record[key]
+
+  if (!value) {
+    return null
+  }
+
+  const parsed = Number.parseInt(value, 10)
+
+  if (!Number.isInteger(parsed)) {
+    throw new Error(`Invalid integer xlog field: ${key}=${value}`)
+  }
+
+  return parsed
+}
+
 export function normalizeXlogTimestamp(value: string): string {
   const match = value.match(/^(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/)
 
@@ -132,6 +148,7 @@ export function parseXlogLine(line: string, ctx: ParseXlogContext): CandidateGam
 
   const sourceVersionLabel = getRequiredField(record, 'v')
   const playerName = getRequiredField(record, 'name')
+  const xl = parseOptionalIntegerField(record, 'xl')
   const startedAtRaw = getRequiredField(record, 'start')
   const endedAtRaw = getRequiredField(record, 'end')
   const endMessage = getRequiredField(record, 'tmsg')
@@ -147,6 +164,7 @@ export function parseXlogLine(line: string, ctx: ParseXlogContext): CandidateGam
     version,
     sourceVersionLabel,
     playerName,
+    xl,
     endMessage,
     startedAt,
     endedAt,

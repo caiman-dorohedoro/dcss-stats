@@ -16,6 +16,7 @@ create table if not exists candidate_games (
   version text not null,
   source_version_label text not null,
   player_name text not null,
+  xl integer,
   end_message text not null,
   started_at text not null,
   ended_at text not null,
@@ -51,4 +52,12 @@ create table if not exists parse_results (
 
 export function migrate(db: Database) {
   db.exec(SCHEMA)
+
+  const candidateColumns = db
+    .prepare(`pragma table_info(candidate_games)`)
+    .all() as Array<{ name: string }>
+
+  if (!candidateColumns.some((column) => column.name === 'xl')) {
+    db.exec(`alter table candidate_games add column xl integer`)
+  }
 }

@@ -9,11 +9,16 @@ export function selectBootstrapCandidates(
   candidates: CandidateGame[],
   options: {
     perBucket: number
+    minXl?: number
   },
 ): CandidateGame[] {
   const buckets = new Map<string, CandidateGame[]>()
 
-  for (const candidate of candidates.filter((item) => !isExcludedModeCandidate(item))) {
+  for (const candidate of candidates.filter(
+    (item) =>
+      !isExcludedModeCandidate(item)
+      && (options.minXl === undefined || (item.xl !== null && item.xl >= options.minXl)),
+  )) {
     const bucketKey = `${candidate.serverId}:${candidate.version}`
     const bucket = buckets.get(bucketKey) ?? []
     bucket.push(candidate)

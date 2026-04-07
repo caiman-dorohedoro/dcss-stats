@@ -29,6 +29,7 @@ describe('parseMorgue', () => {
     if (result.ok) {
       expect(result.record.version).toBe('0.34.0')
       expect(result.record.species).toBe('Barachi')
+      expect(result.record.xl).toBe(1)
       expect(result.record.ac).toBe(3)
       expect(result.record.ev).toBe(11)
       expect(result.record.sh).toBe(0)
@@ -58,6 +59,7 @@ describe('parseMorgue', () => {
     if (result.ok) {
       expect(result.record.version).toBe('0.35-a0-181-g84ebf06')
       expect(result.record.species).toBe('Minotaur')
+      expect(result.record.xl).toBe(9)
       expect(result.record.ac).toBe(14)
       expect(result.record.ev).toBe(6)
       expect(result.record.sh).toBe(0)

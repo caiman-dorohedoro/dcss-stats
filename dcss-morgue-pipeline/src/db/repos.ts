@@ -25,6 +25,7 @@ type CandidateRowDb = {
   version: string
   source_version_label: string
   player_name: string
+  xl: number | null
   end_message: string
   started_at: string
   ended_at: string
@@ -71,6 +72,7 @@ function mapCandidateRow(row: CandidateRowDb): CandidateGame {
     version: row.version as TargetVersion,
     sourceVersionLabel: row.source_version_label,
     playerName: row.player_name,
+    xl: row.xl,
     endMessage: row.end_message,
     startedAt: row.started_at,
     endedAt: row.ended_at,
@@ -157,6 +159,7 @@ export const candidateRepo = {
             version,
             source_version_label,
             player_name,
+            xl,
             end_message,
             started_at,
             ended_at,
@@ -189,6 +192,7 @@ export const candidateRepo = {
             version,
             source_version_label,
             player_name,
+            xl,
             end_message,
             started_at,
             ended_at,
@@ -216,6 +220,7 @@ export const candidateRepo = {
             version,
             source_version_label,
             player_name,
+            xl,
             end_message,
             started_at,
             ended_at,
@@ -244,6 +249,7 @@ export const candidateRepo = {
             version,
             source_version_label,
             player_name,
+            xl,
             end_message,
             started_at,
             ended_at,
@@ -295,6 +301,7 @@ export const candidateRepo = {
             version,
             source_version_label,
             player_name,
+            xl,
             end_message,
             started_at,
             ended_at,
@@ -309,6 +316,7 @@ export const candidateRepo = {
           @version,
           @sourceVersionLabel,
           @playerName,
+          @xl,
           @endMessage,
           @startedAt,
           @endedAt,

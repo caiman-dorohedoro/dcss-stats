@@ -71,6 +71,33 @@ This also matches how players actually talk about runs:
 
 - species + background, not species alone
 
+## 2.5. XL Extraction
+
+### What changed
+
+The parser now stores `xl` from the morgue stat line.
+
+Examples:
+
+- `XL:     1` -> `xl: 1`
+- `XL:     27` -> `xl: 27`
+
+### Why
+
+`XL` is one of the most common grouping and power-level fields used by
+downstream tooling.
+
+It is also part of the same stable header block as:
+
+- `AC`
+- `EV`
+- `SH`
+- `Str`
+- `Int`
+- `Dex`
+
+so it belongs in the same base-stats layer instead of being re-derived later.
+
 ## 3. Skills vs Effective Skills
 
 ### What changed

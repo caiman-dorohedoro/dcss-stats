@@ -3,6 +3,7 @@
   "version": "0.34.0",
   "species": "Djinni",
   "background": "Fire Elementalist",
+  "xl": 7,
   "ac": 4,
   "ev": 11,
   "sh": 0,

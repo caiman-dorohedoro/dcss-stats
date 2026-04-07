@@ -3,6 +3,7 @@
   "version": "0.34.0",
   "species": "Octopode",
   "background": "Brigand",
+  "xl": 21,
   "ac": 3,
   "ev": 34,
   "sh": 19,

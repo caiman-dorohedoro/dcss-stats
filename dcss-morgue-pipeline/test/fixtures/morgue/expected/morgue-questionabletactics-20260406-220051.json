@@ -3,6 +3,7 @@
   "version": "0.35-a0-181-g84ebf06",
   "species": "Gnoll",
   "background": "Reaver",
+  "xl": 27,
   "ac": 39,
   "ev": 33,
   "sh": 13,

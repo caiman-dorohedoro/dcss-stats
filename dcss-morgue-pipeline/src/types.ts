@@ -40,6 +40,7 @@ export type CandidateGame = {
   version: TargetVersion
   sourceVersionLabel: string
   playerName: string
+  xl: number | null
   endMessage: string
   startedAt: string
   endedAt: string
@@ -54,6 +55,7 @@ export type BaseStatsSnapshot = {
   version: MorgueVersion
   species: string
   background: string | null
+  xl: number
   ac: number
   ev: number
   sh: number

@@ -3,6 +3,7 @@
   "version": "0.35-a0-256-g859e8e3ba0",
   "species": "Minotaur",
   "background": "Fighter",
+  "xl": 17,
   "ac": 10,
   "ev": 12,
   "sh": 15,

@@ -6,10 +6,11 @@ export function selectIncrementalCandidates(
   options: {
     since: string
     perBucket: number
+    minXl?: number
   },
 ): CandidateGame[] {
   return selectBootstrapCandidates(
     candidates.filter((candidate) => candidate.discoveredAt >= options.since),
-    { perBucket: options.perBucket },
+    { perBucket: options.perBucket, minXl: options.minXl },
   )
 }

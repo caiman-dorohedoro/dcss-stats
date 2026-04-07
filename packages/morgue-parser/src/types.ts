@@ -5,6 +5,7 @@ export type BaseStatsSnapshot = {
   version: MorgueVersion
   species: string
   background: string | null
+  xl: number
   ac: number
   ev: number
   sh: number

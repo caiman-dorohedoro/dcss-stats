@@ -3,6 +3,7 @@
   "version": "0.35-a0-256-g859e8e3ba0",
   "species": "Poltergeist",
   "background": "Enchanter",
+  "xl": 22,
   "ac": 10,
   "ev": 2,
   "sh": 0,

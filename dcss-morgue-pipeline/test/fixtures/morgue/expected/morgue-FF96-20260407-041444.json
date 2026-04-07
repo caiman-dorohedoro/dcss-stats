@@ -3,6 +3,7 @@
   "version": "0.35-a0-258-g8c878a6c5f",
   "species": "Formicid",
   "background": "Fighter",
+  "xl": 24,
   "ac": 37,
   "ev": 21,
   "sh": 18,

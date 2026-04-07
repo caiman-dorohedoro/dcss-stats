@@ -23,13 +23,13 @@ export type RuntimeCommandOptions = {
 }
 
 export type BootstrapCommandOptions = RuntimeCommandOptions &
-  Pick<PipelineOptions, 'perBucket'> & {
+  Pick<PipelineOptions, 'perBucket' | 'minXl'> & {
     backfillChunkBytes?: number
     dryRun: boolean
   }
 
 export type IncrementalCommandOptions = RuntimeCommandOptions &
-  Pick<PipelineOptions, 'perBucket'> & {
+  Pick<PipelineOptions, 'perBucket' | 'minXl'> & {
     since?: string
     dryRun: boolean
   }
@@ -89,6 +89,7 @@ export async function runBootstrapCommand(
       db,
       options: {
         perBucket: options.perBucket,
+        minXl: options.minXl,
         dryRun: options.dryRun,
         serverIds: options.serverIds,
       },
@@ -126,6 +127,7 @@ export async function runIncrementalCommand(
       db,
       options: {
         perBucket: options.perBucket,
+        minXl: options.minXl,
         since: options.since,
         dryRun: options.dryRun,
         serverIds: options.serverIds,

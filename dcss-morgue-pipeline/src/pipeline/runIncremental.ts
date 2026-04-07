@@ -21,6 +21,7 @@ export async function runIncremental(ctx: PipelineContext): Promise<PipelineSumm
     {
       since,
       perBucket: ctx.options.perBucket,
+      minXl: ctx.options.minXl,
     },
   )
   ctx.log?.(`[incremental] selected ${selected.length} candidates since ${since}`)

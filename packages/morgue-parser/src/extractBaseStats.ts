@@ -129,15 +129,17 @@ function parsePrimaryStats(text: string) {
 }
 
 function parseDefensiveStats(text: string) {
+  const xl = text.match(/\bXL:\s+(\d+)/)?.[1]
   const ac = text.match(/\bAC:\s+(-?\d+)/)?.[1]
   const ev = text.match(/\bEV:\s+(-?\d+)/)?.[1]
   const sh = text.match(/\bSH:\s+(-?\d+)/)?.[1]
 
-  if (!ac || !ev || !sh) {
-    throw new Error('Could not parse AC/EV/SH')
+  if (!xl || !ac || !ev || !sh) {
+    throw new Error('Could not parse XL/AC/EV/SH')
   }
 
   return {
+    xl: Number(xl),
     ac: Number(ac),
     ev: Number(ev),
     sh: Number(sh),

@@ -25,6 +25,7 @@ describe('parseMorgueText shared parser', () => {
     if (result.ok) {
       expect(result.record.playerName).toBe('EnsignRicky')
       expect(result.record.species).toBe('Barachi')
+      expect(result.record.xl).toBe(1)
       expect(result.record.ac).toBe(3)
       expect(result.record.ev).toBe(11)
       expect(result.record.sh).toBe(0)
